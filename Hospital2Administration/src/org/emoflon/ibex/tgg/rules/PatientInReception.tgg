@@ -6,7 +6,7 @@
 
 #source { 
 	
-	
+	++ p1 : Patient
 	h:Hospital{
 		-reception->r
 	}
@@ -19,6 +19,7 @@
 
 #target {
 	
+	++ p2 : Patient
 	v:Administration{
 		++-patient->p2
 	}
@@ -31,9 +32,6 @@
 		#src->h
 		#trg->v
 	}
-	
-	
-	
 	
 }
 

@@ -6,7 +6,7 @@
 
 #source { 
 	
-	
+	++ p1 : Patient
 	h:Hospital{
 		-department->d
 	}
@@ -22,11 +22,11 @@
 }
 
 #target {
-	
+	++ p2 : Patient
 	v:Administration{
 		++-patient->p2
 	}
-	}
+}
 	
 
 #correspondence {

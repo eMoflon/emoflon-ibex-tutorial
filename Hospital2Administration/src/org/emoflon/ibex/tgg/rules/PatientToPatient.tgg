@@ -51,6 +51,6 @@
 
 #attributeConditions {
 	
-	//carelevelToMedication(p1.level, t.medication)
+	carelevelToMedication(p1.level, t.medication)
 	
 }

@@ -1,348 +1,768 @@
 <?xml version="1.0" encoding="ASCII"?>
-<HospitalExampleTarget:Verwaltung xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:HospitalExampleTarget="platform:/resource/HospitalExampleTarget/model/HospitalExampleTarget.ecore">
-  <staff staffID="583" salary="6000.0"/>
-  <staff staffID="362" salary="6000.0"/>
-  <staff staffID="820" salary="3000.0"/>
-  <staff staffID="239" salary="3000.0"/>
-  <staff staffID="272" salary="6000.0"/>
-  <staff staffID="983" salary="3000.0"/>
-  <staff staffID="837" salary="3000.0"/>
-  <staff staffID="329" salary="3000.0"/>
-  <staff staffID="417" salary="3000.0"/>
-  <staff staffID="696" salary="6000.0"/>
-  <staff staffID="420" salary="3000.0"/>
-  <staff staffID="110" salary="3000.0"/>
-  <staff staffID="221" salary="6000.0"/>
-  <staff staffID="309" salary="3000.0"/>
-  <staff staffID="499" salary="3000.0"/>
-  <staff staffID="960" salary="3000.0"/>
-  <staff staffID="184" salary="6000.0"/>
-  <staff staffID="476" salary="3000.0"/>
-  <staff staffID="200" salary="3000.0"/>
-  <staff staffID="404" salary="3000.0"/>
-  <staff staffID="92" salary="3000.0"/>
-  <staff staffID="967" salary="6000.0"/>
-  <staff staffID="73" salary="3000.0"/>
-  <staff staffID="936" salary="3000.0"/>
-  <staff staffID="67" salary="6000.0"/>
-  <staff staffID="627" salary="3000.0"/>
-  <staff staffID="804" salary="3000.0"/>
-  <staff staffID="505" salary="6000.0"/>
-  <staff staffID="93" salary="3000.0"/>
-  <staff staffID="551" salary="3000.0"/>
-  <staff staffID="996" salary="6000.0"/>
-  <staff staffID="303" salary="6000.0"/>
-  <staff staffID="733" salary="6000.0"/>
+<AdministrationExample:Administration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore">
+  <staff staffID="566" salary="3000.0"/>
+  <staff staffID="590" salary="6000.0" treatment="//@patient.33/@treatment //@patient.65/@treatment //@patient.96/@treatment //@patient.131/@treatment //@patient.159/@treatment //@patient.206/@treatment //@patient.224/@treatment"/>
+  <staff staffID="442" salary="6000.0" treatment="//@patient.10/@treatment //@patient.1/@treatment //@patient.23/@treatment //@patient.41/@treatment //@patient.45/@treatment //@patient.60/@treatment //@patient.61/@treatment //@patient.144/@treatment //@patient.168/@treatment //@patient.170/@treatment //@patient.190/@treatment"/>
+  <staff staffID="668" salary="6000.0" treatment="//@patient.0/@treatment //@patient.17/@treatment //@patient.30/@treatment //@patient.36/@treatment //@patient.43/@treatment //@patient.98/@treatment //@patient.112/@treatment //@patient.110/@treatment //@patient.149/@treatment //@patient.172/@treatment //@patient.176/@treatment //@patient.207/@treatment //@patient.216/@treatment //@patient.230/@treatment //@patient.232/@treatment"/>
+  <staff staffID="523" salary="6000.0" treatment="//@patient.20/@treatment //@patient.18/@treatment //@patient.70/@treatment //@patient.71/@treatment //@patient.77/@treatment //@patient.83/@treatment //@patient.87/@treatment //@patient.123/@treatment //@patient.128/@treatment //@patient.152/@treatment //@patient.178/@treatment //@patient.183/@treatment //@patient.210/@treatment"/>
+  <staff staffID="368" salary="6000.0" treatment="//@patient.26/@treatment //@patient.32/@treatment //@patient.48/@treatment //@patient.64/@treatment //@patient.92/@treatment //@patient.95/@treatment //@patient.132/@treatment //@patient.201/@treatment"/>
+  <staff staffID="235" salary="6000.0" treatment="//@patient.28/@treatment //@patient.46/@treatment //@patient.104/@treatment //@patient.125/@treatment //@patient.147/@treatment //@patient.194/@treatment //@patient.228/@treatment"/>
+  <staff staffID="862" salary="6000.0" treatment="//@patient.7/@treatment //@patient.6/@treatment //@patient.40/@treatment //@patient.42/@treatment //@patient.49/@treatment //@patient.52/@treatment //@patient.59/@treatment //@patient.62/@treatment //@patient.63/@treatment //@patient.80/@treatment //@patient.133/@treatment //@patient.134/@treatment //@patient.139/@treatment //@patient.174/@treatment"/>
+  <staff staffID="325" salary="3000.0"/>
   <staff staffID="204" salary="3000.0"/>
-  <staff staffID="803" salary="6000.0"/>
-  <staff staffID="724" salary="3000.0"/>
-  <staff staffID="970" salary="3000.0"/>
-  <staff staffID="504" salary="3000.0"/>
-  <staff staffID="518" salary="6000.0"/>
-  <staff staffID="641" salary="6000.0"/>
-  <staff staffID="357" salary="6000.0"/>
-  <staff staffID="129" salary="6000.0"/>
-  <staff staffID="407" salary="6000.0"/>
-  <staff staffID="355" salary="3000.0"/>
-  <staff staffID="930" salary="6000.0"/>
-  <staff staffID="528" salary="6000.0"/>
-  <staff staffID="366" salary="6000.0"/>
-  <staff staffID="866" salary="6000.0"/>
-  <staff staffID="564" salary="6000.0"/>
-  <staff staffID="411" salary="3000.0"/>
-  <staff staffID="215" salary="3000.0"/>
-  <staff staffID="336" salary="6000.0"/>
-  <staff staffID="721" salary="3000.0"/>
-  <staff staffID="722" salary="3000.0"/>
-  <staff staffID="694" salary="6000.0"/>
-  <staff staffID="870" salary="3000.0"/>
-  <staff staffID="777" salary="6000.0"/>
-  <staff staffID="327" salary="3000.0"/>
-  <staff staffID="487" salary="6000.0"/>
-  <staff staffID="5" salary="6000.0"/>
-  <staff staffID="373" salary="3000.0"/>
-  <staff staffID="948" salary="6000.0"/>
-  <staff staffID="818" salary="6000.0"/>
-  <staff staffID="520" salary="3000.0"/>
-  <staff staffID="478" salary="3000.0"/>
-  <staff staffID="80" salary="6000.0"/>
-  <staff staffID="466" salary="6000.0"/>
-  <staff staffID="460" salary="3000.0"/>
-  <staff staffID="104" salary="3000.0"/>
-  <staff staffID="904" salary="6000.0"/>
-  <staff staffID="236" salary="6000.0"/>
-  <staff staffID="496" salary="6000.0"/>
-  <staff staffID="877" salary="6000.0"/>
-  <staff staffID="437" salary="3000.0"/>
-  <staff staffID="226" salary="6000.0"/>
-  <staff staffID="4" salary="6000.0"/>
-  <staff staffID="882" salary="3000.0"/>
-  <staff staffID="439" salary="6000.0"/>
-  <staff staffID="437" salary="3000.0"/>
-  <staff staffID="483" salary="3000.0"/>
-  <staff staffID="496" salary="3000.0"/>
-  <staff staffID="823" salary="3000.0"/>
-  <staff staffID="558" salary="3000.0"/>
-  <staff staffID="203" salary="6000.0"/>
-  <staff staffID="142" salary="6000.0"/>
-  <staff staffID="571" salary="3000.0"/>
-  <staff staffID="986" salary="6000.0"/>
-  <staff staffID="205" salary="6000.0"/>
-  <staff staffID="151" salary="6000.0"/>
-  <staff staffID="409" salary="3000.0"/>
-  <staff staffID="391" salary="3000.0"/>
-  <staff staffID="30" salary="6000.0"/>
-  <staff staffID="178" salary="6000.0"/>
-  <staff staffID="748" salary="6000.0"/>
-  <staff staffID="406" salary="6000.0"/>
-  <staff staffID="811" salary="3000.0"/>
-  <staff staffID="862" salary="3000.0"/>
-  <staff staffID="650" salary="6000.0"/>
-  <staff staffID="247" salary="6000.0"/>
-  <staff staffID="608" salary="6000.0"/>
-  <staff staffID="678" salary="3000.0"/>
-  <staff staffID="811" salary="3000.0"/>
-  <staff staffID="336" salary="3000.0"/>
-  <staff staffID="105" salary="6000.0"/>
-  <staff staffID="156" salary="6000.0"/>
-  <staff staffID="818" salary="6000.0"/>
-  <staff staffID="236" salary="3000.0"/>
-  <staff staffID="60" salary="3000.0"/>
-  <staff staffID="931" salary="6000.0"/>
-  <staff staffID="197" salary="3000.0"/>
-  <staff staffID="477" salary="3000.0"/>
-  <staff staffID="128" salary="3000.0"/>
-  <staff staffID="293" salary="3000.0"/>
-  <staff staffID="987" salary="3000.0"/>
-  <staff staffID="77" salary="6000.0"/>
-  <staff staffID="944" salary="3000.0"/>
-  <staff staffID="192" salary="6000.0"/>
-  <staff staffID="855" salary="3000.0"/>
-  <staff staffID="827" salary="6000.0"/>
-  <staff staffID="584" salary="6000.0"/>
-  <staff staffID="892" salary="3000.0"/>
-  <staff staffID="6" salary="3000.0"/>
-  <staff staffID="664" salary="6000.0"/>
-  <staff staffID="796" salary="6000.0"/>
-  <staff staffID="700" salary="3000.0"/>
-  <staff staffID="386" salary="6000.0"/>
-  <staff staffID="691" salary="6000.0"/>
-  <staff staffID="616" salary="3000.0"/>
-  <staff staffID="478" salary="3000.0"/>
-  <staff staffID="938" salary="6000.0"/>
-  <staff staffID="660" salary="3000.0"/>
-  <staff staffID="263" salary="6000.0"/>
-  <staff staffID="867" salary="6000.0"/>
-  <staff staffID="909" salary="6000.0"/>
-  <staff staffID="990" salary="6000.0"/>
-  <staff staffID="426" salary="3000.0"/>
-  <staff staffID="426" salary="3000.0"/>
-  <staff staffID="471" salary="3000.0"/>
-  <staff staffID="631" salary="6000.0"/>
-  <staff staffID="337" salary="6000.0"/>
-  <staff staffID="117" salary="6000.0"/>
-  <staff staffID="147" salary="6000.0"/>
-  <staff staffID="344" salary="6000.0"/>
-  <staff staffID="247" salary="6000.0"/>
-  <staff staffID="830" salary="6000.0"/>
-  <staff staffID="807" salary="6000.0"/>
-  <staff staffID="211" salary="3000.0"/>
-  <staff staffID="191" salary="3000.0"/>
-  <staff staffID="896" salary="6000.0"/>
-  <staff staffID="235" salary="3000.0"/>
-  <staff staffID="444" salary="3000.0"/>
-  <staff staffID="164" salary="3000.0"/>
-  <staff staffID="769" salary="6000.0"/>
-  <staff staffID="514" salary="6000.0"/>
-  <staff staffID="805" salary="6000.0"/>
-  <staff staffID="101" salary="3000.0"/>
-  <staff staffID="330" salary="3000.0"/>
-  <staff staffID="750" salary="6000.0"/>
-  <staff staffID="211" salary="6000.0"/>
-  <staff staffID="271" salary="3000.0"/>
-  <staff staffID="490" salary="6000.0"/>
-  <staff staffID="863" salary="6000.0"/>
-  <staff staffID="328" salary="3000.0"/>
-  <staff staffID="979" salary="3000.0"/>
-  <staff staffID="52" salary="6000.0"/>
-  <staff staffID="473" salary="3000.0"/>
-  <staff staffID="237" salary="3000.0"/>
-  <staff staffID="695" salary="3000.0"/>
-  <staff staffID="2" salary="3000.0"/>
-  <staff staffID="125" salary="3000.0"/>
-  <staff staffID="473" salary="6000.0"/>
-  <staff staffID="997" salary="3000.0"/>
-  <staff staffID="688" salary="6000.0"/>
-  <staff staffID="356" salary="3000.0"/>
-  <staff staffID="14" salary="6000.0"/>
-  <staff staffID="949" salary="3000.0"/>
-  <staff staffID="573" salary="6000.0"/>
-  <staff staffID="354" salary="3000.0"/>
-  <staff staffID="25" salary="6000.0"/>
-  <staff staffID="803" salary="6000.0"/>
-  <staff staffID="498" salary="6000.0"/>
-  <staff staffID="228" salary="6000.0"/>
-  <staff staffID="444" salary="6000.0"/>
-  <staff staffID="142" salary="3000.0"/>
-  <staff staffID="650" salary="6000.0"/>
-  <staff staffID="127" salary="3000.0"/>
-  <staff staffID="698" salary="3000.0"/>
-  <staff staffID="850" salary="3000.0"/>
-  <staff staffID="684" salary="6000.0"/>
-  <staff staffID="718" salary="3000.0"/>
-  <staff staffID="140" salary="3000.0"/>
-  <staff staffID="538" salary="6000.0"/>
-  <staff staffID="673" salary="6000.0"/>
-  <staff staffID="775" salary="6000.0"/>
-  <staff staffID="15" salary="3000.0"/>
-  <staff staffID="306" salary="3000.0"/>
-  <staff staffID="851" salary="3000.0"/>
-  <staff staffID="895" salary="3000.0"/>
-  <staff staffID="9" salary="6000.0"/>
-  <staff staffID="958" salary="3000.0"/>
-  <staff staffID="313" salary="6000.0"/>
-  <staff staffID="569" salary="3000.0"/>
-  <staff staffID="723" salary="6000.0"/>
-  <staff staffID="73" salary="6000.0"/>
-  <staff staffID="138" salary="6000.0"/>
-  <staff staffID="141" salary="6000.0"/>
-  <staff staffID="615" salary="6000.0"/>
-  <staff staffID="531" salary="6000.0"/>
-  <staff staffID="611" salary="3000.0"/>
-  <staff staffID="388" salary="3000.0"/>
-  <staff staffID="239" salary="3000.0"/>
-  <staff staffID="400" salary="6000.0"/>
-  <staff staffID="496" salary="6000.0"/>
-  <staff staffID="738" salary="6000.0"/>
-  <staff staffID="841" salary="6000.0"/>
-  <staff staffID="294" salary="6000.0"/>
-  <staff staffID="535" salary="6000.0"/>
-  <staff staffID="364" salary="6000.0"/>
-  <staff staffID="635" salary="6000.0"/>
-  <staff staffID="591" salary="6000.0"/>
-  <staff staffID="639" salary="6000.0"/>
-  <staff staffID="682" salary="3000.0"/>
-  <staff staffID="320" salary="6000.0"/>
-  <staff staffID="137" salary="3000.0"/>
-  <staff staffID="439" salary="6000.0"/>
-  <staff staffID="984" salary="6000.0"/>
-  <staff staffID="655" salary="3000.0"/>
-  <staff staffID="314" salary="6000.0"/>
-  <staff staffID="148" salary="6000.0"/>
-  <staff staffID="220" salary="6000.0"/>
-  <staff staffID="162" salary="3000.0"/>
-  <staff staffID="601" salary="3000.0"/>
-  <staff staffID="936" salary="3000.0"/>
-  <staff staffID="184" salary="6000.0"/>
-  <staff staffID="268" salary="3000.0"/>
-  <staff staffID="9" salary="6000.0"/>
-  <staff staffID="234" salary="3000.0"/>
-  <staff staffID="605" salary="3000.0"/>
-  <staff staffID="461" salary="3000.0"/>
-  <staff staffID="18" salary="3000.0"/>
-  <staff staffID="686" salary="6000.0"/>
-  <staff staffID="900" salary="3000.0"/>
-  <staff staffID="261" salary="6000.0"/>
-  <staff staffID="890" salary="6000.0"/>
-  <staff staffID="668" salary="3000.0"/>
-  <staff staffID="582" salary="6000.0"/>
-  <staff staffID="93" salary="6000.0"/>
-  <staff staffID="499" salary="3000.0"/>
-  <staff staffID="584" salary="6000.0"/>
-  <staff staffID="600" salary="3000.0"/>
-  <staff staffID="359" salary="6000.0"/>
-  <staff staffID="43" salary="6000.0"/>
-  <staff staffID="364" salary="3000.0"/>
-  <staff staffID="86" salary="3000.0"/>
-  <staff staffID="291" salary="6000.0"/>
-  <staff staffID="275" salary="6000.0"/>
-  <staff staffID="867" salary="3000.0"/>
-  <staff staffID="288" salary="3000.0"/>
-  <staff staffID="386" salary="3000.0"/>
-  <staff staffID="131" salary="6000.0"/>
-  <staff staffID="126" salary="3000.0"/>
-  <staff staffID="673" salary="6000.0"/>
-  <staff staffID="509" salary="3000.0"/>
-  <staff staffID="880" salary="3000.0"/>
-  <staff staffID="624" salary="6000.0"/>
-  <staff staffID="475" salary="6000.0"/>
-  <staff staffID="959" salary="6000.0"/>
-  <staff staffID="185" salary="6000.0"/>
-  <staff staffID="53" salary="6000.0"/>
-  <staff staffID="166" salary="3000.0"/>
-  <staff staffID="77" salary="6000.0"/>
-  <staff staffID="685" salary="6000.0"/>
-  <staff staffID="226" salary="6000.0"/>
-  <staff staffID="631" salary="6000.0"/>
-  <staff staffID="216" salary="6000.0"/>
-  <staff staffID="1" salary="6000.0"/>
-  <staff staffID="109" salary="6000.0"/>
-  <staff staffID="28" salary="6000.0"/>
-  <staff staffID="128" salary="6000.0"/>
-  <staff staffID="275" salary="3000.0"/>
-  <staff staffID="152" salary="3000.0"/>
-  <staff staffID="603" salary="3000.0"/>
-  <staff staffID="86" salary="3000.0"/>
-  <staff staffID="630" salary="3000.0"/>
-  <staff staffID="348" salary="6000.0"/>
-  <staff staffID="955" salary="6000.0"/>
-  <staff staffID="323" salary="3000.0"/>
-  <staff staffID="181" salary="6000.0"/>
-  <staff staffID="740" salary="6000.0"/>
-  <staff staffID="509" salary="6000.0"/>
-  <staff staffID="580" salary="6000.0"/>
-  <staff staffID="470" salary="6000.0"/>
-  <staff staffID="296" salary="6000.0"/>
-  <staff staffID="196" salary="3000.0"/>
-  <staff staffID="854" salary="3000.0"/>
-  <staff staffID="457" salary="6000.0"/>
-  <staff staffID="340" salary="3000.0"/>
-  <staff staffID="603" salary="3000.0"/>
-  <staff staffID="636" salary="6000.0"/>
-  <staff staffID="449" salary="3000.0"/>
-  <staff staffID="5" salary="3000.0"/>
-  <staff staffID="87" salary="6000.0"/>
-  <staff staffID="235" salary="3000.0"/>
-  <staff staffID="595" salary="3000.0"/>
-  <staff staffID="373" salary="3000.0"/>
-  <staff staffID="615" salary="3000.0"/>
-  <staff staffID="980" salary="3000.0"/>
-  <staff staffID="814" salary="6000.0"/>
-  <staff staffID="258" salary="3000.0"/>
-  <staff staffID="321" salary="6000.0"/>
-  <staff staffID="377" salary="6000.0"/>
-  <staff staffID="307" salary="6000.0"/>
-  <staff staffID="815" salary="3000.0"/>
-  <staff staffID="59" salary="3000.0"/>
-  <staff staffID="538" salary="6000.0"/>
-  <staff staffID="11" salary="6000.0"/>
-  <staff staffID="432" salary="3000.0"/>
-  <staff staffID="425" salary="3000.0"/>
-  <staff staffID="447" salary="3000.0"/>
-  <staff staffID="636" salary="6000.0"/>
-  <staff staffID="572" salary="6000.0"/>
-  <staff staffID="22" salary="6000.0"/>
-  <staff staffID="874" salary="6000.0"/>
-  <staff staffID="163" salary="6000.0"/>
-  <staff staffID="531" salary="6000.0"/>
-  <staff staffID="971" salary="6000.0"/>
-  <staff staffID="15" salary="6000.0"/>
-  <staff staffID="924" salary="3000.0"/>
-  <staff staffID="284" salary="6000.0"/>
-  <staff staffID="914" salary="3000.0"/>
-  <staff staffID="164" salary="6000.0"/>
-  <staff staffID="653" salary="3000.0"/>
-  <staff staffID="872" salary="3000.0"/>
-  <staff staffID="10" salary="6000.0"/>
-  <staff staffID="985" salary="3000.0"/>
-  <staff staffID="129" salary="3000.0"/>
-  <staff staffID="21" salary="3000.0"/>
-  <staff staffID="701" salary="6000.0"/>
-  <staff staffID="208" salary="6000.0"/>
-  <staff staffID="295" salary="6000.0"/>
-  <staff staffID="928" salary="6000.0"/>
+  <staff staffID="623" salary="3000.0"/>
+  <staff staffID="849" salary="3000.0"/>
+  <staff staffID="670" salary="3000.0"/>
+  <staff staffID="808" salary="3000.0"/>
+  <staff staffID="535" salary="6000.0" treatment="//@patient.4/@treatment //@patient.16/@treatment //@patient.13/@treatment //@patient.19/@treatment //@patient.25/@treatment //@patient.31/@treatment //@patient.35/@treatment //@patient.50/@treatment //@patient.108/@treatment //@patient.137/@treatment //@patient.148/@treatment //@patient.171/@treatment //@patient.181/@treatment //@patient.184/@treatment //@patient.225/@treatment"/>
+  <staff staffID="466" salary="3000.0"/>
+  <staff staffID="857" salary="3000.0"/>
+  <staff staffID="890" salary="6000.0" treatment="//@patient.2/@treatment //@patient.11/@treatment //@patient.21/@treatment //@patient.34/@treatment //@patient.54/@treatment //@patient.68/@treatment //@patient.93/@treatment //@patient.120/@treatment //@patient.146/@treatment //@patient.162/@treatment //@patient.177/@treatment //@patient.192/@treatment //@patient.217/@treatment"/>
+  <staff staffID="530" salary="6000.0" treatment="//@patient.8/@treatment //@patient.15/@treatment //@patient.5/@treatment //@patient.27/@treatment //@patient.29/@treatment //@patient.47/@treatment //@patient.78/@treatment //@patient.121/@treatment //@patient.167/@treatment //@patient.199/@treatment //@patient.204/@treatment //@patient.214/@treatment"/>
+  <staff staffID="634" salary="3000.0"/>
+  <staff staffID="141" salary="3000.0"/>
+  <staff staffID="942" salary="6000.0" treatment="//@patient.12/@treatment //@patient.38/@treatment //@patient.44/@treatment //@patient.56/@treatment //@patient.79/@treatment //@patient.90/@treatment //@patient.103/@treatment //@patient.126/@treatment //@patient.129/@treatment //@patient.165/@treatment //@patient.166/@treatment //@patient.191/@treatment //@patient.196/@treatment //@patient.198/@treatment"/>
+  <staff staffID="466" salary="6000.0" treatment="//@patient.3/@treatment //@patient.14/@treatment //@patient.9/@treatment //@patient.22/@treatment //@patient.51/@treatment //@patient.76/@treatment //@patient.82/@treatment //@patient.91/@treatment //@patient.97/@treatment //@patient.99/@treatment //@patient.102/@treatment //@patient.106/@treatment //@patient.145/@treatment //@patient.151/@treatment //@patient.212/@treatment //@patient.213/@treatment"/>
+  <staff staffID="423" salary="3000.0"/>
+  <staff staffID="667" salary="6000.0" treatment="//@patient.24/@treatment //@patient.37/@treatment //@patient.69/@treatment //@patient.89/@treatment //@patient.116/@treatment //@patient.118/@treatment //@patient.160/@treatment"/>
+  <staff staffID="526" salary="6000.0" treatment="//@patient.39/@treatment //@patient.57/@treatment //@patient.67/@treatment //@patient.73/@treatment //@patient.88/@treatment //@patient.100/@treatment //@patient.105/@treatment //@patient.111/@treatment //@patient.127/@treatment //@patient.142/@treatment //@patient.180/@treatment //@patient.205/@treatment //@patient.227/@treatment"/>
+  <staff staffID="778" salary="6000.0" treatment="//@patient.58/@treatment //@patient.81/@treatment //@patient.107/@treatment"/>
   <staff staffID="217" salary="3000.0"/>
-  <staff staffID="808" salary="6000.0"/>
-  <staff staffID="982" salary="3000.0"/>
-  <staff staffID="407" salary="6000.0"/>
-</HospitalExampleTarget:Verwaltung>
+  <staff staffID="766" salary="3000.0"/>
+  <staff staffID="112" salary="3000.0"/>
+  <staff staffID="430" salary="3000.0"/>
+  <staff staffID="157" salary="6000.0" treatment="//@patient.66/@treatment //@patient.72/@treatment //@patient.85/@treatment //@patient.101/@treatment //@patient.109/@treatment //@patient.117/@treatment //@patient.115/@treatment //@patient.124/@treatment //@patient.138/@treatment //@patient.189/@treatment //@patient.197/@treatment //@patient.202/@treatment"/>
+  <staff staffID="248" salary="6000.0" treatment="//@patient.55/@treatment //@patient.53/@treatment //@patient.74/@treatment //@patient.84/@treatment //@patient.186/@treatment //@patient.188/@treatment"/>
+  <staff staffID="846" salary="3000.0"/>
+  <staff staffID="400" salary="3000.0"/>
+  <staff staffID="662" salary="6000.0" treatment="//@patient.75/@treatment //@patient.86/@treatment //@patient.114/@treatment //@patient.113/@treatment //@patient.130/@treatment //@patient.140/@treatment //@patient.161/@treatment //@patient.163/@treatment //@patient.222/@treatment"/>
+  <staff staffID="97" salary="3000.0"/>
+  <staff staffID="133" salary="6000.0" treatment="//@patient.94/@treatment //@patient.150/@treatment //@patient.153/@treatment //@patient.156/@treatment //@patient.185/@treatment //@patient.200/@treatment //@patient.220/@treatment //@patient.221/@treatment //@patient.231/@treatment"/>
+  <staff staffID="604" salary="3000.0"/>
+  <staff staffID="926" salary="6000.0" treatment="//@patient.119/@treatment //@patient.122/@treatment //@patient.157/@treatment //@patient.154/@treatment //@patient.182/@treatment"/>
+  <staff staffID="610" salary="6000.0" treatment="//@patient.135/@treatment //@patient.164/@treatment //@patient.179/@treatment //@patient.187/@treatment //@patient.209/@treatment"/>
+  <staff staffID="132" salary="6000.0" treatment="//@patient.141/@treatment //@patient.215/@treatment"/>
+  <staff staffID="632" salary="6000.0" treatment="//@patient.136/@treatment //@patient.143/@treatment //@patient.169/@treatment //@patient.173/@treatment //@patient.208/@treatment"/>
+  <staff staffID="551" salary="3000.0"/>
+  <staff staffID="772" salary="6000.0" treatment="//@patient.155/@treatment //@patient.175/@treatment //@patient.211/@treatment"/>
+  <staff staffID="380" salary="6000.0" treatment="//@patient.158/@treatment"/>
+  <staff staffID="58" salary="6000.0" treatment="//@patient.195/@treatment"/>
+  <staff staffID="879" salary="3000.0"/>
+  <staff staffID="392" salary="3000.0"/>
+  <staff staffID="956" salary="3000.0"/>
+  <staff staffID="837" salary="6000.0" treatment="//@patient.203/@treatment"/>
+  <staff staffID="635" salary="3000.0"/>
+  <staff staffID="695" salary="6000.0"/>
+  <staff staffID="765" salary="6000.0" treatment="//@patient.193/@treatment //@patient.229/@treatment"/>
+  <staff staffID="871" salary="6000.0" treatment="//@patient.218/@treatment //@patient.219/@treatment"/>
+  <staff staffID="13" salary="3000.0"/>
+  <staff staffID="575" salary="6000.0" treatment="//@patient.223/@treatment //@patient.226/@treatment"/>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+  <patient>
+    <treatment/>
+  </patient>
+</AdministrationExample:Administration>

@@ -60,7 +60,6 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 	  			v0.bindToValue(Carelevel.get(0));
 	  			v1.bindToValue(Medication.get(0));
 	  			setSatisfied(true);
-	  		default:  throw new UnsupportedOperationException("This case in the constraint has not been implemented yet: " + bindingStates);
 	  		}
 	  	}
 }

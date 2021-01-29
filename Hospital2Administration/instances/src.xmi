@@ -1,348 +1,385 @@
 <?xml version="1.0" encoding="ASCII"?>
 <HospitalExample:Hospital xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
-  <staff xsi:type="HospitalExample:Doctor" staffID="583"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="362"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="820"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="239"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="272"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="983"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="837"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="329"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="417"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="696"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="420"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="110"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="221"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="309"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="499"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="960"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="184"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="476"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="200"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="404"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="92"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="967"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="73"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="936"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="67"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="627"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="804"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="505"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="93"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="551"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="996"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="303"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="733"/>
+  <reception>
+    <waits doctor="//@staff.3"/>
+    <waits doctor="//@staff.2"/>
+    <waits doctor="//@staff.17"/>
+    <waits doctor="//@staff.22"/>
+    <waits doctor="//@staff.14"/>
+    <waits doctor="//@staff.18"/>
+    <waits doctor="//@staff.7"/>
+    <waits doctor="//@staff.7"/>
+    <waits doctor="//@staff.18"/>
+    <waits doctor="//@staff.22"/>
+    <waits doctor="//@staff.2"/>
+    <waits doctor="//@staff.17"/>
+    <waits doctor="//@staff.21"/>
+    <waits doctor="//@staff.14"/>
+    <waits doctor="//@staff.22"/>
+    <waits doctor="//@staff.18"/>
+    <waits doctor="//@staff.14"/>
+    <waits doctor="//@staff.18"/>
+    <waits doctor="//@staff.6"/>
+    <waits doctor="//@staff.7"/>
+    <waits doctor="//@staff.2"/>
+    <waits doctor="//@staff.4"/>
+    <waits doctor="//@staff.22"/>
+    <waits doctor="//@staff.4"/>
+    <waits doctor="//@staff.32"/>
+    <waits doctor="//@staff.26"/>
+    <waits doctor="//@staff.14"/>
+    <waits doctor="//@staff.31"/>
+    <waits doctor="//@staff.25"/>
+    <waits doctor="//@staff.40"/>
+    <waits doctor="//@staff.42"/>
+    <waits doctor="//@staff.4"/>
+    <waits doctor="//@staff.22"/>
+    <waits doctor="//@staff.54"/>
+    <waits/>
+  </reception>
+  <staff xsi:type="HospitalExample:Nurse" staffID="566"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="590" caresfor="//@department.5/@room/@lies.1 //@department.6/@room/@lies.3 //@department.4/@room/@lies.5 //@department.12/@room/@lies.2 //@department.9/@room/@lies.12 //@department.21/@room/@lies.0 //@department.1/@room/@lies.14"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="442" caresfor="//@reception/@waits.10 //@reception/@waits.1 //@department.5/@room/@lies.0 //@department.2/@room/@lies.1 //@department.7/@room/@lies.0 //@department.8/@room/@lies.0 //@reception/@waits.20 //@department.9/@room/@lies.10 //@department.4/@room/@lies.12 //@department.18/@room/@lies.0 //@department.9/@room/@lies.15"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="668" caresfor="//@reception/@waits.0 //@department.10/@room/@lies.0 //@department.1/@room/@lies.0 //@department.9/@room/@lies.1 //@department.1/@room/@lies.2 //@department.7/@room/@lies.3 //@department.15/@room/@lies.4 //@department.6/@room/@lies.6 //@department.13/@room/@lies.4 //@department.20/@room/@lies.0 //@department.4/@room/@lies.13 //@department.12/@room/@lies.9 //@department.14/@room/@lies.7 //@department.8/@room/@lies.8 //@department.21/@room/@lies.1"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="523" caresfor="//@department.0/@room/@lies.1 //@department.10/@room/@lies.1 //@department.10/@room/@lies.7 //@reception/@waits.21 //@reception/@waits.23 //@department.2/@room/@lies.5 //@department.12/@room/@lies.0 //@department.0/@room/@lies.12 //@department.9/@room/@lies.9 //@department.4/@room/@lies.9 //@department.3/@room/@lies.3 //@reception/@waits.31 //@department.6/@room/@lies.12"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="368" caresfor="//@department.4/@room/@lies.1 //@department.10/@room/@lies.3 //@department.11/@room/@lies.0 //@department.8/@room/@lies.1 //@department.0/@room/@lies.8 //@department.8/@room/@lies.3 //@department.13/@room/@lies.2 //@department.0/@room/@lies.15"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="235" caresfor="//@reception/@waits.18 //@department.9/@room/@lies.3 //@department.10/@room/@lies.9 //@department.0/@room/@lies.13 //@department.15/@room/@lies.7 //@department.2/@room/@lies.11 //@department.9/@room/@lies.17"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="862" caresfor="//@reception/@waits.7 //@reception/@waits.6 //@department.2/@room/@lies.0 //@department.9/@room/@lies.2 //@department.9/@room/@lies.4 //@reception/@waits.19 //@department.13/@room/@lies.0 //@department.10/@room/@lies.6 //@department.6/@room/@lies.2 //@department.14/@room/@lies.0 //@department.14/@room/@lies.4 //@department.12/@room/@lies.3 //@department.13/@room/@lies.3 //@department.1/@room/@lies.9"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="325"/>
   <staff xsi:type="HospitalExample:Nurse" staffID="204"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="803"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="724"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="970"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="504"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="518"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="641"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="357"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="129"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="407"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="355"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="930"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="528"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="366"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="866"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="564"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="411"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="215"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="336"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="721"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="722"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="694"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="870"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="777"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="327"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="487"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="5"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="373"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="948"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="818"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="520"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="478"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="80"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="466"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="460"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="104"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="904"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="236"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="496"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="877"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="437"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="226"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="4"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="882"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="439"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="437"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="483"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="496"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="823"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="558"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="203"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="142"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="571"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="986"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="205"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="151"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="409"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="391"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="30"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="178"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="748"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="406"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="811"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="862"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="650"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="247"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="608"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="678"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="811"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="336"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="105"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="156"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="818"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="236"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="60"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="931"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="197"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="477"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="128"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="293"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="987"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="77"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="944"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="192"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="855"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="827"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="584"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="892"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="6"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="664"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="796"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="700"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="386"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="691"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="616"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="478"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="938"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="660"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="263"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="867"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="909"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="990"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="426"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="426"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="471"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="631"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="337"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="117"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="147"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="344"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="247"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="830"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="807"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="211"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="191"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="896"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="235"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="444"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="164"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="769"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="514"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="805"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="101"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="330"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="750"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="211"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="271"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="490"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="863"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="328"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="979"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="52"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="473"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="237"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="695"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="2"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="125"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="473"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="997"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="688"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="356"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="14"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="949"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="573"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="354"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="25"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="803"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="498"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="228"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="444"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="142"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="650"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="127"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="698"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="850"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="684"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="718"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="140"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="538"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="673"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="775"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="15"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="306"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="851"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="895"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="9"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="958"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="313"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="569"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="723"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="73"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="138"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="141"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="615"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="531"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="611"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="388"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="239"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="400"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="496"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="738"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="841"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="294"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="535"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="364"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="635"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="591"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="639"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="682"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="320"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="137"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="439"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="984"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="655"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="314"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="148"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="220"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="162"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="601"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="936"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="184"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="268"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="9"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="234"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="605"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="461"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="18"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="686"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="900"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="261"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="890"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="668"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="582"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="93"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="499"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="584"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="600"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="359"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="43"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="364"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="86"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="291"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="275"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="867"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="288"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="386"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="131"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="126"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="673"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="509"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="880"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="624"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="475"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="959"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="185"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="53"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="166"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="77"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="685"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="226"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="631"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="216"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="1"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="109"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="28"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="128"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="275"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="152"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="603"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="86"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="630"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="348"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="955"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="323"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="181"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="740"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="509"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="580"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="470"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="296"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="196"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="854"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="457"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="340"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="603"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="636"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="449"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="5"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="87"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="235"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="595"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="373"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="615"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="980"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="814"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="258"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="321"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="377"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="307"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="815"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="59"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="538"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="11"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="432"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="425"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="447"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="636"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="572"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="22"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="874"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="163"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="531"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="971"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="15"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="924"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="284"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="914"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="164"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="653"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="872"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="10"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="985"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="129"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="21"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="701"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="208"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="295"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="928"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="623"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="849"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="670"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="808"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="535" caresfor="//@reception/@waits.4 //@reception/@waits.16 //@reception/@waits.13 //@department.0/@room/@lies.0 //@department.4/@room/@lies.0 //@department.9/@room/@lies.0 //@department.10/@room/@lies.4 //@department.5/@room/@lies.2 //@reception/@waits.26 //@department.15/@room/@lies.6 //@department.11/@room/@lies.3 //@department.13/@room/@lies.5 //@department.9/@room/@lies.14 //@department.12/@room/@lies.6 //@department.11/@room/@lies.5"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="466"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="857"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="890" caresfor="//@reception/@waits.2 //@reception/@waits.11 //@department.0/@room/@lies.2 //@department.1/@room/@lies.1 //@department.6/@room/@lies.0 //@department.5/@room/@lies.3 //@department.14/@room/@lies.1 //@department.11/@room/@lies.2 //@department.8/@room/@lies.7 //@department.6/@room/@lies.10 //@department.16/@room/@lies.1 //@department.15/@room/@lies.9 //@department.13/@room/@lies.6"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="530" caresfor="//@reception/@waits.8 //@reception/@waits.15 //@reception/@waits.5 //@reception/@waits.17 //@department.0/@room/@lies.4 //@department.10/@room/@lies.5 //@department.1/@room/@lies.5 //@department.14/@room/@lies.2 //@department.4/@room/@lies.11 //@department.3/@room/@lies.6 //@department.19/@room/@lies.0 //@department.5/@room/@lies.10"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="634"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="141"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="942" caresfor="//@reception/@waits.12 //@department.0/@room/@lies.6 //@department.4/@room/@lies.3 //@department.7/@room/@lies.1 //@department.1/@room/@lies.6 //@department.2/@room/@lies.6 //@department.1/@room/@lies.7 //@department.5/@room/@lies.5 //@department.16/@room/@lies.0 //@department.7/@room/@lies.7 //@department.15/@room/@lies.8 //@department.2/@room/@lies.10 //@department.5/@room/@lies.9 //@department.10/@room/@lies.11"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="466" caresfor="//@reception/@waits.3 //@reception/@waits.14 //@reception/@waits.9 //@department.10/@room/@lies.2 //@department.9/@room/@lies.5 //@reception/@waits.22 //@department.2/@room/@lies.4 //@department.15/@room/@lies.1 //@department.9/@room/@lies.7 //@department.4/@room/@lies.6 //@department.3/@room/@lies.1 //@department.15/@room/@lies.3 //@department.4/@room/@lies.8 //@department.9/@room/@lies.11 //@department.11/@room/@lies.4 //@reception/@waits.32"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="423"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="667" caresfor="//@department.0/@room/@lies.3 //@department.0/@room/@lies.5 //@department.6/@room/@lies.5 //@department.13/@room/@lies.1 //@department.7/@room/@lies.5 //@department.0/@room/@lies.10 //@department.3/@room/@lies.2"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="526" caresfor="//@department.4/@room/@lies.2 //@department.7/@room/@lies.2 //@department.6/@room/@lies.4 //@department.1/@room/@lies.4 //@department.0/@room/@lies.7 //@department.3/@room/@lies.0 //@department.7/@room/@lies.4 //@department.0/@room/@lies.9 //@reception/@waits.28 //@department.10/@room/@lies.10 //@department.14/@room/@lies.6 //@department.2/@room/@lies.12 //@department.16/@room/@lies.3"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="778" caresfor="//@department.9/@room/@lies.6 //@department.8/@room/@lies.2 //@reception/@waits.25"/>
   <staff xsi:type="HospitalExample:Nurse" staffID="217"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="808"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="982"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="407"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="766"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="112"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="430"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="157" caresfor="//@department.2/@room/@lies.3 //@department.1/@room/@lies.3 //@department.4/@room/@lies.4 //@department.8/@room/@lies.4 //@department.12/@room/@lies.1 //@department.4/@room/@lies.7 //@department.15/@room/@lies.5 //@reception/@waits.27 //@department.12/@room/@lies.5 //@department.12/@room/@lies.8 //@department.15/@room/@lies.11 //@department.3/@room/@lies.7"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="248" caresfor="//@department.6/@room/@lies.1 //@department.2/@room/@lies.2 //@department.11/@room/@lies.1 //@reception/@waits.24 //@department.12/@room/@lies.7 //@department.1/@room/@lies.11"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="846"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="400"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="662" caresfor="//@department.10/@room/@lies.8 //@department.15/@room/@lies.0 //@department.6/@room/@lies.7 //@department.9/@room/@lies.8 //@department.14/@room/@lies.3 //@department.8/@room/@lies.5 //@department.9/@room/@lies.13 //@department.14/@room/@lies.5 //@department.6/@room/@lies.13"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="97"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="133" caresfor="//@department.15/@room/@lies.2 //@department.6/@room/@lies.8 //@department.5/@room/@lies.8 //@department.7/@room/@lies.6 //@department.1/@room/@lies.10 //@department.1/@room/@lies.12 //@department.16/@room/@lies.2 //@department.9/@room/@lies.16 //@department.19/@room/@lies.1"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="604"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="926" caresfor="//@department.5/@room/@lies.4 //@department.0/@room/@lies.11 //@department.1/@room/@lies.8 //@department.4/@room/@lies.10 //@department.6/@room/@lies.11"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="610" caresfor="//@department.5/@room/@lies.6 //@reception/@waits.29 //@department.3/@room/@lies.4 //@department.2/@room/@lies.9 //@department.1/@room/@lies.13"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="132" caresfor="//@department.5/@room/@lies.7 //@department.3/@room/@lies.8"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="632" caresfor="//@department.12/@room/@lies.4 //@department.8/@room/@lies.6 //@department.2/@room/@lies.8 //@reception/@waits.30 //@department.12/@room/@lies.10"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="551"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="772" caresfor="//@department.6/@room/@lies.9 //@department.0/@room/@lies.14 //@department.7/@room/@lies.8"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="380" caresfor="//@department.2/@room/@lies.7"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="58" caresfor="//@department.3/@room/@lies.5"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="879"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="392"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="956"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="837" caresfor="//@department.10/@room/@lies.12"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="635"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="695"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="765" caresfor="//@department.15/@room/@lies.10 //@department.9/@room/@lies.18"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="871" caresfor="//@reception/@waits.33 //@department.3/@room/@lies.9"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="13"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="575" caresfor="//@department.3/@room/@lies.10 //@department.10/@room/@lies.13"/>
+  <department>
+    <room>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.39"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.44"/>
+      <lies doctor="//@staff.5"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.39"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.32"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.40"/>
+      <lies doctor="//@staff.1"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.32"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.45"/>
+      <lies doctor="//@staff.42"/>
+      <lies doctor="//@staff.40"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.25"/>
+      <lies/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.40"/>
+      <lies doctor="//@staff.46"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.41"/>
+      <lies doctor="//@staff.54"/>
+      <lies doctor="//@staff.56"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.39"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.3"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.39"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.40"/>
+      <lies doctor="//@staff.41"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.18"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.32"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.44"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.39"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.35"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.44"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.26"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.42"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.3"/>
+      <lies/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.26"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.2"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.53"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.50"/>
+      <lies doctor="//@staff.56"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.32"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.14"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.4"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.42"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.32"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.42"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.24"/>
+      <lies doctor="//@staff.5"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.17"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.7"/>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.25"/>
+      <lies doctor="//@staff.3"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.35"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.22"/>
+      <lies doctor="//@staff.3"/>
+      <lies doctor="//@staff.31"/>
+      <lies doctor="//@staff.14"/>
+      <lies doctor="//@staff.6"/>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.53"/>
+      <lies doctor="//@staff.31"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.21"/>
+      <lies doctor="//@staff.17"/>
+      <lies doctor="//@staff.37"/>
+      <lies doctor="//@staff.25"/>
+    </room>
+  </department>
+  <department>
+    <room/>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.2"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.18"/>
+      <lies doctor="//@staff.37"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.3"/>
+    </room>
+  </department>
+  <department>
+    <room>
+      <lies doctor="//@staff.1"/>
+      <lies doctor="//@staff.3"/>
+    </room>
+  </department>
 </HospitalExample:Hospital>

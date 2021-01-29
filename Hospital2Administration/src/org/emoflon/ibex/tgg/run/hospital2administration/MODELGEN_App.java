@@ -18,7 +18,7 @@ import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGENStopCriterion;
 public class MODELGEN_App extends MODELGEN {
 
 	// eMoflon supports other pattern matching engines. Replace _DefaultRegistrationHelper with one of the other registrationHelpers from the *.config-package to choose between them. Default: Democles 
-	public static IRegistrationHelper registrationHelper = new _DefaultRegistrationHelper();
+	public static IRegistrationHelper registrationHelper = new HiPERegistrationHelper();
 
 	public MODELGEN_App() throws IOException {
 		super(registrationHelper.createIbexOptions().resourceHandler(new TGGResourceHandler() {

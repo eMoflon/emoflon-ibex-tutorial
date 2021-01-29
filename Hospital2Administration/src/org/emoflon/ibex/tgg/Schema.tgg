@@ -25,11 +25,6 @@
 		#trg->Patient
 	}
 	
-	/*MedicationToTreatment{
-		#src->Carelevel
-		#trg->Treatment
-	}*/
-	
 }
 
 #attributeConditions {
@@ -43,6 +38,7 @@
 		#sync:[B F]
 		#gen:[F]
 	}
+	
 	#userDefined carelevelToMedication(carelevel:Carelevel, medication:Medication){
 		#sync: [B B], [B F], [F B]
 		#gen:  [B B], [B F], [F B], [F F]

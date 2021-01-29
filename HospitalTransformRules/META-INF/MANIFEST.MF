@@ -14,7 +14,8 @@ Require-Bundle: org.emoflon.ibex.common,
  org.emoflon.ibex.gt.democles,
  HospitalExample;bundle-version="0.0.1",
  org.emoflon.ibex.patternmodel,
- org.emoflon.ibex.gt.hipe
+ org.emoflon.ibex.gt.hipe,
+ org.emoflon.ibex.gt.viatra
 Export-Package: HospitalTransformRules.api,
  HospitalTransformRules.api.matches,
  HospitalTransformRules.api.rules

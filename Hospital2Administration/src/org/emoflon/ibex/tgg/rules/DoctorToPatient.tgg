@@ -1,0 +1,44 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule DoctorToPatient #with Hospital2Administration
+
+#source { 
+	d:Doctor{
+		
+	}
+	p1:Patient{
+		++-doctor->d
+	}
+}
+
+#target {
+	
+	s:Staff{
+		++-treatment->t
+	}
+		
+	p2:Patient{
+		-treatment->t
+	}
+	t:Treatment{
+		
+	}
+}
+
+#correspondence {
+	
+	pToP:PatientToPatient{
+		#src->p1
+		#trg->p2
+	}
+	dToS:StaffToStaff{
+		#src->d
+		#trg->s
+	
+	}
+}
+
+#attributeConditions {
+	
+}

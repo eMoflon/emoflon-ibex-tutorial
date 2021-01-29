@@ -1,0 +1,51 @@
+#import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+#import "platform:/resource/AdministrationExample/model/AdministrationExample.ecore"
+
+#schema Hospital2Administration
+	 
+#source {
+	HospitalExample
+}
+
+#target { 
+	AdministrationExample
+} 
+
+#correspondence {
+	HospitalToAdministration{
+		#src->Hospital
+		#trg->Administration
+	}
+	StaffToStaff{
+		#src->Staff
+		#trg->Staff
+	}
+	PatientToPatient{
+		#src->Patient
+		#trg->Patient
+	}
+	
+	/*MedicationToTreatment{
+		#src->Carelevel
+		#trg->Treatment
+	}*/
+	
+}
+
+#attributeConditions {
+	
+	#userDefined doctorsalary(salary:EDouble){
+		#sync:[B F]
+		#gen:[F]
+	}
+	
+	#userDefined nursesalary(salary:EDouble){
+		#sync:[B F]
+		#gen:[F]
+	}
+	#userDefined carelevelToMedication(carelevel:Carelevel, medication:Medication){
+		#sync: [B B], [B F], [F B]
+		#gen:  [B B], [B F], [F B], [F F]
+	}
+	
+}

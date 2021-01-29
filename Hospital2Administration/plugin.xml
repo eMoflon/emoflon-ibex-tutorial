@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Hospital2Administration -->
+      <package
+            uri="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore"
+            class="Hospital2Administration.Hospital2AdministrationPackage"
+            genModel="model/Hospital2Administration.genmodel"/>
+   </extension>
+
+</plugin>

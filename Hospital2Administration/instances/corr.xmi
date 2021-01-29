@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Hospital2Administration="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
+  <Hospital2Administration:HospitalToAdministration>
+    <source href="src.xmi#/"/>
+    <target href="trg.xmi#/"/>
+  </Hospital2Administration:HospitalToAdministration>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.0"/>
+    <target href="trg.xmi#//@staff.0"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.1"/>
+    <target href="trg.xmi#//@staff.1"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.2"/>
+    <target href="trg.xmi#//@staff.2"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.3"/>
+    <target href="trg.xmi#//@staff.3"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.4"/>
+    <target href="trg.xmi#//@staff.4"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.5"/>
+    <target href="trg.xmi#//@staff.5"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.6"/>
+    <target href="trg.xmi#//@staff.6"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.7"/>
+    <target href="trg.xmi#//@staff.7"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.8"/>
+    <target href="trg.xmi#//@staff.8"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.9"/>
+    <target href="trg.xmi#//@staff.9"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.10"/>
+    <target href="trg.xmi#//@staff.10"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.11"/>
+    <target href="trg.xmi#//@staff.11"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.12"/>
+    <target href="trg.xmi#//@staff.12"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.13"/>
+    <target href="trg.xmi#//@staff.13"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.14"/>
+    <target href="trg.xmi#//@staff.14"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.15"/>
+    <target href="trg.xmi#//@staff.15"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.16"/>
+    <target href="trg.xmi#//@staff.16"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.17"/>
+    <target href="trg.xmi#//@staff.17"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.18"/>
+    <target href="trg.xmi#//@staff.18"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.19"/>
+    <target href="trg.xmi#//@staff.19"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.20"/>
+    <target href="trg.xmi#//@staff.20"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.21"/>
+    <target href="trg.xmi#//@staff.21"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.22"/>
+    <target href="trg.xmi#//@staff.22"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.23"/>
+    <target href="trg.xmi#//@staff.23"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.24"/>
+    <target href="trg.xmi#//@staff.24"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.25"/>
+    <target href="trg.xmi#//@staff.25"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.26"/>
+    <target href="trg.xmi#//@staff.26"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.27"/>
+    <target href="trg.xmi#//@staff.27"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.28"/>
+    <target href="trg.xmi#//@staff.28"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.29"/>
+    <target href="trg.xmi#//@staff.29"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.30"/>
+    <target href="trg.xmi#//@staff.30"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.31"/>
+    <target href="trg.xmi#//@staff.31"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.32"/>
+    <target href="trg.xmi#//@staff.32"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.33"/>
+    <target href="trg.xmi#//@staff.33"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.34"/>
+    <target href="trg.xmi#//@staff.34"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.35"/>
+    <target href="trg.xmi#//@staff.35"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.36"/>
+    <target href="trg.xmi#//@staff.36"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.37"/>
+    <target href="trg.xmi#//@staff.37"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.38"/>
+    <target href="trg.xmi#//@staff.38"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.39"/>
+    <target href="trg.xmi#//@staff.39"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.40"/>
+    <target href="trg.xmi#//@staff.40"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.41"/>
+    <target href="trg.xmi#//@staff.41"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.42"/>
+    <target href="trg.xmi#//@staff.42"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.43"/>
+    <target href="trg.xmi#//@staff.43"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.44"/>
+    <target href="trg.xmi#//@staff.44"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.45"/>
+    <target href="trg.xmi#//@staff.45"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.46"/>
+    <target href="trg.xmi#//@staff.46"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.47"/>
+    <target href="trg.xmi#//@staff.47"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.48"/>
+    <target href="trg.xmi#//@staff.48"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.49"/>
+    <target href="trg.xmi#//@staff.49"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.50"/>
+    <target href="trg.xmi#//@staff.50"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.51"/>
+    <target href="trg.xmi#//@staff.51"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.52"/>
+    <target href="trg.xmi#//@staff.52"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.53"/>
+    <target href="trg.xmi#//@staff.53"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.54"/>
+    <target href="trg.xmi#//@staff.54"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.55"/>
+    <target href="trg.xmi#//@staff.55"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.56"/>
+    <target href="trg.xmi#//@staff.56"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.57"/>
+    <target href="trg.xmi#//@staff.57"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.58"/>
+    <target href="trg.xmi#//@staff.58"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.59"/>
+    <target href="trg.xmi#//@staff.59"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.60"/>
+    <target href="trg.xmi#//@staff.60"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.61"/>
+    <target href="trg.xmi#//@staff.61"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.62"/>
+    <target href="trg.xmi#//@staff.62"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.63"/>
+    <target href="trg.xmi#//@staff.63"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.64"/>
+    <target href="trg.xmi#//@staff.64"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.65"/>
+    <target href="trg.xmi#//@staff.65"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.66"/>
+    <target href="trg.xmi#//@staff.66"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.67"/>
+    <target href="trg.xmi#//@staff.67"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.68"/>
+    <target href="trg.xmi#//@staff.68"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.69"/>
+    <target href="trg.xmi#//@staff.69"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.70"/>
+    <target href="trg.xmi#//@staff.70"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.71"/>
+    <target href="trg.xmi#//@staff.71"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.72"/>
+    <target href="trg.xmi#//@staff.72"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.73"/>
+    <target href="trg.xmi#//@staff.73"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.74"/>
+    <target href="trg.xmi#//@staff.74"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.75"/>
+    <target href="trg.xmi#//@staff.75"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.76"/>
+    <target href="trg.xmi#//@staff.76"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.77"/>
+    <target href="trg.xmi#//@staff.77"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.78"/>
+    <target href="trg.xmi#//@staff.78"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.79"/>
+    <target href="trg.xmi#//@staff.79"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.80"/>
+    <target href="trg.xmi#//@staff.80"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.81"/>
+    <target href="trg.xmi#//@staff.81"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.82"/>
+    <target href="trg.xmi#//@staff.82"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.83"/>
+    <target href="trg.xmi#//@staff.83"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.84"/>
+    <target href="trg.xmi#//@staff.84"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.85"/>
+    <target href="trg.xmi#//@staff.85"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.86"/>
+    <target href="trg.xmi#//@staff.86"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.87"/>
+    <target href="trg.xmi#//@staff.87"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.88"/>
+    <target href="trg.xmi#//@staff.88"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.89"/>
+    <target href="trg.xmi#//@staff.89"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.90"/>
+    <target href="trg.xmi#//@staff.90"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.91"/>
+    <target href="trg.xmi#//@staff.91"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.92"/>
+    <target href="trg.xmi#//@staff.92"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.93"/>
+    <target href="trg.xmi#//@staff.93"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.94"/>
+    <target href="trg.xmi#//@staff.94"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.95"/>
+    <target href="trg.xmi#//@staff.95"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.96"/>
+    <target href="trg.xmi#//@staff.96"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.97"/>
+    <target href="trg.xmi#//@staff.97"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.98"/>
+    <target href="trg.xmi#//@staff.98"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.99"/>
+    <target href="trg.xmi#//@staff.99"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.100"/>
+    <target href="trg.xmi#//@staff.100"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.101"/>
+    <target href="trg.xmi#//@staff.101"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.102"/>
+    <target href="trg.xmi#//@staff.102"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.103"/>
+    <target href="trg.xmi#//@staff.103"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.104"/>
+    <target href="trg.xmi#//@staff.104"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.105"/>
+    <target href="trg.xmi#//@staff.105"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.106"/>
+    <target href="trg.xmi#//@staff.106"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.107"/>
+    <target href="trg.xmi#//@staff.107"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.108"/>
+    <target href="trg.xmi#//@staff.108"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.109"/>
+    <target href="trg.xmi#//@staff.109"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.110"/>
+    <target href="trg.xmi#//@staff.110"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.111"/>
+    <target href="trg.xmi#//@staff.111"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.112"/>
+    <target href="trg.xmi#//@staff.112"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.113"/>
+    <target href="trg.xmi#//@staff.113"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.114"/>
+    <target href="trg.xmi#//@staff.114"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.115"/>
+    <target href="trg.xmi#//@staff.115"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.116"/>
+    <target href="trg.xmi#//@staff.116"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.117"/>
+    <target href="trg.xmi#//@staff.117"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.118"/>
+    <target href="trg.xmi#//@staff.118"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.119"/>
+    <target href="trg.xmi#//@staff.119"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.120"/>
+    <target href="trg.xmi#//@staff.120"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.121"/>
+    <target href="trg.xmi#//@staff.121"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.122"/>
+    <target href="trg.xmi#//@staff.122"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.123"/>
+    <target href="trg.xmi#//@staff.123"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.124"/>
+    <target href="trg.xmi#//@staff.124"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.125"/>
+    <target href="trg.xmi#//@staff.125"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.126"/>
+    <target href="trg.xmi#//@staff.126"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.127"/>
+    <target href="trg.xmi#//@staff.127"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.128"/>
+    <target href="trg.xmi#//@staff.128"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.129"/>
+    <target href="trg.xmi#//@staff.129"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.130"/>
+    <target href="trg.xmi#//@staff.130"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.131"/>
+    <target href="trg.xmi#//@staff.131"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.132"/>
+    <target href="trg.xmi#//@staff.132"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.133"/>
+    <target href="trg.xmi#//@staff.133"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.134"/>
+    <target href="trg.xmi#//@staff.134"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.135"/>
+    <target href="trg.xmi#//@staff.135"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.136"/>
+    <target href="trg.xmi#//@staff.136"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.137"/>
+    <target href="trg.xmi#//@staff.137"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.138"/>
+    <target href="trg.xmi#//@staff.138"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.139"/>
+    <target href="trg.xmi#//@staff.139"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.140"/>
+    <target href="trg.xmi#//@staff.140"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.141"/>
+    <target href="trg.xmi#//@staff.141"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.142"/>
+    <target href="trg.xmi#//@staff.142"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.143"/>
+    <target href="trg.xmi#//@staff.143"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.144"/>
+    <target href="trg.xmi#//@staff.144"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.145"/>
+    <target href="trg.xmi#//@staff.145"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.146"/>
+    <target href="trg.xmi#//@staff.146"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.147"/>
+    <target href="trg.xmi#//@staff.147"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.148"/>
+    <target href="trg.xmi#//@staff.148"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.149"/>
+    <target href="trg.xmi#//@staff.149"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.150"/>
+    <target href="trg.xmi#//@staff.150"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.151"/>
+    <target href="trg.xmi#//@staff.151"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.152"/>
+    <target href="trg.xmi#//@staff.152"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.153"/>
+    <target href="trg.xmi#//@staff.153"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.154"/>
+    <target href="trg.xmi#//@staff.154"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.155"/>
+    <target href="trg.xmi#//@staff.155"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.156"/>
+    <target href="trg.xmi#//@staff.156"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.157"/>
+    <target href="trg.xmi#//@staff.157"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.158"/>
+    <target href="trg.xmi#//@staff.158"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.159"/>
+    <target href="trg.xmi#//@staff.159"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.160"/>
+    <target href="trg.xmi#//@staff.160"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.161"/>
+    <target href="trg.xmi#//@staff.161"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.162"/>
+    <target href="trg.xmi#//@staff.162"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.163"/>
+    <target href="trg.xmi#//@staff.163"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.164"/>
+    <target href="trg.xmi#//@staff.164"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.165"/>
+    <target href="trg.xmi#//@staff.165"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.166"/>
+    <target href="trg.xmi#//@staff.166"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.167"/>
+    <target href="trg.xmi#//@staff.167"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.168"/>
+    <target href="trg.xmi#//@staff.168"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.169"/>
+    <target href="trg.xmi#//@staff.169"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.170"/>
+    <target href="trg.xmi#//@staff.170"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.171"/>
+    <target href="trg.xmi#//@staff.171"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.172"/>
+    <target href="trg.xmi#//@staff.172"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.173"/>
+    <target href="trg.xmi#//@staff.173"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.174"/>
+    <target href="trg.xmi#//@staff.174"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.175"/>
+    <target href="trg.xmi#//@staff.175"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.176"/>
+    <target href="trg.xmi#//@staff.176"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.177"/>
+    <target href="trg.xmi#//@staff.177"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.178"/>
+    <target href="trg.xmi#//@staff.178"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.179"/>
+    <target href="trg.xmi#//@staff.179"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.180"/>
+    <target href="trg.xmi#//@staff.180"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.181"/>
+    <target href="trg.xmi#//@staff.181"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.182"/>
+    <target href="trg.xmi#//@staff.182"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.183"/>
+    <target href="trg.xmi#//@staff.183"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.184"/>
+    <target href="trg.xmi#//@staff.184"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.185"/>
+    <target href="trg.xmi#//@staff.185"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.186"/>
+    <target href="trg.xmi#//@staff.186"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.187"/>
+    <target href="trg.xmi#//@staff.187"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.188"/>
+    <target href="trg.xmi#//@staff.188"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.189"/>
+    <target href="trg.xmi#//@staff.189"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.190"/>
+    <target href="trg.xmi#//@staff.190"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.191"/>
+    <target href="trg.xmi#//@staff.191"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.192"/>
+    <target href="trg.xmi#//@staff.192"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.193"/>
+    <target href="trg.xmi#//@staff.193"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.194"/>
+    <target href="trg.xmi#//@staff.194"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.195"/>
+    <target href="trg.xmi#//@staff.195"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.196"/>
+    <target href="trg.xmi#//@staff.196"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.197"/>
+    <target href="trg.xmi#//@staff.197"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.198"/>
+    <target href="trg.xmi#//@staff.198"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.199"/>
+    <target href="trg.xmi#//@staff.199"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.200"/>
+    <target href="trg.xmi#//@staff.200"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.201"/>
+    <target href="trg.xmi#//@staff.201"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.202"/>
+    <target href="trg.xmi#//@staff.202"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.203"/>
+    <target href="trg.xmi#//@staff.203"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.204"/>
+    <target href="trg.xmi#//@staff.204"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.205"/>
+    <target href="trg.xmi#//@staff.205"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.206"/>
+    <target href="trg.xmi#//@staff.206"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.207"/>
+    <target href="trg.xmi#//@staff.207"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.208"/>
+    <target href="trg.xmi#//@staff.208"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.209"/>
+    <target href="trg.xmi#//@staff.209"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.210"/>
+    <target href="trg.xmi#//@staff.210"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.211"/>
+    <target href="trg.xmi#//@staff.211"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.212"/>
+    <target href="trg.xmi#//@staff.212"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.213"/>
+    <target href="trg.xmi#//@staff.213"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.214"/>
+    <target href="trg.xmi#//@staff.214"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.215"/>
+    <target href="trg.xmi#//@staff.215"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.216"/>
+    <target href="trg.xmi#//@staff.216"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.217"/>
+    <target href="trg.xmi#//@staff.217"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.218"/>
+    <target href="trg.xmi#//@staff.218"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.219"/>
+    <target href="trg.xmi#//@staff.219"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.220"/>
+    <target href="trg.xmi#//@staff.220"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.221"/>
+    <target href="trg.xmi#//@staff.221"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.222"/>
+    <target href="trg.xmi#//@staff.222"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.223"/>
+    <target href="trg.xmi#//@staff.223"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.224"/>
+    <target href="trg.xmi#//@staff.224"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.225"/>
+    <target href="trg.xmi#//@staff.225"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.226"/>
+    <target href="trg.xmi#//@staff.226"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.227"/>
+    <target href="trg.xmi#//@staff.227"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.228"/>
+    <target href="trg.xmi#//@staff.228"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.229"/>
+    <target href="trg.xmi#//@staff.229"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.230"/>
+    <target href="trg.xmi#//@staff.230"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.231"/>
+    <target href="trg.xmi#//@staff.231"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.232"/>
+    <target href="trg.xmi#//@staff.232"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.233"/>
+    <target href="trg.xmi#//@staff.233"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.234"/>
+    <target href="trg.xmi#//@staff.234"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.235"/>
+    <target href="trg.xmi#//@staff.235"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.236"/>
+    <target href="trg.xmi#//@staff.236"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.237"/>
+    <target href="trg.xmi#//@staff.237"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.238"/>
+    <target href="trg.xmi#//@staff.238"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.239"/>
+    <target href="trg.xmi#//@staff.239"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.240"/>
+    <target href="trg.xmi#//@staff.240"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.241"/>
+    <target href="trg.xmi#//@staff.241"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.242"/>
+    <target href="trg.xmi#//@staff.242"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.243"/>
+    <target href="trg.xmi#//@staff.243"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.244"/>
+    <target href="trg.xmi#//@staff.244"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.245"/>
+    <target href="trg.xmi#//@staff.245"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.246"/>
+    <target href="trg.xmi#//@staff.246"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.247"/>
+    <target href="trg.xmi#//@staff.247"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.248"/>
+    <target href="trg.xmi#//@staff.248"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.249"/>
+    <target href="trg.xmi#//@staff.249"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.250"/>
+    <target href="trg.xmi#//@staff.250"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.251"/>
+    <target href="trg.xmi#//@staff.251"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.252"/>
+    <target href="trg.xmi#//@staff.252"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.253"/>
+    <target href="trg.xmi#//@staff.253"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.254"/>
+    <target href="trg.xmi#//@staff.254"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.255"/>
+    <target href="trg.xmi#//@staff.255"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.256"/>
+    <target href="trg.xmi#//@staff.256"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.257"/>
+    <target href="trg.xmi#//@staff.257"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.258"/>
+    <target href="trg.xmi#//@staff.258"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.259"/>
+    <target href="trg.xmi#//@staff.259"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.260"/>
+    <target href="trg.xmi#//@staff.260"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.261"/>
+    <target href="trg.xmi#//@staff.261"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.262"/>
+    <target href="trg.xmi#//@staff.262"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.263"/>
+    <target href="trg.xmi#//@staff.263"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.264"/>
+    <target href="trg.xmi#//@staff.264"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.265"/>
+    <target href="trg.xmi#//@staff.265"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.266"/>
+    <target href="trg.xmi#//@staff.266"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.267"/>
+    <target href="trg.xmi#//@staff.267"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.268"/>
+    <target href="trg.xmi#//@staff.268"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.269"/>
+    <target href="trg.xmi#//@staff.269"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.270"/>
+    <target href="trg.xmi#//@staff.270"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.271"/>
+    <target href="trg.xmi#//@staff.271"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.272"/>
+    <target href="trg.xmi#//@staff.272"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.273"/>
+    <target href="trg.xmi#//@staff.273"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.274"/>
+    <target href="trg.xmi#//@staff.274"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.275"/>
+    <target href="trg.xmi#//@staff.275"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.276"/>
+    <target href="trg.xmi#//@staff.276"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.277"/>
+    <target href="trg.xmi#//@staff.277"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.278"/>
+    <target href="trg.xmi#//@staff.278"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.279"/>
+    <target href="trg.xmi#//@staff.279"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.280"/>
+    <target href="trg.xmi#//@staff.280"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.281"/>
+    <target href="trg.xmi#//@staff.281"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.282"/>
+    <target href="trg.xmi#//@staff.282"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.283"/>
+    <target href="trg.xmi#//@staff.283"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.284"/>
+    <target href="trg.xmi#//@staff.284"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.285"/>
+    <target href="trg.xmi#//@staff.285"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.286"/>
+    <target href="trg.xmi#//@staff.286"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.287"/>
+    <target href="trg.xmi#//@staff.287"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.288"/>
+    <target href="trg.xmi#//@staff.288"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.289"/>
+    <target href="trg.xmi#//@staff.289"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.290"/>
+    <target href="trg.xmi#//@staff.290"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.291"/>
+    <target href="trg.xmi#//@staff.291"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.292"/>
+    <target href="trg.xmi#//@staff.292"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.293"/>
+    <target href="trg.xmi#//@staff.293"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.294"/>
+    <target href="trg.xmi#//@staff.294"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.295"/>
+    <target href="trg.xmi#//@staff.295"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.296"/>
+    <target href="trg.xmi#//@staff.296"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.297"/>
+    <target href="trg.xmi#//@staff.297"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.298"/>
+    <target href="trg.xmi#//@staff.298"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.299"/>
+    <target href="trg.xmi#//@staff.299"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.300"/>
+    <target href="trg.xmi#//@staff.300"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.301"/>
+    <target href="trg.xmi#//@staff.301"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.302"/>
+    <target href="trg.xmi#//@staff.302"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.303"/>
+    <target href="trg.xmi#//@staff.303"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.304"/>
+    <target href="trg.xmi#//@staff.304"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.305"/>
+    <target href="trg.xmi#//@staff.305"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.306"/>
+    <target href="trg.xmi#//@staff.306"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.307"/>
+    <target href="trg.xmi#//@staff.307"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.308"/>
+    <target href="trg.xmi#//@staff.308"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.309"/>
+    <target href="trg.xmi#//@staff.309"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.310"/>
+    <target href="trg.xmi#//@staff.310"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.311"/>
+    <target href="trg.xmi#//@staff.311"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.312"/>
+    <target href="trg.xmi#//@staff.312"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.313"/>
+    <target href="trg.xmi#//@staff.313"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.314"/>
+    <target href="trg.xmi#//@staff.314"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.315"/>
+    <target href="trg.xmi#//@staff.315"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.316"/>
+    <target href="trg.xmi#//@staff.316"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.317"/>
+    <target href="trg.xmi#//@staff.317"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.318"/>
+    <target href="trg.xmi#//@staff.318"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.319"/>
+    <target href="trg.xmi#//@staff.319"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.320"/>
+    <target href="trg.xmi#//@staff.320"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.321"/>
+    <target href="trg.xmi#//@staff.321"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.322"/>
+    <target href="trg.xmi#//@staff.322"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.323"/>
+    <target href="trg.xmi#//@staff.323"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.324"/>
+    <target href="trg.xmi#//@staff.324"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.325"/>
+    <target href="trg.xmi#//@staff.325"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.326"/>
+    <target href="trg.xmi#//@staff.326"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.327"/>
+    <target href="trg.xmi#//@staff.327"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.328"/>
+    <target href="trg.xmi#//@staff.328"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.329"/>
+    <target href="trg.xmi#//@staff.329"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.330"/>
+    <target href="trg.xmi#//@staff.330"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.331"/>
+    <target href="trg.xmi#//@staff.331"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.332"/>
+    <target href="trg.xmi#//@staff.332"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.333"/>
+    <target href="trg.xmi#//@staff.333"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.334"/>
+    <target href="trg.xmi#//@staff.334"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.335"/>
+    <target href="trg.xmi#//@staff.335"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.336"/>
+    <target href="trg.xmi#//@staff.336"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.337"/>
+    <target href="trg.xmi#//@staff.337"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.338"/>
+    <target href="trg.xmi#//@staff.338"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.339"/>
+    <target href="trg.xmi#//@staff.339"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.340"/>
+    <target href="trg.xmi#//@staff.340"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.341"/>
+    <target href="trg.xmi#//@staff.341"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.342"/>
+    <target href="trg.xmi#//@staff.342"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Nurse" href="src.xmi#//@staff.343"/>
+    <target href="trg.xmi#//@staff.343"/>
+  </Hospital2Administration:StaffToStaff>
+  <Hospital2Administration:StaffToStaff>
+    <source xsi:type="HospitalExample:Doctor" href="src.xmi#//@staff.344"/>
+    <target href="trg.xmi#//@staff.344"/>
+  </Hospital2Administration:StaffToStaff>
+</xmi:XMI>

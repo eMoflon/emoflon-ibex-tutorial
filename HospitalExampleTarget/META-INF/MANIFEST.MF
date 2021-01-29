@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HospitalExampleTarget
+Bundle-SymbolicName: HospitalExampleTarget;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: 
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: HospitalExampleTarget
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Export-Package: HospitalExampleTarget.impl,
+ HospitalExampleTarget,
+ HospitalExampleTarget.util

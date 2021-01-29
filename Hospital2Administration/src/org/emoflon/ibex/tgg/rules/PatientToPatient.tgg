@@ -1,0 +1,56 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule PatientToPatient  #with Hospital2Administration
+
+#source { 
+	++p1:Patient
+	
+	h:Hospital{
+		
+	}
+		
+}
+
+#target {
+	
+	v:Administration{
+		
+	}
+	
+	++p2:Patient{
+		++-treatment->t
+	}
+	
+	
+	
+	++t:Treatment{
+		
+	}
+	
+	
+	
+	
+}
+
+#correspondence {
+	
+	++pTop:PatientToPatient{
+		#src->p1
+		#trg->p2
+	}
+	
+	htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+	
+	
+	
+}
+
+#attributeConditions {
+	
+	//carelevelToMedication(p1.level, t.medication)
+	
+}

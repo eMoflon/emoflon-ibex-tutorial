@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: AdministrationExample
+Bundle-SymbolicName: AdministrationExample;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: 
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: AdministrationExample
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Export-Package: AdministrationExample.util,
+ AdministrationExample,
+ AdministrationExample.impl

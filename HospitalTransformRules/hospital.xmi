@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<HospitalExample:Hospital xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
+  <reception>
+    <waits/>
+    <waits/>
+    <waits/>
+    <waits/>
+  </reception>
+  <staff xsi:type="HospitalExample:Nurse"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="2"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="3" responsible="//@department.0/@room"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="1" caresfor="//@department.0/@room/@lies.0"/>
+  <department>
+    <room capacity="4">
+      <lies doctor="//@staff.3"/>
+    </room>
+  </department>
+</HospitalExample:Hospital>

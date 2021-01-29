@@ -1,0 +1,26 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule RoomRule #with Hospital2Administration
+
+#source { 
+	
+	d:Department{
+		++-room->ro
+	}
+	++ro:Room{
+		
+	}
+}
+
+#target {
+	
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

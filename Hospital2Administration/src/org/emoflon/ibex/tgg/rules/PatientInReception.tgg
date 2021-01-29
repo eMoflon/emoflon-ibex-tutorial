@@ -1,0 +1,42 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule PatientInReception #extends PatientToPatient #with Hospital2Administration
+
+
+#source { 
+	
+	
+	h:Hospital{
+		-reception->r
+	}
+	
+	r:Reception{
+		++-waits->p1
+	}
+	
+}
+
+#target {
+	
+	v:Administration{
+		++-patient->p2
+	}
+	
+}
+
+#correspondence {
+	
+	htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+	
+	
+	
+	
+}
+
+#attributeConditions {
+	
+}

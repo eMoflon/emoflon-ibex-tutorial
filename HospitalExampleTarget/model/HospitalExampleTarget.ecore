@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="HospitalExampleTarget" nsURI="platform:/resource/HospitalExampleTarget/model/HospitalExampleTarget.ecore"
+    nsPrefix="HospitalExampleTarget">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="TODO: Add documentation for HospitalExampleTarget. Hint: You may copy this element in the Ecore editor to add documentation to EClasses, EOperations, ..."/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Verwaltung">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staff" upperBound="-1"
+        eType="#//Staff" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patient" upperBound="-1"
+        eType="#//Patient" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Staff" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shifts" lowerBound="1"
+        eType="#//Shiftplan" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staffID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shift">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="#//DayTime"
+        transient="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Treatment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meds" eType="#//Medication"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Shiftplan">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shift" upperBound="-1"
+        eType="#//Shift" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="covers" upperBound="-1"
+        eType="#//Patient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Patient" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="treatment" lowerBound="1"
+        eType="#//Treatment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="covers" lowerBound="1"
+        upperBound="-1" eType="#//Shiftplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Medication">
+    <eLiterals name="strong"/>
+    <eLiterals name="medium" value="1"/>
+    <eLiterals name="weak" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DayTime">
+    <eLiterals name="night"/>
+    <eLiterals name="early" value="1"/>
+    <eLiterals name="late" value="2"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,42 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule ShitplanRule #with Hospital2Administration
+
+#source {
+	
+	p1:Patient{
+		
+	}
+	
+}
+
+#target {
+	
+	s:Staff{
+		++-shiftPlan->sp
+	}
+	++sp:Shiftplan{
+		++-shifts->sh
+		++-covers->p2
+	}
+	++sh:Shift{
+		
+	}
+	p2:Patient{
+		
+	}
+	
+}
+
+#correspondence {
+	
+	pToP:PatientToPatient{
+		#src->p1
+		#trg->p2
+	}
+}
+
+#attributeConditions {
+	
+}

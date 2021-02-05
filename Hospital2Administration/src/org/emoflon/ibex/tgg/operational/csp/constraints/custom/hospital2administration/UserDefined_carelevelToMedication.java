@@ -1,5 +1,7 @@
 package org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration;
 
+import java.util.Random;
+
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraint;
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable;
 
@@ -22,6 +24,9 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 		RuntimeTGGAttributeConstraintVariable v0 = variables.get(0);
 		RuntimeTGGAttributeConstraintVariable v1 = variables.get(1);
 		String bindingStates = getBindingStates(v0, v1);
+		
+		
+		
 
 	  	switch(bindingStates) {
 	  		case "BB": {
@@ -56,10 +61,12 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 	  			}
 	  			setSatisfied(true);
 	  		}
-	  		case "FF": 
+	  		case "FF":
 	  			v0.bindToValue(Carelevel.get(0));
 	  			v1.bindToValue(Medication.get(0));
 	  			setSatisfied(true);
+
+
 	  		}
 	  	}
 }

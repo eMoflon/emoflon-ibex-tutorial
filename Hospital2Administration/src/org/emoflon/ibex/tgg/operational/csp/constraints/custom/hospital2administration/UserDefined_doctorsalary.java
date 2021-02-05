@@ -1,5 +1,7 @@
 package org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration;
 
+import java.util.Random;
+
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraint;
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable;
 
@@ -20,7 +22,11 @@ public class UserDefined_doctorsalary extends RuntimeTGGAttributeConstraint {
 
 		switch (bindingStates) {
 		case "F":
-			v0.bindToValue(6000.0);
+			Random random = new Random();
+			double minsalary = 6000.0;
+			double maxsalary = 20000.0;
+			double randomsalary = minsalary + (random.nextDouble()*(maxsalary-minsalary));
+			v0.bindToValue(randomsalary);
 			setSatisfied(true);
 			break;
 		case "B":

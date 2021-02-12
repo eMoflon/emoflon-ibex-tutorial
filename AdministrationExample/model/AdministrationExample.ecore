@@ -15,11 +15,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="#//Daytime"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Staff" eSuperTypes="#//Person">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staffID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staffID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="salary" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="shiftPlan" lowerBound="1"
         eType="#//Shiftplan" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dInt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dInt" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="treatment" upperBound="-1"
         eType="#//Treatment"/>
   </eClassifiers>
@@ -37,7 +38,8 @@
         eType="#//Shift" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Patient" eSuperTypes="#//Person">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="treatment" lowerBound="1"
         eType="#//Treatment" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="coveredBy" upperBound="-1"

@@ -19,8 +19,13 @@ public class UserDefined_nametoname extends Concat
 		if (variables.size() != 4)
 			throw new RuntimeException("The CSP -NAMETONAME- needs exactly 4 variables");
 		
-		final String [] firstNames = {"Lars", "Sebastian", "Max"};
-		final String [] lastNames = {"Fritsche", "Ehmes", "Klinge"};
+		final String [] firstNames = {"Lucy" ,"Lukas",	"Ella", "Konstantin",	"Amy",	"Ben",	"Emely",	"Jonas",	"Finja",	"Elias",	"Amelie",	"Niklas",	"Luise",	"David",	"Frieda",	"Oskar",	"Katharina",	"Philipp",	"Romy",	"Leon",	"Juna",	"Noah",	"Theresa",	"Luis",	"Eva",	"Paul",	"Julia",	"Finn",	"Anna",	"Felix",	"Carla",	"Julian",
+		"Paulina",	"Maximilian",	"Elisabeth",	"Henry",	"Rosa",	"Tim",	"Mia",	"Karl",	"Maya",	"Friedrich",	"Selma",	"Peter",	"Edda",	"Quirin",	"Flora", "Liam",	"Berenike",	"Linus",	"Simone",	"Quentin",	"Elena",	"Meike",	"Johannes",	"Susanne",	"Alexander",	"Annika",	"Anton",	"Augusta", "Aras", "Alba",	"Asis",	"Wilma",	"Adrian",	"Annegret",	"Arthur",	"Aglaia",	"Adam",	"Aaliyah",
+		"Arian",	"Annabelle",	"Amos",	"Alma",	"Arik",	"Alicia",	"Ake", "Anette",	"Altfried",	"Astrid",	"Ari",	"Anisha",	"Andreas",	"Antke",	"Allessandro",	"Abigail",};
+		final String [] lastNames = { "Smith", 	"Johnson",	"Williams", 	"Brown",	"Jones",	"Miller",	"Davis",	"Garcia",	"Rodriguez",	"Wilson",	"Martinez",	"Anderson",	"Taylor",	"Thomas",	"Hernandez",
+				"Moore",	"Martin",	"Jackson",	"Thompson",	"White",	"Lopez",	"Lee",	"Gonzalez",	"Harris",	"Clark",	"Lewis", 	"Robinson",	"Walker",	"Perez",	"Hall",	"Young",
+				"Allen", 	"Sanchez", 	"Wright",	"King",	"Scott",	"Green",	"Baker",	"Adams",	"Nelson",	"Hill",	"Ramirez", "Campbell",	"Mitchell",	"Roberts",	"Carter",	"Phillips",
+				"Evans",	"Turner",	"Torres",	"Parker",	"Collins",	"Edwards",	"Stewart",	"Flores",	"Morris",	"Nguyen",	"Murphy", "Rivera", "Cook", "Peterson", "Cooper", "Reed", "Bailey",};
 		
 		final Random random = new Random();
 

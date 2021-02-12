@@ -6,10 +6,12 @@
 #source { 
 	++h:Hospital{
 		++-reception->r
+		
 	}
 	++r:Reception{
 		
 	}
+	
 }
 
 #target {

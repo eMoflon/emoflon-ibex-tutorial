@@ -1,19 +1,26 @@
 #using Hospital2Administration.*
 #using AttrCondDefLibrary.*
 
-#rule ShitplanRule #with Hospital2Administration
+#rule ShiftplanRule #with Hospital2Administration
 
 #source {
 	
 	p1:Patient{
+		-doctor->d
+	}
+	
+	d:Doctor{
 		
+	}
+	ro:Room{
+		-lies->p1
 	}
 	
 }
 
 #target {
 	
-	s:Staff{
+	s2:Staff{
 		++-shiftPlan->sp
 	}
 	++sp:Shiftplan{
@@ -24,7 +31,7 @@
 		
 	}
 	p2:Patient{
-		
+		++-coveredBy->sp
 	}
 	
 }
@@ -34,6 +41,11 @@
 	pToP:PatientToPatient{
 		#src->p1
 		#trg->p2
+	}
+	
+	stot:StaffToStaff{
+		#src->d
+		#trg->s2
 	}
 }
 

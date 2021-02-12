@@ -26,6 +26,14 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 		String bindingStates = getBindingStates(v0, v1);
 		
 		
+		int lengthMeds = Medication.values().length;
+		int randMedNumber = new Random().nextInt(lengthMeds);
+		
+		int lengthCare = Carelevel.values().length;
+		int randCareNumber = new Random().nextInt(lengthCare);
+		
+		
+		
 		
 
 	  	switch(bindingStates) {
@@ -62,9 +70,12 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 	  			setSatisfied(true);
 	  		}
 	  		case "FF":
-	  			v0.bindToValue(Carelevel.get(0));
-	  			v1.bindToValue(Medication.get(0));
+	  			v0.bindToValue(Carelevel.values()[randCareNumber]);
+				v1.bindToValue(Medication.values()[randCareNumber]);
 	  			setSatisfied(true);
+	  			break;
+	  			
+	  		default:  throw new UnsupportedOperationException("This case in the constraint has not been implemented yet: " + bindingStates);
 
 
 	  		}

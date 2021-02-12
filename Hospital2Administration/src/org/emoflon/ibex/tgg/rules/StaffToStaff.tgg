@@ -4,9 +4,14 @@
 #abstract #rule StaffToStaffRule #with Hospital2Administration
 
 #source { 
-	++s1:Staff
+	++s1:Staff{
+		++-works->d
+	}
 	h:Hospital{
 		++-staff->s1
+	}
+	d:Department{
+		
 	}
 	
 }
@@ -31,6 +36,7 @@
 
 #attributeConditions {
 	eq_int(s1.staffID, s2.staffID)
+	nametoname(" ", s2.firstName, s2.lastName, s1.name)
 }
 
 
@@ -49,7 +55,10 @@
 	
 #rule NurseToStaffRule #extends StaffToStaffRule #with Hospital2Administration
 #source{
-	++s1:Nurse
+	++s1:Nurse{
+	
+	}
+	
 }
 #target{
 	++s2:Staff{

@@ -19,6 +19,7 @@ public class UserDefined_doctorsalary extends RuntimeTGGAttributeConstraint {
 
 		RuntimeTGGAttributeConstraintVariable v0 = variables.get(0);
 		String bindingStates = getBindingStates(v0);
+		
 
 		switch (bindingStates) {
 		case "F":
@@ -26,7 +27,8 @@ public class UserDefined_doctorsalary extends RuntimeTGGAttributeConstraint {
 			double minsalary = 6000.0;
 			double maxsalary = 20000.0;
 			double randomsalary = minsalary + (random.nextDouble()*(maxsalary-minsalary));
-			v0.bindToValue(randomsalary);
+			double roundedsalary = Math.round(randomsalary*100)/100.0;
+			v0.bindToValue(roundedsalary);
 			setSatisfied(true);
 			break;
 		case "B":

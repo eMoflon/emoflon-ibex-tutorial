@@ -24,6 +24,10 @@
 		#src->Patient
 		#trg->Patient
 	}
+	RoomToShiftplan{
+		#src->Room
+		#trg->Shiftplan
+	}
 	
 }
 
@@ -48,6 +52,7 @@
 		#sync: [B B B B], [B B B F], [B B F B], [B F F B], [B F B B]
 		#gen: [B B B B] , [B B B F], [B B F B], [B F F B], [B F B B], [B F B F], [B B F F], [B F F F]
 	}
+	
 	
 	
 }

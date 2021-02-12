@@ -19,14 +19,11 @@
 	}
 	
 	++p2:Patient{
-		++-treatment->t
-	}
-	
-	
-	
-	++t:Treatment{
 		
 	}
+		
+	
+	
 	
 	
 	
@@ -50,8 +47,10 @@
 }
 
 #attributeConditions {
-	carelevelToMedication(p1.level, t.medication)
+	
 	eq_int(p1.patientID, p2.patientID)
 	nametoname(" ", p2.firstName, p2.lastName, p1.name)
+	
+	
 	
 }

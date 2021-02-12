@@ -5,6 +5,8 @@ import java.util.Random;
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraint;
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable;
 
+
+
 public class UserDefined_nursesalary extends RuntimeTGGAttributeConstraint {
 
 	/**
@@ -19,14 +21,15 @@ public class UserDefined_nursesalary extends RuntimeTGGAttributeConstraint {
 
 		RuntimeTGGAttributeConstraintVariable v0 = variables.get(0);
 		String bindingStates = getBindingStates(v0);
-
+		
 		switch (bindingStates) {
 		case "F":
 			Random random = new Random();
 			double minsalary = 0.0;
 			double maxsalary = 5999;
 			double randomsalary = minsalary + (random.nextDouble()*(maxsalary-minsalary));
-			v0.bindToValue(randomsalary);
+			double roundedsalary = Math.round(randomsalary*100)/100.0;
+			v0.bindToValue(roundedsalary);
 			setSatisfied(true);
 			break;
 		case "B":

@@ -5,11 +5,16 @@
 
 #source { 
 	d:Doctor{
-		
+		++-caresfor->p1
 	}
 	p1:Patient{
 		++-doctor->d
+		
 	}
+	ro:Room{
+		-lies->p1
+	}
+	
 }
 
 #target {
@@ -17,11 +22,14 @@
 	s:Staff{
 		++-treatment->t
 	}
-		
+	
 	p2:Patient{
-		-treatment->t
+		++-treatment->t
+		
 	}
-	t:Treatment{
+		
+
+	++t:Treatment{
 		
 	}
 }
@@ -40,5 +48,11 @@
 }
 
 #attributeConditions {
+	
+ eq_int(d.staffID, s.staffID)
+ eq_int(p1.patientID, p2.patientID)
+ carelevelToMedication(p1.level, t.medication)
+ 
+	
 	
 }

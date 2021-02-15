@@ -2,57 +2,89 @@
 #import "platform:/resource/AdministrationExample/model/AdministrationExample.ecore"
 
 #schema Hospital2Administration
-	 
+
 #source {
 	HospitalExample
 }
 
-#target { 
+#target {
 	AdministrationExample
-} 
+}
 
 #correspondence {
 	HospitalToAdministration{
 		#src->Hospital
 		#trg->Administration
 	}
+
 	StaffToStaff{
 		#src->Staff
 		#trg->Staff
 	}
+
 	PatientToPatient{
 		#src->Patient
 		#trg->Patient
 	}
+
 	RoomToShiftplan{
 		#src->Room
 		#trg->Shiftplan
 	}
-	
+	DoctorToStaff{
+		#src->Doctor
+		#trg->Staff
+	}
+	NurseToStaff{
+		#src->Nurse
+		#trg->Staff
+	}
 }
 
 #attributeConditions {
-	
 	#userDefined doctorsalary(salary:EDouble){
 		#sync:[B F]
 		#gen:[F]
 	}
-	
+
 	#userDefined nursesalary(salary:EDouble){
 		#sync:[B F]
 		#gen:[F]
 	}
-	
+
 	#userDefined carelevelToMedication(carelevel:Carelevel, medication:Medication){
 		#sync: [B B], [B F], [F B]
 		#gen:  [B B], [B F], [F B], [F F]
 	}
-	
+
 	#userDefined nametoname(separator:EString, leftWord:EString, rightWord:EString, result:EString) {
 		#sync: [B B B B], [B B B F], [B B F B], [B F F B], [B F B B]
 		#gen: [B B B B] , [B B B F], [B B F B], [B F F B], [B F B B], [B F B F], [B B F F], [B F F F]
 	}
-	
-	
-	
+
+	#userDefined incrementingID(id:EInt)
+	{
+		#sync:[B F]
+		#gen:[F]
+	}
+
+	#userDefined incrementingStaffID(id:EInt)
+	{
+		#sync:[B F]
+		#gen:[F]
+	}
+
+	#userDefined incrementingPatientID(id:EInt)
+	{
+		#sync:[B F]
+		#gen:[F]
+	}
+
+	#userDefined incrementingRoomID(id:EInt)
+	{
+		#sync:[B F]
+		#gen:[F]
+	}
 }
+
+

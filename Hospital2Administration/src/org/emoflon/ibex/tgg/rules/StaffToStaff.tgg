@@ -11,15 +11,24 @@
 		++-staff->s1
 	}
 	d:Department{
-		
+		++-staff->s1
 	}
 	
 }
 
 #target {
-	++s2:Staff
+	++s2:Staff{
+		++-shiftPlan->sp
+	}
 	v:Administration{
 		++-staff->s2
+	}
+	++sp:Shiftplan{
+		++-shifts->sh
+		
+	}
+	++sh:Shift{
+		
 	}
 }
 
@@ -35,8 +44,12 @@
 }
 
 #attributeConditions {
-	eq_int(s1.staffID, s2.staffID)
+	
 	nametoname(" ", s2.firstName, s2.lastName, s1.name)
+	incrementingStaffID(s1.staffID)
+	eq_int(s1.staffID, s2.staffID)
+	eq_int(d.dID,s2.dInt)
+	
 }
 
 

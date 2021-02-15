@@ -60,6 +60,8 @@ public class MODELGEN_App extends MODELGEN {
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
 	    stop.setMaxRuleCount("HospitaltoAdministrationRule", 1);
+	    stop.setMaxRuleCount("ShiftplanRule", 10);
+	    
 		generator.setStopCriterion(stop);
 		
 		tic = System.currentTimeMillis();

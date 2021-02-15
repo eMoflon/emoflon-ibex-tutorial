@@ -6,7 +6,9 @@
 
 #source { 
 	
-	++ p1 : Patient
+	++ p1 : Patient{
+		
+	}
 	h:Hospital{
 		-department->d
 	}

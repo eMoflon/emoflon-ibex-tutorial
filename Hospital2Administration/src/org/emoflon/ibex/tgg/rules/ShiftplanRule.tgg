@@ -10,10 +10,13 @@
 	}
 	
 	d:Doctor{
-		
+		-caresfor->p1
 	}
 	ro:Room{
 		-lies->p1
+	}
+	n:Nurse{
+		-responsible->ro
 	}
 	
 }
@@ -21,13 +24,13 @@
 #target {
 	
 	s2:Staff{
-		++-shiftPlan->sp
+		-shiftPlan->sp
 	}
-	++sp:Shiftplan{
-		++-shifts->sh
+	sp:Shiftplan{
+		-shifts->sh
 		++-covers->p2
 	}
-	++sh:Shift{
+	sh:Shift{
 		
 	}
 	p2:Patient{
@@ -43,7 +46,11 @@
 		#trg->p2
 	}
 	
-	stot:StaffToStaff{
+	nToS:StaffToStaff{
+		#src->n
+		#trg->s2
+	}
+	dToS:StaffToStaff{
 		#src->d
 		#trg->s2
 	}

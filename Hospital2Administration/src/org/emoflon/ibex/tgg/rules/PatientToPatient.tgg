@@ -4,7 +4,9 @@
 #abstract #rule PatientToPatient  #with Hospital2Administration
 
 #source { 
-	++p1:Patient
+	++p1:Patient{
+		
+	}
 	
 	h:Hospital{
 		
@@ -48,9 +50,10 @@
 
 #attributeConditions {
 	
-	eq_int(p1.patientID, p2.patientID)
-	nametoname(" ", p2.firstName, p2.lastName, p1.name)
 	
+	nametoname(" ", p2.firstName, p2.lastName, p1.name)
+	incrementingPatientID(p1.patientID)
+	eq_int(p1.patientID, p2.patientID)
 	
 	
 }

@@ -14,6 +14,10 @@
 		++-nurses->n
 		
 	}
+	dep:Department{
+		-room->r
+		-staff->n
+	}
 	p1:Patient{
 		
 		

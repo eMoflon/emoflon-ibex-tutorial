@@ -1,198 +1,204 @@
 <?xml version="1.0" encoding="ASCII"?>
 <HospitalExample:Hospital xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
   <reception>
-    <waits patientID="811" name="Lucy Flores"/>
-    <waits patientID="752" name="Wilma Davis"/>
-    <waits patientID="544" name="Theresa Turner"/>
-    <waits patientID="265" name="Romy Mitchell"/>
-    <waits patientID="289" name="Carla Thomas"/>
-    <waits patientID="43" name="Lukas Taylor"/>
-    <waits patientID="260" name="Anette Morris"/>
-    <waits patientID="359" name="Paulina Nelson"/>
-    <waits patientID="318" name="Flora King"/>
-    <waits patientID="733" name="Luis Roberts"/>
-    <waits patientID="110" name="Theresa Wilson"/>
-    <waits patientID="9" name="Flora Bailey"/>
-    <waits patientID="540" name="Flora Garcia"/>
-    <waits patientID="962" name="Liam Edwards"/>
-    <waits patientID="461" name="Henry Lopez"/>
-    <waits patientID="500" name="Linus Thomas"/>
-    <waits patientID="852" name="Luise White"/>
-    <waits patientID="961" name="Ben Flores"/>
-    <waits patientID="102" name="Annegret Murphy"/>
-    <waits patientID="500" name="Anisha Allen"/>
-    <waits patientID="60" name="Luise Evans"/>
-    <waits patientID="386" name="Jonas Lee"/>
-    <waits patientID="757" name="Allessandro Turner"/>
-    <waits patientID="704" name="Ake Sanchez"/>
+    <waits name="Amos Scott"/>
+    <waits patientID="2" name="Aglaia Bailey"/>
+    <waits patientID="3" name="Finja Campbell"/>
+    <waits patientID="4" name="Liam Smith"/>
+    <waits patientID="5" name="Noah Phillips"/>
+    <waits patientID="6" name="Luise Hill"/>
+    <waits patientID="7" name="Maximilian Perez"/>
+    <waits patientID="8" name="Leon Jones"/>
+    <waits patientID="9" name="Oskar Wilson"/>
+    <waits patientID="10" name="Anna Carter"/>
+    <waits patientID="11" name="Frieda Morris"/>
+    <waits patientID="12" name="Luis Baker"/>
+    <waits patientID="13" name="Elias Cook"/>
+    <waits patientID="14" name="Oskar Nguyen"/>
+    <waits patientID="15" name="Eva Hall"/>
+    <waits patientID="16" name="Anton Hall"/>
+    <waits patientID="17" name="Amos Garcia"/>
+    <waits patientID="18" name="Aglaia Nelson"/>
+    <waits patientID="19" name="Liam Martinez"/>
+    <waits patientID="20" name="Quirin Clark"/>
+    <waits patientID="21" name="Ake Carter"/>
+    <waits patientID="22" name="Niklas Martin"/>
+    <waits patientID="23" name="Aglaia Cook"/>
   </reception>
-  <staff xsi:type="HospitalExample:Doctor" staffID="465" works="//@department.18" name="Felix Hill"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="730" works="//@department.9" name="Amos Adams"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="370" works="//@department.16" name="Quentin Lee" caresfor="//@department.20/@room/@lies.0 //@department.7/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="43" works="//@department.27" name="Annegret Anderson" caresfor="//@department.21/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="292" works="//@department.5" name="Friedrich Young" responsible="//@department.21/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="977" works="//@department.23" name="Finn Lewis" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="599" works="//@department.4" name="Quentin Jackson" responsible="//@department.18/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="675" works="//@department.2" name="Arik Jones" caresfor="//@department.13/@room/@lies.0 //@department.22/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="350" works="//@department.6" name="Annegret Davis" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="653" works="//@department.22" name="Elena Nguyen"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="874" works="//@department.22" name="Felix Smith" responsible="//@department.21/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="776" works="//@department.4" name="Wilma Jones"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="358" works="//@department.9" name="Oskar Lopez" responsible="//@department.22/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="319" works="//@department.13" name="Eva Mitchell"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="34" works="//@department.7" name="Annabelle Sanchez" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="248" works="//@department.10" name="Aglaia Taylor"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="703" works="//@department.23" name="Adrian Young"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="314" works="//@department.12" name="Amelie Young" responsible="//@department.21/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="745" works="//@department.6" name="Meike Edwards" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="571" works="//@department.25" name="Tim Collins"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="27" works="//@department.4" name="Adrian White"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="367" works="//@department.27" name="Katharina Phillips" caresfor="//@department.18/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="824" works="//@department.21" name="Theresa Peterson"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="819" works="//@department.2" name="Luise Robinson" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="273" works="//@department.17" name="Wilma Gonzalez" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="693" works="//@department.9" name="Niklas Reed"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="639" works="//@department.3" name="Flora Brown" caresfor="//@department.25/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="422" works="//@department.23" name="Konstantin Thompson" responsible="//@department.18/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="989" works="//@department.25" name="Jonas Thomas" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="280" works="//@department.13" name="Johannes Phillips"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="581" works="//@department.10" name="Arian Johnson"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="231" works="//@department.1" name="Anette Peterson"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="703" works="//@department.19" name="Anette Ramirez"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="335" works="//@department.5" name="Meike Nguyen" responsible="//@department.21/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="83" works="//@department.24" name="Arian Stewart" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="339" works="//@department.2" name="Selma Cook" caresfor="//@department.20/@room/@lies.1"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="659" works="//@department.10" name="Linus Gonzalez" responsible="//@department.18/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="388" works="//@department.12" name="Simone Torres"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="994" works="//@department.4" name="Alexander Peterson" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="615" works="//@department.0" name="Luise Torres" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="617" works="//@department.2" name="Flora Garcia"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="539" works="//@department.10" name="Frieda Bailey" caresfor="//@department.11/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="833" works="//@department.0" name="Aaliyah Garcia"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="740" works="//@department.22" name="Finja Harris"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="446" works="//@department.28" name="Berenike Roberts" responsible="//@department.10/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="410" works="//@department.4" name="Berenike Brown"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="209" works="//@department.14" name="Lucy Ramirez" responsible="//@department.7/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="101" works="//@department.26" name="Eva Jackson"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="846" works="//@department.5" name="Emely Perez" responsible="//@department.11/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="674" works="//@department.21" name="Julian Garcia" caresfor="//@department.20/@room/@lies.2 //@department.10/@room/@lies.0"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="968" works="//@department.6" name="Julian Sanchez"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="848" works="//@department.22" name="Ake Moore"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="744" works="//@department.28" name="Liam Stewart"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="952" works="//@department.8" name="Emely Thompson" responsible="//@department.21/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="950" works="//@department.14" name="Henry Perez" responsible="//@department.7/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="847" works="//@department.14" name="Maximilian Williams" responsible="//@department.11/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="740" works="//@department.4" name="Niklas Gonzalez" responsible="//@department.18/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="214" works="//@department.24" name="Oskar Johnson"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="754" works="//@department.11" name="Ella Hall" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="570" works="//@department.27" name="Tim Collins"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="980" works="//@department.15" name="Quentin Smith"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="410" works="//@department.16" name="Aglaia Martinez"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="191" works="//@department.18" name="Amy Bailey"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="606" works="//@department.15" name="Quirin Nelson" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="549" works="//@department.5" name="Ari Flores" responsible="//@department.25/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="952" works="//@department.22" name="Selma King" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="719" works="//@department.28" name="Oskar Hill" responsible="//@department.18/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="806" works="//@department.2" name="Lucy Allen" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="949" works="//@department.4" name="Frieda Harris"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="263" works="//@department.4" name="Lucy Bailey" responsible="//@department.20/@room"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="570" works="//@department.10" name="Liam Thomas"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="494" works="//@department.20" name="Arthur Harris"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="696" works="//@department.12" name="Anisha Perez"/>
-  <department staff="615 833">
-    <room capacity="4"/>
-  </department>
-  <department staff="231">
-    <room capacity="4"/>
-  </department>
-  <department staff="675 819 339 617 806"/>
-  <department staff="639"/>
-  <department staff="599 776 27 994 410 740 949 263">
-    <room capacity="4"/>
-  </department>
-  <department staff="292 335 846 549">
-    <room capacity="4"/>
-  </department>
-  <department staff="350 745 968">
-    <room capacity="4"/>
-  </department>
-  <department staff="34">
-    <room capacity="4" nurses="209 950">
-      <lies patientID="631" name="Philipp Parker" level="MEDIUM" doctor="370"/>
-    </room>
-  </department>
-  <department staff="952"/>
-  <department staff="730 358 693">
-    <room capacity="4"/>
-  </department>
-  <department staff="248 581 659 539 570">
-    <room capacity="4" nurses="446">
-      <lies patientID="142" name="Romy Davis" level="MEDIUM" doctor="674"/>
-    </room>
-  </department>
-  <department staff="754">
-    <room capacity="4" nurses="847 846">
-      <lies patientID="64" name="Arik Flores" level="MEDIUM" doctor="539"/>
-    </room>
-  </department>
-  <department staff="314 388 696"/>
-  <department staff="319 280">
-    <room capacity="4">
-      <lies patientID="819" name="Wilma Lewis" level="MEDIUM" doctor="675"/>
-    </room>
-  </department>
-  <department staff="209 950 847">
-    <room capacity="4"/>
-  </department>
-  <department staff="980 606"/>
-  <department staff="370 410"/>
-  <department staff="273"/>
-  <department staff="465 191">
-    <room capacity="4" nurses="422 740 599 719 659">
-      <lies patientID="700" name="Paulina Jackson" doctor="367"/>
-    </room>
-  </department>
-  <department staff="703">
-    <room capacity="4">
-      <lies patientID="595" name="Annabelle Mitchell"/>
-    </room>
-  </department>
-  <department staff="494">
-    <room capacity="4" nurses="273 350 83 977 994 806 952 263">
-      <lies patientID="960" name="Noah Smith" level="MEDIUM" doctor="370"/>
-      <lies patientID="725" name="Susanne Robinson" level="STRONG" doctor="339"/>
-      <lies patientID="937" name="Andreas Flores" doctor="674"/>
-    </room>
-  </department>
-  <department staff="824 674">
-    <room capacity="4" nurses="952 314 874 292 335">
-      <lies patientID="667" name="Amelie Ramirez" level="MEDIUM" doctor="43"/>
-    </room>
-  </department>
-  <department staff="653 874 740 848 952">
-    <room capacity="4" nurses="358">
-      <lies patientID="865" name="Alexander Thomas" doctor="675"/>
-    </room>
-  </department>
-  <department staff="977 703 422">
-    <room capacity="4"/>
-  </department>
-  <department staff="83 214">
-    <room capacity="4"/>
-  </department>
-  <department staff="571 989">
-    <room capacity="4" nurses="819 754 606 745 549 615 989 34">
-      <lies patientID="246" name="Julian Reed" doctor="639"/>
-    </room>
-  </department>
-  <department staff="101">
-    <room capacity="4"/>
-  </department>
-  <department staff="43 367 570"/>
-  <department staff="446 744 719">
-    <room capacity="4"/>
-  </department>
+  <staff xsi:type="HospitalExample:Nurse" works="22" name="Jonas Carter"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="2" works="13" name="Finja Cooper"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="3" works="22" name="Anton Roberts"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="4" works="22" name="Ella Thompson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="5" works="25" name="Emely Lee"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="6" works="12" name="Elena Green"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="7" works="21" name="Arian Clark"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="8" works="26" name="Carla Baker" responsible="//@department.25/@room"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="9" works="2" name="Allessandro Sanchez"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="10" works="2" name="Allessandro Walker"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="11" works="12" name="Maya Lewis" responsible="//@department.11/@room"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="12" works="11" name="Carla Peterson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="13" works="5" name="David Cooper"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="14" works="8" name="Niklas Stewart"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="15" works="10" name="Eva Hill"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="16" works="4" name="Simone Reed"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="17" works="21" name="Ake Adams"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="18" works="23" name="Maya Cook"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="19" works="18" name="Anisha Ramirez" caresfor="//@department.17/@room/@lies.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="20" works="5" name="Arthur Cook"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="21" works="4" name="Antke Murphy"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="22" works="11" name="Anisha Johnson" caresfor="//@department.10/@room/@lies.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="23" works="13" name="Aras Lopez"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="24" works="6" name="Carla Roberts"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="25" works="25" name="Luis Garcia"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="26" works="2" name="Amy Torres"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="27" works="15" name="Luis Johnson" caresfor="//@department.14/@room/@lies.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="28" works="3" name="Juna Nelson"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="29" works="10" name="Noah Hernandez"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="30" works="9" name="Anton Roberts"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="31" works="13" name="Lucy Allen"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="32" works="2" name="Leon Mitchell"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="33" works="5" name="Carla Campbell"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="34" works="4" name="Peter Cook"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="35" works="18" name="Altfried Cook"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="36" works="23" name="Annika Edwards"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="37" works="16" name="Amos Harris"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="38" works="5" name="Julian Cooper"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="39" works="15" name="Susanne Morris"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="40" works="28" name="Rosa Perez" caresfor="//@department.27/@room/@lies.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="41" works="19" name="Quirin Morris"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="42" works="11" name="Finja Cooper"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="43" works="3" name="Elisabeth Green"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="44" works="19" name="Katharina Nelson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="45" works="16" name="Paulina Edwards"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="46" works="7" name="Simone Roberts"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="47" works="17" name="Astrid Phillips"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="48" works="20" name="Adrian Cook"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="49" works="14" name="Ari Garcia"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="50" works="2" name="Alma Davis"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="51" works="14" name="Quentin Johnson"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="52" works="16" name="Carla Harris"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="53" works="26" name="Theresa Jackson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="54" works="3" name="Noah Cook"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="55" works="24" name="Paulina Campbell" caresfor="//@department.23/@room/@lies.0"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="56" works="21" name="Alma Cook"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="57" works="8" name="Elena Wright"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="58" works="11" name="Maximilian Thomas" responsible="//@department.10/@room"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="59" works="23" name="Ari Jackson"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="60" works="8" name="Alba Martinez"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="61" works="14" name="Annabelle White"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="62" works="15" name="Andreas Davis"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="63" works="12" name="Anna Campbell"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="64" works="24" name="Peter Hill"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="65" works="12" name="Felix Wilson"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="66" works="9" name="Andreas Allen"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="67" works="18" name="Alexander Davis"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="68" works="6" name="Amy Flores"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="69" works="13" name="Meike Davis"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="70" works="8" name="Juna Cooper"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="71" works="8" name="Quentin Martinez"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="72" works="27" name="Anna Allen"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="73" works="24" name="Finja Robinson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="74" works="28" name="Rosa Perez"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="75" works="4" name="Anisha Martin"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="76" works="29" name="Mia Peterson"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="77" works="18" name="Meike Collins"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="78" works="27" name="Arian King"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="79" works="23" name="Julian Nguyen"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="80" works="6" name="Katharina Edwards"/>
   <department>
     <room capacity="4"/>
   </department>
+  <department dID="2" staff="9 10 26 32 50"/>
+  <department dID="3" staff="28 43 54"/>
+  <department dID="4" staff="16 21 34 75">
+    <room capacity="4"/>
+  </department>
+  <department dID="5" staff="13 20 33 38">
+    <room capacity="4"/>
+  </department>
+  <department dID="6" staff="24 68 80"/>
+  <department dID="7" staff="46">
+    <room capacity="4"/>
+  </department>
+  <department dID="8" staff="14 57 60 70 71">
+    <room capacity="4">
+      <lies patientID="35" name="Antke Moore"/>
+    </room>
+  </department>
+  <department dID="9" staff="30 66">
+    <room capacity="4"/>
+  </department>
+  <department dID="10" staff="15 29"/>
+  <department dID="11" staff="12 22 42 58">
+    <room capacity="4" nurses="58">
+      <lies patientID="33" name="Quirin Morris" level="STRONG" doctor="22"/>
+    </room>
+  </department>
+  <department dID="12" staff="6 11 63 65">
+    <room capacity="4" nurses="11">
+      <lies patientID="29" name="Ben Edwards"/>
+    </room>
+  </department>
+  <department dID="13" staff="2 23 31 69"/>
+  <department dID="14" staff="49 51 61">
+    <room capacity="4"/>
+  </department>
+  <department dID="15" staff="27 39 62">
+    <room capacity="4">
+      <lies patientID="30" name="Liam Williams" level="STRONG" doctor="27"/>
+    </room>
+  </department>
+  <department dID="16" staff="37 45 52">
+    <room capacity="4"/>
+  </department>
+  <department dID="17" staff="47">
+    <room capacity="4"/>
+  </department>
+  <department dID="18" staff="19 35 67 77">
+    <room capacity="4">
+      <lies patientID="25" name="Rosa Jackson" doctor="19"/>
+    </room>
+  </department>
+  <department dID="19" staff="41 44"/>
+  <department dID="20" staff="48">
+    <room capacity="4"/>
+  </department>
+  <department dID="21" staff="7 17 56">
+    <room capacity="4"/>
+  </department>
+  <department dID="22" staff="//@staff.0 3 4"/>
+  <department dID="23" staff="18 36 59 79">
+    <room capacity="4"/>
+  </department>
+  <department dID="24" staff="55 64 73">
+    <room capacity="4">
+      <lies patientID="26" name="Elena Allen" doctor="55"/>
+      <lies patientID="27" name="Arian Reed"/>
+      <lies patientID="39" name="Linus Campbell"/>
+    </room>
+  </department>
+  <department dID="25" staff="5 25">
+    <room capacity="4"/>
+  </department>
+  <department dID="26" staff="8 53">
+    <room capacity="4" nurses="8">
+      <lies patientID="24" name="Frieda Torres"/>
+      <lies patientID="28" name="Friedrich Edwards"/>
+      <lies patientID="32" name="Henry Rodriguez"/>
+      <lies patientID="34" name="Susanne Rodriguez"/>
+    </room>
+  </department>
+  <department dID="27" staff="72 78">
+    <room capacity="4">
+      <lies patientID="37" name="Abigail Peterson"/>
+      <lies patientID="38" name="Annegret Harris"/>
+    </room>
+  </department>
+  <department dID="28" staff="40 74">
+    <room capacity="4">
+      <lies patientID="31" name="Niklas Lopez" doctor="40"/>
+      <lies patientID="36" name="Wilma Murphy"/>
+    </room>
+  </department>
+  <department dID="29" staff="76"/>
 </HospitalExample:Hospital>

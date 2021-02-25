@@ -1,0 +1,154 @@
+import "http://www.eclipse.org/emf/2002/Ecore"
+import "platform:/resource/AdministrationExample/model/AdministrationExample.ecore"
+
+pattern administrationRules() {
+	object: EObject
+}
+
+rule administration() {
+	++administration: Administration
+}
+when oneAdministration
+
+condition oneAdministration = forbid findAdministration
+
+abstract rule person() {
+	++person: Person {
+		.firstName:="Adam"
+		.lastName:="Smith"
+		
+	}
+}
+
+rule staff()
+refines person {
+	++staff: Staff {
+		++ -shiftPlan -> shiftPlan
+		.staffID:="1"
+		++ -treatment -> treatment
+		
+	}
+
+	++shiftPlan: Shiftplan {
+		++ -shifts -> shift
+	}
+
+	++ shift: Shift {
+		
+	}
+
+	++treatment: Treatment {
+		
+	}
+}
+
+rule patient()
+refines person {
+	++patient: Patient {
+		++ -treatment -> treatment
+	}
+
+	++treatment: Treatment {
+		
+	}
+}
+
+rule patientCovered() {
+	patient: Patient {
+		++ -coveredBy -> shiftPlan
+		++ -treatment -> t
+	}
+
+	shiftPlan: Shiftplan {
+		++ -shifts -> earlyshift
+		++ -shifts -> lateshift
+		++ -shifts -> nightshift
+	}
+
+	earlyshift: Shift {
+		
+	}
+
+	lateshift: Shift {
+		
+	}
+
+	nightshift: Shift {
+		
+	}
+
+	t: Treatment {
+		
+	}
+
+	s: Staff {
+		++ -treatment -> t
+	}
+}
+
+abstract rule shift() {
+	++shift: Shift {
+		
+	}
+}
+
+rule earlyshift()
+refines shift {
+	++earlyshift: Shift {
+		.time:=enum::early
+	}
+}
+
+rule lateshift()
+refines shift {
+	++lateshift: Shift {
+		.time:=enum::late
+	}
+}
+
+rule nightshift()
+refines shift {
+	++nightshift: Shift {
+		.time:=enum::night
+	}
+}
+
+pattern findAdministration() {
+	administration: Administration
+}
+
+pattern findNurse() {
+	nurse: Staff
+}
+
+pattern findDoctor() {
+	doctor: Staff
+}
+
+pattern findPatient() {
+	patient: Patient
+}
+
+pattern findShiftplan() {
+	shiftlpan: Shiftplan
+}
+
+pattern findEarlyShift() {
+	earlyshift: Shift
+}
+
+pattern findLateShift() {
+	lateshift: Shift
+}
+
+pattern findNightShift() {
+	nightshift: Shift
+}
+
+pattern findStaff() {
+	staff: Staff
+}
+
+pattern findPerson() {
+	person: Person
+}

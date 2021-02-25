@@ -1,23 +1,18 @@
 #using Hospital2Administration.*
 #using AttrCondDefLibrary.*
 
-#rule ShiftplanRule #with Hospital2Administration
+#abstract #rule ShiftplanRule #with Hospital2Administration
 
 #source {
 	
 	p1:Patient{
-		-doctor->d
+		
+	}
+	s1:Staff{
+		
 	}
 	
-	d:Doctor{
-		-caresfor->p1
-	}
-	ro:Room{
-		-lies->p1
-	}
-	n:Nurse{
-		-responsible->ro
-	}
+	
 	
 }
 
@@ -28,7 +23,7 @@
 	}
 	sp:Shiftplan{
 		-shifts->sh
-		++-covers->p2
+		
 	}
 	sh:Shift{
 		
@@ -46,14 +41,11 @@
 		#trg->p2
 	}
 	
-	nToS:StaffToStaff{
-		#src->n
+	sToS:StaffToStaff{
+		#src->s1
 		#trg->s2
 	}
-	dToS:StaffToStaff{
-		#src->d
-		#trg->s2
-	}
+	
 }
 
 #attributeConditions {

@@ -26,10 +26,10 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 		String bindingStates = getBindingStates(v0, v1);
 		
 		
-		int lengthMeds = Medication.values().length;
+		int lengthMeds = Medication.values().length-1;
 		int randMedNumber = new Random().nextInt(lengthMeds);
 		
-		int lengthCare = Carelevel.values().length;
+		int lengthCare = Carelevel.values().length-1;
 		int randCareNumber = new Random().nextInt(lengthCare);
 		
 		
@@ -52,6 +52,9 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 					case WEAK:
 						v1.bindToValue(Medication.WEAK);
 						break;
+					case PENDING:
+						v1.bindToValue(Medication.PENDING);
+						break;
 	  			}
 	  			setSatisfied(true);
 	  		}
@@ -65,6 +68,9 @@ public class UserDefined_carelevelToMedication extends RuntimeTGGAttributeConstr
 						break;
 					case WEAK:
 						v0.bindToValue(Carelevel.WEAK);
+						break;
+					case PENDING:
+						v0.bindToValue(Carelevel.PENDING);
 						break;
 	  			}
 	  			setSatisfied(true);

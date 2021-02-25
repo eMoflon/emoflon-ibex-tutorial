@@ -11,7 +11,7 @@
 	r:Room{
 		
 		-lies->p1
-		++-nurses->n
+		
 		
 	}
 	dep:Department{
@@ -35,6 +35,7 @@
 		s:Staff{
 			
 		}
+		
 			
 		
 	

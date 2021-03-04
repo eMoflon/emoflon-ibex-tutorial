@@ -17,10 +17,10 @@ public class UserDefined_incrementingPatientID extends RuntimeTGGAttributeConstr
 			throw new RuntimeException("The CSP -INCREMENTINGPATIENTID- needs exactly 2 variables");
 
 		RuntimeTGGAttributeConstraintVariable v0 = variables.get(0);
-		RuntimeTGGAttributeConstraintVariable v1 = variables.get(0);
+		RuntimeTGGAttributeConstraintVariable v1 = variables.get(1);
 		String bindingStates = getBindingStates(v0, v1);
 
-		incrementingID++;
+	
 
 		switch (bindingStates) {
 		case "BB": {
@@ -39,6 +39,7 @@ public class UserDefined_incrementingPatientID extends RuntimeTGGAttributeConstr
 			break;
 		}
 		case "FF":{
+			incrementingID++;
 			v0.bindToValue(incrementingID);
 			v1.bindToValue(incrementingID);
 			setSatisfied(true);

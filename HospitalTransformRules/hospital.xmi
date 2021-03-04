@@ -1,20 +1,38 @@
 <?xml version="1.0" encoding="ASCII"?>
 <HospitalExample:Hospital xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
   <reception>
-    <waits/>
-    <waits/>
+    <waits patientID="0" name="Adam Walker"/>
+    <waits patientID="20" name="John Fitzgerald"/>
+    <waits patientID="2" name="Steven Green"/>
+    <waits patientID="4" name="Allan Mercer"/>
+    <waits patientID="5" name="Adam Williams"/>
+    <waits patientID="6" name="Misha Brown"/>
+    <waits patientID="7" name="Abigail Jones"/>
+    <waits patientID="8" name="Robert Lewis"/>
+    <waits patientID="9" name="Bob Clark"/>
+    <waits patientID="10" name="Chloe Hall"/>
+    <waits patientID="11" name="Melissa Walker"/>
+    <waits patientID="14" name="Christina Taylor"/>
+    <waits patientID="16" name="Christina Campbell"/>
+    <waits patientID="17" name="Austin Reed"/>
+    <waits patientID="18" name="Ron Murphy"/>
+    <waits patientID="19" name="James Rivera"/>
   </reception>
-  <staff xsi:type="HospitalExample:Nurse"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="2"/>
-  <staff xsi:type="HospitalExample:Nurse" staffID="3" responsible="//@department.0/@room"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="4" caresfor="//@department.0/@room/@lies.2"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="5"/>
-  <staff xsi:type="HospitalExample:Doctor" staffID="6" caresfor="//@department.0/@room/@lies.0"/>
-  <department dID="0">
-    <room capacity="4" nurses="3">
-      <lies level="STRONG" doctor="6"/>
-      <lies/>
-      <lies level="STRONG" doctor="4"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="2" name="James Black" responsible="//@department.1/@room"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="3" name="Alisha Greenwood"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="20" name="Alex Ramirez"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="7" name="Jeffrey King"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="3" name="Eliza Martinez" caresfor="//@department.1/@room/@lies.3" patientCapacity="4"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="5" name="Martin Jupiter" caresfor="//@department.1/@room/@lies.0 //@department.1/@room/@lies.1 //@department.1/@room/@lies.2" patientCapacity="5"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="6" name="Sven Boson" patientCapacity="4"/>
+  <department dID="4" maxRoomCount="4"/>
+  <department dID="2" maxRoomCount="4">
+    <room capacity="4" nurses="2">
+      <lies patientID="3" name="George Stafford" doctor="5"/>
+      <lies patientID="12" name="Lauren Nguyen" doctor="5"/>
+      <lies patientID="15" name="Amy Walker" doctor="5"/>
+      <lies patientID="13" name="Stefanie More" doctor="3"/>
     </room>
   </department>
+  <department dID="3" maxRoomCount="4"/>
 </HospitalExample:Hospital>

@@ -28,6 +28,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Doctor" eSuperTypes="#//Staff">
     <eStructuralFeatures xsi:type="ecore:EReference" name="caresfor" upperBound="-1"
         eType="#//Patient" eOpposite="#//Patient/doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Nurse" eSuperTypes="#//Staff">
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsible" eType="#//Room"

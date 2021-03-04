@@ -14,7 +14,7 @@ rule reception() {
 	++reception: Reception // Adds a node reception of the type reception
 }
 
-rule patient() {
+rule patient(name: EString, patientId: EInt, level: Carelevel) {
 	hospital: Hospital {
 		-reception -> reception // A path from Hospital to reception is required before creating a new patient in the reception
 	}
@@ -23,10 +23,14 @@ rule patient() {
 		++ -waits -> patient // Creates the Branch waits from Reception towards the patient node
 	}
 
-	++patient: Patient // Adds a patient in the reception
+	++patient: Patient {
+		.name:=param::name
+		.patientID:=param::patientId
+		.level:=param::level
+	} // Adds a patient in the reception
 }
 
-rule department(dID: EInt, maxRoomCount:EInt) { // creates a department with the parameter dID
+rule department(dID: EInt, maxRoomCount: EInt) { // creates a department with the parameter dID
 	hospital: Hospital {
 		++ -department -> department // Adds a branch department from Hospital to Department
 	}
@@ -34,7 +38,6 @@ rule department(dID: EInt, maxRoomCount:EInt) { // creates a department with the
 	++department: Department { // Adds a node named department of the type Department
 		.dID:=param::dID // Creates the Parameter departmentID (dID)
 		.maxRoomCount:=param::maxRoomCount
-		
 	}
 }
 
@@ -45,7 +48,6 @@ rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs,
 
 	department: Department {
 		++ -room -> room // Adds a branch from department to room
-		
 	}
 
 	++room: Room { // Adds a node named room of they type Room
@@ -53,24 +55,23 @@ rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs,
 		.level:=param::carelvl
 	}
 	#department.maxRoomCount>count(findRoomInDepartment)
-} 
+}
 
-
-
-abstract rule staff(staffID: EInt) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
+abstract rule staff(name: EString, staffID: EInt) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
 	hospital: Hospital {
 		++ -staff -> staff // Adds the Branch staff from hospital to Staff
 	}
 
 	++staff: Staff { // Creates the node staff of the type Staff and the param staffID
 		.staffID:=param::staffID
+		.name:=param::name
 	}
 }
 
-rule doctor()
+rule doctor(capacity: EInt)
 refines staff { // adds the rule doctor which refines/inherits from the rule Staff
 	++staff: Doctor {
-		
+		.patientCapacity:=param::capacity
 	}
 }
 
@@ -120,45 +121,53 @@ condition freeRoomAndNurse = forbidOccupiedRoom && forbidNurse // This pattern i
 
 rule assignPatientToRoom() {
 	patient: Patient {
-		.level:=enum::STRONG
-		++ -doctor -> doctor
+		
 	}
 
 	room: Room {
 		++ -lies -> patient
 	}
-	
+	#room.capacity>count(findPatientInRoom)
+
 	doctor: Doctor {
-		
+		++-caresfor->patient
+	}
+
+	#doctor.patientCapacity>count(findOccupiedDoc)
+	
+	hospital: Hospital {
+		-reception -> reception
+		-department -> department
+	}
+
+	department: Department {
+		-room -> room
 	}
 
 	reception: Reception {
-		---waits -> patient
-	}
-	
-	
-}when patientWithDoc
-condition patientWithDoc = forbid findPatientWithDoc
-
-
-
-
-pattern findDocWithPatient() {
-	somendoc: Doctor {
-		-caresfor -> patient
-	}
-
-	patient: Patient {
-		
+		-- -waits -> patient
 	}
 }
+when patientWithDoc
+
+condition patientWithDoc = forbid findPatientWithDoc
+
 pattern findPatientWithDoc() {
 	somedoctor: Doctor {
-		
+		-caresfor->patient
 	}
 
 	patient: Patient {
-		-doctor->somedoctor
+	
+	}
+}
+
+pattern findPatientInRoom(){
+	somepatient:Patient{
+		
+	}
+	room:Room{
+		-lies->somepatient
 	}
 }
 
@@ -180,24 +189,25 @@ pattern findRoom() {
 	room: Room
 }
 
-pattern findRoomInDepartment(){
-	department:Department{
-		-room->otherroom
+pattern findRoomInDepartment() {
+	department: Department {
+		-room -> otherroom
 	}
-	otherroom:Room{
+
+	otherroom: Room {
 		
 	}
 }
 
-pattern findPatientinRoom() {
-	patient: Patient {
-		
-	}
+pattern findOccupiedDoc() {
+	doctor: Doctor
 
-	room: Room {
-		-lies -> patient
+	somepatient: Patient {
+		-doctor -> doctor
 	}
 }
+
+
 
 pattern findNurse() {
 	nurse: Nurse
@@ -211,9 +221,10 @@ pattern findDepartment() {
 	department: Department
 }
 
-pattern roomInDepartment(){
-	department: Department{
-		-room->room
+pattern roomInDepartment() {
+	department: Department {
+		-room -> room
 	}
+
 	room: Room
 }

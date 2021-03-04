@@ -11,7 +11,8 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: Hospital2Administration,
  Hospital2Administration.impl,
- Hospital2Administration.util
+ Hospital2Administration.util,
+ org.emoflon.ibex.tgg.run.hospital2administration.config
 Require-Bundle: AdministrationExample;visibility:=reexport,
  HospitalExample;bundle-version="0.0.1";visibility:=reexport,
  org.apache.log4j,

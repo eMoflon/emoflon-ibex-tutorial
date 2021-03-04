@@ -14,55 +14,75 @@ condition oneAdministration = forbid findAdministration
 
 abstract rule person() {
 	++person: Person {
-		.firstName:="Adam"
-		.lastName:="Smith"
+	
 		
 	}
 }
 
-rule staff()
+rule staff(time1:Daytime, time2:Daytime)
 refines person {
-	++staff: Staff {
+	++person: Staff {
 		++ -shiftPlan -> shiftPlan
-		.staffID:="1"
+		
 		++ -treatment -> treatment
+		
 		
 	}
 
 	++shiftPlan: Shiftplan {
 		++ -shifts -> shift
+		++ -shifts -> shift2
 	}
 
 	++ shift: Shift {
+		.time:=param::time1
+	}
+	++ shift2: Shift {
+		.time:=param::time2
+	}
+	treatment:Treatment{
 		
 	}
-
-	++treatment: Treatment {
-		
-	}
+	#count(findTreatment)<3
+	
 }
 
 rule patient()
 refines person {
-	++patient: Patient {
-		++ -treatment -> treatment
+	++person: Patient {
+		++-treatment -> t
 	}
-
-	++treatment: Treatment {
+	t:Treatment{
 		
 	}
+
+	
 }
+
+rule salaryRaise(currentSalary:EDouble){
+	staff:Staff{
+		.salary:=param::currentSalary
+		}
+		
+	
+}
+
 
 rule patientCovered() {
 	patient: Patient {
 		++ -coveredBy -> shiftPlan
-		++ -treatment -> t
+		++ -coveredBy -> shiftPlan2
+		-treatment->t
 	}
 
 	shiftPlan: Shiftplan {
-		++ -shifts -> earlyshift
-		++ -shifts -> lateshift
-		++ -shifts -> nightshift
+		-shifts -> earlyshift
+		
+		-shifts -> nightshift
+	}
+	shiftPlan2: Shiftplan {
+		-shifts -> lateshift
+		
 	}
 
 	earlyshift: Shift {
@@ -77,14 +97,20 @@ rule patientCovered() {
 		
 	}
 
+	
+	s: Staff {
+		-treatment -> t
+		-shiftPlan->shiftPlan
+	}
+	s1:Staff{
+		-treatment -> t
+		-shiftPlan->shiftPlan2
+	}
 	t: Treatment {
 		
 	}
-
-	s: Staff {
-		++ -treatment -> t
-	}
-}
+} when patientAlreadyCovered
+condition patientAlreadyCovered = forbid findCoveredPatient
 
 abstract rule shift() {
 	++shift: Shift {
@@ -149,6 +175,26 @@ pattern findStaff() {
 	staff: Staff
 }
 
+
 pattern findPerson() {
 	person: Person
 }
+pattern findTreatment(){
+	treatment: Treatment{
+		
+	}
+	
+	staff: Staff{
+		-treatment->treatment
+	}
+		}
+pattern findCoveredPatient(){
+	patient:Patient{
+		-coveredBy->shiftPlan
+	}
+	shiftPlan:Shiftplan{
+		
+	}
+}
+
+

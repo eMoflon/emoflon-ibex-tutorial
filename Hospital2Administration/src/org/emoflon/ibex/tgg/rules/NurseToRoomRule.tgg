@@ -15,7 +15,7 @@
 		
 	}
 	dep:Department{
-		-room->r
+		-rooms->r
 		-staff->n
 	}
 	p1:Patient{

@@ -6,7 +6,7 @@
 #source { 
 	
 	d:Department{
-		++-room->ro
+		++-rooms->ro
 	}
 	++ro:Room{
 		capacity := 4

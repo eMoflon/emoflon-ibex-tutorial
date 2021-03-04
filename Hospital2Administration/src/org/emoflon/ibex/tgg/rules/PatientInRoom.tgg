@@ -14,7 +14,7 @@
 	}
 	
 	d:Department{
-		-room->ro
+		-rooms->ro
 	}
 	ro:Room{
 		++-lies->p1

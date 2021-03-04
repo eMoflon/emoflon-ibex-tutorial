@@ -16,7 +16,7 @@
 		-lies->p1
 	}
 	dep:Department{
-		-room->ro
+		-rooms->ro
 		
 	}
 	

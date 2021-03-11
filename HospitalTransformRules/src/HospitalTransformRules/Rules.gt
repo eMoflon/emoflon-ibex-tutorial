@@ -144,6 +144,20 @@ when patientWithDoc
 
 condition patientWithDoc = forbid findPatientWithDoc
 
+
+rule releasePatient(patientID:EInt){
+	-- patient:Patient{
+		
+	}
+	room:Room{
+		-- -lies->patient
+	}
+	doctor:Doctor{
+		-- -caresfor->patient
+	}
+	
+}
+
 pattern findPatientWithDoc() {
 	somedoctor: Doctor {
 		-caresfor->patient

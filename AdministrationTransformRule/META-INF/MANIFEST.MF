@@ -15,7 +15,9 @@ Require-Bundle: org.emoflon.ibex.common,
  org.emoflon.ibex.gt.democles,
  org.emoflon.ibex.gt.hipe,
  AdministrationExample;bundle-version="0.0.1",
- org.emoflon.ibex.gt.viatra
+ org.emoflon.ibex.gt.viatra;resolution:=optional,
+ Hospital2Administration;bundle-version="0.0.1",
+ HospitalTransformRules;bundle-version="0.0.1"
 Export-Package: AdministrationTransformRule.api,
  AdministrationTransformRule.api.matches,
  AdministrationTransformRule.api.rules

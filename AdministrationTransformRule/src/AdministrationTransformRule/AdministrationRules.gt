@@ -59,13 +59,6 @@ refines person {
 	
 }
 
-rule salaryRaise(currentSalary:EDouble){
-	staff:Staff{
-		.salary:=param::currentSalary
-		}
-		
-	
-}
 
 
 rule patientCovered() {

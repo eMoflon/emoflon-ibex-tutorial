@@ -25,23 +25,24 @@ public class SYNC_App extends SYNC {
 			public void saveModels() throws IOException {
 				// Use the commented code below to implement saveModels individually.
 				// source.save(null);
-				// target.save(null);
-				// corr.save(null);
-				// protocol.save(null);
+				 target.save(null);
+				 corr.save(null);
+				 protocol.save(null);
 				
-				super.saveModels();
+				//super.saveModels();
 			}
 			
 			@Override
 			public void loadModels() throws IOException {
 				// Use the commented code below to implement loadModels individually.
 				// loadResource loads from a file while createResource creates a new resource without content
-				// source = loadResource(options.project.path() + "/instances/src.xmi");
-				// target = createResource(options.project.path() + "/instances/trg.xmi");
-				// corr = createResource(options.project.path() + "/instances/corr.xmi");
-				// protocol = createResource(options.project.path() + "/instances/protocol.xmi");
+				//source = loadResource("file:\\C:\\Users\\asfas\\HospitalEmoflonTutorial\\git\\emoflon-ibex-tutorial\\HospitalTransformRules\\" + "hospital.xmi");
+				source = loadResource(options.project.path() + "/instances/hospital.xmi");
+				target = createResource(options.project.path() + "/instances/trg.xmi");
+				corr = createResource(options.project.path() + "/instances/corr.xmi");
+				protocol = createResource(options.project.path() + "/instances/protocol.xmi");
 				
-				super.loadModels();
+				//super.loadModels();
 			}
 		}));
 	}

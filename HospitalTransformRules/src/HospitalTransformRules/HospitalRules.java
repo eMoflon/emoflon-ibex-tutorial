@@ -24,7 +24,7 @@ public class HospitalRules {
 
 	public static void main(String[] args) throws IOException {
 		HospitalRules hospitalrules = new HospitalRules("someSeed".hashCode());
-
+	
 		hospitalrules.createHospital();
 		hospitalrules.validateHospital();
 		try {
@@ -37,6 +37,7 @@ public class HospitalRules {
 	}
 
 	public void createHospital() {
+		
 		api.hospital().apply();
 		api.reception().apply();
 		for(int i=0; i<4; i++) {
@@ -63,6 +64,8 @@ public class HospitalRules {
 		while(api.findPatientInReception().hasMatches()) {
 			api.assignPatientToRoom().apply();
 		}
+		api.releasePatient(patientID).setSPO();
+		api.releasePatient(5).apply();
 
 		try {
 			api.getModel().getResources().get(0).save(null);
@@ -71,6 +74,7 @@ public class HospitalRules {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 
 	}
 
@@ -82,8 +86,7 @@ public class HospitalRules {
 		long countpatientsinroom = api.findPatientInRoom().countMatches();
 		System.out.println(countpatientsinroom + " Patients are in a room");
 		
-		System.out.println(api.findPatientWithDoc().countMatches());
-
+		
 		if (api.findHospital().countMatches() == 1) {
 			System.out.println("One instance of a hospital has been created");
 		} else

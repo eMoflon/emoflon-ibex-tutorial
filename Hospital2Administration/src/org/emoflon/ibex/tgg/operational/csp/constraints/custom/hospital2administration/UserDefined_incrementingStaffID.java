@@ -4,7 +4,7 @@ import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraint;
 import org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable;
 
 public class UserDefined_incrementingStaffID extends RuntimeTGGAttributeConstraint
-{
+{private static int incrementingID = 0;
 
    /**
     * Constraint incrementingStaffID(v0, v1)
@@ -20,13 +20,32 @@ public class UserDefined_incrementingStaffID extends RuntimeTGGAttributeConstrai
 		RuntimeTGGAttributeConstraintVariable v1 = variables.get(1);
 		String bindingStates = getBindingStates(v0, v1);
 
-	  	switch(bindingStates) {
-	  		case "BB": 
-	  		case "BF": 
-	  		case "FB": 
-	  		case "FF": 
-	  		default:  throw new UnsupportedOperationException("This case in the constraint has not been implemented yet: " + bindingStates);
-	  		 	}
-	  	}
-}
+		incrementingID++;
 
+		switch (bindingStates) {
+		case "BB": {
+			setSatisfied(v0.getValue().equals(v1.getValue()));
+			break;
+		}
+		case "BF": {
+			v1.bindToValue(v0.getValue());
+			setSatisfied(true);
+			break;
+		}
+			
+		case "FB": {
+			v0.bindToValue(v1.getValue());
+			setSatisfied(true);
+			break;
+		}
+		case "FF":
+			v0.bindToValue(incrementingID);
+			v1.bindToValue(incrementingID);
+			setSatisfied(true);
+			break;
+		default:
+			throw new UnsupportedOperationException(
+					"This case in the constraint has not been implemented yet: " + bindingStates);
+		}
+	}
+}

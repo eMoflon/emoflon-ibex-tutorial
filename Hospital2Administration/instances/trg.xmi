@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<AdministrationExample:Administration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore">
+  <staff firstName="Chloe" lastName="Rivera" staffID="15" salary="4216.83" dInt="4">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Abigail" lastName="Ramirez" staffID="10" salary="4004.98" dInt="5">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Ron" lastName="Clark" staffID="14" salary="1982.01" dInt="5">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Bob" lastName="Williams" staffID="4" salary="16326.5" dInt="5" treatment="//@patient.2/@treatment">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Allan" lastName="Stafford" staffID="5" salary="11866.02" dInt="3">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="James" lastName="Green" staffID="19" salary="806.92" dInt="3">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="George" lastName="Martinez" staffID="12" salary="2195.76" dInt="4">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Martin" lastName="Taylor" staffID="17" salary="5740.2" dInt="3">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Martin" lastName="Jupiter" staffID="21" salary="5248.69" dInt="3">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Adam" lastName="Jones" staffID="20" salary="1274.23" dInt="2">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="James" lastName="Clark" staffID="11" salary="2143.62" dInt="4">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Eliza" lastName="Clark" staffID="2" salary="11700.69" dInt="2" treatment="//@patient.4/@treatment">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Stefanie" lastName="Jones" staffID="7" salary="4833.69" dInt="2">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Robert" lastName="Stafford" staffID="6" salary="2983.87" dInt="2">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Bob" lastName="Reed" staffID="3" salary="7796.98" dInt="4">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Sven" lastName="Hall" staffID="18" salary="4489.41" dInt="2">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Eliza" lastName="Lewis" staffID="13" salary="5167.18" dInt="4">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Robert" lastName="Greenwood" staffID="8" salary="1805.52" dInt="5">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="Eliza" lastName="Greenwood" staffID="16" salary="2867.44" dInt="5">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <staff firstName="James" lastName="Jones" staffID="9" salary="5152.5" dInt="3">
+    <shiftPlan>
+      <shifts/>
+    </shiftPlan>
+  </staff>
+  <patient firstName="Misha" lastName="King" patientID="10"/>
+  <patient firstName="Allan" lastName="Martinez" patientID="3"/>
+  <patient firstName="Stefanie" lastName="Rivera" patientID="7">
+    <treatment medication="strong"/>
+  </patient>
+  <patient firstName="Steven" lastName="Clark" patientID="4"/>
+  <patient firstName="Martin" lastName="King" patientID="9">
+    <treatment medication="medium"/>
+  </patient>
+  <patient firstName="Robert" lastName="King" patientID="8"/>
+  <patient firstName="Alex" lastName="Brown" patientID="6"/>
+  <patient firstName="James" lastName="Williams" patientID="11"/>
+  <patient firstName="Bob" lastName="More" patientID="2"/>
+  <patient firstName="John" lastName="Lewis" patientID="5"/>
+</AdministrationExample:Administration>

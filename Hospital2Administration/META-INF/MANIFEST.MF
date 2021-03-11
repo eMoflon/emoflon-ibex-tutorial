@@ -29,5 +29,4 @@ Require-Bundle: AdministrationExample;visibility:=reexport,
  org.emoflon.ibex.tgg.runtime.democles,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.emoflon.ibex.tgg.runtime.hipe,
- HospitalTransformRules;bundle-version="0.0.1"
+ org.emoflon.ibex.tgg.runtime.hipe

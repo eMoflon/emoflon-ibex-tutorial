@@ -9,7 +9,7 @@
 		++-rooms->ro
 	}
 	++ro:Room{
-		capacity := 4
+		
 	}
 }
 

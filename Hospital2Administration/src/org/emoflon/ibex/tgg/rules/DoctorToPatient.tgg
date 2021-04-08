@@ -19,7 +19,7 @@
 		-rooms->ro
 		
 	}
-	
+		
 }
 
 #target {
@@ -36,9 +36,9 @@
 	}
 		
 
-	++t:Treatment{
-		
-	}
+		++t:Treatment{
+			
+		}
 }
 
 #correspondence {

@@ -4,24 +4,24 @@
 #rule HospitaltoAdministrationRule #with Hospital2Administration
 
 #source { 
-	++h:Hospital{
-		++-reception->r
+	++hospital:Hospital{
+		++-reception->reception
 		
 	}
-	++r:Reception{
+	++reception:Reception{
 		
 	}
 	
 }
 
 #target {
-	++v:Administration
+	++administration:Administration
 }
 
 #correspondence {
-	++htov:HospitalToAdministration{
-		#src->h
-		#trg->v
+	++htoa:HospitalToAdministration{
+		#src->hospital
+		#trg->administration
 	}
 }
 

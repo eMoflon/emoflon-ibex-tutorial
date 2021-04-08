@@ -1,0 +1,73 @@
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+
+rule hospital() {
+	++hospital: Hospital // Adds a Node named Hospital of the type Hospital
+}
+when forbidHospital 
+condition forbidHospital = forbid findHospital
+
+rule reception() {
+	hospital: Hospital {
+		++ -reception -> reception // Adds a branch named reception to the node reception but it requires a Hospital node
+	}
+ 
+	++reception: Reception // Adds a node reception of the type reception
+}
+when forbidReception
+condition forbidReception = forbid findReception
+
+rule department(dID: EInt, maxRoomCount: EInt) { // creates a department with the parameter dID
+	hospital: Hospital {
+		++ -department -> department // Adds a branch department from Hospital to Department
+	}
+
+	++department: Department { // Adds a node named department of the type Department
+		.dID:=param::dID // Creates the Parameter departmentID (dID)
+		.maxRoomCount:=param::maxRoomCount
+		
+	}
+}
+
+rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs, Capacity: cap and Carelevel: carelevel
+	hospital: Hospital {
+		-department -> department
+	}
+
+	department: Department {
+		++ -rooms -> room // Adds a branch from department to room
+	}
+
+	++room: Room { // Adds a node named room of they type Room
+		.capacity:=param::cap
+		.level:=param::carelvl
+		
+	}
+	#department.maxRoomCount>count(findRoomInDepartment)
+		
+}
+
+
+pattern findHospital() {
+	hospital: Hospital
+}
+
+
+pattern findReception() {
+	reception: Reception
+}
+
+pattern findRoom() {
+	room: Room
+}
+
+pattern findRoomInDepartment() {
+	department: Department {
+		-rooms -> otherroom
+	}
+
+	otherroom: Room {
+		
+	}
+}

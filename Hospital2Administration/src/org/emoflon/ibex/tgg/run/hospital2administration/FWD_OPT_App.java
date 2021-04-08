@@ -17,7 +17,7 @@ import org.emoflon.ibex.tgg.operational.strategies.opt.FWD_OPT;
 public class FWD_OPT_App extends FWD_OPT {
 
 	// eMoflon supports other pattern matching engines. Replace _DefaultRegistrationHelper with one of the other registrationHelpers from the *.config-package to choose between them. Default: Democles 
-	public static IRegistrationHelper registrationHelper = new _DefaultRegistrationHelper();
+	public static IRegistrationHelper registrationHelper = new DemoclesRegistrationHelper();
 
 	public FWD_OPT_App() throws IOException {
 		super(registrationHelper.createIbexOptions().resourceHandler(new TGGResourceHandler() {

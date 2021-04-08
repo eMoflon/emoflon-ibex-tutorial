@@ -40,23 +40,24 @@ public class HospitalRules {
 		
 		api.hospital().apply();
 		api.reception().apply();
+	
 		for(int i=0; i<4; i++) {
-			api.department(i+2, 4).apply();
+			api.department(i+1, 4).apply();	
 		}
 		for(int i=0; i<16; i++) {
 			api.room(4, Carelevel.get(rnd.nextInt(3))).apply();
 		}
 		
-		int staffID = 2;
+		int staffID = 1;
 		while(api.findDepartmentWithoutDoctor().hasMatches()) {
 			api.doctor(16, firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
 		}
 		
-		while(api.findRoomWithoutNurse().hasMatches()) {
-			api.assignNurseToRoom(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
-		}
+		//while(api.findRoomWithoutNurse().hasMatches()) {
+		//	api.assignNurseToRoom(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
+		//}
 		
-		int patientID = 2;
+		int patientID = 1;
 		for(int i=rnd.nextInt(16); i>0; i--) {
 			api.patient(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], patientID++, Carelevel.PENDING).apply();
 		}
@@ -64,27 +65,19 @@ public class HospitalRules {
 		while(api.findPatientInReception().hasMatches()) {
 			api.assignPatientToRoom().apply();
 		}
-		api.releasePatient(patientID).setSPO();
-		api.releasePatient(5).apply();
+				
 
-		try {
-			api.getModel().getResources().get(0).save(null);
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 
 	}
 
 	public void validateHospital() {
 
-		long counthospital = api.findPatient().countMatches();
-		System.out.println(counthospital + " Patients are in the hospital right now");
+		long countPatientsInHospital = api.findPatient().countMatches();
+		System.out.println(countPatientsInHospital + " Patients are in the hospital right now");
 
-		long countpatientsinroom = api.findPatientInRoom().countMatches();
-		System.out.println(countpatientsinroom + " Patients are in a room");
+		long countPatientsInRoom = api.findPatientInRoom().countMatches();
+		System.out.println(countPatientsInRoom + " Patients are in a room");
 		
 		
 		if (api.findHospital().countMatches() == 1) {

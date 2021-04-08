@@ -12,16 +12,9 @@ when oneAdministration
 
 condition oneAdministration = forbid findAdministration
 
-abstract rule person() {
-	++person: Person {
-	
-		
-	}
-}
 
-rule staff(time1:Daytime, time2:Daytime)
-refines person {
-	++person: Staff {
+rule staff(time1:Daytime, time2:Daytime) {
+	person: Staff {
 		++ -shiftPlan -> shiftPlan
 		
 		++ -treatment -> treatment
@@ -47,9 +40,8 @@ refines person {
 	
 }
 
-rule patient()
-refines person {
-	++person: Patient {
+rule patient() {
+	person: Patient {
 		++-treatment -> t
 	}
 	t:Treatment{
@@ -136,13 +128,6 @@ pattern findAdministration() {
 	administration: Administration
 }
 
-pattern findNurse() {
-	nurse: Staff
-}
-
-pattern findDoctor() {
-	doctor: Staff
-}
 
 pattern findPatient() {
 	patient: Patient
@@ -168,10 +153,6 @@ pattern findStaff() {
 	staff: Staff
 }
 
-
-pattern findPerson() {
-	person: Person
-}
 pattern findTreatment(){
 	treatment: Treatment{
 		

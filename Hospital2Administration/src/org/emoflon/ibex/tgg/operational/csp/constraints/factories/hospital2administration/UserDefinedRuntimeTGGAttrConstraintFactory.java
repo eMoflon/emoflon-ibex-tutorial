@@ -9,7 +9,7 @@ import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administ
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nursesalary;
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_carelevelToMedication;
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nametoname;
-import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_incrementingID;
+import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_incrementingDepartmentID;
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_incrementingStaffID;
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_incrementingPatientID;
 import org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_incrementingRoomID;
@@ -27,7 +27,7 @@ public class UserDefinedRuntimeTGGAttrConstraintFactory extends RuntimeTGGAttrCo
 		creators.put("nursesalary", () -> new UserDefined_nursesalary());
 		creators.put("carelevelToMedication", () -> new UserDefined_carelevelToMedication());
 		creators.put("nametoname", () -> new UserDefined_nametoname());
-		creators.put("incrementingID", () -> new UserDefined_incrementingID());
+		creators.put("incrementingDepartmentID", () -> new UserDefined_incrementingDepartmentID());
 		creators.put("incrementingStaffID", () -> new UserDefined_incrementingStaffID());
 		creators.put("incrementingPatientID", () -> new UserDefined_incrementingPatientID());
 		creators.put("incrementingRoomID", () -> new UserDefined_incrementingRoomID());

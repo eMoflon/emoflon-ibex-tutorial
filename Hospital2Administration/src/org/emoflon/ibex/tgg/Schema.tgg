@@ -43,13 +43,13 @@
 
 #attributeConditions {
 	#userDefined doctorsalary(salary:EDouble){
-		#sync:[B F]
-		#gen:[F]
+		#sync: [F],[B]
+		#gen: [F], [B]
 	}
 
 	#userDefined nursesalary(salary:EDouble){
-		#sync:[B F]
-		#gen:[F]
+		#sync: [F],[B]
+		#gen: [F], [B]
 	}
 
 	#userDefined carelevelToMedication(carelevel:Carelevel, medication:Medication){
@@ -62,22 +62,23 @@
 		#gen: [B B B B] , [B B B F], [B B F B], [B F F B], [B F B B], [B F B F], [B B F F], [B F F F]
 	}
 
-	#userDefined incrementingID(id:EInt)
+	#userDefined incrementingDepartmentID(id:EInt)
 	{
 		#sync:[B F]
 		#gen:[F]
+	
 	}
 
-	#userDefined incrementingStaffID(id:EInt)
+	#userDefined incrementingStaffID(id1:EInt, id2:EInt )
 	{
-		#sync:[B F]
-		#gen:[F]
+		#sync: [B B],[B F], [F B]
+		#gen: [B B], [B F], [F B], [F F]
 	}
 
-	#userDefined incrementingPatientID(id:EInt)
+	#userDefined incrementingPatientID(id1:EInt, id2:EInt)
 	{
-		#sync:[B F]
-		#gen:[F]
+		#sync: [B B],[B F], [F B]
+		#gen: [B B], [B F], [F B], [F F]
 	}
 
 	#userDefined incrementingRoomID(id:EInt)

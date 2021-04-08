@@ -18,9 +18,8 @@
         eType="#//Patient" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Staff" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staffID" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"
-        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="staffID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="works" eType="#//Department"
         eOpposite="#//Department/staff"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -28,30 +27,33 @@
   <eClassifiers xsi:type="ecore:EClass" name="Doctor" eSuperTypes="#//Staff">
     <eStructuralFeatures xsi:type="ecore:EReference" name="caresfor" upperBound="-1"
         eType="#//Patient" eOpposite="#//Patient/doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientCapacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Nurse" eSuperTypes="#//Staff">
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsible" eType="#//Room"
         eOpposite="#//Room/nurses"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Department">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="room" eType="#//Room" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="1" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" upperBound="-1"
+        eType="#//Room" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="staff" upperBound="-1"
         eType="#//Staff" eOpposite="#//Staff/works"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxRoomCount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Patient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientID" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="patientID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="-1"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Carelevel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Carelevel"
+        defaultValueLiteral="PENDING"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="doctor" lowerBound="1"
         eType="#//Doctor" eOpposite="#//Doctor/caresfor"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Room">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="#//Carelevel"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" lowerBound="1" eType="#//Carelevel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lies" upperBound="-1" eType="#//Patient"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nurses" upperBound="-1"
@@ -61,5 +63,6 @@
     <eLiterals name="WEAK"/>
     <eLiterals name="MEDIUM" value="1"/>
     <eLiterals name="STRONG" value="2"/>
+    <eLiterals name="PENDING" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

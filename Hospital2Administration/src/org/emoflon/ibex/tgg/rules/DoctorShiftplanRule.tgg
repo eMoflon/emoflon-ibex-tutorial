@@ -1,15 +1,14 @@
 #using Hospital2Administration.*
 #using AttrCondDefLibrary.*
 
-#rule RoomRule #with Hospital2Administration
+ #rule DoctorShiftplanRule #extends ShiftplanRule #with Hospital2Administration
 
 #source { 
-	
-	d:Department{
-		++-rooms->ro
+	s1:Doctor{
+
 	}
-	++ro:Room{
-		capacity := 4
+	p1:Patient{
+		-doctor->s1
 	}
 }
 

@@ -49,6 +49,7 @@
     <eLiterals name="weak"/>
     <eLiterals name="medium" value="1"/>
     <eLiterals name="strong" value="2"/>
+    <eLiterals name="pending" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Daytime">
     <eLiterals name="night"/>

@@ -5,7 +5,7 @@
 
 #source { 
 	d:Doctor{
-		++-caresfor->p1
+		
 		-works->dep
 	}
 	p1:Patient{
@@ -16,8 +16,8 @@
 		-lies->p1
 	}
 	dep:Department{
-		-room->ro
-		-staff->d
+		-rooms->ro
+		
 	}
 	
 }

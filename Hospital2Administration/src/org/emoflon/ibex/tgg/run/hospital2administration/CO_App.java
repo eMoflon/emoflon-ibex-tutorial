@@ -17,7 +17,7 @@ import org.emoflon.ibex.tgg.operational.strategies.opt.CO;
 public class CO_App extends CO {
 
 	// eMoflon supports other pattern matching engines. Replace _DefaultRegistrationHelper with one of the other registrationHelpers from the *.config-package to choose between them. Default: Democles 
-	public static IRegistrationHelper registrationHelper = new _DefaultRegistrationHelper();
+	public static IRegistrationHelper registrationHelper = new HiPERegistrationHelper();
 
 	public CO_App() throws IOException {
 		super(registrationHelper.createIbexOptions().resourceHandler(new TGGResourceHandler() {

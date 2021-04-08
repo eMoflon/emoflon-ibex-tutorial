@@ -1,17 +1,12 @@
 package HospitalTransformRules;
 
-
 import org.eclipse.emf.common.util.URI;
-import HospitalExample.Hospital;
-import HospitalTransformRules.api.HospitalTransformRulesDemoclesApp;
+import HospitalTransformRules.api.HospitalTransformRulesHiPEApp;
 
-
-public class HospitalValidator extends HospitalTransformRulesDemoclesApp  {
+public class HospitalValidator extends HospitalTransformRulesHiPEApp  {
 	
 	public HospitalValidator() {
 		createModel(URI.createURI("hospital.xmi"));
-	
-	
-}		
+	}	
 
 }

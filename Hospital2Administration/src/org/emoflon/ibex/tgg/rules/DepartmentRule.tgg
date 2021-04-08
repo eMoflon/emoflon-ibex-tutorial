@@ -7,7 +7,9 @@
 	h:Hospital{
 		++-department->d
 	}
-	++d:Department
+	++d:Department{
+		
+	}
 }
 
 #target {
@@ -19,5 +21,6 @@
 }
 
 #attributeConditions {
-	incrementingID(d.dID)
+	incrementingDepartmentID(d.dID)
+	setDefaultNumber(d.maxRoomCount, 10)
 }

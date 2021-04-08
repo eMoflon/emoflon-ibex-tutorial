@@ -52,8 +52,8 @@
 	
 	
 	nametoname(" ", p2.firstName, p2.lastName, p1.name)
-	incrementingPatientID(p1.patientID)
-	eq_int(p1.patientID, p2.patientID)
+	incrementingPatientID(p1.patientID, p2.patientID)
+	
 	
 	
 }

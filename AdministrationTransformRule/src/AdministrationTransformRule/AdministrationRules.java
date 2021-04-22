@@ -47,7 +47,7 @@ public class AdministrationRules {
 		
 		api.patientCovered().apply();
 		api.patientCovered().apply();
-		api.patientCovered().apply();
+		api.patientCovered().apply();		
 		api.patientCovered().apply();
 		api.patientCovered().apply();
 		api.patientCovered().apply();

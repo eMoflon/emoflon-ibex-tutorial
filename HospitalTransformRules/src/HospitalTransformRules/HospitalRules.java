@@ -53,9 +53,9 @@ public class HospitalRules {
 			api.doctor(16, firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
 		}
 		
-		//while(api.findRoomWithoutNurse().hasMatches()) {
-		//	api.assignNurseToRoom(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
-		//}
+		while(api.findRoomWithoutNurse().hasMatches()) {
+			api.assignNurseToRoom(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], staffID++).apply();
+		}
 		
 		int patientID = 1;
 		for(int i=rnd.nextInt(16); i>0; i--) {

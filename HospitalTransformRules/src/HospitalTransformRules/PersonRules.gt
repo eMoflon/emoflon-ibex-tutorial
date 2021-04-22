@@ -21,7 +21,7 @@ rule patient(name: EString, patientId: EInt, level: Carelevel) {
 }
 
 
-abstract rule staff(name: EString, staffID: EInt) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
+abstract rule staff(name: EString, staffID: EInt ) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
 	hospital: Hospital {
 		++ -staff -> staff // Adds the Branch staff from hospital to Staff
 		-department -> department
@@ -180,7 +180,9 @@ pattern findDepartment() {
 	department: Department
 }
 
-
+pattern findRoomWithoutNurse() {
+	room : Room
+} when forbidNurse
 
 pattern doctorInDepartment() {
 	someDoctor : Doctor

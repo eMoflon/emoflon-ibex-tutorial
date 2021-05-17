@@ -1,55 +1,75 @@
 package AdministrationTransformRule;
 
+import java.util.Random;
+
+import AdministrationExample.Daytime;
 import AdministrationTransformRule.api.AdministrationTransformRuleAPI;
 
 public class AdministrationRules {
 	private AdministrationTransformRuleAPI api;
 
-	public AdministrationRules() {
+	
+	
+	public AdministrationRules() { // initializes api the Administrationrules with the model created previously
 		api = new AdministrationValidator().initAPI();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { // main method to apply and validate the ruleset
 		AdministrationRules administrationRules = new AdministrationRules();
-		administrationRules.validateAdministration();
 		administrationRules.createAdministration();
 		administrationRules.validateAdministration();
 
 	}
 
-	public void createAdministration() {
-		api.administration().apply();
-		api.patient().apply();
-		api.patient().apply();
-		api.patient().apply();
-		api.patient().apply();
-		api.patientCovered().apply();
-		api.patientCovered().apply();
-		api.patientCovered().apply();
-		api.patientCovered().apply();
-		api.patientCovered().apply();
-		api.patientCovered().apply();
+	public void createAdministration() { // method to apply the ruleset for the administration
+	
+			
+		long staffMemberNumber = api.findStaff().countMatches();
+		long staffCount= 0;
+		
+		
+		
+		while(staffCount <= staffMemberNumber)
+		{
+		int lengthDaytime = Daytime.values().length -1;
+		int lengthDaytime2 = lengthDaytime + 1;
+		int randDaytimeNumber = new Random().nextInt(lengthDaytime);	
+		int randDaytimeNumber2 = new Random().nextInt(lengthDaytime2);	
+		api.staff(Daytime.values()[randDaytimeNumber], Daytime.values()[randDaytimeNumber2]).apply();
+		staffCount++;
+		}
+		
+		long countPatients = api.findPatient().countMatches();
+		long countPatientsCovered = 0;
+		
+		
+		while(countPatientsCovered <= countPatients) {
+			api.patientCovered().apply();
+			countPatientsCovered++;
+			
+		}
 		
 		api.terminate();
 	}
 
-	public void validateAdministration() {
-
-		System.out.println(api.patientCovered().countRuleApplications());
+	public void validateAdministration() { // method to validate the ruleset if rules were applied correctly
+		
+		if (api.findAdministration().countMatches() == 1) {
+			System.out.println("One instance of an administration has been created");
+		} else
+			System.out.println("Error, the administration was not created");
+		
+	
 
 		long countpatients = api.findPatient().countMatches();
-		System.out.println(countpatients + " Patients are in the hospital right now");
+		System.out.println(countpatients + " patients are in the hospital right now");
 
-		System.out.println(api.findStaff().countMatches());
+	
 
-		long countpersons = api.findStaff().countMatches() + api.findPatient().countMatches();
-		System.out.println(countpersons + " persons are in the hospital right now");
+		long countStaff = api.findStaff().countMatches();
+		System.out.println(countStaff+ " staff members are in the hospital right now");
 
-		long countnurses = api.findNurse().countMatches();
-		System.out.println(countnurses + "nurses are in the hospital right now");
-		long countdoc = api.findDoctor().countMatches();
-		System.out.println(countdoc+ "Doctors are in the hospital right now");
-
+	
 		if (api.findEarlyShift().countMatches() + api.findLateShift().countMatches()
 				+ api.findNightShift().countMatches() >= 3) {
 			System.out.println("The Patient is covered");

@@ -29,4 +29,6 @@ Require-Bundle: AdministrationExample;visibility:=reexport,
  org.emoflon.ibex.tgg.runtime.democles,
  org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.emoflon.ibex.tgg.runtime.hipe
+ org.emoflon.ibex.tgg.runtime.hipe,
+ Hospital2Administration,
+ org.emoflon.ibex.tgg.runtime.viatra

@@ -71,22 +71,6 @@
 	doctorsalary(s2.salary)
 }
 
-#rule NurseToStaffRule #extends StaffToStaffRule #with Hospital2Administration
 
-#source{
-	++s1:Nurse{
-	
-	}
-}
-
-#target{
-	++s2:Staff{
-		
-	}
-}
-
-#attributeConditions{
-	nursesalary(s2.salary)
-}
 
 

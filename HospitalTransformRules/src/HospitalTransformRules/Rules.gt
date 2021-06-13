@@ -1,5 +1,5 @@
-import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
-import "http://www.eclipse.org/emf/2002/Ecore"
+	import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+	import "http://www.eclipse.org/emf/2002/Ecore"
 
 rule hospital() {
 	++hospital: Hospital // Adds a Node named Hospital of the type Hospital
@@ -8,25 +8,27 @@ when forbidHospital //
 
 rule reception() {
 	hospital: Hospital {
-		++ -reception -> reception // Adds a branch named reception to the node reception but it requires a Hospital node
+		++ -reception -> reception ///Adds an edge named reception to the node reception but it requires a Hospital node
 	}
  
 	++reception: Reception // Adds a node reception of the type reception
 }
+when forbidReception
+condition forbidReception = forbid findReception
 
 rule patient(name: EString, patientId: EInt, level: Carelevel) {
 	hospital: Hospital {
-		-reception -> reception // A path from Hospital to reception is required before creating a new patient in the reception
+		-reception -> reception //Adds an edge from Hospital to reception is required before creating a new patient in the reception
 	}
 
 	reception: Reception {
-		++ -waits -> patient // Creates the Branch waits from Reception towards the patient node
+		++ -waits -> patient // Creates the edge waits from reception towards the patient node
 	}
 
 	++patient: Patient {
-		.name:=param::name
-		.patientID:=param::patientId
-		.level:=param::level
+		.name:=param::name  // initalisation the parameter name
+		.patientID:=param::patientId // initalisation the parameter patientid
+		.level:=param::level		// initalisation the parameter carelvl
 	} // Adds a patient in the reception
 }
 
@@ -37,13 +39,13 @@ rule department(dID: EInt, maxRoomCount: EInt) { // creates a department with th
 
 	++department: Department { // Adds a node named department of the type Department
 		.dID:=param::dID // Creates the Parameter departmentID (dID)
-		.maxRoomCount:=param::maxRoomCount
+		.maxRoomCount:=param::maxRoomCount // initalisation the parameter maxRoomCount
 	}
 }
 
 rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs, Capacity: cap and Carelevel: carelevel
 	hospital: Hospital {
-		-department -> department
+		-department -> department  
 	}
 
 	department: Department {
@@ -51,46 +53,46 @@ rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs,
 	}
 
 	++room: Room { // Adds a node named room of they type Room
-		.capacity:=param::cap
-		.level:=param::carelvl
+		.capacity:=param::cap // initalisation the parameter capacity
+		.level:=param::carelvl // initalisation the parameter carelvl
 	}
-	#department.maxRoomCount>count(findRoomInDepartment)
+	#department.maxRoomCount>count(findRoomInDepartment)  // attribute condition for the maximum number of rooms which can be assigned to a department
 }
 
 abstract rule staff(name: EString, staffID: EInt) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
 	hospital: Hospital {
-		++ -staff -> staff // Adds the Branch staff from hospital to Staff
+		++ -staff -> staff // Adds an edge staff from hospital to Staff
 		-department -> department
 	}
 	
 	department : Department
 
 	++staff: Staff { // Creates the node staff of the type Staff and the param staffID
-		.staffID:=param::staffID
-		.name:=param::name
+		.staffID:=param::staffID // initalisation the parameter capacity
+		.name:=param::name // initalisation the parameter name
 	}
 }
 
 rule doctor(capacity: EInt)
 refines staff { // adds the rule doctor which refines/inherits from the rule Staff
 	++staff: Doctor {
-		.patientCapacity:=param::capacity
+		.patientCapacity:=param::capacity // initalisation the parameter capacity
 	}
 	department : Department {
-		++ -staff -> staff
+		++ -staff -> staff // Adds an edge staff from staff to department
 	}
 } when departmentWithoutDoctor
 
 rule assignNurseToRoom() refines staff { // assigns a Nurse to a room she is responsible for
 	++ staff: Nurse {
-		++ -responsible -> room // Adds a responsiblity branch to room
+		++ -responsible -> room // Adds a responsiblity edge from room to nurse
 	}
 
 	room: Room
 	
 	department : Department {
 		-rooms->room
-		++ -staff-> staff
+		++ -staff-> staff // Adds an edge from department to room
 	}
 }
 when forbidNurse //Applies only if a room has no nurse who is responsible for the room and the nurse has no other room assigned to her 
@@ -107,22 +109,22 @@ pattern findNurseInRoom() { //This pattern checks whether a nurse is already res
 	}
 }
 
-pattern findRoomWithoutNurse() {
+pattern findRoomWithoutNurse() {  // Pattern to find rooms which are not covered by a nurse
 	room : Room
 } when forbidNurse
 
-rule assignPatientToRoom() {
+rule assignPatientToRoom() { // Rule to assign a patient to a room and a doctor if the room is not full and the given doctor is not exceeding has patient limit
 	patient: Patient {
 		
 	}
 
 	room: Room {
-		++ -lies -> patient
+		++ -lies -> patient  // Adds an edge from department to room
 	}
 	#room.capacity>count(findPatientInRoom)
 
 	doctor: Doctor {
-		++-caresfor->patient
+		++-caresfor->patient // Adds an edge from doctor to patient
 	}
 
 	#doctor.patientCapacity>count(findOccupiedDoc)
@@ -137,7 +139,7 @@ rule assignPatientToRoom() {
 	}
 
 	reception: Reception {
-		-- -waits -> patient
+		-- -waits -> patient // Removes a patient from the reception 
 	}
 }
 when patientWithDoc
@@ -145,8 +147,8 @@ when patientWithDoc
 condition patientWithDoc = forbid findPatientWithDoc
 
 
-rule releasePatient(patientID:EInt){
-	-- patient:Patient{
+rule releasePatient(patientID:EInt){ // This rule removes a patient from the hospital and the edges in case a patient was in a room
+	-- patient:Patient{ 
 		
 	}
 	room:Room{
@@ -158,7 +160,7 @@ rule releasePatient(patientID:EInt){
 	
 }
 
-pattern findPatientWithDoc() {
+pattern findPatientWithDoc() { // Pattern to find patients who are not covered by a doctor
 	somedoctor: Doctor {
 		-caresfor->patient
 	}
@@ -174,7 +176,7 @@ pattern findDocWithPatient() {
 	somedoctor : Doctor
 } when docWithPatient
 
-pattern findPatientInRoom(){
+pattern findPatientInRoom(){ // Pattern to find a patient lying in a room
 	somepatient:Patient{
 		
 	}
@@ -183,32 +185,32 @@ pattern findPatientInRoom(){
 	}
 }
 
-pattern findHospital() {
+pattern findHospital() { // Pattern to find a hospital object
 	hospital: Hospital
 }
 
 condition forbidHospital = forbid findHospital
 
-pattern findReception() {
+pattern findReception() { // Pattern to find a reception object
 	reception: Reception
 }
 
-pattern findPatient() {
+pattern findPatient() { // Pattern to find a patient
 	patient: Patient
 }
 
-pattern findPatientInReception(){
+pattern findPatientInReception(){ // Pattern to find a patient waiting in the reception
 	reception: Reception {
 		-waits->patient
 	}
 	patient: Patient
 }
 
-pattern findRoom() {
+pattern findRoom() { // Pattern to find a room
 	room: Room
 }
 
-pattern findRoomInDepartment() {
+pattern findRoomInDepartment() { // Pattern to find a room in a department
 	department: Department {
 		-rooms -> otherroom
 	}
@@ -218,7 +220,7 @@ pattern findRoomInDepartment() {
 	}
 }
 
-pattern findOccupiedDoc() {
+pattern findOccupiedDoc() { // Pattern to find a doctor who is occupied with patients
 	doctor: Doctor
 
 	somepatient: Patient {
@@ -226,36 +228,29 @@ pattern findOccupiedDoc() {
 	}
 }
 
-pattern findNurse() {
+pattern findNurse() { // Pattern to find a nurse
 	nurse: Nurse
 }
 
-pattern findDoctor() {
+pattern findDoctor() {  // Pattern to find a doctor
 	doctor: Doctor
 }
 
-pattern findDepartment() {
+pattern findDepartment() {  // Pattern to find a department
 	department: Department
 }
 
 condition departmentWithoutDoctor = forbid doctorInDepartment
 
-pattern doctorInDepartment() {
+pattern doctorInDepartment() { // Pattern to find a doctor in a department
 	someDoctor : Doctor
 	department : Department {
 		-staff->someDoctor
 	}
 }
 
-pattern findDepartmentWithoutDoctor() {
+pattern findDepartmentWithoutDoctor() { // Pattern to find a department without a doctor
 	department : Department
 }when departmentWithoutDoctor
 
 
-pattern roomInDepartment() {
-	department: Department {
-		-rooms -> room
-	}
-
-	room: Room
-}

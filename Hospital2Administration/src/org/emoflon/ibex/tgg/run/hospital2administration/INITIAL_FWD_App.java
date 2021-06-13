@@ -38,7 +38,7 @@ public class INITIAL_FWD_App extends INITIAL_FWD {
 			public void loadModels() throws IOException {
 				// Use the commented code below to implement loadModels individually.
 				// loadResource loads from a file while createResource creates a new resource without content
-				 source = loadResource("file:\\C:\\Users\\asfas\\HospitalEmoflonTutorial\\git\\emoflon-ibex-tutorial\\HospitalTransformRules\\" + "hospital.xmi");
+				 source = loadResource(options.project.path() + "/../HospitalTransformRules/hospital.xmi");
 				 target = createResource(options.project.path() + "/instances/trg.xmi");
 				 corr = createResource(options.project.path() + "/instances/corr.xmi");
 				 protocol = createResource(options.project.path() + "/instances/protocol.xmi");

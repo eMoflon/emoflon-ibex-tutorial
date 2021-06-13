@@ -17,18 +17,18 @@ public class HospitalRules {
 	private Random rnd;
 	public HospitalTransformRulesAPI api;
 
-	public HospitalRules(final long rndSeed) {
+	public HospitalRules(final long rndSeed) { // Method to initalize a random seed and a new model 
 		rnd = new Random(rndSeed);
 		api = new HospitalValidator().initAPI();
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException { // Main method to apply and validate the ruleset
 		HospitalRules hospitalrules = new HospitalRules("someSeed".hashCode());
 	
 		hospitalrules.createHospital();
 		hospitalrules.validateHospital();
 		try {
-			hospitalrules.api.getModel().getResources().get(0).save(null);
+			hospitalrules.api.getModel().getResources().get(0).save(null); 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,10 +36,11 @@ public class HospitalRules {
 		hospitalrules.api.terminate();
 	}
 
-	public void createHospital() {
+	public void createHospital() { // Method where hospital rules are applied step by step
 		
 		api.hospital().apply();
 		api.reception().apply();
+		
 		for(int i=0; i<4; i++) {
 			api.department(i+2, 4).apply();
 		}
@@ -64,8 +65,7 @@ public class HospitalRules {
 		while(api.findPatientInReception().hasMatches()) {
 			api.assignPatientToRoom().apply();
 		}
-		api.releasePatient(patientID).setSPO();
-		api.releasePatient(5).apply();
+		
 
 		try {
 			api.getModel().getResources().get(0).save(null);
@@ -78,14 +78,8 @@ public class HospitalRules {
 
 	}
 
-	public void validateHospital() {
+	public void validateHospital() { // Method to validate the ruleset via print outputs
 
-		long counthospital = api.findPatient().countMatches();
-		System.out.println(counthospital + " Patients are in the hospital right now");
-
-		long countpatientsinroom = api.findPatientInRoom().countMatches();
-		System.out.println(countpatientsinroom + " Patients are in a room");
-		
 		
 		if (api.findHospital().countMatches() == 1) {
 			System.out.println("One instance of a hospital has been created");
@@ -98,7 +92,7 @@ public class HospitalRules {
 			System.out.println("Error, the reception was not created");
 
 		if (api.findDepartment().countMatches() > 0) {
-			System.out.println("At least one deparment instance has been created");
+			System.out.println("At least one department instance has been created");
 		} else
 			System.out.println("Error, there are no departments in the hospital");
 
@@ -111,7 +105,6 @@ public class HospitalRules {
 			System.out.println("Error, there are no nurses in the hospital");
 
 		if (api.findDoctor().countMatches() > 0) {
-			System.out.println("At least one doctor is in the hospital");
 			long docCount = api.findDoctor().countMatches();
 			long busyDocCount = api.findDocWithPatient().countMatches();
 			System.out.println(
@@ -126,7 +119,6 @@ public class HospitalRules {
 			System.out.println("Error, there are no patients in the hospital");
 
 		if (api.findRoom().countMatches() > 0) {
-			System.out.println("The hospital consists of at least one room");
 			long patientsInHospital = api.findPatient().countMatches();
 			long patientsInRoom = api.findPatientInRoom().countMatches();
 			System.out.println(patientsInHospital + " Patients are in the hospital right now and " + patientsInRoom

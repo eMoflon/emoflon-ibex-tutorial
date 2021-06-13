@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:AdministrationExample="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" xmlns:Hospital2Administration="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore" xmlns:org.emoflon.ibex.tgg.runtime="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore">
+  <xsd:import namespace="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore" schemaLocation="runtime.xsd"/>
+  <xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+  <xsd:import namespace="platform:/resource/AdministrationExample/model/AdministrationExample.ecore" schemaLocation="AdministrationExample.xsd"/>
+  <xsd:import namespace="platform:/resource/HospitalExample/model/HospitalExample.ecore" schemaLocation="HospitalExample.xsd"/>
+  <xsd:complexType name="HospitalToAdministration">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Hospital"/>
+      <xsd:element name="target" type="AdministrationExample:Administration"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="HospitalToAdministration" type="Hospital2Administration:HospitalToAdministration"/>
+  <xsd:complexType name="StaffToStaff">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Staff"/>
+      <xsd:element name="target" type="AdministrationExample:Staff"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="StaffToStaff" type="Hospital2Administration:StaffToStaff"/>
+  <xsd:complexType name="PatientToPatient">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Patient"/>
+      <xsd:element name="target" type="AdministrationExample:Patient"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="PatientToPatient" type="Hospital2Administration:PatientToPatient"/>
+  <xsd:complexType name="RoomToShiftplan">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Room"/>
+      <xsd:element name="target" type="AdministrationExample:Shiftplan"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="RoomToShiftplan" type="Hospital2Administration:RoomToShiftplan"/>
+  <xsd:complexType name="DoctorToStaff">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Doctor"/>
+      <xsd:element name="target" type="AdministrationExample:Staff"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="DoctorToStaff" type="Hospital2Administration:DoctorToStaff"/>
+  <xsd:complexType name="NurseToStaff">
+    <xsd:choice maxOccurs="unbounded" minOccurs="0">
+      <xsd:element name="source" type="HospitalExample:Nurse"/>
+      <xsd:element name="target" type="AdministrationExample:Staff"/>
+      <xsd:element ref="xmi:Extension"/>
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id"/>
+    <xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+    <xsd:attribute name="source" type="xsd:string"/>
+    <xsd:attribute name="target" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:element name="NurseToStaff" type="Hospital2Administration:NurseToStaff"/>
+  <xsd:complexType name="DepartmentRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__d" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__h" type="HospitalExample:Hospital"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__h" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DepartmentRule__Marker" type="Hospital2Administration:DepartmentRule__Marker"/>
+  <xsd:complexType name="DocToStaffRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__d" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__h" type="HospitalExample:Hospital"/>
+          <xsd:element name="CREATE__SRC__s1" type="HospitalExample:Doctor"/>
+          <xsd:element name="CREATE__TRG__s2" type="AdministrationExample:Staff"/>
+          <xsd:element name="CREATE__TRG__sh" type="AdministrationExample:Shift"/>
+          <xsd:element name="CREATE__TRG__sp" type="AdministrationExample:Shiftplan"/>
+          <xsd:element name="CONTEXT__TRG__v" type="AdministrationExample:Administration"/>
+          <xsd:element name="CONTEXT__CORR__htov" type="Hospital2Administration:HospitalToAdministration"/>
+          <xsd:element name="CREATE__CORR__stot" type="Hospital2Administration:StaffToStaff"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__h" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__s1" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__s2" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__sh" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__sp" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__v" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__htov" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__stot" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DocToStaffRule__Marker" type="Hospital2Administration:DocToStaffRule__Marker"/>
+  <xsd:complexType name="DoctorShiftplanRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__s1" type="HospitalExample:Doctor"/>
+          <xsd:element name="CONTEXT__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__s2" type="AdministrationExample:Staff"/>
+          <xsd:element name="CONTEXT__TRG__sh" type="AdministrationExample:Shift"/>
+          <xsd:element name="CONTEXT__TRG__sp" type="AdministrationExample:Shiftplan"/>
+          <xsd:element name="CONTEXT__CORR__pToP" type="Hospital2Administration:PatientToPatient"/>
+          <xsd:element name="CONTEXT__CORR__sToS" type="Hospital2Administration:StaffToStaff"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__s1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__s2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__sh" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__sp" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__pToP" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__sToS" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DoctorShiftplanRule__Marker" type="Hospital2Administration:DoctorShiftplanRule__Marker"/>
+  <xsd:complexType name="DoctorToPatient__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__d" type="HospitalExample:Doctor"/>
+          <xsd:element name="CONTEXT__SRC__dep" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__ro" type="HospitalExample:Room"/>
+          <xsd:element name="CONTEXT__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__s" type="AdministrationExample:Staff"/>
+          <xsd:element name="CREATE__TRG__t" type="AdministrationExample:Treatment"/>
+          <xsd:element name="CONTEXT__CORR__dToS" type="Hospital2Administration:StaffToStaff"/>
+          <xsd:element name="CONTEXT__CORR__pToP" type="Hospital2Administration:PatientToPatient"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__dep" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__ro" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__s" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__t" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__dToS" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__pToP" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DoctorToPatient__Marker" type="Hospital2Administration:DoctorToPatient__Marker"/>
+  <xsd:complexType name="HospitaltoAdministrationRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CREATE__SRC__h" type="HospitalExample:Hospital"/>
+          <xsd:element name="CREATE__SRC__r" type="HospitalExample:Reception"/>
+          <xsd:element name="CREATE__TRG__v" type="AdministrationExample:Administration"/>
+          <xsd:element name="CREATE__CORR__htov" type="Hospital2Administration:HospitalToAdministration"/>
+        </xsd:choice>
+        <xsd:attribute name="CREATE__SRC__h" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__r" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__v" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__htov" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="HospitaltoAdministrationRule__Marker" type="Hospital2Administration:HospitaltoAdministrationRule__Marker"/>
+  <xsd:complexType name="NurseShiftplanRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__ro" type="HospitalExample:Room"/>
+          <xsd:element name="CONTEXT__SRC__s1" type="HospitalExample:Nurse"/>
+          <xsd:element name="CONTEXT__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__s2" type="AdministrationExample:Staff"/>
+          <xsd:element name="CONTEXT__TRG__sh" type="AdministrationExample:Shift"/>
+          <xsd:element name="CONTEXT__TRG__sp" type="AdministrationExample:Shiftplan"/>
+          <xsd:element name="CONTEXT__CORR__pToP" type="Hospital2Administration:PatientToPatient"/>
+          <xsd:element name="CONTEXT__CORR__sToS" type="Hospital2Administration:StaffToStaff"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__ro" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__s1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__s2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__sh" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__sp" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__pToP" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__sToS" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NurseShiftplanRule__Marker" type="Hospital2Administration:NurseShiftplanRule__Marker"/>
+  <xsd:complexType name="NurseToRoomRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__dep" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__n" type="HospitalExample:Nurse"/>
+          <xsd:element name="CONTEXT__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__r" type="HospitalExample:Room"/>
+          <xsd:element name="CONTEXT__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__s" type="AdministrationExample:Staff"/>
+          <xsd:element name="CONTEXT__CORR__nToS" type="Hospital2Administration:StaffToStaff"/>
+          <xsd:element name="CONTEXT__CORR__pTop" type="Hospital2Administration:PatientToPatient"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__dep" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__n" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__r" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__s" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__nToS" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__pTop" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NurseToRoomRule__Marker" type="Hospital2Administration:NurseToRoomRule__Marker"/>
+  <xsd:complexType name="NurseToStaffRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__d" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__h" type="HospitalExample:Hospital"/>
+          <xsd:element name="CREATE__SRC__s1" type="HospitalExample:Nurse"/>
+          <xsd:element name="CREATE__TRG__s2" type="AdministrationExample:Staff"/>
+          <xsd:element name="CREATE__TRG__sh" type="AdministrationExample:Shift"/>
+          <xsd:element name="CREATE__TRG__sp" type="AdministrationExample:Shiftplan"/>
+          <xsd:element name="CONTEXT__TRG__v" type="AdministrationExample:Administration"/>
+          <xsd:element name="CONTEXT__CORR__htov" type="Hospital2Administration:HospitalToAdministration"/>
+          <xsd:element name="CREATE__CORR__stot" type="Hospital2Administration:StaffToStaff"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__h" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__s1" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__s2" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__sh" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__sp" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__v" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__htov" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__stot" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="NurseToStaffRule__Marker" type="Hospital2Administration:NurseToStaffRule__Marker"/>
+  <xsd:complexType name="PatientInReception__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__h" type="HospitalExample:Hospital"/>
+          <xsd:element name="CREATE__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__r" type="HospitalExample:Reception"/>
+          <xsd:element name="CREATE__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__v" type="AdministrationExample:Administration"/>
+          <xsd:element name="CONTEXT__CORR__htov" type="Hospital2Administration:HospitalToAdministration"/>
+          <xsd:element name="CREATE__CORR__pTop" type="Hospital2Administration:PatientToPatient"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__h" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__r" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__v" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__htov" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__pTop" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PatientInReception__Marker" type="Hospital2Administration:PatientInReception__Marker"/>
+  <xsd:complexType name="PatientInRoom__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__d" type="HospitalExample:Department"/>
+          <xsd:element name="CONTEXT__SRC__h" type="HospitalExample:Hospital"/>
+          <xsd:element name="CREATE__SRC__p1" type="HospitalExample:Patient"/>
+          <xsd:element name="CONTEXT__SRC__ro" type="HospitalExample:Room"/>
+          <xsd:element name="CREATE__TRG__p2" type="AdministrationExample:Patient"/>
+          <xsd:element name="CONTEXT__TRG__v" type="AdministrationExample:Administration"/>
+          <xsd:element name="CONTEXT__CORR__htov" type="Hospital2Administration:HospitalToAdministration"/>
+          <xsd:element name="CREATE__CORR__pTop" type="Hospital2Administration:PatientToPatient"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__h" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__p1" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__SRC__ro" type="xsd:string"/>
+        <xsd:attribute name="CREATE__TRG__p2" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__TRG__v" type="xsd:string"/>
+        <xsd:attribute name="CONTEXT__CORR__htov" type="xsd:string"/>
+        <xsd:attribute name="CREATE__CORR__pTop" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PatientInRoom__Marker" type="Hospital2Administration:PatientInRoom__Marker"/>
+  <xsd:complexType name="RoomRule__Marker">
+    <xsd:complexContent>
+      <xsd:extension base="org.emoflon.ibex.tgg.runtime:TGGRuleApplication">
+        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+          <xsd:element name="CONTEXT__SRC__d" type="HospitalExample:Department"/>
+          <xsd:element name="CREATE__SRC__ro" type="HospitalExample:Room"/>
+        </xsd:choice>
+        <xsd:attribute name="CONTEXT__SRC__d" type="xsd:string"/>
+        <xsd:attribute name="CREATE__SRC__ro" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RoomRule__Marker" type="Hospital2Administration:RoomRule__Marker"/>
+</xsd:schema>

@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hipe.network:HiPENetwork xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hipe.network="platform:/resource/hipe.network/model/hiPENetwork" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage platform:/resource/hipe.network/model/hiPENetwork java://hipe.network.NetworkPackage">
+  <networknode xmi:type="hipe.network:DispatchNode" name="DispatchNode" objectNodes="//@networknode.2 //@networknode.4 //@networknode.5 //@networknode.22 //@networknode.23 //@networknode.24 //@networknode.25 //@networknode.28 //@networknode.29 //@networknode.35 //@networknode.52 //@networknode.57 //@networknode.58 //@networknode.59 //@networknode.60 //@networknode.61 //@networknode.62 //@networknode.63 //@networknode.64 //@networknode.65 //@networknode.66 //@networknode.67 //@networknode.68" notificationNode="//@networknode.1">
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#/"/>
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NotificationNode" name="NotificationNode" dispatchNode="//@networknode.0"/>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Department_object" patternName="DocToStaffRule__BWD_10" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.18" patternName="DocToStaffRule__BWD_10" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DocToStaffRule__BWD_10" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.48" patternName="DocToStaffRule__BWD_10" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DocToStaffRule__BWD_10" matchingNode="//@networknode.2"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="HospitalToAdministration_source_0_reference" inputPort="//@networknode.4/@ports/@port.0 //@networknode.5/@ports/@port.0" patternName="DocToStaffRule__BWD_14">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.7" patternName="DocToStaffRule__BWD_14" matchingNode="//@networknode.3"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.38" patternName="DocToStaffRule__BWD_14" matchingNode="//@networknode.3"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="HospitalToAdministration_object" patternName="DocToStaffRule__BWD_18" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.3" patternName="DocToStaffRule__BWD_18" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.6" patternName="DocToStaffRule__BWD_18" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.53" patternName="DocToStaffRule__BWD_18" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DocToStaffRule__BWD_18" matchingNode="//@networknode.4"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Hospital_object" patternName="DocToStaffRule__BWD_19" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.3" patternName="DocToStaffRule__BWD_19" matchingNode="//@networknode.5"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.53" patternName="DocToStaffRule__BWD_19" matchingNode="//@networknode.5"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DocToStaffRule__BWD_19" matchingNode="//@networknode.5"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="HospitalToAdministration_target_0_reference" inputPort="//@networknode.4/@ports/@port.1 //@networknode.57/@ports/@port.0" patternName="DocToStaffRule__BWD_15">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.7" patternName="DocToStaffRule__BWD_15" matchingNode="//@networknode.6"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.38" patternName="DocToStaffRule__BWD_15" matchingNode="//@networknode.6"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="DocToStaffRule__BWD_12_junction" inputPort="//@networknode.3/@ports/@port.0 //@networknode.6/@ports/@port.0" patternName="DocToStaffRule__BWD_12" overlaps="//@networknode.7/@allOverlaps.0" mappings="//@networknode.7/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.17" patternName="DocToStaffRule__BWD_12" matchingNode="//@networknode.7"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Shiftplan_shifts_0_reference" inputPort="//@networknode.59/@ports/@port.0 //@networknode.62/@ports/@port.0" patternName="DocToStaffRule__BWD_21">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.10" patternName="DocToStaffRule__BWD_21" matchingNode="//@networknode.8"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.40" patternName="DocToStaffRule__BWD_21" matchingNode="//@networknode.8"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_5_localSearch" inputPort="//@networknode.60/@ports/@port.0 //@networknode.63/@ports/@port.0" patternName="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_5">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.10" patternName="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_5" matchingNode="//@networknode.9" initializationCode="" constraintName="check_constraint_1" predicateCode="!FILTER_NAC_NODE.equals(sh)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sh</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.17"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.21" patternName="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_5" matchingNode="//@networknode.9" initializationCode="" constraintName="check_constraint_7" predicateCode="!FILTER_NAC_NODE.equals(sh)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sh</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.17"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.17"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.2 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.2 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.5"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.2 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.6"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.2 //@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.9/@orchestrationComponents.2 //@networknode.9/@orchestrationComponents.1 //@networknode.9/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.7"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.2"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.3"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="DocToStaffRule__BWD_16_nacjunction" inputPort="//@networknode.8/@ports/@port.0 //@networknode.9/@ports/@port.0" patternName="DocToStaffRule__BWD_16" overlaps="//@networknode.10/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.16" patternName="DocToStaffRule__BWD_16" matchingNode="//@networknode.10"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Administration_staff_0_reference" inputPort="//@networknode.58/@ports/@port.0 //@networknode.64/@ports/@port.0" patternName="DocToStaffRule__BWD_22">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.15" patternName="DocToStaffRule__BWD_22" matchingNode="//@networknode.11"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Staff_shiftPlan_0_reference" inputPort="//@networknode.65/@ports/@port.0 //@networknode.61/@ports/@port.0" patternName="DocToStaffRule__BWD_27">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.14" patternName="DocToStaffRule__BWD_27" matchingNode="//@networknode.12"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_1_localSearch" inputPort="//@networknode.66/@ports/@port.0 //@networknode.59/@ports/@port.1" patternName="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_1">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.14" patternName="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_1" matchingNode="//@networknode.13" initializationCode="" constraintName="check_constraint_4" predicateCode="!FILTER_NAC_NODE.equals(sp)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sp</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.13"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.20" patternName="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_1" matchingNode="//@networknode.13" initializationCode="" constraintName="check_constraint_6" predicateCode="!FILTER_NAC_NODE.equals(sp)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sp</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.13"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.13"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.0"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.2"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.13/@orchestrationComponents.2 //@networknode.13/@orchestrationComponents.1 //@networknode.13/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.1"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.1"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.0"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="DocToStaffRule__BWD_23_nacjunction" inputPort="//@networknode.12/@ports/@port.0 //@networknode.13/@ports/@port.0" patternName="DocToStaffRule__BWD_23" overlaps="//@networknode.14/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.15" patternName="DocToStaffRule__BWD_23" matchingNode="//@networknode.14"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="DocToStaffRule__BWD_17_junction" inputPort="//@networknode.11/@ports/@port.0 //@networknode.14/@ports/@port.0" patternName="DocToStaffRule__BWD_17" overlaps="//@networknode.15/@allOverlaps.0" mappings="//@networknode.15/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.16" patternName="DocToStaffRule__BWD_17" matchingNode="//@networknode.15"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="DocToStaffRule__BWD_13_junction" inputPort="//@networknode.10/@ports/@port.0 //@networknode.15/@ports/@port.0" patternName="DocToStaffRule__BWD_13" overlaps="//@networknode.16/@allOverlaps.0" mappings="//@networknode.16/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.17" patternName="DocToStaffRule__BWD_13" matchingNode="//@networknode.16"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="2"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="DocToStaffRule__BWD_11_junction" inputPort="//@networknode.7/@ports/@port.0 //@networknode.16/@ports/@port.0" patternName="DocToStaffRule__BWD_11" overlaps="//@networknode.17/@allOverlaps.0" mappings="//@networknode.17/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.18" patternName="DocToStaffRule__BWD_11" matchingNode="//@networknode.17"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="2" rightIndex="2"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="2"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="DocToStaffRule__BWD_9_junction" inputPort="//@networknode.2/@ports/@port.0 //@networknode.17/@ports/@port.0" patternName="DocToStaffRule__BWD_9" overlaps="//@networknode.18/@allOverlaps.0" mappings="//@networknode.18/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.19" patternName="DocToStaffRule__BWD_9" matchingNode="//@networknode.18" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_1 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();&#xA;csp_1.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, d.getDID(), &quot;int&quot;));&#xA;csp_1.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getDInt(), &quot;int&quot;));&#xA;csp_1.solve();&#xA;" constraintName="check_constraint_5" predicateCode="csp_1.isSatisfied()">
+        <indices>6</indices>
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        <nodeNames>s2</nodeNames>
+        <nodeNames>d</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.21"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="5"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="5"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DocToStaffRule__BWD_production" inputPort="//@networknode.18/@ports/@port.0" patternName="DocToStaffRule__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="d" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="h" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="htov" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="v" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.13/@ports/@port.1" patternName="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.9/@ports/@port.1" patternName="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Patient_object" patternName="DoctorShiftplanRule__BWD_29" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DoctorShiftplanRule__BWD_29" matchingNode="//@networknode.22"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorShiftplanRule__BWD_29" matchingNode="//@networknode.22"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DoctorShiftplanRule__BWD_29" matchingNode="//@networknode.22"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="PatientToPatient_object" patternName="DoctorShiftplanRule__BWD_31" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DoctorShiftplanRule__BWD_31" matchingNode="//@networknode.23"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorShiftplanRule__BWD_31" matchingNode="//@networknode.23"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DoctorShiftplanRule__BWD_31" matchingNode="//@networknode.23"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Doctor_object" patternName="DoctorShiftplanRule__BWD_32" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DoctorShiftplanRule__BWD_32" matchingNode="//@networknode.24"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorShiftplanRule__BWD_32" matchingNode="//@networknode.24"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="StaffToStaff_object" patternName="DoctorShiftplanRule__BWD_34" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DoctorShiftplanRule__BWD_34" matchingNode="//@networknode.25"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorShiftplanRule__BWD_34" matchingNode="//@networknode.25"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DoctorShiftplanRule__BWD_34" matchingNode="//@networknode.25"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DoctorShiftplanRule__BWD_28_localSearch" inputPort="//@networknode.22/@ports/@port.0 //@networknode.67/@ports/@port.0 //@networknode.23/@ports/@port.0 //@networknode.24/@ports/@port.0 //@networknode.64/@ports/@port.1 //@networknode.25/@ports/@port.0 //@networknode.62/@ports/@port.1 //@networknode.60/@ports/@port.1" patternName="DoctorShiftplanRule__BWD_28">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.27" patternName="DoctorShiftplanRule__BWD_28" matchingNode="//@networknode.26"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.40"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.11"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.15"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.14"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.1 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.15"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.1 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.20"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.1 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.19"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.13"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.18"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_4_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.16"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.9"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_5_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.13"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_6_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.16"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_7_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.10"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_8_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.14"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_8_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.17"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.26/@orchestrationComponents.7 //@networknode.26/@orchestrationComponents.6 //@networknode.26/@orchestrationComponents.2 //@networknode.26/@orchestrationComponents.4 //@networknode.26/@orchestrationComponents.3 //@networknode.26/@orchestrationComponents.0 //@networknode.26/@orchestrationComponents.5 //@networknode.26/@orchestrationComponents.1" name="edge_explorer_9_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.12"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.11"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>7</indices>
+      <indices>6</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.15"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>5</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.13"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>0</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.9"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_6">
+      <indices>7</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/covers"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.16"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_7">
+      <indices>2</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.10"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_8">
+      <indices>5</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.14"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_9">
+      <indices>4</indices>
+      <indices>7</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.12"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DoctorShiftplanRule__BWD_production" inputPort="//@networknode.26/@ports/@port.0" patternName="DoctorShiftplanRule__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p1" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p2" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="pToP" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s1" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="4"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sToS" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="7"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Room_object" patternName="DoctorToPatient__BWD_48" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorToPatient__BWD_48" matchingNode="//@networknode.28"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DoctorToPatient__BWD_48" matchingNode="//@networknode.28"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DoctorToPatient__BWD_48" matchingNode="//@networknode.28"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Treatment_object" patternName="DoctorToPatient__BWD_50" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorToPatient__BWD_50" matchingNode="//@networknode.29"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.30" patternName="DoctorToPatient__BWD_50" matchingNode="//@networknode.29"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG_37_localSearch" inputPort="//@networknode.29/@ports/@port.1 //@networknode.66/@ports/@port.1" patternName="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG_37">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG_37" matchingNode="//@networknode.30"/>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.33" patternName="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG_37" matchingNode="//@networknode.30" initializationCode="" constraintName="check_constraint_9" predicateCode="!FILTER_NAC_NODE.equals(s)">
+        <indices>1</indices>
+        <indices>2</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <nodeNames>s</nodeNames>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.49"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.49"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.30/@orchestrationComponents.1 //@networknode.30/@orchestrationComponents.2 //@networknode.30/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.17"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.30/@orchestrationComponents.1 //@networknode.30/@orchestrationComponents.2 //@networknode.30/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.22"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.30/@orchestrationComponents.1 //@networknode.30/@orchestrationComponents.2 //@networknode.30/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.21"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.30/@orchestrationComponents.2 //@networknode.30/@orchestrationComponents.1 //@networknode.30/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.18"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.30/@orchestrationComponents.2 //@networknode.30/@orchestrationComponents.1 //@networknode.30/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.23"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.17"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>2</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.18"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="DoctorToPatient__BWD_41_localSearch" inputPort="//@networknode.24/@ports/@port.1 //@networknode.25/@ports/@port.1 //@networknode.2/@ports/@port.1 //@networknode.22/@ports/@port.1 //@networknode.68/@ports/@port.0 //@networknode.23/@ports/@port.1 //@networknode.28/@ports/@port.0 //@networknode.65/@ports/@port.1 //@networknode.29/@ports/@port.0 //@networknode.30/@ports/@port.0" patternName="DoctorToPatient__BWD_41">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.32" patternName="DoctorToPatient__BWD_41" matchingNode="//@networknode.31" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_carelevelToMedication csp_2 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_carelevelToMedication();&#xA;csp_2.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, p1.getLevel(), &quot;Enum::Carelevel&quot;));&#xA;csp_2.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, t.getMedication(), &quot;Enum::Medication&quot;));&#xA;csp_2.solve();&#xA;" constraintName="check_constraint_8" predicateCode="csp_2.isSatisfied()">
+        <indices>8</indices>
+        <indices>3</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        <nodeNames>t</nodeNames>
+        <nodeNames>p1</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.53"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps" name="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="7" rightIndex="1"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="8"/>
+    </allOverlaps>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.53"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.23"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.31"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.29"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.21"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.26"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.28"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.25"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.32"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.24"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_5_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.30"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_6_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.27"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_6_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.25"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_6_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.24"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_7_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.20"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_7_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.27"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_8_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.22"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.9" name="edge_explorer_9_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.19"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.9 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.5" name="edge_explorer_10_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.26"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.31/@orchestrationComponents.10 //@networknode.31/@orchestrationComponents.6 //@networknode.31/@orchestrationComponents.8 //@networknode.31/@orchestrationComponents.2 //@networknode.31/@orchestrationComponents.7 //@networknode.31/@orchestrationComponents.3 //@networknode.31/@orchestrationComponents.0 //@networknode.31/@orchestrationComponents.1 //@networknode.31/@orchestrationComponents.4 //@networknode.31/@orchestrationComponents.5 //@networknode.31/@orchestrationComponents.9" name="nac_checker_orchestration" sender="//@networknode.30/@ports/@port.0"/>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="constraint_checker" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_carelevelToMedication csp_2 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_carelevelToMedication();&#xA;csp_2.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, p1.getLevel(), &quot;Enum::Carelevel&quot;));&#xA;csp_2.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, t.getMedication(), &quot;Enum::Medication&quot;));&#xA;csp_2.solve();&#xA;" predicateCode="csp_2.isSatisfied()">
+      <indices>3</indices>
+      <indices>8</indices>
+      <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+      <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+      <nodeNames>p1</nodeNames>
+      <nodeNames>t</nodeNames>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>5</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.23"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.21"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>6</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.25"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>5</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.24"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_6">
+      <indices>7</indices>
+      <indices>8</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.27"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_7">
+      <indices>1</indices>
+      <indices>7</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.20"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_8">
+      <indices>2</indices>
+      <indices>6</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.22"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_9">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.19"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_10">
+      <indices>4</indices>
+      <indices>8</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.26"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:ACComponent" sender="//@networknode.30/@ports/@port.0" name="nac_checker" overlaps="//@networknode.31/@allOverlaps.0">
+      <indices>7</indices>
+      <indices>8</indices>
+      <overlappedNodes xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.25"/>
+      <overlappedNodes xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.24"/>
+    </orchestrationComponents>
+    <invocations xmi:type="hipe.network:LocalSearchInvocation" inputPort="//@networknode.30/@ports/@port.0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DoctorToPatient__BWD_production" inputPort="//@networknode.31/@ports/@port.0" patternName="DoctorToPatient__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="d" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="dToS" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="dep" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p1" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p2" value="4"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="pToP" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="ro" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s" value="7"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="t" value="8"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.30/@ports/@port.1" patternName="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="t" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="HospitaltoAdministrationRule__BWD_production" inputPort="//@networknode.57/@ports/@port.1" patternName="HospitaltoAdministrationRule__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="v" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Nurse_object" patternName="NurseShiftplanRule__BWD_57" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="NurseShiftplanRule__BWD_57" matchingNode="//@networknode.35"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="NurseShiftplanRule__BWD_52_localSearch" inputPort="//@networknode.22/@ports/@port.2 //@networknode.67/@ports/@port.1 //@networknode.23/@ports/@port.2 //@networknode.28/@ports/@port.1 //@networknode.35/@ports/@port.0 //@networknode.64/@ports/@port.2 //@networknode.25/@ports/@port.2 //@networknode.63/@ports/@port.1 //@networknode.61/@ports/@port.1" patternName="NurseShiftplanRule__BWD_52">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.37" patternName="NurseShiftplanRule__BWD_52" matchingNode="//@networknode.36"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.64"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.30"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.37"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.34"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.36"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.42"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.35"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.28"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.36"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.32"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_5_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.39"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_6_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.29"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_7_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.33"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_7_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.40"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_7_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.38"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_8_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.35"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_8_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.41"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.8" name="edge_explorer_9_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.31"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.36/@orchestrationComponents.8 //@networknode.36/@orchestrationComponents.3 //@networknode.36/@orchestrationComponents.6 //@networknode.36/@orchestrationComponents.5 //@networknode.36/@orchestrationComponents.1 //@networknode.36/@orchestrationComponents.7 //@networknode.36/@orchestrationComponents.0 //@networknode.36/@orchestrationComponents.2 //@networknode.36/@orchestrationComponents.4" name="edge_explorer_10_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.34"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>3</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.30"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>8</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/covers"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.36"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>2</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.28"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>5</indices>
+      <indices>8</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.32"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_6">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.29"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_7">
+      <indices>6</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.33"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_8">
+      <indices>8</indices>
+      <indices>7</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.35"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_9">
+      <indices>4</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.31"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_10">
+      <indices>6</indices>
+      <indices>5</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.34"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="NurseShiftplanRule__BWD_production" inputPort="//@networknode.36/@ports/@port.0" patternName="NurseShiftplanRule__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p1" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p2" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="pToP" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="ro" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s1" value="4"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sToS" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="7"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="8"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="NurseToStaffRule__BWD_73_junction" inputPort="//@networknode.3/@ports/@port.1 //@networknode.6/@ports/@port.1" patternName="NurseToStaffRule__BWD_73" overlaps="//@networknode.38/@allOverlaps.0" mappings="//@networknode.38/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.47" patternName="NurseToStaffRule__BWD_73" matchingNode="//@networknode.38"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_66_localSearch" inputPort="//@networknode.59/@ports/@port.2 //@networknode.62/@ports/@port.2" patternName="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_66">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.40" patternName="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_66" matchingNode="//@networknode.39" initializationCode="" constraintName="check_constraint_10" predicateCode="!FILTER_NAC_NODE.equals(sh)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sh</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.78"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.51" patternName="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_66" matchingNode="//@networknode.39" initializationCode="" constraintName="check_constraint_16" predicateCode="!FILTER_NAC_NODE.equals(sh)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sh</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.78"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.78"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.39/@orchestrationComponents.1 //@networknode.39/@orchestrationComponents.2 //@networknode.39/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.40"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.39/@orchestrationComponents.1 //@networknode.39/@orchestrationComponents.2 //@networknode.39/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.48"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.39/@orchestrationComponents.1 //@networknode.39/@orchestrationComponents.2 //@networknode.39/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.50"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.39/@orchestrationComponents.2 //@networknode.39/@orchestrationComponents.1 //@networknode.39/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.39"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.39/@orchestrationComponents.2 //@networknode.39/@orchestrationComponents.1 //@networknode.39/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.49"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.40"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.39"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="NurseToStaffRule__BWD_77_nacjunction" inputPort="//@networknode.8/@ports/@port.1 //@networknode.39/@ports/@port.0" patternName="NurseToStaffRule__BWD_77" overlaps="//@networknode.40/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.46" patternName="NurseToStaffRule__BWD_77" matchingNode="//@networknode.40"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Administration_staff_1_reference" inputPort="//@networknode.58/@ports/@port.1 //@networknode.65/@ports/@port.2" patternName="NurseToStaffRule__BWD_83">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.45" patternName="NurseToStaffRule__BWD_83" matchingNode="//@networknode.41"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Staff_shiftPlan_1_reference" inputPort="//@networknode.66/@ports/@port.2 //@networknode.60/@ports/@port.2" patternName="NurseToStaffRule__BWD_88">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.44" patternName="NurseToStaffRule__BWD_88" matchingNode="//@networknode.42"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_62_localSearch" inputPort="//@networknode.64/@ports/@port.3 //@networknode.61/@ports/@port.2" patternName="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_62">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.44" patternName="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_62" matchingNode="//@networknode.43" initializationCode="" constraintName="check_constraint_13" predicateCode="!FILTER_NAC_NODE.equals(sp)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sp</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.74"/>
+      </port>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.50" patternName="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_62" matchingNode="//@networknode.43" initializationCode="" constraintName="check_constraint_15" predicateCode="!FILTER_NAC_NODE.equals(sp)">
+        <indices>2</indices>
+        <indices>1</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+        <nodeNames>FILTER_NAC_NODE</nodeNames>
+        <nodeNames>sp</nodeNames>
+        <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.74"/>
+      </port>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.74"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.43/@orchestrationComponents.1 //@networknode.43/@orchestrationComponents.2 //@networknode.43/@orchestrationComponents.0" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.37"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.43/@orchestrationComponents.1 //@networknode.43/@orchestrationComponents.2 //@networknode.43/@orchestrationComponents.0" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.43"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.43/@orchestrationComponents.1 //@networknode.43/@orchestrationComponents.2 //@networknode.43/@orchestrationComponents.0" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.44"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.43/@orchestrationComponents.2 //@networknode.43/@orchestrationComponents.1 //@networknode.43/@orchestrationComponents.0" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.38"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.43/@orchestrationComponents.2 //@networknode.43/@orchestrationComponents.1 //@networknode.43/@orchestrationComponents.0" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.45"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:ConstraintCheckComponent" name="node_constraint" initializationCode="Object[] objs = match.getNodes();&#xA;" predicateCode="!objs[2].equals(objs[1]);"/>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>0</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.37"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.38"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="NurseToStaffRule__BWD_84_nacjunction" inputPort="//@networknode.42/@ports/@port.0 //@networknode.43/@ports/@port.0" patternName="NurseToStaffRule__BWD_84" overlaps="//@networknode.44/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.45" patternName="NurseToStaffRule__BWD_84" matchingNode="//@networknode.44"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="NurseToStaffRule__BWD_78_junction" inputPort="//@networknode.41/@ports/@port.0 //@networknode.44/@ports/@port.0" patternName="NurseToStaffRule__BWD_78" overlaps="//@networknode.45/@allOverlaps.0" mappings="//@networknode.45/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.46" patternName="NurseToStaffRule__BWD_78" matchingNode="//@networknode.45"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="NurseToStaffRule__BWD_74_junction" inputPort="//@networknode.40/@ports/@port.0 //@networknode.45/@ports/@port.0" patternName="NurseToStaffRule__BWD_74" overlaps="//@networknode.46/@allOverlaps.0" mappings="//@networknode.46/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.47" patternName="NurseToStaffRule__BWD_74" matchingNode="//@networknode.46"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="2"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="NurseToStaffRule__BWD_72_junction" inputPort="//@networknode.38/@ports/@port.0 //@networknode.46/@ports/@port.0" patternName="NurseToStaffRule__BWD_72" overlaps="//@networknode.47/@allOverlaps.0" mappings="//@networknode.47/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.48" patternName="NurseToStaffRule__BWD_72" matchingNode="//@networknode.47"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="2" rightIndex="2"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" index="2"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="NurseToStaffRule__BWD_70_junction" inputPort="//@networknode.2/@ports/@port.2 //@networknode.47/@ports/@port.0" patternName="NurseToStaffRule__BWD_70" overlaps="//@networknode.48/@allOverlaps.0" mappings="//@networknode.48/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.49" patternName="NurseToStaffRule__BWD_70" matchingNode="//@networknode.48" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.Eq csp_3 = new org.emoflon.ibex.tgg.operational.csp.constraints.Eq();&#xA;csp_3.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, d.getDID(), &quot;int&quot;));&#xA;csp_3.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getDInt(), &quot;int&quot;));&#xA;csp_3.solve();&#xA;" constraintName="check_constraint_14" predicateCode="csp_3.isSatisfied()">
+        <indices>6</indices>
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        <nodeNames>s2</nodeNames>
+        <nodeNames>d</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.82"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="5"/>
+      <signatureMapping xmi:type="hipe.network:Mapping"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+      <signatureMapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="5"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="NurseToStaffRule__BWD_production" inputPort="//@networknode.48/@ports/@port.0" patternName="NurseToStaffRule__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="d" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="h" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="htov" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="v" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="6"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.43/@ports/@port.1" patternName="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="s2" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG_production" inputPort="//@networknode.39/@ports/@port.1" patternName="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sp" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="sh" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="FILTER_NAC_NODE" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Reception_object" patternName="PatientInReception__BWD_92" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.53" patternName="PatientInReception__BWD_92" matchingNode="//@networknode.52"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="PatientInReception__BWD_89_localSearch" inputPort="//@networknode.5/@ports/@port.1 //@networknode.4/@ports/@port.2 //@networknode.52/@ports/@port.0 //@networknode.57/@ports/@port.2 //@networknode.68/@ports/@port.1" patternName="PatientInReception__BWD_89">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.54" patternName="PatientInReception__BWD_89" matchingNode="//@networknode.53"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.101"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.0 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.49"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.0 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.59"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.0 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.60"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.48"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.57"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.2 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.46"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.2 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.56"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.2 //@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0" name="edge_explorer_4_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.58"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.53/@orchestrationComponents.3 //@networknode.53/@orchestrationComponents.2 //@networknode.53/@orchestrationComponents.1 //@networknode.53/@orchestrationComponents.0" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.47"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>3</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.49"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>1</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.48"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>0</indices>
+      <indices>2</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.46"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.47"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="PatientInReception__BWD_production" inputPort="//@networknode.53/@ports/@port.0" patternName="PatientInReception__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="h" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="htov" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="r" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="v" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p2" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:LocalSearchNode" name="PatientInRoom__BWD_95_localSearch" inputPort="//@networknode.2/@ports/@port.3 //@networknode.5/@ports/@port.2 //@networknode.4/@ports/@port.3 //@networknode.28/@ports/@port.2 //@networknode.58/@ports/@port.2 //@networknode.67/@ports/@port.2" patternName="PatientInRoom__BWD_95">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.56" patternName="PatientInRoom__BWD_95" matchingNode="//@networknode.55"/>
+    </ports>
+    <pattern xmi:type="HiPEPattern:HiPELargePattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.107"/>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.53"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.63"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.65"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_3_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.50"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_3_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.61"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_3_2_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.64"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_4_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.51"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_4_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.62"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.4" name="edge_explorer_5_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.52"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.4 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1" name="edge_explorer_6_0_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.54"/>
+    </orchestrations>
+    <orchestrations xmi:type="hipe.network:SearchOrchestration" plan="//@networknode.55/@orchestrationComponents.4 //@networknode.55/@orchestrationComponents.0 //@networknode.55/@orchestrationComponents.3 //@networknode.55/@orchestrationComponents.2 //@networknode.55/@orchestrationComponents.1" name="edge_explorer_6_1_orchestration">
+      <entryElement xmi:type="HiPEPattern:HiPENode" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@nodes.66"/>
+    </orchestrations>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer">
+      <indices>2</indices>
+      <indices>4</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.53"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_3">
+      <indices>0</indices>
+      <indices>3</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.50"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_4">
+      <indices>1</indices>
+      <indices>0</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.51"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_5">
+      <indices>2</indices>
+      <indices>1</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.52"/>
+    </orchestrationComponents>
+    <orchestrationComponents xmi:type="hipe.network:EdgeExplorationComponent" name="edge_explorer_6">
+      <indices>4</indices>
+      <indices>5</indices>
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+      <edge xmi:type="HiPEPattern:HiPEEdge" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@edges.54"/>
+    </orchestrationComponents>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="PatientInRoom__BWD_production" inputPort="//@networknode.55/@ports/@port.0" patternName="PatientInRoom__BWD">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="d" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="h" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="htov" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="ro" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="v" value="4"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="p2" value="5"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Administration_object_SP0" patternName="DocToStaffRule__BWD_20" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.6" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.57"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.34" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.57"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.53" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.57"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Administration_object_SP1" patternName="DocToStaffRule__BWD_20" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.11" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.58"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.41" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.58"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DocToStaffRule__BWD_20" matchingNode="//@networknode.58"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Shiftplan_object_SP0" patternName="DocToStaffRule__BWD_24" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.8" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.59"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.59"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.39" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.59"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Shiftplan_object_SP1" patternName="DocToStaffRule__BWD_24" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.60"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.60"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.42" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.60"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Shiftplan_object_SP2" patternName="DocToStaffRule__BWD_24" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.12" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.61"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.61"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.43" patternName="DocToStaffRule__BWD_24" matchingNode="//@networknode.61"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Shift_object_SP0" patternName="DocToStaffRule__BWD_25" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.8" patternName="DocToStaffRule__BWD_25" matchingNode="//@networknode.62"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DocToStaffRule__BWD_25" matchingNode="//@networknode.62"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.39" patternName="DocToStaffRule__BWD_25" matchingNode="//@networknode.62"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Shift_object_SP1" patternName="DocToStaffRule__BWD_25" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.9" patternName="DocToStaffRule__BWD_25" matchingNode="//@networknode.63"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DocToStaffRule__BWD_25" matchingNode="//@networknode.63"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Staff_object_SP0" patternName="DocToStaffRule__BWD_26" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.11" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.64" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_doctorsalary csp_0 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_doctorsalary();&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getSalary(), &quot;double&quot;));&#xA;csp_0.solve();&#xA;" constraintName="check_constraint_2" predicateCode="csp_0.isSatisfied()">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <nodeNames>s2</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.38"/>
+      </port>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.64"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.64"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.43" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.64"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Staff_object_SP1" patternName="DocToStaffRule__BWD_26" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.12" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.65" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_doctorsalary csp_0 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_doctorsalary();&#xA;csp_0.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getSalary(), &quot;double&quot;));&#xA;csp_0.solve();&#xA;" constraintName="check_constraint_3" predicateCode="csp_0.isSatisfied()">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <nodeNames>s2</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.38"/>
+      </port>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.41" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.65" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nursesalary csp_4 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nursesalary();&#xA;csp_4.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getSalary(), &quot;double&quot;));&#xA;csp_4.solve();&#xA;" constraintName="check_constraint_11" predicateCode="csp_4.isSatisfied()">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <nodeNames>s2</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.99"/>
+      </port>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Staff_object_SP2" patternName="DocToStaffRule__BWD_26" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.13" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.30" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.42" patternName="DocToStaffRule__BWD_26" matchingNode="//@networknode.66" initializationCode="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nursesalary csp_4 = new org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration.UserDefined_nursesalary();&#xA;csp_4.getVariables().add(new org.emoflon.ibex.tgg.operational.csp.RuntimeTGGAttributeConstraintVariable(true, s2.getSalary(), &quot;double&quot;));&#xA;csp_4.solve();&#xA;" constraintName="check_constraint_12" predicateCode="csp_4.isSatisfied()">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <nodeNames>s2</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="file:/C:/Users/asfas/HospitalEmoflonTutorial/git/emoflon-ibex-tutorial/Hospital2Administration/src-gen/Hospital2Administration/initbwd/hipe/engine//hipe-patterns.xmi#//@patterns.99"/>
+      </port>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Patient_1_object_SP0" patternName="DoctorShiftplanRule__BWD_30" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.26" patternName="DoctorShiftplanRule__BWD_30" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="DoctorShiftplanRule__BWD_30" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.55" patternName="DoctorShiftplanRule__BWD_30" matchingNode="//@networknode.67"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Patient_1_object_SP1" patternName="DoctorShiftplanRule__BWD_30" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="DoctorShiftplanRule__BWD_30" matchingNode="//@networknode.68"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.53" patternName="DoctorShiftplanRule__BWD_30" matchingNode="//@networknode.68"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </networknode>
+</hipe.network:HiPENetwork>

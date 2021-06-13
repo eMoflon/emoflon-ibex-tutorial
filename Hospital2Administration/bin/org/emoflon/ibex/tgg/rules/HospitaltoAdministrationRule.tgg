@@ -1,0 +1,30 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule HospitaltoAdministrationRule #with Hospital2Administration
+
+#source { 
+	++h:Hospital{
+		++-reception->r
+		
+	}
+	++r:Reception{
+		
+	}
+	
+}
+
+#target {
+	++v:Administration
+}
+
+#correspondence {
+	++htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+}
+
+#attributeConditions {
+	
+}

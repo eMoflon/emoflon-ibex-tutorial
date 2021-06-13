@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IBeXPatternModel:IBeXModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore java://org.emoflon.ibex.patternmodel.IBeXPatternModel.IBeXPatternModelPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+  <patternSet xmi:type="IBeXPatternModel:IBeXPatternSet">
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule__BWD" localEdges="//@edgeSet/@edges.8 //@edgeSet/@edges.12 //@edgeSet/@edges.31 //@edgeSet/@edges.45 //@edgeSet/@edges.53" signatureNodes="//@nodeSet/@nodes.5 //@nodeSet/@nodes.11 //@nodeSet/@nodes.15 //@nodeSet/@nodes.62 //@nodeSet/@nodes.38 //@nodeSet/@nodes.46 //@nodeSet/@nodes.52">
+      <invocations xmi:type="IBeXPatternModel:IBeXPatternInvocation" invokedPattern="//@patternSet/@contextPatterns.1">
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.38" value="//@nodeSet/@nodes.39"/>
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.52" value="//@nodeSet/@nodes.53"/>
+      </invocations>
+      <invocations xmi:type="IBeXPatternModel:IBeXPatternInvocation" invokedPattern="//@patternSet/@contextPatterns.2">
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.52" value="//@nodeSet/@nodes.54"/>
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.46" value="//@nodeSet/@nodes.47"/>
+      </invocations>
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_doctorsalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.38">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        </values>
+      </csps>
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.5">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.38">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG" localEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.29" signatureNodes="//@nodeSet/@nodes.39 //@nodeSet/@nodes.53 //@nodeSet/@nodes.0">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.0 //@nodeSet/@nodes.53"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DocToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG" localEdges="//@edgeSet/@edges.46 //@edgeSet/@edges.41" signatureNodes="//@nodeSet/@nodes.54 //@nodeSet/@nodes.47 //@nodeSet/@nodes.1">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.1 //@nodeSet/@nodes.47"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorShiftplanRule__BWD" localEdges="//@edgeSet/@edges.16 //@edgeSet/@edges.18 //@edgeSet/@edges.21 //@edgeSet/@edges.33 //@edgeSet/@edges.37 //@edgeSet/@edges.39 //@edgeSet/@edges.47 //@edgeSet/@edges.43" signatureNodes="//@nodeSet/@nodes.19 //@nodeSet/@nodes.22 //@nodeSet/@nodes.27 //@nodeSet/@nodes.36 //@nodeSet/@nodes.40 //@nodeSet/@nodes.44 //@nodeSet/@nodes.48 //@nodeSet/@nodes.55"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient__BWD" localEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.4 //@edgeSet/@edges.1 //@edgeSet/@edges.5 //@edgeSet/@edges.19 //@edgeSet/@edges.22 //@edgeSet/@edges.24 //@edgeSet/@edges.17 //@edgeSet/@edges.26" signatureNodes="//@nodeSet/@nodes.6 //@nodeSet/@nodes.9 //@nodeSet/@nodes.10 //@nodeSet/@nodes.20 //@nodeSet/@nodes.23 //@nodeSet/@nodes.28 //@nodeSet/@nodes.31 //@nodeSet/@nodes.34 //@nodeSet/@nodes.60">
+      <invocations xmi:type="IBeXPatternModel:IBeXPatternInvocation" invokedPattern="//@patternSet/@contextPatterns.5">
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.60" value="//@nodeSet/@nodes.61"/>
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.34" value="//@nodeSet/@nodes.35"/>
+      </invocations>
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_carelevelToMedication" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.20">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.60">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="DoctorToPatient_t_treatment_incoming_TRG__FILTER_NAC_TRG" localEdges="//@edgeSet/@edges.27 //@edgeSet/@edges.0" signatureNodes="//@nodeSet/@nodes.61 //@nodeSet/@nodes.35 //@nodeSet/@nodes.2">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.2 //@nodeSet/@nodes.35"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="HospitaltoAdministrationRule__BWD" signatureNodes="//@nodeSet/@nodes.63"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="NurseShiftplanRule__BWD" localEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.23 //@edgeSet/@edges.25 //@edgeSet/@edges.28 //@edgeSet/@edges.34 //@edgeSet/@edges.38 //@edgeSet/@edges.40 //@edgeSet/@edges.48 //@edgeSet/@edges.44" signatureNodes="//@nodeSet/@nodes.21 //@nodeSet/@nodes.24 //@nodeSet/@nodes.29 //@nodeSet/@nodes.32 //@nodeSet/@nodes.37 //@nodeSet/@nodes.41 //@nodeSet/@nodes.45 //@nodeSet/@nodes.49 //@nodeSet/@nodes.56"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule__BWD" localEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.13 //@edgeSet/@edges.35 //@edgeSet/@edges.49 //@edgeSet/@edges.54" signatureNodes="//@nodeSet/@nodes.7 //@nodeSet/@nodes.12 //@nodeSet/@nodes.16 //@nodeSet/@nodes.64 //@nodeSet/@nodes.42 //@nodeSet/@nodes.50 //@nodeSet/@nodes.57">
+      <invocations xmi:type="IBeXPatternModel:IBeXPatternInvocation" invokedPattern="//@patternSet/@contextPatterns.9">
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.42" value="//@nodeSet/@nodes.43"/>
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.57" value="//@nodeSet/@nodes.58"/>
+      </invocations>
+      <invocations xmi:type="IBeXPatternModel:IBeXPatternInvocation" invokedPattern="//@patternSet/@contextPatterns.10">
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.57" value="//@nodeSet/@nodes.59"/>
+        <mapping xmi:type="IBeXPatternModel:IBeXNodeToNodeMapping" key="//@nodeSet/@nodes.50" value="//@nodeSet/@nodes.51"/>
+      </invocations>
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="eq_int" package="org.emoflon.ibex.tgg.operational.csp.constraints">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.7">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </values>
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.42">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        </values>
+      </csps>
+      <csps xmi:type="IBeXPatternModel:IBeXCSP" name="UserDefined_nursesalary" package="org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration">
+        <values xmi:type="IBeXPatternModel:IBeXAttributeExpression" node="//@nodeSet/@nodes.42">
+          <attribute xmi:type="ecore:EAttribute" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        </values>
+      </csps>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule_s2_shiftPlan_outgoing_TRG__FILTER_NAC_TRG" localEdges="//@edgeSet/@edges.36 //@edgeSet/@edges.30" signatureNodes="//@nodeSet/@nodes.43 //@nodeSet/@nodes.58 //@nodeSet/@nodes.3">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.3 //@nodeSet/@nodes.58"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="NurseToStaffRule_sp_shifts_outgoing_TRG__FILTER_NAC_TRG" localEdges="//@edgeSet/@edges.50 //@edgeSet/@edges.42" signatureNodes="//@nodeSet/@nodes.59 //@nodeSet/@nodes.51 //@nodeSet/@nodes.4">
+      <injectivityConstraints xmi:type="IBeXPatternModel:IBeXInjectivityConstraint" values="//@nodeSet/@nodes.4 //@nodeSet/@nodes.51"/>
+    </contextPatterns>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInReception__BWD" localEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.10 //@edgeSet/@edges.14 //@edgeSet/@edges.51" signatureNodes="//@nodeSet/@nodes.13 //@nodeSet/@nodes.17 //@nodeSet/@nodes.30 //@nodeSet/@nodes.65 //@nodeSet/@nodes.25"/>
+    <contextPatterns xmi:type="IBeXPatternModel:IBeXContextPattern" name="PatientInRoom__BWD" localEdges="//@edgeSet/@edges.2 //@edgeSet/@edges.6 //@edgeSet/@edges.11 //@edgeSet/@edges.15 //@edgeSet/@edges.52" signatureNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.14 //@nodeSet/@nodes.18 //@nodeSet/@nodes.33 //@nodeSet/@nodes.66 //@nodeSet/@nodes.26"/>
+  </patternSet>
+  <nodeSet xmi:type="IBeXPatternModel:IBeXNodeSet">
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.29">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.41">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.0">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.30">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.42">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="d">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="d" incomingEdges="//@edgeSet/@edges.3" outgoingEdges="//@edgeSet/@edges.1">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="d">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="d" incomingEdges="//@edgeSet/@edges.6" outgoingEdges="//@edgeSet/@edges.2">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="dToS" outgoingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.4">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="dep" incomingEdges="//@edgeSet/@edges.1" outgoingEdges="//@edgeSet/@edges.5">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="h" incomingEdges="//@edgeSet/@edges.8">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="h" incomingEdges="//@edgeSet/@edges.9">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="h" incomingEdges="//@edgeSet/@edges.10" outgoingEdges="//@edgeSet/@edges.7">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="h" incomingEdges="//@edgeSet/@edges.11" outgoingEdges="//@edgeSet/@edges.6">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="htov" outgoingEdges="//@edgeSet/@edges.8 //@edgeSet/@edges.12">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="htov" outgoingEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.13">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="htov" outgoingEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.14">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="htov" outgoingEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p1" incomingEdges="//@edgeSet/@edges.18" outgoingEdges="//@edgeSet/@edges.16">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p1" incomingEdges="//@edgeSet/@edges.19 //@edgeSet/@edges.24">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p1" incomingEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.25">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p2" incomingEdges="//@edgeSet/@edges.21 //@edgeSet/@edges.43">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p2" incomingEdges="//@edgeSet/@edges.22" outgoingEdges="//@edgeSet/@edges.17">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p2" incomingEdges="//@edgeSet/@edges.23 //@edgeSet/@edges.44">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p2" incomingEdges="//@edgeSet/@edges.51">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="p2" incomingEdges="//@edgeSet/@edges.52">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="pToP" outgoingEdges="//@edgeSet/@edges.18 //@edgeSet/@edges.21">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="pToP" outgoingEdges="//@edgeSet/@edges.19 //@edgeSet/@edges.22">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="pToP" outgoingEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.23">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="r" incomingEdges="//@edgeSet/@edges.7">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="ro" incomingEdges="//@edgeSet/@edges.5" outgoingEdges="//@edgeSet/@edges.24">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="ro" incomingEdges="//@edgeSet/@edges.28" outgoingEdges="//@edgeSet/@edges.25">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="ro" incomingEdges="//@edgeSet/@edges.2">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s" incomingEdges="//@edgeSet/@edges.4" outgoingEdges="//@edgeSet/@edges.26">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s" outgoingEdges="//@edgeSet/@edges.27">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s1" incomingEdges="//@edgeSet/@edges.16 //@edgeSet/@edges.37">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s1" incomingEdges="//@edgeSet/@edges.38" outgoingEdges="//@edgeSet/@edges.28">
+      <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" incomingEdges="//@edgeSet/@edges.53" outgoingEdges="//@edgeSet/@edges.31">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" outgoingEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.29">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" incomingEdges="//@edgeSet/@edges.39" outgoingEdges="//@edgeSet/@edges.33">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" incomingEdges="//@edgeSet/@edges.40" outgoingEdges="//@edgeSet/@edges.34">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" incomingEdges="//@edgeSet/@edges.54" outgoingEdges="//@edgeSet/@edges.35">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="s2" outgoingEdges="//@edgeSet/@edges.36 //@edgeSet/@edges.30">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sToS" outgoingEdges="//@edgeSet/@edges.37 //@edgeSet/@edges.39">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sToS" outgoingEdges="//@edgeSet/@edges.38 //@edgeSet/@edges.40">
+      <type xmi:type="ecore:EClass" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.45">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.46">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.47">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.48">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.49">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sh" incomingEdges="//@edgeSet/@edges.50">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.31" outgoingEdges="//@edgeSet/@edges.45">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.32">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" outgoingEdges="//@edgeSet/@edges.46 //@edgeSet/@edges.41">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.33" outgoingEdges="//@edgeSet/@edges.47 //@edgeSet/@edges.43">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.34" outgoingEdges="//@edgeSet/@edges.48 //@edgeSet/@edges.44">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.35" outgoingEdges="//@edgeSet/@edges.49">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" incomingEdges="//@edgeSet/@edges.36">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="sp" outgoingEdges="//@edgeSet/@edges.50 //@edgeSet/@edges.42">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="t" incomingEdges="//@edgeSet/@edges.17 //@edgeSet/@edges.26">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="t" incomingEdges="//@edgeSet/@edges.27 //@edgeSet/@edges.0">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="v" incomingEdges="//@edgeSet/@edges.12" outgoingEdges="//@edgeSet/@edges.53">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="v">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="v" incomingEdges="//@edgeSet/@edges.13" outgoingEdges="//@edgeSet/@edges.54">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="v" incomingEdges="//@edgeSet/@edges.14" outgoingEdges="//@edgeSet/@edges.51">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xmi:type="IBeXPatternModel:IBeXNode" name="v" incomingEdges="//@edgeSet/@edges.15" outgoingEdges="//@edgeSet/@edges.52">
+      <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+  </nodeSet>
+  <edgeSet xmi:type="IBeXPatternModel:IBeXEdgeSet">
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="FILTER_NAC_NODE->t" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.61">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="d->dep" sourceNode="//@nodeSet/@nodes.6" targetNode="//@nodeSet/@nodes.10">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="d->ro" sourceNode="//@nodeSet/@nodes.8" targetNode="//@nodeSet/@nodes.33">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="dToS->d" sourceNode="//@nodeSet/@nodes.9" targetNode="//@nodeSet/@nodes.6">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="dToS->s" sourceNode="//@nodeSet/@nodes.9" targetNode="//@nodeSet/@nodes.34">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="dep->ro" sourceNode="//@nodeSet/@nodes.10" targetNode="//@nodeSet/@nodes.31">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="h->d" sourceNode="//@nodeSet/@nodes.14" targetNode="//@nodeSet/@nodes.8">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="h->r" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.30">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->h" sourceNode="//@nodeSet/@nodes.15" targetNode="//@nodeSet/@nodes.11">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->h" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.12">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->h" sourceNode="//@nodeSet/@nodes.17" targetNode="//@nodeSet/@nodes.13">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->h" sourceNode="//@nodeSet/@nodes.18" targetNode="//@nodeSet/@nodes.14">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->v" sourceNode="//@nodeSet/@nodes.15" targetNode="//@nodeSet/@nodes.62">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->v" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.64">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->v" sourceNode="//@nodeSet/@nodes.17" targetNode="//@nodeSet/@nodes.65">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="htov->v" sourceNode="//@nodeSet/@nodes.18" targetNode="//@nodeSet/@nodes.66">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="p1->s1" sourceNode="//@nodeSet/@nodes.19" targetNode="//@nodeSet/@nodes.36">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="p2->t" sourceNode="//@nodeSet/@nodes.23" targetNode="//@nodeSet/@nodes.60">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p1" sourceNode="//@nodeSet/@nodes.27" targetNode="//@nodeSet/@nodes.19">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p1" sourceNode="//@nodeSet/@nodes.28" targetNode="//@nodeSet/@nodes.20">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p1" sourceNode="//@nodeSet/@nodes.29" targetNode="//@nodeSet/@nodes.21">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p2" sourceNode="//@nodeSet/@nodes.27" targetNode="//@nodeSet/@nodes.22">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p2" sourceNode="//@nodeSet/@nodes.28" targetNode="//@nodeSet/@nodes.23">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="pToP->p2" sourceNode="//@nodeSet/@nodes.29" targetNode="//@nodeSet/@nodes.24">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ro->p1" sourceNode="//@nodeSet/@nodes.31" targetNode="//@nodeSet/@nodes.20">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="ro->p1" sourceNode="//@nodeSet/@nodes.32" targetNode="//@nodeSet/@nodes.21">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s->t" sourceNode="//@nodeSet/@nodes.34" targetNode="//@nodeSet/@nodes.60">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s->t" sourceNode="//@nodeSet/@nodes.35" targetNode="//@nodeSet/@nodes.61">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s1->ro" sourceNode="//@nodeSet/@nodes.37" targetNode="//@nodeSet/@nodes.32">
+      <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->FILTER_NAC_NODE" sourceNode="//@nodeSet/@nodes.39" targetNode="//@nodeSet/@nodes.0">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->FILTER_NAC_NODE" sourceNode="//@nodeSet/@nodes.43" targetNode="//@nodeSet/@nodes.3">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.38" targetNode="//@nodeSet/@nodes.52">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.39" targetNode="//@nodeSet/@nodes.53">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.40" targetNode="//@nodeSet/@nodes.55">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.41" targetNode="//@nodeSet/@nodes.56">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.42" targetNode="//@nodeSet/@nodes.57">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="s2->sp" sourceNode="//@nodeSet/@nodes.43" targetNode="//@nodeSet/@nodes.58">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sToS->s1" sourceNode="//@nodeSet/@nodes.44" targetNode="//@nodeSet/@nodes.36">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sToS->s1" sourceNode="//@nodeSet/@nodes.45" targetNode="//@nodeSet/@nodes.37">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sToS->s2" sourceNode="//@nodeSet/@nodes.44" targetNode="//@nodeSet/@nodes.40">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sToS->s2" sourceNode="//@nodeSet/@nodes.45" targetNode="//@nodeSet/@nodes.41">
+      <type xmi:type="ecore:EReference" href="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->FILTER_NAC_NODE" sourceNode="//@nodeSet/@nodes.54" targetNode="//@nodeSet/@nodes.1">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->FILTER_NAC_NODE" sourceNode="//@nodeSet/@nodes.59" targetNode="//@nodeSet/@nodes.4">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->p2" sourceNode="//@nodeSet/@nodes.55" targetNode="//@nodeSet/@nodes.22">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/covers"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->p2" sourceNode="//@nodeSet/@nodes.56" targetNode="//@nodeSet/@nodes.24">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/covers"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.52" targetNode="//@nodeSet/@nodes.46">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.54" targetNode="//@nodeSet/@nodes.47">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.55" targetNode="//@nodeSet/@nodes.48">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.56" targetNode="//@nodeSet/@nodes.49">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.57" targetNode="//@nodeSet/@nodes.50">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="sp->sh" sourceNode="//@nodeSet/@nodes.59" targetNode="//@nodeSet/@nodes.51">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="v->p2" sourceNode="//@nodeSet/@nodes.65" targetNode="//@nodeSet/@nodes.25">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="v->p2" sourceNode="//@nodeSet/@nodes.66" targetNode="//@nodeSet/@nodes.26">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="v->s2" sourceNode="//@nodeSet/@nodes.62" targetNode="//@nodeSet/@nodes.38">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    </edges>
+    <edges xmi:type="IBeXPatternModel:IBeXEdge" name="v->s2" sourceNode="//@nodeSet/@nodes.64" targetNode="//@nodeSet/@nodes.42">
+      <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    </edges>
+  </edgeSet>
+</IBeXPatternModel:IBeXModel>

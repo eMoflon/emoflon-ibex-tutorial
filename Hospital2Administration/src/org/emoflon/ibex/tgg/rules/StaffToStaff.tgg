@@ -55,22 +55,7 @@
 	eq_int(d.dID, s2.dInt)
 }
 
-#rule DocToStaffRule #extends StaffToStaffRule #with Hospital2Administration
-
-#source{
-	++s1:Doctor
-}
-
-#target{
-	++s2:Staff{
-		
-	}
-}
-
-#attributeConditions{
-	doctorsalary(s2.salary)
-}
-
+// Please code the rules from section 3.3 here
 
 
 

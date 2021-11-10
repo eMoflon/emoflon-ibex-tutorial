@@ -24,7 +24,7 @@ public class HospitalRules {
 
 	public static void main(String[] args) throws IOException { // Main method to apply and validate the ruleset
 		HospitalRules hospitalrules = new HospitalRules("someSeed".hashCode());
-	
+//		hospitalrules.api.trackModelStates(false);
 		hospitalrules.createHospital();
 		hospitalrules.validateHospital();
 		try {
@@ -34,6 +34,7 @@ public class HospitalRules {
 			e.printStackTrace();
 		}
 		hospitalrules.api.terminate();
+//		hospitalrules.api.displayModelStates();
 	}
 
 	public void createHospital() { // Method where hospital rules are applied step by step

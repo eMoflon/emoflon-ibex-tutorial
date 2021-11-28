@@ -2,13 +2,12 @@ import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore"
 
 
-// For this File you need to add the rules explained in the Sections 2.3 to 2.6
-
 rule hospital(){
 	++hospital: Hospital
 }
 when forbidHospital
 condition forbidHospital = forbid findHospital
+
 
 pattern findHospital(){
 	hospital:Hospital
@@ -16,6 +15,7 @@ pattern findHospital(){
 
 
 rule reception(){
+	
 	hospital:Hospital{
 		++ -reception -> reception
 	}
@@ -26,7 +26,9 @@ rule reception(){
 when forbidReception
 condition forbidReception = forbid findReception
 
+
 rule department(dID:EInt, maxRoomCount: EInt){
+	
 	hospital: Hospital{
 		++ -department -> department
 	}
@@ -37,6 +39,7 @@ rule department(dID:EInt, maxRoomCount: EInt){
 	}
 	
 }
+
 
 rule room(cap: EInt, carelvl: Carelevel){
 	
@@ -56,6 +59,7 @@ rule room(cap: EInt, carelvl: Carelevel){
 	#department.maxRoomCount>count(findRoomInDepartment)
 }
 
+
 rule patient(name: EString, patientId: EInt, level:Carelevel){
 	
 	hospital: Hospital{
@@ -74,7 +78,9 @@ rule patient(name: EString, patientId: EInt, level:Carelevel){
 	
 }
 
+
 abstract rule staff(name:EString, staffID:EInt){
+	
 	hospital:Hospital{
 		++ -staff -> staff
 		-department -> department
@@ -88,9 +94,9 @@ abstract rule staff(name:EString, staffID:EInt){
 	}
 }
 
-rule doctor(capacity: EInt)
 
-	refines staff{
+rule doctor(capacity: EInt) refines staff{
+		
 		++staff:Doctor{
 			.patientCapacity:=param::capacity
 		}
@@ -98,11 +104,13 @@ rule doctor(capacity: EInt)
 		department: Department{
 			++ -staff -> staff
 		}
-	}
+}
 when departmentWithoutDoctor 
 condition departmentWithoutDoctor = forbid doctorInDepartment
 
+
 pattern doctorInDepartment(){
+	
 	someDoctor: Doctor
 	
 	department:Department{
@@ -110,13 +118,16 @@ pattern doctorInDepartment(){
 	}
 }
 
+
 rule assignNurseToRoom() refines staff{
+	
 	++staff:Nurse{
 		++ -responsible -> room
 	}
 	
-	room: Room
-	department: Department{
+	room: Room 
+	
+	department:Department{
 		-rooms -> room
 		++ -staff -> staff
 	}
@@ -125,7 +136,9 @@ rule assignNurseToRoom() refines staff{
 when forbidNurse
 condition forbidNurse = forbid findNurseInRoom
 
+
 pattern findNurseInRoom(){
+	
 	somenurse: Nurse{
 		-responsible -> room
 	}
@@ -135,6 +148,7 @@ pattern findNurseInRoom(){
 
 
 rule releasePatient(patientID:EInt){
+	
 	--patient:Patient
 	
 	room: Room{
@@ -148,7 +162,9 @@ rule releasePatient(patientID:EInt){
 	#patient.patientID == param::patientID
 }
 
+
 rule assignPatientToRoom(){
+	
 	patient: Patient
 	
 	room: Room{
@@ -156,6 +172,7 @@ rule assignPatientToRoom(){
 	}
 	
 	#room.capacity>count(findPatientInRoom)
+	
 	doctor: Doctor{
 		++ -caresfor -> patient
 	}
@@ -178,51 +195,61 @@ rule assignPatientToRoom(){
 when patientWithDoc
 condition patientWithDoc = forbid findPatientWithDoc
 
+
 pattern findPatientWithDoc(){
+	
 	somedoctor: Doctor{
 		-caresfor -> patient
 	}
 	
 	patient: Patient
 }
-
 condition docWithPatient = enforce findPatientWithDoc
 
+
 pattern findDocWithPatient(){
+	
 	somedoctor:Doctor
 }
 when docWithPatient
 
 
 pattern findRoomWithoutNurse(){
+	
 	room: Room
 }
 when roomHasNoNurse
 condition roomHasNoNurse = forbid findNurseInRoom
 
 
-
 pattern findPatientInRoom(){
-	somepatient:Patient{
-		
-	}
+	
+	somepatient:Patient
+	
 	room:Room{
 		-lies->somepatient
 	}
 }
 
+
 pattern findReception() {
+	
 	reception: Reception
 }
 
+
 pattern findPatient() {
+	
 	patient: Patient
 }
 
+
 pattern findPatientInReception(){
+	
 	reception: Reception {
 		-waits->patient
 	}
+	
 	patient: Patient
 }
 
@@ -230,17 +257,19 @@ pattern findRoom() {
 	room: Room
 }
 
+
 pattern findRoomInDepartment() {
+	
 	department: Department {
 		-rooms -> otherroom
 	}
 
-	otherroom: Room {
-		
-	}
+	otherroom: Room
 }
 
+
 pattern findOccupiedDoc() {
+	
 	doctor: Doctor
 
 	somepatient: Patient {
@@ -249,25 +278,33 @@ pattern findOccupiedDoc() {
 }
 
 pattern findNurse() {
+	
 	nurse: Nurse
+	
 }
+
 
 pattern findDoctor() {
-	doctor: Doctor
+	
+	doctor: Doctor	
 }
+
 
 pattern findDepartment() {
-	department: Department
+	
+	department: Department	
 }
-
 
 
 pattern findDepartmentWithoutDoctor() {
-	department : Department
-}when departmentWithoutDoctor
+	
+	department : Department	
+}
+when departmentWithoutDoctor
 
 
 pattern roomInDepartment() {
+	
 	department: Department {
 		-rooms -> room
 	}

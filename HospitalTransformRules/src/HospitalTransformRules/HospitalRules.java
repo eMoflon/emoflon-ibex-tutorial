@@ -44,6 +44,7 @@ public class HospitalRules {
 			api.department(i+2, 4).apply();
 		}
 		for(int i=0; i<16; i++) {
+		
 			api.room(4, Carelevel.get(rnd.nextInt(3))).apply();
 		}
 		
@@ -58,6 +59,7 @@ public class HospitalRules {
 		
 		int patientID = 2;
 		for(int i=rnd.nextInt(16); i>0; i--) {
+			System.out.println(i);
 			api.patient(firstNames[rnd.nextInt(firstNames.length)]+" "+lastNames[rnd.nextInt(lastNames.length)], patientID++, Carelevel.PENDING).apply();
 		}
 		

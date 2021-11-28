@@ -4,6 +4,202 @@ import "http://www.eclipse.org/emf/2002/Ecore"
 
 // For this File you need to add the rules explained in the Sections 2.3 to 2.6
 
+rule hospital(){
+	++hospital: Hospital
+}
+when forbidHospital
+condition forbidHospital = forbid findHospital
+
+pattern findHospital(){
+	hospital:Hospital
+}
+
+
+rule reception(){
+	hospital:Hospital{
+		++ -reception -> reception
+	}
+	
+	++reception: Reception
+}
+
+when forbidReception
+condition forbidReception = forbid findReception
+
+rule department(dID:EInt, maxRoomCount: EInt){
+	hospital: Hospital{
+		++ -department -> department
+	}
+	
+	++department: Department{
+		.dID := param::dID
+		.maxRoomCount := param::maxRoomCount
+	}
+	
+}
+
+rule room(cap: EInt, carelvl: Carelevel){
+	
+	hospital: Hospital{
+		-department-> department
+	}
+	
+	department:Department{
+		++ -rooms -> room
+	}
+	
+	++room: Room{
+		.capacity := param::cap
+		.level := param::carelvl
+	}
+	
+	#department.maxRoomCount>count(findRoomInDepartment)
+}
+
+rule patient(name: EString, patientId: EInt, level:Carelevel){
+	
+	hospital: Hospital{
+		-reception -> reception
+	}
+	
+	reception: Reception{
+		++ -waits -> patient
+	}
+	
+	++patient: Patient{
+		.name := param::name
+		.patientID:=param::patientId
+		.level:=param::level
+	}
+	
+}
+
+abstract rule staff(name:EString, staffID:EInt){
+	hospital:Hospital{
+		++ -staff -> staff
+		-department -> department
+	}
+	
+	department: Department
+	
+	++staff: Staff{
+		.staffID:=param::staffID
+		.name:=param::name
+	}
+}
+
+rule doctor(capacity: EInt)
+
+	refines staff{
+		++staff:Doctor{
+			.patientCapacity:=param::capacity
+		}
+		
+		department: Department{
+			++ -staff -> staff
+		}
+	}
+when departmentWithoutDoctor 
+condition departmentWithoutDoctor = forbid doctorInDepartment
+
+pattern doctorInDepartment(){
+	someDoctor: Doctor
+	
+	department:Department{
+		-staff->someDoctor
+	}
+}
+
+rule assignNurseToRoom() refines staff{
+	++staff:Nurse{
+		++ -responsible -> room
+	}
+	
+	room: Room
+	department: Department{
+		-rooms -> room
+		++ -staff -> staff
+	}
+}
+
+when forbidNurse
+condition forbidNurse = forbid findNurseInRoom
+
+pattern findNurseInRoom(){
+	somenurse: Nurse{
+		-responsible -> room
+	}
+	
+	room: Room
+}
+
+
+rule releasePatient(patientID:EInt){
+	--patient:Patient
+	
+	room: Room{
+		-- -lies -> patient
+	}
+	
+	doctor: Doctor{
+		-- -caresfor -> patient
+	}
+	
+	#patient.patientID == param::patientID
+}
+
+rule assignPatientToRoom(){
+	patient: Patient
+	
+	room: Room{
+		++ -lies-> patient
+	}
+	
+	#room.capacity>count(findPatientInRoom)
+	doctor: Doctor{
+		++ -caresfor -> patient
+	}
+	
+	#doctor.patientCapacity>count(findOccupiedDoc)
+	
+	hospital: Hospital{
+		-reception -> reception
+		-department -> department
+		}
+	
+	department: Department{
+		-rooms -> room
+	}
+	
+	reception: Reception{
+		-- -waits -> patient
+	}
+}
+when patientWithDoc
+condition patientWithDoc = forbid findPatientWithDoc
+
+pattern findPatientWithDoc(){
+	somedoctor: Doctor{
+		-caresfor -> patient
+	}
+	
+	patient: Patient
+}
+
+condition docWithPatient = enforce findPatientWithDoc
+
+pattern findDocWithPatient(){
+	somedoctor:Doctor
+}
+when docWithPatient
+
+
+pattern findRoomWithoutNurse(){
+	room: Room
+}
+when roomHasNoNurse
+condition roomHasNoNurse = forbid findNurseInRoom
+
 
 
 pattern findPatientInRoom(){

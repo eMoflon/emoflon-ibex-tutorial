@@ -1,5 +1,5 @@
-	import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
-	import "http://www.eclipse.org/emf/2002/Ecore"
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore"
 
 rule hospital() {
 	++hospital: Hospital // Adds a Node named Hospital of the type Hospital

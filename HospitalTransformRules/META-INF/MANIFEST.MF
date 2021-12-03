@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Bundle-Version: 0.0.1
 Bundle-SymbolicName: HospitalTransformRules;singleton:=true
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-15
+Bundle-RequiredExecutionEnvironment: JavaSE-16
 Require-Bundle: org.emoflon.ibex.common,
  org.emoflon.ibex.gt,
  org.emoflon.ibex.patternmodel,

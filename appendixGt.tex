@@ -1,0 +1,335 @@
+\section{Appendix Graph Transformations}
+
+\subsection{Concepts}
+
+\textbf{Patterns and Rules:}
+
+The keywords \textbf{pattern} and \textbf{rule} are used to distinguish graph structures containing only context and graph structures that create, delete, or change the model.
+
+Patterns only contain the context while rules contain context and change the model.\newline
+
+\textbf{Node naming conventions:}
+
+Nodes should be named in \textbf{lowerCamelCase} and may contain small and capital letters and numbers. They may not contain underscores except as a first letter. Node names starting with an underscore are local nodes, i.e., they would not appear in matches.
+
+Nodes are visualized as boxes in PlantUML which provide context and can be created and deleted via the application of graph transformation rules.\newline
+
+\textbf{Edge naming conventions:}
+
+Edges also should have names that describe the type of connection between the nodes for reasons of traceability.\newline
+
+\textbf{Parameters:}
+
+Parameters are a way to pass values to attribute assignments and conditions at runtime. They must be declared in the signature.
+
+Note that parameters can only have \textbf{primitive data types} such as EInt, EDouble, EChar, EString, EBoolean, EShort, ELong, EByte.\newline
+
+\textbf{Attribute Assignments and Conditions:}
+
+Via an attribute assignment, you can set new values for an attribute or add condition filters that can be applied to already existing attributes.
+
+Supported values are:
+\begin{itemize}
+
+\item constants 
+\item enum values (type enum:: for auto-completion)
+\item parameters (type param:: for auto-completion)
+\item the attribute value of another attribute \newline (given by the node and attribute name <typeName>.<attributeName>)
+
+\end{itemize}
+
+\clearpage
+
+\textbf{Pattern Refinement:}\newline
+
+Pattern refinement is a modular concept that allows nodes to inherit traits from super patterns to avoid writing the same graph structures repeatedly. All nodes from a pattern and its super patterns are combined to one pattern shown in the PlantUML visualization. This process is called flattening.
+
+\textbf{Note:} Pattern refinement only includes graph structures, not the conditions of super patterns. The pattern refinement hierarchy must be defined such that the refinement hierarchy does \textbf{not contain cycles}, i.e., a rule is not allowed to refine itself directly or indirectly.
+
+Abstract patterns and rules exist only to be used in pattern refinement. Since they cannot be applied directly, they are not available in the generated API.\newline
+
+\textbf{Conditions and Mapping:}\newline
+
+Patterns may specify conditions to be used as an additional filter for matches. Conditions are used as application conditions for a rule.
+
+All nodes in patterns used in conditions are mapped to nodes with the same name in the pattern for which the application condition is specified. This mapping is depicted in the visualization of the pattern.\newline
+
+Patterns used in application conditions using the keywords enforce or forbid \textbf{cannot have parameters and may contain at most one application condition}. This restriction is made due to constraints when transforming the pattern specification into a pattern network for a pattern matching engine.\newline
+
+\textbf{The API:}\newline
+
+The API class is a factory for patterns and rules: For each pattern and rule, there is a method to create a new instance of a pattern or rule. Note that the returned instances are no singletons which means that you can create instances of the same pattern with different parameterization. If the pattern or rule has parameters, those must be initialized during creation.\newline
+
+\clearpage
+
+\subsection{Syntax and Documentation}
+
+\subsubsection{API methods}
+
+{\setstretch{1.2}
+
+\begin{center}
+\begin{tabular}{ | m{4.25cm} | m{4.25cm} | m{4.5cm} | }
+\hline
+\textbf{Return Type} & \textbf{Signature} & \textbf{Description} \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{updateMatches}() & Triggers an incremental update of the matches \\
+\hline
+\textsf{Map<M>} & \textcolor{MidnightBlue}{getAllPatterns}() & Returns all the Rules and Patterns of the model that do need a parameter that has to be initialized with  \\
+\hline
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{getPushoutApproach}() & Returns the pushout approach which would be used for the rule application. If the pushout was not set explicitly, the default pushout approach of the API is used. This is "SPO" but can be changed for the whole API as well \\
+\hline
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{setPushoutApproach}\newline(PushoutApproach pushoutApproach) & Returns all the Rules and Patterns of the model that do need a parameter that has to be initialized with  \\
+\hline
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{setDPO}() & Sets the pushout approach to DPO (Double Pushout). This means that a rule is only applicable if the deleted nodes do not leave dangling edges, i.e., if adjacent edges are not deleted with the node \\
+\hline
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{setSPO}() & Sets the pushout approach to SPO (Single Pushout). In contrast to DPO, SPO deletes adjacent edges implicitly as well \\
+\hline
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{getDefaultPushoutApproach}() & Returns the default pushout approach \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{terminate}() & Terminates the interpreter \\
+\hline
+\textsf{boolean} & \textcolor{MidnightBlue}{getTotalSystemActivity}(boolean doUpdate) & Helper method for the Gillespie algorithm; counts all the possible matches for rules in the graph that have a static probability \\
+\hline
+\textsf{ResourceSet} & \textcolor{MidnightBlue}{getModel}() & Returns the resource that contains all models \\
+\hline
+\textsf{boolean} & \textcolor{MidnightBlue}{applyGillespie}(boolean doUpdate) & Applies a rule to the graph after the Gillespie algorithm but only rules that do not have parameters are counted \\
+\hline
+\textsf{double} & \textcolor{MidnightBlue}{getGillespieProbability\newline}(GraphTransformationRule <?,?> rule,\newline Boolean doUpdate) & Returns the probability that the rule will be applied with the Gillespie algorithm; only works if the rules do not have parameters and the probability is static \\
+\hline
+\end{tabular}
+\end{center}
+
+}
+
+\clearpage
+
+\subsubsection{Pattern methods}
+
+Each pattern P initialized via the API has setters for all parameters and bind methods for all nodes.\newline\newline
+
+{\setstretch{1.2}
+
+\begin{center}
+\begin{tabular}{ | m{4.25cm} | m{4.25cm} | m{4.5cm} | }
+\hline
+\textbf{Return Type} & \textbf{Signature} & \textbf{Description} \\
+\hline
+\textsf{Map<string, object>} & \textcolor{MidnightBlue}{getParameters}() & Returns all parameters and bound nodes \\
+\hline
+\textsf{p} & \textcolor{MidnightBlue}{bind}(IMatch match) & Binds the nodes to the objects that are bound in the given match \\
+\hline
+
+\textsf{p} & \textcolor{MidnightBlue}{bind\newline}(GraphTransformationMatch<?,?> match) & Binds the nodes to the objects that are bound in the given match. You can pass any match returned by any pattern or rule here \\
+\hline
+\textsf{optional<M>} & \textcolor{MidnightBlue}{findAnyMatch}() & Returns any matches for the pattern. Note that the resulting Optional object can be empty if no match exists \\
+\hline
+\textsf{collection<M>} & \textcolor{MidnightBlue}{findMatches}() & Returns all matches for the pattern \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{forEachMatch\newline}(Consumer<M> action) & Executes the given action for all matches \\
+\hline
+\textsf{boolean} & \textcolor{MidnightBlue}{hasMatches}() & Returns whether any matches for the pattern exist \\
+\hline
+\textsf{int} & \textcolor{MidnightBlue}{hasMatches}() & Returns whether any matches for the pattern exist \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{subscribeAppearing\newline}(Consumer<M> action) & Subscribes to any future match for the pattern. Whenever a new match for the pattern appears, the given action will be executed \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{unsubscribeAppearing\newline}(Consumer<M> action) & Unsubscribes the action such that the action will not be executed for new matches anymore \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{subscribeDisappearing\newline}(Consumer<M> action) & Subscribes to any disappearing matches for the pattern. Whenever a match for the pattern disappears, the given action will be executed \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{unsubscribeDisappearing\newline}(Consumer<M> action) & Unsubscribes the action such that the action will not be executed for disappearing matches anymore \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{subscribeMatchDisappears\newline}(M match, Consumer<M> action) & Subscribes to the given match. As soon as the match disappears, the given action will be executed \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{unsubscribeMatchDisappears\newline}(M match, Consumer<M> action) & Unsubscribes the action such that the action will not be called in the case the match disappears \\
+\hline
+
+\end{tabular}
+\end{center}
+
+}
+
+
+\subsubsection{Rule methods}
+
+Each rule R supports all methods provided for patterns and additional methods for rule application.
+
+{\setstretch{1.2}
+
+\begin{center}
+\begin{tabular}{ | m{4.25cm} | m{4.25cm} | m{4.5cm} | }
+\hline
+\textbf{Return Type} & \textbf{Signature} & \textbf{Description} \\
+\hline
+\textsf{boolean} & \textcolor{MidnightBlue}{isApplicable}() & Checks whether the rule can be applied, i.e., a match for the rule can be found \\
+\hline
+\textsf{optional<M>} & \textcolor{MidnightBlue}{apply}() & Applies the rule on an arbitrary match if any match exists and returns the co-match, i. e. the match after rule application. Note that the Optional will be empty if (1) no match exists or (2) the rule cannot be applied due to pushout semantics \\
+\hline
+\textsf{optional<M>} & \textcolor{MidnightBlue}{apply}(IMatch match) & Binds the nodes to the objects that are bound in the given match \\
+\hline
+
+\textsf{optional<M>} & \textcolor{MidnightBlue}{apply}(M match) & Applies the rule on the given match if possible and returns the co-match \\
+\hline
+\textsf{collection<M>} & \textcolor{MidnightBlue}{apply}(int max) & Applies the rule at most max times as long as there are matches the rule can be applied on \\
+\hline
+\textsf{collection<M>} & \textcolor{MidnightBlue}{apply\newline}(predicate<collection<M>> condition) & Applies the rule as long as the given condition based on the co-matches returns true \\
+\hline
+\textsf{optional<M>} & \textcolor{MidnightBlue}{bindAndApply}(IMatch match) & Binds the nodes from the given match and applies the rule \\
+\hline
+\textsf{optional<M>} & \textcolor{MidnightBlue}{bindAndApply\newline}(GraphTransformationMatch<?,?> match) & Binds the nodes from the given match and applies the rule \\
+\hline
+\textsf{collection<M>} & \textcolor{MidnightBlue}{bindAndApply\newline}(Supplier<? extends GraphTransformationMatch<?,?>> matchSupplier) & Binds the nodes to the ones bound in the match given by the supplier and applies the rule. This is repeated until the supplier returns null \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{enableAutoApply}() & Enables instant automatic rule application: As soon as a match for the rule is found, the rule will be applied \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{disableAutoApply}() & Disables instant automatic rule application \\
+\hline
+\textsf{int} & \textcolor{MidnightBlue}{countRuleApplications}() & Returns how often the rule has been applied \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{subscribeRuleApplications\newline}(Consumer<M> action) & Subscribes rule applications: Whenever the rule is applied, the given action will be executed \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{unsubscribeRuleApplications\newline}(Consumer<M> action) & Unsubscribes the action such that the action will not be executed for future rule applications \\
+\hline
+\textsf{void} & \textcolor{MidnightBlue}{unsubscribeRuleApplicationsAll}() & Removes all subscriptions for rule applications \\
+\hline
+
+\end{tabular}
+\end{center}
+
+}
+
+\clearpage
+
+\subsubsection{Syntax reference}
+
+The list below provides a summary of the textual concrete syntax using the EBNF-style notation and \textsf{<..>} as placeholders for actual values:\newline\newline
+
+{\setstretch{1.2}
+
+1\hspace{0.5cm} \textcolor{ForestGreen}{/*--- meta-models for node and parameter types ---------*/}
+
+2\hspace{0.5cm}\textcolor{Purple}{import}\textcolor{blue}{ "<URI of an Ecore meta-model>"}
+
+3
+
+4 \hspace{0.5cm}\textcolor{ForestGreen}{/*--- pattern/rule with parameters ---------------------*/}
+
+5\hspace{0.5cm}[\textcolor{Purple}{abstract}] [\textcolor{Purple}{pattern}|\textcolor{Purple}{rule}] <pattern-name>[(<parameter-name: <parameter-type[, ...])]
+
+6\hspace{0.5cm}[\textcolor{Purple}{refines} <super-pattern-name>[, ...]] \{
+
+7
+
+8\hspace{1cm}\textcolor{ForestGreen}{/* Node: context, ++ for create, -- for delete */}
+
+9\hspace{1cm}[\textcolor{LimeGreen}{++}|\textcolor{Red}{-- --}] <node-name>: <node-type> \{
+
+10
+
+11\hspace{1.5cm}\textcolor{ForestGreen}{/* Attributes */}
+
+12\hspace{1.5cm}.<attribute-name> [:=] <constant>
+
+13\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{enum}::<VALUE>
+
+14\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{param}::<parameter-name>
+
+15\hspace{1.5cm}.<attribute-name> [:=] <node-name>.<attribute-name>
+
+16
+
+17\hspace{1.5cm}\textcolor{ForestGreen}{/* References to other nodes */}
+
+18\hspace{1.5cm}[\textcolor{LimeGreen}{++}|[\textcolor{Red}{-- --}] -<reference-name> -> <node-name>
+
+19\hspace{1cm}\}
+
+20\hspace{0.5cm}\}
+
+21
+
+22\hspace{0.5cm}\textcolor{ForestGreen}{/* Additional (application) conditions for pattern/rule: Combine conditions via OR */}
+
+23\hspace{0.5cm}[\textcolor{Purple}{when} <condition-name> [|| <condition-name> || ...]]
+
+24
+
+25\hspace{0.5cm}\textcolor{ForestGreen}{/* Probability of the rule; cannot be used on patterns */}
+
+26\hspace{0.5cm}[@ <arithmetic-expression> | [N|U|Exp](<arithmetic-expression>
+
+27\hspace{0.5cm}[, <arithmetic-expression>]) [<arithmetic-expression>]]
+
+28
+
+29\hspace{0.5cm}\textcolor{ForestGreen}{/*--- conditions to be used in patterns/rules ----------*/}
+
+30\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern can be matched (positive application condition) */}
+
+31\hspace{0.5cm}condition <condition-name> = \textcolor{Purple}{enforce} <pattern-name>
+
+32
+
+33\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern cannot be matched (negative application condition) */}
+
+34\hspace{0.5cm}condition <condition-name> = \textcolor{Purple}{forbid} <pattern-name>
+
+35
+
+36\hspace{0.5cm}\textcolor{ForestGreen}{/* Combine conditions via AND */}
+
+37\hspace{0.5cm}condition <condition-name> = <condition-name> \&\& <condition-name>
+
+38
+
+39\hspace{0.5cm}\textcolor{ForestGreen}{/*----- summary of the arithmetic extension ------------*/}
+
+40\hspace{0.5cm}<arithmetic-expression> = <constant> | <node-name>.<attribute-name> |
+
+41\hspace{0.5cm}<arithmetic-expression> [+|-|*|/|\%|ˆ] <arithmetic-expression> |
+
+42\hspace{0.5cm}[\textcolor{Purple}{exp}|\textcolor{Purple}{log}|\textcolor{Purple}{ln}|\textcolor{Purple}{sqrt}|\textcolor{Purple}{abs}|\textcolor{Purple}{cos}|\textcolor{Purple}{sin}|\textcolor{Purple}{tan}] (<arithmetic-expression>)
+
+}
+
+\clearpage
+
+\subsubsection{Syntax math functions}
+
+{\setstretch{1.5}
+\begin{center}
+\begin{tabular}{ | m{4cm} | m{4cm} |  }
+\hline
+\textbf{Syntax} & \textbf{Function} \\
+\hline
+N(mean, standardDerivation) & Normal distribution  \\
+\hline
+U(minValue, maxValue) & Uniform distribution  \\
+\hline
+exp(lambda) & Exponential distribution \\
+\hline
+$x \wedge y$ & Exponential function \\
+\hline
+exp(x) & Exponential function with e \\
+\hline
+log(x) & Logarithmic function \\
+\hline
+ln(x) & Natural logarithmic function \\
+\hline
+sqrt(x) & Square root \\
+\hline
+abs(x) & Absolute value function \\
+\hline
+cos(x) & Cosine \\
+\hline
+sin(x) & Sine \\
+\hline
+tan(x) & Tangens \\
+\hline
+
+\end{tabular}
+\end{center}
+}
+
+\clearpage

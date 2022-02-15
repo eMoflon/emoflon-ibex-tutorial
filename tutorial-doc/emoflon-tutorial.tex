@@ -1,0 +1,111 @@
+%!TEX program = pdflatex
+
+\documentclass[
+	ngerman,
+	xcolor=(dvipsnames,svgnames,table),
+	type=intern,
+	marginpar=false,% Kopfzeile und Fußzeile erstrecken sich nicht über die Randnotizspalte
+	accentcolor=1b% Farbe für Hervorhebungen auf Basis der Deklarationen in den
+	%ruledheaders=section,%Ebene bis zu der die Überschriften mit Linien abgetrennt werden, vgl. DEMO-TUDaPub
+	%class=report,%Basisdokumentenklasse. Wählt die Korrespondierende KOMA-Script Klasse
+	%thesis={type=master},%Dokumententyp Thesis, für Dissertationen siehe die Demo-Datei DEMO-TUDaPhd
+	%accentcolor=1b,%Auswahl der Akzentfarbe
+	%custommargins=false,% Ränder werden mithilfe von typearea automatisch berechnen
+	%BCOR=12mm,%Bindekorrektur, falls notwendig
+	%twoside,%größerer Rand ist abwechselnd rechts und links
+	%open=right,%neue Kapitel starten immer auf der rechten Seite (ggf. wird also eine leere Seite eingefügt)
+	%parskip=half-,%Absatzkennzeichnung durch Abstand vgl. KOMA-Sript
+	%fontsize=11pt,%Basisschriftgröße laut Corporate Design ist mit 9pt häufig zu klein
+	%IMRAD=false,%Abschalten von IMRAD-Warnings wegen fehlender Labels
+	%bibliography=totoc,%Literaturverzeichnis im Inhaltsverzeichnis
+]{tudapub}
+
+% Der folgende Block ist nur bei pdfTeX auf Versionen vor April 2018 notwendig
+\usepackage{iftex}
+\ifPDFTeX
+\usepackage[utf8]{inputenc}%kompatibilität mit TeX Versionen vor April 2018
+\fi
+
+%%%%%%%%%%%%%%%%%%%
+%Sprachanpassung und Verbesserte Trennregeln
+%%%%%%%%%%%%%%%%%%%
+\usepackage[english, main=english]{babel}
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%
+%Beschriftung von Tabellen, Skizzen, Listings etc.
+%%%%%%%%%%%%%%%%%%%
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+%Tabellen
+%%%%%%%%%%%%%%%%%%%
+%\usepackage{array}     % Basispaket für Tabellenkonfiguration, wird von den folgenden automatisch geladen
+%\usepackage{tabularx}  % Tabellen, die sich automatisch der Breite anpassen
+%\usepackage{longtable} % Mehrseitige Tabellen
+%\usepackage{xltabular} % Mehrseitige Tabellen mit anpassarer Breite
+\usepackage{booktabs}   % Verbesserte Möglichkeiten für Tabellenlayout über horizontale Linien
+
+%%%%%%%%%%%%%%%%%%%
+%Paketvorschläge Mathematik
+%%%%%%%%%%%%%%%%%%%
+\usepackage{mathtools}  % erweiterte Fassung von amsmath
+\usepackage{amssymb}    % erweiterter Zeichensatz
+%\usepackage{siunitx}   % Einheiten
+
+%%%%%%%%%%%%%%%%%%%
+% Code-Listings und Illustrationen
+%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}   % ermöglicht es Quell-code schön darzustellen
+\usepackage{graphicx}
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+%Referenzen und Links
+%%%%%%%%%%%%%%%%%%%
+\usepackage{cleveref}   % automatisches Voranstellen des Referenztyps (z.B. Kapitel)
+\usepackage{hyperref}   % erzeugt aus Referenzen und Web-Adressen Hyperlinks zum Springen im Dokument oder dem Öffnen einer Webseite.
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{xcolor}
+\colorlet{LightSalmon}{Salmon!45!white}
+\colorlet{LightYellow}{Yellow!45!white}
+\usepackage[autostyle]{csquotes}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{hologo}
+\usepackage{subcaption}
+
+\usepackage{amsthm}
+
+\begin{document}
+
+\frontmatter
+
+\title{eMoflon::IBeX - Tutorial}
+\author{Marek Daniv}%optionales Argument ist die Signatur
+
+\maketitle
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{pictures/eMoflonLogoIbex.png}
+\end{figure}
+
+\newpage
+\tableofcontents
+
+\mainmatter
+
+\input{chapters/introduction.tex}
+\input{chapters/modelCreation.tex}
+\input{chapters/gt.tex}
+\input{chapters/appendixGt.tex}
+\input{chapters/tgg.tex}
+\input{chapters/appendixTGG.tex}
+\input{chapters/troubleshooting.tex}
+
+%\bibliographystyle{plain}
+%\bibliography{chapters/references}
+	
+\end{document}

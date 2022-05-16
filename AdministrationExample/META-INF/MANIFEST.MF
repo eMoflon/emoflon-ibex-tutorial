@@ -8,7 +8,7 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-16
 Automatic-Module-Name: AdministrationExample
 Require-Bundle: org.eclipse.emf.ecore,
- org.eclipse.emf.ecore.xmi
-Export-Package: AdministrationExample.util,
- AdministrationExample,
+ org.eclipse.emf.ecore.xmi,
+ org.emoflon.smartemf
+Export-Package: AdministrationExample,
  AdministrationExample.impl

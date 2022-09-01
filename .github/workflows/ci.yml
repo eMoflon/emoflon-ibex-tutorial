@@ -39,3 +39,17 @@ jobs:
           path: |
             tutorial-doc/emoflon-tutorial.pdf
             tutorial-doc/emoflon-tutorial.log
+
+  create-release:
+    needs: [build-pdf]
+    runs-on: [ubuntu-20.04]
+    # Only run on pushed tags (and explicitely ignore scheduled runs)
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/') && github.event_name != 'schedule'
+    steps:
+      - name: Collect artifacts
+        uses: actions/download-artifact@master
+      - name: Release eMoflon::IBeX tutorial
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            emoflon-tutorial.pdf

@@ -52,4 +52,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            emoflon-tutorial.pdf
+            emoflon-tutorial/emoflon-tutorial.pdf

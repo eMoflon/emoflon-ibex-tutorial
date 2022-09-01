@@ -27,6 +27,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+      - name: Docker setup
+        run: |
+          docker pull maxkratz/texlive:latest
       - name: LaTeX compile
         run: |
           echo "Starting LuaLaTeX compiling"

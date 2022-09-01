@@ -1,0 +1,41 @@
+name: Build eMoflon::IBeX tutorial
+on:
+  push:
+    # Run pipeline for commits on branch 'main' and on 'testing/<stuff>'
+    branches:
+      - master
+      - 'testing/**'
+      - 'feature/**'
+      - 'hotfix/**'
+    # Run pipeline for release tags
+    tags:
+      - 'v*.*.*'
+
+  schedule:
+    # Weekly builds on Monday morning 4:42
+    # Github doc:
+    # "The schedule event can be delayed during periods of high loads of GitHub Actions workflow runs.
+    # High load times include the start of every hour.
+    # To decrease the chance of delay, schedule your workflow to run at a different time of the hour."
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    - cron: '42 4 * * 1'
+
+jobs:
+  # Build tutorial PDF
+  build-pdf:
+    runs-on: [ubuntu-20.04]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: LaTeX compile
+        run: |
+          echo "Starting LuaLaTeX compiling"
+          cd tutorial-doc
+          docker run --rm -it -v $PWD:/data maxkratz/texlive:latest lualatex emoflon-tutorial.tex
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: emoflon-tutorial
+          path: |
+            tutorial-doc/emoflon-tutorial.pdf
+            tutorial-doc/emoflon-tutorial.log

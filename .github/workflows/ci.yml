@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "Starting LuaLaTeX compiling"
           cd tutorial-doc
-          docker run --rm -it -v $PWD:/data maxkratz/texlive:latest lualatex emoflon-tutorial.tex
+          docker run --rm -v $PWD:/data maxkratz/texlive:latest lualatex emoflon-tutorial.tex
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ASCII"?>
+<IBeXPatternModel:IBeXModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore">
+  <patternSet>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="administration" documentation="">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.3"/>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="earlyshift" documentation=""/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findAdministration" documentation="" signatureNodes="//@nodeSet/@nodes.2"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findAdministration_CONDITION_" documentation="" localNodes="//@nodeSet/@nodes.1"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findCoveredPatient" documentation="" localEdges="//@edgeSet/@edges.1" signatureNodes="//@nodeSet/@nodes.14 //@nodeSet/@nodes.27"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findEarlyShift" documentation="" signatureNodes="//@nodeSet/@nodes.5"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findLateShift" documentation="" signatureNodes="//@nodeSet/@nodes.7"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findNightShift" documentation="" signatureNodes="//@nodeSet/@nodes.10"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatient" documentation="" signatureNodes="//@nodeSet/@nodes.12"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPerson" documentation="" signatureNodes="//@nodeSet/@nodes.15"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findShiftplan" documentation="" signatureNodes="//@nodeSet/@nodes.29"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findStaff" documentation="" signatureNodes="//@nodeSet/@nodes.31"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findTreatment" documentation="" localEdges="//@edgeSet/@edges.16" signatureNodes="//@nodeSet/@nodes.30 //@nodeSet/@nodes.35"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="lateshift" documentation=""/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="nightshift" documentation=""/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="patient" documentation="" signatureNodes="//@nodeSet/@nodes.33"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="patientCovered" documentation="" localEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.9 //@edgeSet/@edges.11 //@edgeSet/@edges.12 //@edgeSet/@edges.15 //@edgeSet/@edges.3 //@edgeSet/@edges.8 //@edgeSet/@edges.10" signatureNodes="//@nodeSet/@nodes.3 //@nodeSet/@nodes.6 //@nodeSet/@nodes.9 //@nodeSet/@nodes.13 //@nodeSet/@nodes.18 //@nodeSet/@nodes.19 //@nodeSet/@nodes.26 //@nodeSet/@nodes.28 //@nodeSet/@nodes.32">
+      <injectivityConstraints values="//@nodeSet/@nodes.3 //@nodeSet/@nodes.6"/>
+      <injectivityConstraints values="//@nodeSet/@nodes.3 //@nodeSet/@nodes.9"/>
+      <injectivityConstraints values="//@nodeSet/@nodes.6 //@nodeSet/@nodes.9"/>
+      <injectivityConstraints values="//@nodeSet/@nodes.18 //@nodeSet/@nodes.19"/>
+      <injectivityConstraints values="//@nodeSet/@nodes.26 //@nodeSet/@nodes.28"/>
+      <invocations invokedPattern="//@patternSet/@contextPatterns.4">
+        <mapping key="//@nodeSet/@nodes.13" value="//@nodeSet/@nodes.14"/>
+        <mapping key="//@nodeSet/@nodes.26" value="//@nodeSet/@nodes.27"/>
+      </invocations>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="staff" hasCountExpression="true" apiPatternDependencies="//@patternSet/@contextPatterns.12" documentation="" signatureNodes="//@nodeSet/@nodes.34">
+      <arithmeticConstraints relation="SMALLER">
+        <lhs xsi:type="IBeXPatternModel:IBeXMatchCount" operator="COUNT">
+          <operand xsi:type="IBeXPatternModel:IBeXArithmeticValueLiteral"/>
+          <invocation positive="true" invokedPattern="//@patternSet/@contextPatterns.12">
+            <mapping key="//@nodeSet/@nodes.34" value="//@nodeSet/@nodes.35"/>
+          </invocation>
+        </lhs>
+        <rhs xsi:type="IBeXPatternModel:IBeXArithmeticValueLiteral" value="3.0"/>
+      </arithmeticConstraints>
+      <parameters name="time1">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Daytime"/>
+      </parameters>
+      <parameters name="time2">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Daytime"/>
+      </parameters>
+    </contextPatterns>
+  </patternSet>
+  <ruleSet>
+    <rules name="administration" documentation="" lhs="//@patternSet/@contextPatterns.0">
+      <rhs name="administration_rhs" signatureNodes="//@nodeSet/@nodes.0"/>
+      <create name="administration" createdNodes="//@nodeSet/@nodes.0"/>
+      <delete name="administration"/>
+    </rules>
+    <rules name="earlyshift" documentation="" lhs="//@patternSet/@contextPatterns.1">
+      <rhs name="earlyshift_rhs" signatureNodes="//@nodeSet/@nodes.4 //@nodeSet/@nodes.21"/>
+      <create name="earlyshift" createdNodes="//@nodeSet/@nodes.4 //@nodeSet/@nodes.21">
+        <attributeAssignments node="//@nodeSet/@nodes.4">
+          <value xsi:type="IBeXPatternModel:IBeXEnumLiteral">
+            <literal href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Daytime/early"/>
+          </value>
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift/time"/>
+        </attributeAssignments>
+      </create>
+      <delete name="earlyshift"/>
+    </rules>
+    <rules name="lateshift" documentation="" lhs="//@patternSet/@contextPatterns.13">
+      <rhs name="lateshift_rhs" signatureNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.23"/>
+      <create name="lateshift" createdNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.23">
+        <attributeAssignments node="//@nodeSet/@nodes.8">
+          <value xsi:type="IBeXPatternModel:IBeXEnumLiteral">
+            <literal href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Daytime/late"/>
+          </value>
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift/time"/>
+        </attributeAssignments>
+      </create>
+      <delete name="lateshift"/>
+    </rules>
+    <rules name="nightshift" documentation="" lhs="//@patternSet/@contextPatterns.14">
+      <rhs name="nightshift_rhs" signatureNodes="//@nodeSet/@nodes.11 //@nodeSet/@nodes.22"/>
+      <create name="nightshift" createdNodes="//@nodeSet/@nodes.11 //@nodeSet/@nodes.22">
+        <attributeAssignments node="//@nodeSet/@nodes.11">
+          <value xsi:type="IBeXPatternModel:IBeXEnumLiteral">
+            <literal href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Daytime/night"/>
+          </value>
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift/time"/>
+        </attributeAssignments>
+      </create>
+      <delete name="nightshift"/>
+    </rules>
+    <rules name="patient" documentation="" lhs="//@patternSet/@contextPatterns.15">
+      <rhs name="patient_rhs" localEdges="//@edgeSet/@edges.5" signatureNodes="//@nodeSet/@nodes.33 //@nodeSet/@nodes.17"/>
+      <create name="patient" createdEdges="//@edgeSet/@edges.5" createdNodes="//@nodeSet/@nodes.17"/>
+      <delete name="patient"/>
+    </rules>
+    <rules name="patientCovered" documentation="" lhs="//@patternSet/@contextPatterns.16">
+      <rhs name="patientCovered_rhs" localEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.9 //@edgeSet/@edges.11 //@edgeSet/@edges.12 //@edgeSet/@edges.15 //@edgeSet/@edges.3 //@edgeSet/@edges.8 //@edgeSet/@edges.10 //@edgeSet/@edges.0 //@edgeSet/@edges.2" signatureNodes="//@nodeSet/@nodes.3 //@nodeSet/@nodes.6 //@nodeSet/@nodes.9 //@nodeSet/@nodes.13 //@nodeSet/@nodes.18 //@nodeSet/@nodes.19 //@nodeSet/@nodes.26 //@nodeSet/@nodes.28 //@nodeSet/@nodes.32"/>
+      <create name="patientCovered" createdEdges="//@edgeSet/@edges.0 //@edgeSet/@edges.2"/>
+      <delete name="patientCovered"/>
+    </rules>
+    <rules name="staff" documentation="" lhs="//@patternSet/@contextPatterns.17" parameters="//@patternSet/@contextPatterns.17/@parameters.0 //@patternSet/@contextPatterns.17/@parameters.1" arithmeticConstraints="//@patternSet/@contextPatterns.17/@arithmeticConstraints.0">
+      <rhs name="staff_rhs" localEdges="//@edgeSet/@edges.4 //@edgeSet/@edges.13 //@edgeSet/@edges.14 //@edgeSet/@edges.6" signatureNodes="//@nodeSet/@nodes.34 //@nodeSet/@nodes.16 //@nodeSet/@nodes.20 //@nodeSet/@nodes.24 //@nodeSet/@nodes.25"/>
+      <create name="staff" createdEdges="//@edgeSet/@edges.4 //@edgeSet/@edges.13 //@edgeSet/@edges.14 //@edgeSet/@edges.6" createdNodes="//@nodeSet/@nodes.16 //@nodeSet/@nodes.20 //@nodeSet/@nodes.24 //@nodeSet/@nodes.25">
+        <attributeAssignments node="//@nodeSet/@nodes.20">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="time1"/>
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift/time"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.24">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="time2"/>
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift/time"/>
+        </attributeAssignments>
+      </create>
+      <delete name="staff"/>
+    </rules>
+  </ruleSet>
+  <nodeSet>
+    <nodes name="administration">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="administration">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="administration">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="earlyshift" incomingEdges="//@edgeSet/@edges.11">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="earlyshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="earlyshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="lateshift" incomingEdges="//@edgeSet/@edges.15">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="lateshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="lateshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="nightshift" incomingEdges="//@edgeSet/@edges.12">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="nightshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="nightshift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="patient">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" outgoingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.0 //@edgeSet/@edges.2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" outgoingEdges="//@edgeSet/@edges.1">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="person">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person"/>
+    </nodes>
+    <nodes name="person" outgoingEdges="//@edgeSet/@edges.4 //@edgeSet/@edges.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="person" outgoingEdges="//@edgeSet/@edges.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="s" outgoingEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.8">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.10">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="shift" incomingEdges="//@edgeSet/@edges.13">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="shift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="shift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="shift">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="shift2" incomingEdges="//@edgeSet/@edges.14">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="shiftPlan" incomingEdges="//@edgeSet/@edges.4" outgoingEdges="//@edgeSet/@edges.13 //@edgeSet/@edges.14">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="shiftPlan" incomingEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.0" outgoingEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.12">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="shiftPlan" incomingEdges="//@edgeSet/@edges.1">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="shiftPlan2" incomingEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.2" outgoingEdges="//@edgeSet/@edges.15">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="shiftlpan">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="someStaff" outgoingEdges="//@edgeSet/@edges.16">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="staff">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="t" incomingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.8 //@edgeSet/@edges.10">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes name="t" incomingEdges="//@edgeSet/@edges.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes name="treatment" incomingEdges="//@edgeSet/@edges.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes name="treatment" incomingEdges="//@edgeSet/@edges.16">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+  </nodeSet>
+  <edgeSet>
+    <edges name="patient->shiftPlan" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.26">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+    </edges>
+    <edges name="patient->shiftPlan" sourceNode="//@nodeSet/@nodes.14" targetNode="//@nodeSet/@nodes.27">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+    </edges>
+    <edges name="patient->shiftPlan2" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.28">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+    </edges>
+    <edges name="patient->t" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.32">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+    </edges>
+    <edges name="person->shiftPlan" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.25">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="person->t" sourceNode="//@nodeSet/@nodes.17" targetNode="//@nodeSet/@nodes.33">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+    </edges>
+    <edges name="person->treatment" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.34">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges name="s->shiftPlan" sourceNode="//@nodeSet/@nodes.18" targetNode="//@nodeSet/@nodes.26">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="s->t" sourceNode="//@nodeSet/@nodes.18" targetNode="//@nodeSet/@nodes.32">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges name="s1->shiftPlan2" sourceNode="//@nodeSet/@nodes.19" targetNode="//@nodeSet/@nodes.28">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="s1->t" sourceNode="//@nodeSet/@nodes.19" targetNode="//@nodeSet/@nodes.32">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges name="shiftPlan->earlyshift" sourceNode="//@nodeSet/@nodes.26" targetNode="//@nodeSet/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="shiftPlan->nightshift" sourceNode="//@nodeSet/@nodes.26" targetNode="//@nodeSet/@nodes.9">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="shiftPlan->shift" sourceNode="//@nodeSet/@nodes.25" targetNode="//@nodeSet/@nodes.20">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="shiftPlan->shift2" sourceNode="//@nodeSet/@nodes.25" targetNode="//@nodeSet/@nodes.24">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="shiftPlan2->lateshift" sourceNode="//@nodeSet/@nodes.28" targetNode="//@nodeSet/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="someStaff->treatment" sourceNode="//@nodeSet/@nodes.30" targetNode="//@nodeSet/@nodes.35">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+  </edgeSet>
+</IBeXPatternModel:IBeXModel>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HiPEPattern:HiPEContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findAdministration" partialPatterns="//@patterns.14" nodes="//@nodes.0" children="//@patterns.14"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findAdministration_CONDITION_" partialPatterns="//@patterns.15" nodes="//@nodes.1" children="//@patterns.15"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findCoveredPatient" partialPatterns="//@patterns.16" nodes="//@nodes.2 //@nodes.3" edges="//@edges.0" invokedBy="//@patterns.12/@patternInvocations.0" children="//@patterns.16 //@patterns.17 //@patterns.18"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findEarlyShift" partialPatterns="//@patterns.19" nodes="//@nodes.4" children="//@patterns.19"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findLateShift" partialPatterns="//@patterns.20" nodes="//@nodes.5" children="//@patterns.20"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findNightShift" partialPatterns="//@patterns.21" nodes="//@nodes.6" children="//@patterns.21"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findPatient" partialPatterns="//@patterns.22" nodes="//@nodes.7" children="//@patterns.22"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findPerson" partialPatterns="//@patterns.23" nodes="//@nodes.8" children="//@patterns.23"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findShiftplan" partialPatterns="//@patterns.24" nodes="//@nodes.9" children="//@patterns.24"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findStaff" partialPatterns="//@patterns.25" nodes="//@nodes.10" children="//@patterns.25"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="findTreatment" partialPatterns="//@patterns.26" nodes="//@nodes.11 //@nodes.12" edges="//@edges.1" invokedBy="//@attributeConstraints.0/@countInvocations.0" children="//@patterns.26 //@patterns.27 //@patterns.28"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="patient" partialPatterns="//@patterns.29" nodes="//@nodes.13" children="//@patterns.29"/>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="patientCovered" partialPatterns="//@patterns.30" nodes="//@nodes.16 //@nodes.17 //@nodes.18 //@nodes.15 //@nodes.19 //@nodes.20 //@nodes.14 //@nodes.21 //@nodes.22" edges="//@edges.2 //@edges.3 //@edges.4 //@edges.5 //@edges.6 //@edges.7 //@edges.8 //@edges.9" children="//@patterns.30 //@patterns.31 //@patterns.32 //@patterns.33 //@patterns.34 //@patterns.35 //@patterns.36 //@patterns.37 //@patterns.38 //@patterns.39 //@patterns.40 //@patterns.41 //@patterns.42 //@patterns.43 //@patterns.44 //@patterns.45 //@patterns.46 //@patterns.47 //@patterns.48 //@patterns.49 //@patterns.50 //@patterns.51 //@patterns.52 //@patterns.53 //@patterns.54">
+    <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.2" positive="false">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.14" value="//@nodes.3"/>
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.15" value="//@nodes.2"/>
+    </patternInvocations>
+  </patterns>
+  <patterns xmi:type="HiPEPattern:HiPEPattern" name="staff" partialPatterns="//@patterns.55" nodes="//@nodes.23" children="//@patterns.55"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findAdministration_1" nodes="//@nodes.0" parentPattern="//@patterns.0" invokedNodes="//@nodes.0" patternType="NODE" rootPattern="//@patterns.0"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findAdministration_CONDITION__2" nodes="//@nodes.1" parentPattern="//@patterns.1" invokedNodes="//@nodes.1" patternType="NODE" rootPattern="//@patterns.1"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findCoveredPatient_3" partialPatterns="//@patterns.17 //@patterns.18" nodes="//@nodes.2 //@nodes.3" edges="//@edges.0" parentPattern="//@patterns.2 //@patterns.32" invokedNodes="//@nodes.2 //@nodes.3" patternType="EDGE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findCoveredPatient_4" nodes="//@nodes.2" parentPattern="//@patterns.16" invokedNodes="//@nodes.2" patternType="NODE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findCoveredPatient_5" nodes="//@nodes.3" parentPattern="//@patterns.16" invokedNodes="//@nodes.3" patternType="NODE" rootPattern="//@patterns.2"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findEarlyShift_6" nodes="//@nodes.4" parentPattern="//@patterns.3" invokedNodes="//@nodes.4" patternType="NODE" rootPattern="//@patterns.3"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findLateShift_7" nodes="//@nodes.5" parentPattern="//@patterns.4" invokedNodes="//@nodes.5" patternType="NODE" rootPattern="//@patterns.4"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findNightShift_8" nodes="//@nodes.6" parentPattern="//@patterns.5" invokedNodes="//@nodes.6" patternType="NODE" rootPattern="//@patterns.5"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findPatient_9" nodes="//@nodes.7" parentPattern="//@patterns.6" invokedNodes="//@nodes.7" patternType="NODE" rootPattern="//@patterns.6"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findPerson_10" nodes="//@nodes.8" parentPattern="//@patterns.7" invokedNodes="//@nodes.8" patternType="NODE" rootPattern="//@patterns.7"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findShiftplan_11" nodes="//@nodes.9" parentPattern="//@patterns.8" invokedNodes="//@nodes.9" patternType="NODE" rootPattern="//@patterns.8"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findStaff_12" nodes="//@nodes.10" parentPattern="//@patterns.9" invokedNodes="//@nodes.10" patternType="NODE" rootPattern="//@patterns.9"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findTreatment_13" partialPatterns="//@patterns.27 //@patterns.28" nodes="//@nodes.11 //@nodes.12" edges="//@edges.1" parentPattern="//@patterns.10" invokedNodes="//@nodes.11 //@nodes.12" patternType="EDGE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findTreatment_14" nodes="//@nodes.11" parentPattern="//@patterns.26" invokedNodes="//@nodes.11" patternType="NODE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findTreatment_15" nodes="//@nodes.12" parentPattern="//@patterns.26" invokedNodes="//@nodes.12" patternType="NODE" rootPattern="//@patterns.10"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patient_16" nodes="//@nodes.13" parentPattern="//@patterns.11" invokedNodes="//@nodes.13" patternType="NODE" rootPattern="//@patterns.11"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_17" partialPatterns="//@patterns.31 //@patterns.32" nodeConstraints="//@nodeConstraints.0 //@nodeConstraints.2 //@nodeConstraints.3 //@nodeConstraints.4" nodes="//@nodes.20 //@nodes.22 //@nodes.21 //@nodes.17 //@nodes.15 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" edges="//@edges.9 //@edges.3 //@edges.6 //@edges.7 //@edges.8 //@edges.5 //@edges.2 //@edges.4" parentPattern="//@patterns.12" invokedNodes="//@nodes.20 //@nodes.22 //@nodes.21 //@nodes.17 //@nodes.15 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_18" partialPatterns="//@patterns.33 //@patterns.34" nodes="//@nodes.20 //@nodes.22 //@nodes.21 //@nodes.17" edges="//@edges.9 //@edges.3 //@edges.6" parentPattern="//@patterns.30" invokedNodes="//@nodes.20 //@nodes.22 //@nodes.21 //@nodes.17" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_19" partialPatterns="//@patterns.35 //@patterns.16" nodes="//@nodes.15 //@nodes.22 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" edges="//@edges.7 //@edges.8 //@edges.5 //@edges.2 //@edges.4" parentPattern="//@patterns.30" positive="false" invokedNodes="//@nodes.15 //@nodes.22 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" invocation="//@patterns.12/@patternInvocations.0" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_20" partialPatterns="//@patterns.36 //@patterns.37" nodes="//@nodes.20 //@nodes.22" edges="//@edges.9" parentPattern="//@patterns.31" invokedNodes="//@nodes.20 //@nodes.22" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_21" partialPatterns="//@patterns.38 //@patterns.39" nodes="//@nodes.20 //@nodes.21 //@nodes.17" edges="//@edges.3 //@edges.6" parentPattern="//@patterns.31" invokedNodes="//@nodes.20 //@nodes.21 //@nodes.17" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_22" partialPatterns="//@patterns.40 //@patterns.41" nodes="//@nodes.15 //@nodes.22 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" edges="//@edges.7 //@edges.8 //@edges.5 //@edges.2 //@edges.4" parentPattern="//@patterns.32" invokedNodes="//@nodes.15 //@nodes.22 //@nodes.19 //@nodes.14 //@nodes.18 //@nodes.16" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_23" nodes="//@nodes.20" parentPattern="//@patterns.33 //@patterns.38" invokedNodes="//@nodes.20" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_24" nodes="//@nodes.22" parentPattern="//@patterns.33 //@patterns.44 //@patterns.45" invokedNodes="//@nodes.22" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_25" partialPatterns="//@patterns.36 //@patterns.42" nodes="//@nodes.20 //@nodes.21" edges="//@edges.3" parentPattern="//@patterns.34" invokedNodes="//@nodes.20 //@nodes.21" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_26" partialPatterns="//@patterns.42 //@patterns.43" nodes="//@nodes.21 //@nodes.17" edges="//@edges.6" parentPattern="//@patterns.34" invokedNodes="//@nodes.21 //@nodes.17" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_27" partialPatterns="//@patterns.44 //@patterns.45" nodes="//@nodes.15 //@nodes.22 //@nodes.19" edges="//@edges.7 //@edges.8" parentPattern="//@patterns.35" invokedNodes="//@nodes.15 //@nodes.22 //@nodes.19" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_28" partialPatterns="//@patterns.46 //@patterns.47" nodeConstraints="//@nodeConstraints.1" nodes="//@nodes.14 //@nodes.18 //@nodes.19 //@nodes.16" edges="//@edges.5 //@edges.2 //@edges.4" parentPattern="//@patterns.35" invokedNodes="//@nodes.14 //@nodes.18 //@nodes.19 //@nodes.16" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_29" nodes="//@nodes.21" parentPattern="//@patterns.38 //@patterns.39" invokedNodes="//@nodes.21" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_30" nodes="//@nodes.17" parentPattern="//@patterns.39" invokedNodes="//@nodes.17" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_31" partialPatterns="//@patterns.48 //@patterns.37" nodes="//@nodes.15 //@nodes.22" edges="//@edges.7" parentPattern="//@patterns.40" invokedNodes="//@nodes.15 //@nodes.22" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_32" partialPatterns="//@patterns.49 //@patterns.37" nodes="//@nodes.19 //@nodes.22" edges="//@edges.8" parentPattern="//@patterns.40" invokedNodes="//@nodes.19 //@nodes.22" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_33" partialPatterns="//@patterns.50 //@patterns.51" nodes="//@nodes.14 //@nodes.18" edges="//@edges.5" parentPattern="//@patterns.41" invokedNodes="//@nodes.14 //@nodes.18" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_34" partialPatterns="//@patterns.52 //@patterns.53" nodes="//@nodes.19 //@nodes.14 //@nodes.16" edges="//@edges.2 //@edges.4" parentPattern="//@patterns.41" invokedNodes="//@nodes.19 //@nodes.14 //@nodes.16" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_35" nodes="//@nodes.15" parentPattern="//@patterns.44" invokedNodes="//@nodes.15" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_36" nodes="//@nodes.19" parentPattern="//@patterns.45 //@patterns.52" invokedNodes="//@nodes.19" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_37" nodes="//@nodes.14" parentPattern="//@patterns.46 //@patterns.52 //@patterns.53" invokedNodes="//@nodes.14" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_38" nodes="//@nodes.18" parentPattern="//@patterns.46" invokedNodes="//@nodes.18" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_39" partialPatterns="//@patterns.49 //@patterns.50" nodes="//@nodes.19 //@nodes.14" edges="//@edges.2" parentPattern="//@patterns.47" invokedNodes="//@nodes.19 //@nodes.14" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_40" partialPatterns="//@patterns.50 //@patterns.54" nodes="//@nodes.14 //@nodes.16" edges="//@edges.4" parentPattern="//@patterns.47" invokedNodes="//@nodes.14 //@nodes.16" patternType="EDGE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="patientCovered_41" nodes="//@nodes.16" parentPattern="//@patterns.53" invokedNodes="//@nodes.16" patternType="NODE" rootPattern="//@patterns.12"/>
+  <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="staff_42" attributeConstraints="//@attributeConstraints.0" nodes="//@nodes.23" parentPattern="//@patterns.13" invokedNodes="//@nodes.23" patternType="NODE" rootPattern="//@patterns.13"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.16" rightNode="//@nodes.17" abstractPatterns="//@patterns.30" targetPatterns="//@patterns.12"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.16" rightNode="//@nodes.18" abstractPatterns="//@patterns.41" targetPatterns="//@patterns.35"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.17" rightNode="//@nodes.18" abstractPatterns="//@patterns.30" targetPatterns="//@patterns.12"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.19" rightNode="//@nodes.20" abstractPatterns="//@patterns.30" targetPatterns="//@patterns.12"/>
+  <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@nodes.14" rightNode="//@nodes.21" abstractPatterns="//@patterns.30" targetPatterns="//@patterns.12"/>
+  <attributeConstraints xmi:type="HiPEPattern:ComplexConstraint" abstractPatterns="//@patterns.55" targetPatterns="//@patterns.13" predicateCode="getCount(match, COUNT_findTreatment_treatment2treatment) &lt; 3.0" initializationCode="">
+    <countInvocations xmi:type="HiPEPattern:HiPECountInvocation" invokedPattern="//@patterns.10" expressionID="COUNT_findTreatment_treatment2treatment">
+      <invocationNodeMap xmi:type="HiPEPattern:HiPENodeToHiPENodeMap" key="//@nodes.23" value="//@nodes.12"/>
+    </countInvocations>
+  </attributeConstraints>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="administration" abstractPatterns="//@patterns.0 //@patterns.14" invokingPartialPatterns="//@patterns.14">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="administration" local="true" abstractPatterns="//@patterns.1 //@patterns.15" invokingPartialPatterns="//@patterns.15">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="patient" abstractPatterns="//@patterns.2 //@patterns.16 //@patterns.17" invokingPartialPatterns="//@patterns.16 //@patterns.17">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="shiftPlan" abstractPatterns="//@patterns.2 //@patterns.16 //@patterns.18" invokingPartialPatterns="//@patterns.16 //@patterns.18">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="earlyshift" abstractPatterns="//@patterns.3 //@patterns.19" invokingPartialPatterns="//@patterns.19">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="lateshift" abstractPatterns="//@patterns.4 //@patterns.20" invokingPartialPatterns="//@patterns.20">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="nightshift" abstractPatterns="//@patterns.5 //@patterns.21" invokingPartialPatterns="//@patterns.21">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="patient" abstractPatterns="//@patterns.6 //@patterns.22" invokingPartialPatterns="//@patterns.22">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="person" abstractPatterns="//@patterns.7 //@patterns.23" invokingPartialPatterns="//@patterns.23">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="shiftlpan" abstractPatterns="//@patterns.8 //@patterns.24" invokingPartialPatterns="//@patterns.24">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="staff" abstractPatterns="//@patterns.9 //@patterns.25" invokingPartialPatterns="//@patterns.25">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="someStaff" abstractPatterns="//@patterns.10 //@patterns.26 //@patterns.27" invokingPartialPatterns="//@patterns.26 //@patterns.27">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="treatment" abstractPatterns="//@patterns.10 //@patterns.26 //@patterns.28" invokingPartialPatterns="//@patterns.26 //@patterns.28">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="t" abstractPatterns="//@patterns.11 //@patterns.29" invokingPartialPatterns="//@patterns.29">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="shiftPlan" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.46 //@patterns.47 //@patterns.50 //@patterns.52 //@patterns.53" invokingPartialPatterns="//@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.46 //@patterns.47 //@patterns.50 //@patterns.52 //@patterns.53">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="patient" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.44 //@patterns.48" invokingPartialPatterns="//@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.44 //@patterns.48">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="earlyshift" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.47 //@patterns.53 //@patterns.54" invokingPartialPatterns="//@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.47 //@patterns.53 //@patterns.54">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="lateshift" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.34 //@patterns.39 //@patterns.43" invokingPartialPatterns="//@patterns.30 //@patterns.31 //@patterns.34 //@patterns.39 //@patterns.43">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="nightshift" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.46 //@patterns.51" invokingPartialPatterns="//@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.46 //@patterns.51">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="s" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.41 //@patterns.45 //@patterns.47 //@patterns.49 //@patterns.52" invokingPartialPatterns="//@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.41 //@patterns.45 //@patterns.47 //@patterns.49 //@patterns.52">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="s1" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.33 //@patterns.34 //@patterns.36 //@patterns.38" invokingPartialPatterns="//@patterns.30 //@patterns.31 //@patterns.33 //@patterns.34 //@patterns.36 //@patterns.38">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="shiftPlan2" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.34 //@patterns.38 //@patterns.39 //@patterns.42" invokingPartialPatterns="//@patterns.30 //@patterns.31 //@patterns.34 //@patterns.38 //@patterns.39 //@patterns.42">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="t" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.32 //@patterns.33 //@patterns.35 //@patterns.37 //@patterns.40 //@patterns.44 //@patterns.45" invokingPartialPatterns="//@patterns.30 //@patterns.31 //@patterns.32 //@patterns.33 //@patterns.35 //@patterns.37 //@patterns.40 //@patterns.44 //@patterns.45">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+  </nodes>
+  <nodes xmi:type="HiPEPattern:HiPENode" name="treatment" abstractPatterns="//@patterns.13 //@patterns.55" invokingPartialPatterns="//@patterns.55">
+    <type xmi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+  </nodes>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Patient_coveredBy" source="//@nodes.2" target="//@nodes.3" abstractPatterns="//@patterns.2 //@patterns.16">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Staff_treatment" source="//@nodes.11" target="//@nodes.12" abstractPatterns="//@patterns.10 //@patterns.26">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Staff_shiftPlan" source="//@nodes.19" target="//@nodes.14" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.47 //@patterns.52">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Staff_shiftPlan" source="//@nodes.20" target="//@nodes.21" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.34 //@patterns.38">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Shiftplan_shifts" source="//@nodes.14" target="//@nodes.16" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.47 //@patterns.53">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Shiftplan_shifts" source="//@nodes.14" target="//@nodes.18" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.41 //@patterns.46">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Shiftplan_shifts" source="//@nodes.21" target="//@nodes.17" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.34 //@patterns.39">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Patient_treatment" source="//@nodes.15" target="//@nodes.22" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.44">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Staff_treatment" source="//@nodes.19" target="//@nodes.22" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.32 //@patterns.35 //@patterns.40 //@patterns.45">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+  </edges>
+  <edges xmi:type="HiPEPattern:HiPEEdge" name="Staff_treatment" source="//@nodes.20" target="//@nodes.22" abstractPatterns="//@patterns.12 //@patterns.30 //@patterns.31 //@patterns.33">
+    <type xmi:type="ecore:EReference" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+  </edges>
+</HiPEPattern:HiPEContainer>

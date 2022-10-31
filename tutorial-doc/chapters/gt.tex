@@ -14,7 +14,7 @@ Whenever you have to add code to the existing project it will be said \textbf{ex
 Now that you are good to go, it is time to get familiar with the two most common constructs for eMoflon Graph Transformations: \textbf{The rules and patterns}. For a more detailed description you can read the second chapter of this essay\footnote{\href{https://www.cs.le.ac.uk/people/rh122/papers/2006/Hec06Nutshell.pdf}{Graph Transformation in a Nutshell}}.\newline
 
 \textbf{Graph pattern}:\newline
-A Graph pattern describes certain structures that must be present in a given instance graph. A structure consists of an arangement of nodes with specific types and specific connecting edges. On the other hand a pattern could also be made up by a single node of a specified type.\newline
+A Graph pattern describes certain structures that must be present in a given instance graph. A structure consists of an arangement of nodes with specific types and specific connecting edges. A pattern could also be made up by a single node of a specified type.\newline
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.7]{pictures/pattern.png}
@@ -26,7 +26,7 @@ Consequently, a graph pattern matcher will find all sub-structures in the instan
 \clearpage
 
 \textbf{Graph transformation rule}:\newline\newline
-A graph transformation rule consists of a so-called left-hand side (LHS) and right-hand side (RHS). The former describes certain preconditions, like a graph pattern, that must be present in a given instance graph, otherwise, a rule is not applicable. If a match of the LHS is found, the rule can be applied. When a rule is applied, the graph is changed in such a way, that the rule's RHS is satisfied. More precisely, any graph pattern node and edge that is present in the LHS, but is not present in the RHS, is deleted. In turn, any node that is not present in the LHS, but is present in the RHS, is created.\newline
+A graph transformation rule consists of a so-called left-hand side (LHS) and right-hand side (RHS). The former describes certain preconditions, like a graph pattern that must be present in a given instance graph, otherwise a rule is not applicable. If a match of the LHS is found, the rule can be applied. When a rule is applied, the graph is changed in such a way, that the rule's RHS is satisfied. More precisely, any graph pattern node and edge that is present in the LHS, but is not present in the RHS, is deleted. In turn, any node that is not present in the LHS, but is present in the RHS, is created.\newline
 
 \begin{figure}[h]
     \centering
@@ -66,7 +66,7 @@ You might have noticed that the project has some \textbf{compilation errors}. To
 
 \centering
 
-Open \textsf{"META-INF/MANIFEST.MF"} file → \textsf{dependencies} → Add \textsf{"HospitalExample"} from drop down menu.\newline\newline
+Open \textsf{"META-INF/MANIFEST.MF"} file → \textsf{dependencies} → Add \textsf{"HospitalExample"} to the Required Plug-ins menu.\newline\newline
 
 \begin{figure}[h]
     \centering
@@ -77,7 +77,7 @@ Open \textsf{"META-INF/MANIFEST.MF"} file → \textsf{dependencies} → Add \tex
 
 \raggedright
 
-The errors should be fixed now, and your project should compile properly. If the \textbf{errors persist} check if the Build automatically option is turned on in the project drop-down menu of your eclipse. \textbf{Refreshing and cleaning} all the projects are the remaining options if you are still encountering errors.
+The errors should be fixed now, and your project should compile properly. If the \textbf{errors persist} check if the Build automatically option is turned on in the project drop-down menu of your eclipse. \textbf{Refreshing and cleaning} all the projects are the remaining options if you are still encountering errors. Should there still be errors remaining in the manifest, check the code of the manifest for the \textbf{Export-Package} and \textbf{Import-Package} sections and check if the names are written properly. Sometimes the commas and names get mixed up or put in the wrong line. After fixing that you should see no more errors.
 
 \raggedright
 
@@ -99,7 +99,7 @@ Any Element that is prepended with a \textcolor{LimeGreen}{ ++} is \textbf{creat
 
 In turn, the {\color{red} -- -- } operator will lead to a \textbf{deletion} of the denoted element. If an element is deleted by the application of a rule the {\color{red}syntax will be colored red}. \newline
 
-If none of the operators is used, the element is interpreted as \textbf{context} and \textbf{colored as black}.\newline
+If none of the operators is used, the element is interpreted as \textbf{context} and \textbf{colored black}.\newline
 
 Every element that is \textbf{not denoted} with an operator describes the \textbf{LHS} of the rule, which means that these elements must be present in a given instance graph.\newline
 In practical terms, a valid match of the LHS must be present before the rule can be applied.\newline
@@ -128,6 +128,9 @@ Therefore, findHospital() is not a rule, but a pattern, which solely will instru
 
 \textbf{Please create rule and pattern in the \textsf{Rules.gt} file of your \textsf{HospitalTransformRules} project.}\newline
 
+\textbf{Note on patterns}:
+\newline
+Just like shown in this example, all the other patterns for all the other types should be created by you on your own.\newline
 
 \textbf{Note on the visualization of PlantUML}:
 \newline
@@ -165,10 +168,10 @@ With our condition, we want to forbid the application of the rule if our \textsf
 
 }
 
-After creating a rule for the construction of a hospital node we need to fill our hospital with the same objects of our meta-model. So, let us continue with a \textbf{reception}. We start by creating the rule \textsf{reception} and adding a reception node of the type of reception.\newline
+After creating a rule for the construction of a hospital node we need to fill our hospital with the same objects of our meta-model. So, let us continue with a \textbf{reception}. We start by creating the rule \textsf{reception} and adding a reception node of type reception.\newline
 
 In contrast to the previous rule, we also have to \textbf{link our reception to the hospital}. To create such a reference, we require the hospital node and add an edge from the hospital node to the reception node as we have done previously in the tutorial.\newline You need to use the \textcolor{LimeGreen}{++} operator once again but now we continue with a \textbf{"-"}. This marks the created structure as an edge. The \textbf{“-"} is followed by the \textbf{type of the edge} and with \textbf{“->”} we are pointing towards the \textbf{node we want to connect}.\newline
-The syntax should look like depicted below and the crucial part for the creation of an edge is shown in \textbf{line 8}:\newline
+The syntax should look like depicted below and the crucial part for the creation of an edge is shown in \textbf{line 9}:\newline
 
 {\setstretch{1.2}
 
@@ -334,7 +337,7 @@ When called like the others this pattern will find exactly find 1 match. Because
 
 \end{figure}
 
-Note that you can look at the PlantUML visualization of rules and pattern by clicking on them in the \textsf{rules.gt} and looking the PlantUML view. \newline
+Note that you can look at the PlantUML visualization of rules and pattern by clicking on them in the \textsf{rules.gt} and looking at the PlantUML view. \newline
 
 Please use the \textsf{findRoomsInDepartment} pattern for our room rule.\newline
 
@@ -350,14 +353,15 @@ This has to be done in the actual code implementation.
 
 \subsection{Finishing the graph transformation ruleset}
 
-After we have created the ruleset for the infrastructure of the hospital, we need rules to define the behavior of the persons in the hospital. In our case, we have the following person types in our hospital: the \textbf{patients}, the \textbf{doctors}, and the \textbf{nurses}.\newline
+After we have created the ruleset for the infrastructure of the hospital, we need rules to define the behavior of the people in the hospital. In our case, we have the following people types in our hospital: the \textbf{patients}, the \textbf{doctors}, and the \textbf{nurses}.\newline
+\textbf{Note:} Repeatedly pressing the F5 key during the creation of a GT or TGG model helps preventing errors, since the automatic build mode sometimes doesn´t work correctly.\newline
 
 \textbf{Patients:}\newline
-For the patients, we assume that a patient appears in the reception and waits there until he has been assigned to a room. Naturally, a patient has a name, an age and will be assigned a patientID and carelevel which requires a certain kind of treatment.\newline\newline
+For the patients, we assume that a patient appears in the reception and waits there until he has been assigned to a room. Naturally, a patient has a name and will be assigned a patientID and a carelevel which requires a certain kind of treatment.\newline\newline
 
 {\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{rule} patient(name: EString,age: EInt, patientId: EInt, level: Carelevel) \{
+1\hspace{0.5cm}\textcolor{Purple}{rule} patient(name: EString, patientId: EInt, level: Carelevel) \{
 
 2\hspace{1cm}	hospital: Hospital \{
 
@@ -379,11 +383,9 @@ For the patients, we assume that a patient appears in the reception and waits th
 
 11\hspace{1.5cm}.\textcolor{LimeGreen}{level}:=\textcolor{Purple}{param}::level
 
-12\hspace{1.5cm}.\textcolor{LimeGreen}{age}:=\textcolor{Purple}{param}::age
+12\hspace{1cm} \}
 
-13\hspace{1cm} \}
-
-14\hspace{0.5cm} \} \newline\newline
+13\hspace{0.5cm} \} \newline\newline
 
 }
 
@@ -648,7 +650,7 @@ But we have to keep in mind that we can only assign a patient to a room if the \
 
 So far, we have only written the rules without applying them. This will be our next task.
 
-To understand how we implement our graph transformation ruleset we should take a look at the creation of a new model instance. For this step, open the \textsf{HospitalValidator.java} in the \textsf{HospitalTransformRules package}, please.\newline
+To understand how we implement our graph transformation ruleset we should take a look at the creation of a new model instance. For this step open the \textsf{HospitalValidator.java} in the \textsf{HospitalTransformRules package}, please.\newline
 
 The HospitalValidator file creates an empty Model with the URI \textsf{"hospital.xmi"}:\newline\newline
 
@@ -766,7 +768,7 @@ Here is a faulty example if you changed the order of the rule application:\newli
 
 This order would have \textbf{severe consequences} for our hospital since the rules which require a reception such as the patients would not be applied as well as the reception itself. \newline
 
-With rule applications below the reception rule, we will create persons of the type of patient, doctor, and nurse for our hospital as well as the departments and the rooms for our hospital.\newline
+With rule applications below the reception rule, we will create people of the type of patient, doctor and nurse for our hospital as well as the departments and the rooms for our hospital.\newline
 
 \textbf{Printing results:}
 
@@ -821,7 +823,7 @@ Now we are going to introduce rule conditions that are also dependent on \textbf
 The probability of a rule can be written in two ways:\newline With an arithmetic expression as or with a stochastic function. We will explore both possibilities in the following chapters.\newline
 Please note, only rules can have a probability since patterns are always \textbf{deterministic}.
 
-The probability is written at the end of the rule after a \textsf{@} . That means even if the corresponding condition is met the rule will only be applied with a chance of \textsf{probability}.
+The probability is written at the end of the rule after an \textsf{@} . That means even if the corresponding condition is met the rule will only be applied with a chance of \textsf{probability}.
 \newline
 
 A simple example of a rule with a constant probability could be written as below:\newline
@@ -872,7 +874,7 @@ You can find the corresponding syntax in the \textbf{appendix}.\newline
 
 \subsection{Static Probabilities}
 
-Of course we want to model much more complex probabilities than a introduced in section 4.8.
+Of course we want to model much more complex probabilities than the ones introduced in section 4.8.
 One way to define probabilities is with the mentioned \textbf{arithmetic expressions}.
 
 As an example for the former we will create a rule that is very similar to the \textsf{releasePatient} rule we have already seen. But this time we don't want to release a patient based on his ID. Instead we want to model the probability of a treatment being effective for a random patient:\newline

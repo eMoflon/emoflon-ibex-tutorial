@@ -91,7 +91,7 @@ The second model to select will be our \textbf{target model} and you might have 
 
 Right now, we have a hospital metamodel and an administration metamodel but they are not connected. As a consequence, we need means to create relations between our two metamodels. These relations are defined in the files we will inspect now.
 
-In the source folder and the \textbf{.tgg package}, you will find the \textbf{Schema.tgg}. This file is the central element linking both the source and the target side since it defines the \textbf{correspondence metamodel} for the connections between both the source and the target side. The correspondence metamodel defined by the Schema.tgg also completes our triple of metamodel graphs.\newline
+In the source folder you will find the \textbf{tgg package} and in it you will find the \textbf{Schema.tgg} file. This file is the central element linking both the source and the target side since it defines the \textbf{correspondence metamodel} for the connections between both the source and the target side. The correspondence metamodel defined by the Schema.tgg also completes our triple of metamodel graphs.\newline
 
 \textbf{Warning:} Please always start the name of your project with a \textbf{capital letter}. The automatic file generation will not work otherwise.\newline
 
@@ -402,7 +402,7 @@ As you can see, we are only operating on the source side of our consistent tripl
 
 Let us continue with the remaining rules since we are still lacking the personnel and the patients. Look at the \textsf{StaffToStaffRule} which is already present in your Java project. Its visualization is shown in the chart below.
 
-For this rule, we assume that a hospital node, at least one department node, an administration node, and the correspondence between source and target side exist.
+For this rule, we assume that a hospital node, at least one department node, an administration node and the correspondence between source and target side exist.
 
 Then we want to create a staff node and its respective connections on the source side. When creating a staff node on the target side we also want to connect them to the target side by creating the \textsf{StaffToStaff} \textbf{correspondence} and the staff for the target side itself.
 
@@ -440,7 +440,7 @@ For the creation of the DocToStaff rule, which can be done in the present StaffT
 
 7\hspace{0.5cm}\}
 
-8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondences}}\{
+8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}}\{
 
 9\hspace{0.5cm}\}
 
@@ -472,7 +472,7 @@ The \textsf{NurseToStaffRule} can be created similarly. Please try it yourself b
 
 7\hspace{0.5cm}\}
 
-8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondences}}\{
+8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}}\{
 
 9\hspace{0.5cm}\}
 
@@ -513,9 +513,9 @@ You can look at the complete rule on the next page.
 
 2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}} \{
 
-3\hspace{1cm}p1:Patient
+3\hspace{1cm}p1:Patient\{\}
 
-4\hspace{1cm}s1:Staff
+4\hspace{1cm}s1:Staff\{\}
 	
 5\hspace{0.5cm}\}
 

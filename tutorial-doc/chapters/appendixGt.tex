@@ -4,7 +4,7 @@
 
 \textbf{Patterns and Rules:}
 
-The keywords \textbf{pattern} and \textbf{rule} are used to distinguish graph structures containing only context and graph structures that create, delete, or change the model.
+The keywords \textbf{pattern} and \textbf{rule} are used to distinguish graph structures containing only context and graph structures that create, delete or change the model.
 
 Patterns only contain the context while rules contain context and change the model.\newline
 
@@ -79,7 +79,7 @@ The API class is a factory for patterns and rules: For each pattern and rule, th
 \hline
 \textsf{PushoutApproach} & \textcolor{MidnightBlue}{getPushoutApproach}() & Returns the pushout approach which would be used for the rule application. If the pushout was not set explicitly, the default pushout approach of the API is used. This is "SPO" but can be changed for the whole API as well \\
 \hline
-\textsf{PushoutApproach} & \textcolor{MidnightBlue}{setPushoutApproach}\newline(PushoutApproach pushoutApproach) & Returns all the Rules and Patterns of the model that do need a parameter that has to be initialized with  \\
+\textsf{PushoutApproach} & \textcolor{MidnightBlue}{setPushoutApproach}\newline(PushoutApproach pushoutApproach) & Does the same as setDPO() and setSPO() but accepts an enum as input \\
 \hline
 \textsf{PushoutApproach} & \textcolor{MidnightBlue}{setDPO}() & Sets the pushout approach to DPO (Double Pushout). This means that a rule is only applicable if the deleted nodes do not leave dangling edges, i.e., if adjacent edges are not deleted with the node \\
 \hline

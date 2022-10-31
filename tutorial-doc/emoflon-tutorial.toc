@@ -1,0 +1,47 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Install instructions}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}General}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Windows specific}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Linux specific}{1}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Eclipse plugins}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Creating a metamodel}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Metamodeling introduction}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Adding the eMoflon toolbar}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Creating a new EMF project}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Filling the model with content}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Graph transformation with eMoflon}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Rules and patterns introduction}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Creating a graph transformation project}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Rules and patterns in eMoflon}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Application Condition}{16}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Parameters and attribute constraints}{17}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Finishing the graph transformation ruleset}{21}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Java implementation of the ruleset}{25}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Stochastic extension}{28}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Arithmetic Extension}{28}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Static Probabilities}{28}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Stochastic functions}{30}{subsection.4.11}%
+\contentsline {subsection}{\numberline {4.12}Number Generation}{30}{subsection.4.12}%
+\contentsline {section}{\numberline {5}Appendix Graph Transformations}{31}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Concepts}{31}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Syntax and Documentation}{33}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}API methods}{33}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Pattern methods}{34}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Rule methods}{34}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Syntax reference}{36}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Syntax math functions}{37}{subsubsection.5.2.5}%
+\contentsline {section}{\numberline {6}Bidirectional Transformation with Triple Graph Grammars}{38}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Administration metamodel}{38}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Creating a TGG project}{39}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Writing a TGG schema}{41}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}TGG Rules}{43}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Attribute Conditions}{51}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Running the TGG Project}{54}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Debugging in TGGs}{59}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Appendix for graph transformation}{60}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Debugging the generated Pattern Invocation Networks (PIN):}{60}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Attribute conditions overview}{61}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Stop criterions overview}{62}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Troubleshooting}{63}{section.8}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

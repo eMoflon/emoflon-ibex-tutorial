@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="AdministrationExample/gen/" modelPluginID="AdministrationExample"
+    modelName="AdministrationExample" generateSchema="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>AdministrationExample.ecore</foreignModel>
+  <genPackages prefix="AdministrationExample" disposableProviderFactory="true" ecorePackage="AdministrationExample.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AdministrationExample.ecore#//Medication">
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Medication/weak"/>
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Medication/medium"/>
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Medication/strong"/>
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Medication/pending"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="AdministrationExample.ecore#//Daytime">
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Daytime/night"/>
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Daytime/early"/>
+      <genEnumLiterals ecoreEnumLiteral="AdministrationExample.ecore#//Daytime/late"/>
+    </genEnums>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Administration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Administration/staff"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Administration/patient"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Shift">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Shift/time"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Staff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Staff/staffID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Staff/salary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Staff/shiftPlan"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Staff/dInt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Staff/treatment"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Person/lastName"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Treatment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Treatment/medication"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Shiftplan">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Shiftplan/covers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </genClasses>
+    <genClasses ecoreClass="AdministrationExample.ecore#//Patient">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute AdministrationExample.ecore#//Patient/patientID"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Patient/treatment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference AdministrationExample.ecore#//Patient/coveredBy"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

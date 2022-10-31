@@ -1,0 +1,185 @@
+import "http://www.eclipse.org/emf/2002/Ecore"
+import "platform:/resource/AdministrationExample/model/AdministrationExample.ecore"
+
+
+rule administration() { // Rule for the creation of an administration
+	++administration: Administration
+}
+when oneAdministration
+
+condition oneAdministration = forbid findAdministration
+
+abstract rule person() { // Abstract rule to create a person node
+	++person: Person {
+	
+		
+	}
+}
+
+rule staff(time1:Daytime, time2:Daytime)
+refines person { // Staff rule which creates a person node of the Type staff and assigns a shiftplan with two shifts
+	++person: Staff {
+		++ -shiftPlan -> shiftPlan
+		
+		++ -treatment -> treatment
+		
+		
+	}
+
+	++shiftPlan: Shiftplan {
+		++ -shifts -> shift
+		++ -shifts -> shift2
+	}
+
+	++ shift: Shift {
+		.time:=param::time1
+	}
+	++ shift2: Shift {
+		.time:=param::time2
+	}
+	treatment:Treatment{
+		
+	}
+	#count(findTreatment)<3
+	
+}
+
+rule patient()
+refines person { // Patient rule which creates a patient node and assigns a treatment to them
+	++person: Patient {
+		++-treatment -> t
+	}
+	t:Treatment{
+		
+	}
+
+	
+}
+
+
+
+rule patientCovered() { // Rule responsible for the coverage of patients 
+	patient: Patient {
+		++ -coveredBy -> shiftPlan
+		++ -coveredBy -> shiftPlan2
+		-treatment->t
+	}
+
+	shiftPlan: Shiftplan {
+		-shifts -> earlyshift
+		
+		-shifts -> nightshift
+	}
+	shiftPlan2: Shiftplan {
+		-shifts -> lateshift
+		
+	}
+
+	earlyshift: Shift {
+		
+	}
+
+	lateshift: Shift {
+		
+	}
+
+	nightshift: Shift {
+		
+	}
+
+	
+	s: Staff {
+		-treatment -> t
+		-shiftPlan->shiftPlan
+	}
+	s1:Staff{
+		-treatment -> t
+		-shiftPlan->shiftPlan2
+	}
+	t: Treatment {
+		
+	}
+} when patientAlreadyCovered
+condition patientAlreadyCovered = forbid findCoveredPatient
+
+abstract rule shift() { // Abstract rule for the creation of a shift
+	++shift: Shift {
+		
+	}
+}
+
+rule earlyshift()
+refines shift { // Concrete rule for an early shift
+	++earlyshift: Shift {
+		.time:=enum::early
+	}
+}
+
+rule lateshift()
+refines shift { // Concrete rule for a late shift
+	++lateshift: Shift {
+		.time:=enum::late
+	}
+}
+
+rule nightshift()
+refines shift { // Concrete rule for a nigh tshift
+	++nightshift: Shift {
+		.time:=enum::night
+	}
+}
+
+pattern findAdministration() { // Pattern to find an administration
+	administration: Administration
+}
+
+
+pattern findPatient() {  // Pattern to find a patient
+	patient: Patient
+}
+
+pattern findShiftplan() {  // Pattern to find a shift plan
+	shiftlpan: Shiftplan
+}
+
+pattern findEarlyShift() {  // Pattern to find an early shift
+	earlyshift: Shift
+}
+
+pattern findLateShift() {  // Pattern to find a late shift
+	lateshift: Shift
+}
+
+pattern findNightShift() {  // Pattern to find a night shift
+	nightshift: Shift
+}
+
+pattern findStaff() {  // Pattern to find a staff member
+	staff: Staff
+}
+
+
+pattern findPerson() {  // Pattern to find a person
+	person: Person
+}
+
+pattern findTreatment(){
+	someStaff:Staff{
+		-treatment-> treatment
+	}
+	treatment:Treatment{
+		
+	}
+}
+
+		
+pattern findCoveredPatient(){  // Pattern to find a covered patient
+	patient:Patient{
+		-coveredBy->shiftPlan
+	}
+	shiftPlan:Shiftplan{
+		
+	}
+}
+
+

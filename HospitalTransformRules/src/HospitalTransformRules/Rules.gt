@@ -1,5 +1,5 @@
-import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore"
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
 
 rule hospital() {
 	++hospital: Hospital // Adds a Node named Hospital of the type Hospital
@@ -26,9 +26,9 @@ rule patient(name: EString, patientId: EInt, level: Carelevel) {
 	}
 
 	++patient: Patient {
-		.name:=param::name  // initalisation the parameter name
-		.patientID:=param::patientId // initalisation the parameter patientid
-		.level:=param::level		// initalisation the parameter carelvl
+		.name:=param::name  // initialization the parameter name
+		.patientID:=param::patientId // initialization the parameter patientid
+		.level:=param::level		// initialization the parameter carelvl
 	} // Adds a patient in the reception
 }
 
@@ -39,7 +39,7 @@ rule department(dID: EInt, maxRoomCount: EInt) { // creates a department with th
 
 	++department: Department { // Adds a node named department of the type Department
 		.dID:=param::dID // Creates the Parameter departmentID (dID)
-		.maxRoomCount:=param::maxRoomCount // initalisation the parameter maxRoomCount
+		.maxRoomCount:=param::maxRoomCount // initialization the parameter maxRoomCount
 	}
 }
 
@@ -53,8 +53,8 @@ rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs,
 	}
 
 	++room: Room { // Adds a node named room of they type Room
-		.capacity:=param::cap // initalisation the parameter capacity
-		.level:=param::carelvl // initalisation the parameter carelvl
+		.capacity:=param::cap // initialization the parameter capacity
+		.level:=param::carelvl // initialization the parameter carelvl
 	}
 	#department.maxRoomCount>count(findRoomInDepartment)  // attribute condition for the maximum number of rooms which can be assigned to a department
 }
@@ -68,15 +68,15 @@ abstract rule staff(name: EString, staffID: EInt) { //creates the Abstract rule 
 	department : Department
 
 	++staff: Staff { // Creates the node staff of the type Staff and the param staffID
-		.staffID:=param::staffID // initalisation the parameter capacity
-		.name:=param::name // initalisation the parameter name
+		.staffID:=param::staffID // initialization the parameter capacity
+		.name:=param::name // initialization the parameter name
 	}
 }
 
 rule doctor(capacity: EInt)
 refines staff { // adds the rule doctor which refines/inherits from the rule Staff
 	++staff: Doctor {
-		.patientCapacity:=param::capacity // initalisation the parameter capacity
+		.patientCapacity:=param::capacity // initialization the parameter capacity
 	}
 	department : Department {
 		++ -staff -> staff // Adds an edge staff from staff to department
@@ -85,7 +85,7 @@ refines staff { // adds the rule doctor which refines/inherits from the rule Sta
 
 rule assignNurseToRoom() refines staff { // assigns a Nurse to a room she is responsible for
 	++ staff: Nurse {
-		++ -responsible -> room // Adds a responsiblity edge from room to nurse
+		++ -responsible -> room // Adds a responsibility edge from room to nurse
 	}
 
 	room: Room

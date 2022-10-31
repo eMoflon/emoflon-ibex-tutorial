@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="ASCII"?>
+<IBeXPatternModel:IBeXModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXPatternModel="platform:/resource/org.emoflon.ibex.patternmodel/model/IBeXPatternModel.ecore">
+  <patternSet>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="assignNurseToRoom" documentation="" localEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.1" signatureNodes="//@nodeSet/@nodes.0 //@nodeSet/@nodes.15 //@nodeSet/@nodes.42">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.14">
+        <mapping key="//@nodeSet/@nodes.42" value="//@nodeSet/@nodes.43"/>
+      </invocations>
+      <parameters name="name">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters name="staffID">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="assignPatientToRoom" hasCountExpression="true" apiPatternDependencies="//@patternSet/@contextPatterns.18 //@patternSet/@contextPatterns.15" documentation="" localEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15 //@edgeSet/@edges.2 //@edgeSet/@edges.21" signatureNodes="//@nodeSet/@nodes.2 //@nodeSet/@nodes.10 //@nodeSet/@nodes.16 //@nodeSet/@nodes.27 //@nodeSet/@nodes.35 //@nodeSet/@nodes.44">
+      <arithmeticConstraints relation="GREATER">
+        <lhs xsi:type="IBeXPatternModel:IBeXArithmeticAttribute" name="room">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        </lhs>
+        <rhs xsi:type="IBeXPatternModel:IBeXMatchCount" operator="COUNT">
+          <operand xsi:type="IBeXPatternModel:IBeXArithmeticValueLiteral"/>
+          <invocation positive="true" invokedPattern="//@patternSet/@contextPatterns.18">
+            <mapping key="//@nodeSet/@nodes.44" value="//@nodeSet/@nodes.41"/>
+          </invocation>
+        </rhs>
+      </arithmeticConstraints>
+      <arithmeticConstraints relation="GREATER">
+        <lhs xsi:type="IBeXPatternModel:IBeXArithmeticAttribute" name="doctor">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+          <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/patientCapacity"/>
+        </lhs>
+        <rhs xsi:type="IBeXPatternModel:IBeXMatchCount" operator="COUNT">
+          <operand xsi:type="IBeXPatternModel:IBeXArithmeticValueLiteral"/>
+          <invocation positive="true" invokedPattern="//@patternSet/@contextPatterns.15">
+            <mapping key="//@nodeSet/@nodes.10" value="//@nodeSet/@nodes.11"/>
+          </invocation>
+        </rhs>
+      </arithmeticConstraints>
+      <invocations invokedPattern="//@patternSet/@contextPatterns.20">
+        <mapping key="//@nodeSet/@nodes.27" value="//@nodeSet/@nodes.31"/>
+      </invocations>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="department" documentation="" signatureNodes="//@nodeSet/@nodes.20">
+      <parameters name="dID">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+      <parameters name="maxRoomCount">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="doctor" documentation="" localEdges="//@edgeSet/@edges.14" signatureNodes="//@nodeSet/@nodes.9 //@nodeSet/@nodes.22">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.5">
+        <mapping key="//@nodeSet/@nodes.9" value="//@nodeSet/@nodes.5"/>
+      </invocations>
+      <parameters name="capacity">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+      <parameters name="name">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters name="staffID">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="doctorInDepartment" documentation="" localEdges="//@edgeSet/@edges.4" signatureNodes="//@nodeSet/@nodes.4 //@nodeSet/@nodes.49"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="doctorInDepartment_CONDITION_department" documentation="" localEdges="//@edgeSet/@edges.5" localNodes="//@nodeSet/@nodes.50" signatureNodes="//@nodeSet/@nodes.5"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findDepartment" documentation="" signatureNodes="//@nodeSet/@nodes.1"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findDepartmentWithoutDoctor" documentation="" signatureNodes="//@nodeSet/@nodes.7">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.5">
+        <mapping key="//@nodeSet/@nodes.7" value="//@nodeSet/@nodes.5"/>
+      </invocations>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findDocWithPatient" documentation="" signatureNodes="//@nodeSet/@nodes.51">
+      <invocations positive="true" invokedPattern="//@patternSet/@contextPatterns.21">
+        <mapping key="//@nodeSet/@nodes.51" value="//@nodeSet/@nodes.53"/>
+      </invocations>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findDoctor" documentation="" signatureNodes="//@nodeSet/@nodes.12"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findHospital" documentation="" signatureNodes="//@nodeSet/@nodes.23"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findHospital_CONDITION_" documentation="" localNodes="//@nodeSet/@nodes.14"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findNurse" documentation="" signatureNodes="//@nodeSet/@nodes.24"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findNurseInRoom" documentation="First condition to forbid finding a Nurse in a Room when she already has a room" localEdges="//@edgeSet/@edges.30" signatureNodes="//@nodeSet/@nodes.47 //@nodeSet/@nodes.56"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findNurseInRoom_CONDITION_room" documentation="First condition to forbid finding a Nurse in a Room when she already has a room" localEdges="//@edgeSet/@edges.29" localNodes="//@nodeSet/@nodes.55" signatureNodes="//@nodeSet/@nodes.43"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findOccupiedDoc" documentation="" localEdges="//@edgeSet/@edges.31" signatureNodes="//@nodeSet/@nodes.11 //@nodeSet/@nodes.58"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatient" documentation="" signatureNodes="//@nodeSet/@nodes.29"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatientInReception" documentation="" localEdges="//@edgeSet/@edges.20" signatureNodes="//@nodeSet/@nodes.26 //@nodeSet/@nodes.34"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatientInRoom" documentation="" localEdges="//@edgeSet/@edges.25" signatureNodes="//@nodeSet/@nodes.41 //@nodeSet/@nodes.57"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatientWithDoc" documentation="" localEdges="//@edgeSet/@edges.28" signatureNodes="//@nodeSet/@nodes.33 //@nodeSet/@nodes.54"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatientWithDoc_CONDITION_patient" documentation="" localEdges="//@edgeSet/@edges.26" localNodes="//@nodeSet/@nodes.52" signatureNodes="//@nodeSet/@nodes.31"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findPatientWithDoc_CONDITION_somedoctor" documentation="" localEdges="//@edgeSet/@edges.27" localNodes="//@nodeSet/@nodes.32" signatureNodes="//@nodeSet/@nodes.53"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findReception" documentation="" signatureNodes="//@nodeSet/@nodes.39"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findReception_CONDITION_" documentation="" localNodes="//@nodeSet/@nodes.38"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findRoom" documentation="" signatureNodes="//@nodeSet/@nodes.48"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findRoomInDepartment" documentation="" localEdges="//@edgeSet/@edges.0" signatureNodes="//@nodeSet/@nodes.8 //@nodeSet/@nodes.25"/>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="findRoomWithoutNurse" documentation="" signatureNodes="//@nodeSet/@nodes.40">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.14">
+        <mapping key="//@nodeSet/@nodes.40" value="//@nodeSet/@nodes.43"/>
+      </invocations>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="hospital" documentation="">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.11"/>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="patient" documentation="" localEdges="//@edgeSet/@edges.16" signatureNodes="//@nodeSet/@nodes.17 //@nodeSet/@nodes.36">
+      <parameters name="name">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters name="patientId">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+      <parameters name="level">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Carelevel"/>
+      </parameters>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="reception" documentation="" signatureNodes="//@nodeSet/@nodes.19">
+      <invocations invokedPattern="//@patternSet/@contextPatterns.23"/>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="releasePatient" documentation="" localEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.24" signatureNodes="//@nodeSet/@nodes.13 //@nodeSet/@nodes.30 //@nodeSet/@nodes.45">
+      <parameters name="patientID">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+    </contextPatterns>
+    <contextPatterns xsi:type="IBeXPatternModel:IBeXContextPattern" name="room" hasCountExpression="true" apiPatternDependencies="//@patternSet/@contextPatterns.25" documentation="" localEdges="//@edgeSet/@edges.13" signatureNodes="//@nodeSet/@nodes.6 //@nodeSet/@nodes.21">
+      <arithmeticConstraints relation="GREATER">
+        <lhs xsi:type="IBeXPatternModel:IBeXArithmeticAttribute" name="department">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+          <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        </lhs>
+        <rhs xsi:type="IBeXPatternModel:IBeXMatchCount" operator="COUNT">
+          <operand xsi:type="IBeXPatternModel:IBeXArithmeticValueLiteral"/>
+          <invocation positive="true" invokedPattern="//@patternSet/@contextPatterns.25">
+            <mapping key="//@nodeSet/@nodes.6" value="//@nodeSet/@nodes.8"/>
+          </invocation>
+        </rhs>
+      </arithmeticConstraints>
+      <parameters name="cap">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameters>
+      <parameters name="carelvl">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Carelevel"/>
+      </parameters>
+    </contextPatterns>
+  </patternSet>
+  <ruleSet>
+    <rules name="assignNurseToRoom" documentation="" lhs="//@patternSet/@contextPatterns.0" parameters="//@patternSet/@contextPatterns.0/@parameters.0 //@patternSet/@contextPatterns.0/@parameters.1">
+      <rhs name="assignNurseToRoom_rhs" localEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.1 //@edgeSet/@edges.32 //@edgeSet/@edges.6 //@edgeSet/@edges.18" signatureNodes="//@nodeSet/@nodes.0 //@nodeSet/@nodes.15 //@nodeSet/@nodes.42 //@nodeSet/@nodes.59"/>
+      <create name="assignNurseToRoom" createdEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.6 //@edgeSet/@edges.18" createdNodes="//@nodeSet/@nodes.59">
+        <attributeAssignments node="//@nodeSet/@nodes.59">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="staffID"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.59">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="name"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        </attributeAssignments>
+      </create>
+      <delete name="assignNurseToRoom"/>
+    </rules>
+    <rules name="assignPatientToRoom" documentation="" lhs="//@patternSet/@contextPatterns.1" arithmeticConstraints="//@patternSet/@contextPatterns.1/@arithmeticConstraints.0 //@patternSet/@contextPatterns.1/@arithmeticConstraints.1">
+      <rhs name="assignPatientToRoom_rhs" localEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15 //@edgeSet/@edges.2 //@edgeSet/@edges.8 //@edgeSet/@edges.23" signatureNodes="//@nodeSet/@nodes.2 //@nodeSet/@nodes.10 //@nodeSet/@nodes.16 //@nodeSet/@nodes.27 //@nodeSet/@nodes.35 //@nodeSet/@nodes.44"/>
+      <create name="assignPatientToRoom" createdEdges="//@edgeSet/@edges.8 //@edgeSet/@edges.23"/>
+      <delete name="assignPatientToRoom" deletedEdges="//@edgeSet/@edges.21"/>
+    </rules>
+    <rules name="department" documentation="" lhs="//@patternSet/@contextPatterns.2" parameters="//@patternSet/@contextPatterns.2/@parameters.0 //@patternSet/@contextPatterns.2/@parameters.1">
+      <rhs name="department_rhs" localEdges="//@edgeSet/@edges.12" signatureNodes="//@nodeSet/@nodes.20 //@nodeSet/@nodes.3"/>
+      <create name="department" createdEdges="//@edgeSet/@edges.12" createdNodes="//@nodeSet/@nodes.3">
+        <attributeAssignments node="//@nodeSet/@nodes.3">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="dID"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.3">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="maxRoomCount"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        </attributeAssignments>
+      </create>
+      <delete name="department"/>
+    </rules>
+    <rules name="doctor" documentation="" lhs="//@patternSet/@contextPatterns.3" parameters="//@patternSet/@contextPatterns.3/@parameters.0 //@patternSet/@contextPatterns.3/@parameters.1 //@patternSet/@contextPatterns.3/@parameters.2">
+      <rhs name="doctor_rhs" localEdges="//@edgeSet/@edges.14 //@edgeSet/@edges.7 //@edgeSet/@edges.19" signatureNodes="//@nodeSet/@nodes.9 //@nodeSet/@nodes.22 //@nodeSet/@nodes.60"/>
+      <create name="doctor" createdEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.19" createdNodes="//@nodeSet/@nodes.60">
+        <attributeAssignments node="//@nodeSet/@nodes.60">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="capacity"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/patientCapacity"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.60">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="staffID"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.60">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="name"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        </attributeAssignments>
+      </create>
+      <delete name="doctor"/>
+    </rules>
+    <rules name="hospital" documentation="" lhs="//@patternSet/@contextPatterns.27">
+      <rhs name="hospital_rhs" signatureNodes="//@nodeSet/@nodes.18"/>
+      <create name="hospital" createdNodes="//@nodeSet/@nodes.18"/>
+      <delete name="hospital"/>
+    </rules>
+    <rules name="patient" documentation="" lhs="//@patternSet/@contextPatterns.28" parameters="//@patternSet/@contextPatterns.28/@parameters.0 //@patternSet/@contextPatterns.28/@parameters.1 //@patternSet/@contextPatterns.28/@parameters.2">
+      <rhs name="patient_rhs" localEdges="//@edgeSet/@edges.16 //@edgeSet/@edges.22" signatureNodes="//@nodeSet/@nodes.17 //@nodeSet/@nodes.36 //@nodeSet/@nodes.28"/>
+      <create name="patient" createdEdges="//@edgeSet/@edges.22" createdNodes="//@nodeSet/@nodes.28">
+        <attributeAssignments node="//@nodeSet/@nodes.28">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="name"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.28">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="patientId"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.28">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="level"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        </attributeAssignments>
+      </create>
+      <delete name="patient"/>
+    </rules>
+    <rules name="reception" documentation="" lhs="//@patternSet/@contextPatterns.29">
+      <rhs name="reception_rhs" localEdges="//@edgeSet/@edges.17" signatureNodes="//@nodeSet/@nodes.19 //@nodeSet/@nodes.37"/>
+      <create name="reception" createdEdges="//@edgeSet/@edges.17" createdNodes="//@nodeSet/@nodes.37"/>
+      <delete name="reception"/>
+    </rules>
+    <rules name="releasePatient" documentation="" lhs="//@patternSet/@contextPatterns.30" parameters="//@patternSet/@contextPatterns.30/@parameters.0">
+      <rhs name="releasePatient_rhs" signatureNodes="//@nodeSet/@nodes.13 //@nodeSet/@nodes.45"/>
+      <create name="releasePatient"/>
+      <delete name="releasePatient" deletedEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.24" deletedNodes="//@nodeSet/@nodes.30"/>
+    </rules>
+    <rules name="room" documentation="" lhs="//@patternSet/@contextPatterns.31" parameters="//@patternSet/@contextPatterns.31/@parameters.0 //@patternSet/@contextPatterns.31/@parameters.1" arithmeticConstraints="//@patternSet/@contextPatterns.31/@arithmeticConstraints.0">
+      <rhs name="room_rhs" localEdges="//@edgeSet/@edges.13 //@edgeSet/@edges.3" signatureNodes="//@nodeSet/@nodes.6 //@nodeSet/@nodes.21 //@nodeSet/@nodes.46"/>
+      <create name="room" createdEdges="//@edgeSet/@edges.3" createdNodes="//@nodeSet/@nodes.46">
+        <attributeAssignments node="//@nodeSet/@nodes.46">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="cap"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        </attributeAssignments>
+        <attributeAssignments node="//@nodeSet/@nodes.46">
+          <value xsi:type="IBeXPatternModel:IBeXAttributeParameter" name="carelvl"/>
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/level"/>
+        </attributeAssignments>
+      </create>
+      <delete name="room"/>
+    </rules>
+  </ruleSet>
+  <nodeSet>
+    <nodes name="department" incomingEdges="//@edgeSet/@edges.10" outgoingEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" incomingEdges="//@edgeSet/@edges.11" outgoingEdges="//@edgeSet/@edges.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" incomingEdges="//@edgeSet/@edges.12">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" outgoingEdges="//@edgeSet/@edges.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" outgoingEdges="//@edgeSet/@edges.5">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" incomingEdges="//@edgeSet/@edges.13" outgoingEdges="//@edgeSet/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" outgoingEdges="//@edgeSet/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="department" incomingEdges="//@edgeSet/@edges.14" outgoingEdges="//@edgeSet/@edges.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="doctor" outgoingEdges="//@edgeSet/@edges.8">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="doctor" incomingEdges="//@edgeSet/@edges.31">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="doctor">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="doctor" outgoingEdges="//@edgeSet/@edges.9">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="hospital">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.10 //@edgeSet/@edges.18">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.11 //@edgeSet/@edges.15">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.16">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.17">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.12">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.13">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital" outgoingEdges="//@edgeSet/@edges.14 //@edgeSet/@edges.19">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="hospital">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="nurse">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="otherroom" incomingEdges="//@edgeSet/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.20">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.21 //@edgeSet/@edges.8 //@edgeSet/@edges.23">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.22">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.9 //@edgeSet/@edges.24">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.26">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.27">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="patient" incomingEdges="//@edgeSet/@edges.28">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="reception" outgoingEdges="//@edgeSet/@edges.20">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="reception" incomingEdges="//@edgeSet/@edges.15" outgoingEdges="//@edgeSet/@edges.21">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="reception" incomingEdges="//@edgeSet/@edges.16" outgoingEdges="//@edgeSet/@edges.22">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="reception" incomingEdges="//@edgeSet/@edges.17">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="reception">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="reception">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="room">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" outgoingEdges="//@edgeSet/@edges.25">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" incomingEdges="//@edgeSet/@edges.1 //@edgeSet/@edges.32">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" incomingEdges="//@edgeSet/@edges.29">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" incomingEdges="//@edgeSet/@edges.2" outgoingEdges="//@edgeSet/@edges.23">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" outgoingEdges="//@edgeSet/@edges.24">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" incomingEdges="//@edgeSet/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room" incomingEdges="//@edgeSet/@edges.30">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="room">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="someDoctor" incomingEdges="//@edgeSet/@edges.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="someDoctor" incomingEdges="//@edgeSet/@edges.5">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="somedoctor">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="somedoctor" outgoingEdges="//@edgeSet/@edges.26">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="somedoctor" outgoingEdges="//@edgeSet/@edges.27">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="somedoctor" outgoingEdges="//@edgeSet/@edges.28">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="somenurse" outgoingEdges="//@edgeSet/@edges.29">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="somenurse" outgoingEdges="//@edgeSet/@edges.30">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="somepatient" incomingEdges="//@edgeSet/@edges.25">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="somepatient" outgoingEdges="//@edgeSet/@edges.31">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="staff" incomingEdges="//@edgeSet/@edges.6 //@edgeSet/@edges.18" outgoingEdges="//@edgeSet/@edges.32">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="staff" incomingEdges="//@edgeSet/@edges.7 //@edgeSet/@edges.19">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+  </nodeSet>
+  <edgeSet>
+    <edges name="department->otherroom" sourceNode="//@nodeSet/@nodes.8" targetNode="//@nodeSet/@nodes.25">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="department->room" sourceNode="//@nodeSet/@nodes.0" targetNode="//@nodeSet/@nodes.42">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="department->room" sourceNode="//@nodeSet/@nodes.2" targetNode="//@nodeSet/@nodes.44">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="department->room" sourceNode="//@nodeSet/@nodes.6" targetNode="//@nodeSet/@nodes.46">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="department->someDoctor" sourceNode="//@nodeSet/@nodes.4" targetNode="//@nodeSet/@nodes.49">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="department->someDoctor" sourceNode="//@nodeSet/@nodes.5" targetNode="//@nodeSet/@nodes.50">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="department->staff" sourceNode="//@nodeSet/@nodes.0" targetNode="//@nodeSet/@nodes.59">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="department->staff" sourceNode="//@nodeSet/@nodes.9" targetNode="//@nodeSet/@nodes.60">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="doctor->patient" sourceNode="//@nodeSet/@nodes.10" targetNode="//@nodeSet/@nodes.27">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <edges name="doctor->patient" sourceNode="//@nodeSet/@nodes.13" targetNode="//@nodeSet/@nodes.30">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <edges name="hospital->department" sourceNode="//@nodeSet/@nodes.15" targetNode="//@nodeSet/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="hospital->department" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="hospital->department" sourceNode="//@nodeSet/@nodes.20" targetNode="//@nodeSet/@nodes.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="hospital->department" sourceNode="//@nodeSet/@nodes.21" targetNode="//@nodeSet/@nodes.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="hospital->department" sourceNode="//@nodeSet/@nodes.22" targetNode="//@nodeSet/@nodes.9">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="hospital->reception" sourceNode="//@nodeSet/@nodes.16" targetNode="//@nodeSet/@nodes.35">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="hospital->reception" sourceNode="//@nodeSet/@nodes.17" targetNode="//@nodeSet/@nodes.36">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="hospital->reception" sourceNode="//@nodeSet/@nodes.19" targetNode="//@nodeSet/@nodes.37">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="hospital->staff" sourceNode="//@nodeSet/@nodes.15" targetNode="//@nodeSet/@nodes.59">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="hospital->staff" sourceNode="//@nodeSet/@nodes.22" targetNode="//@nodeSet/@nodes.60">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="reception->patient" sourceNode="//@nodeSet/@nodes.34" targetNode="//@nodeSet/@nodes.26">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+    </edges>
+    <edges name="reception->patient" sourceNode="//@nodeSet/@nodes.35" targetNode="//@nodeSet/@nodes.27">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+    </edges>
+    <edges name="reception->patient" sourceNode="//@nodeSet/@nodes.36" targetNode="//@nodeSet/@nodes.28">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+    </edges>
+    <edges name="room->patient" sourceNode="//@nodeSet/@nodes.44" targetNode="//@nodeSet/@nodes.27">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="room->patient" sourceNode="//@nodeSet/@nodes.45" targetNode="//@nodeSet/@nodes.30">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="room->somepatient" sourceNode="//@nodeSet/@nodes.41" targetNode="//@nodeSet/@nodes.57">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="somedoctor->patient" sourceNode="//@nodeSet/@nodes.52" targetNode="//@nodeSet/@nodes.31">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <edges name="somedoctor->patient" sourceNode="//@nodeSet/@nodes.53" targetNode="//@nodeSet/@nodes.32">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <edges name="somedoctor->patient" sourceNode="//@nodeSet/@nodes.54" targetNode="//@nodeSet/@nodes.33">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <edges name="somenurse->room" sourceNode="//@nodeSet/@nodes.55" targetNode="//@nodeSet/@nodes.43">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+    <edges name="somenurse->room" sourceNode="//@nodeSet/@nodes.56" targetNode="//@nodeSet/@nodes.47">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+    <edges name="somepatient->doctor" sourceNode="//@nodeSet/@nodes.58" targetNode="//@nodeSet/@nodes.11">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+    </edges>
+    <edges name="staff->room" sourceNode="//@nodeSet/@nodes.59" targetNode="//@nodeSet/@nodes.42">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+  </edgeSet>
+</IBeXPatternModel:IBeXModel>

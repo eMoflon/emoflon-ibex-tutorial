@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hipe.network:HiPENetwork xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hipe.network="platform:/resource/hipe.network/model/hiPENetwork" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage platform:/resource/hipe.network/model/hiPENetwork java://hipe.network.NetworkPackage">
+  <networknode xmi:type="hipe.network:DispatchNode" name="DispatchNode" objectNodes="//@networknode.5 //@networknode.57 //@networknode.58 //@networknode.59 //@networknode.60 //@networknode.61 //@networknode.62 //@networknode.63 //@networknode.64 //@networknode.65 //@networknode.66 //@networknode.67 //@networknode.68" notificationNode="//@networknode.1">
+    <metamodels xmi:type="ecore:EPackage" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NotificationNode" name="NotificationNode" dispatchNode="//@networknode.0"/>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Hospital_department_0_reference" inputPort="//@networknode.57/@ports/@port.0 //@networknode.59/@ports/@port.0" patternName="assignNurseToRoom_5">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.7" patternName="assignNurseToRoom_5" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.14" patternName="assignNurseToRoom_5" matchingNode="//@networknode.2"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.21" patternName="assignNurseToRoom_5" matchingNode="//@networknode.2"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Department_rooms_0_reference" inputPort="//@networknode.60/@ports/@port.0 //@networknode.61/@ports/@port.0" patternName="assignNurseToRoom_9">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.6" patternName="assignNurseToRoom_9" matchingNode="//@networknode.3"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.47" patternName="assignNurseToRoom_9" matchingNode="//@networknode.3"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.70" patternName="assignNurseToRoom_9" matchingNode="//@networknode.3"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Nurse_responsible_0_reference" inputPort="//@networknode.5/@ports/@port.0 //@networknode.62/@ports/@port.0" patternName="findNurseInRoom_CONDITION_room_1">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.6" patternName="findNurseInRoom_CONDITION_room_1" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.33" patternName="findNurseInRoom_CONDITION_room_1" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.34" patternName="findNurseInRoom_CONDITION_room_1" matchingNode="//@networknode.4"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.48" patternName="findNurseInRoom_CONDITION_room_1" matchingNode="//@networknode.4"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Nurse_object" patternName="findNurseInRoom_CONDITION_room_2" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.4" patternName="findNurseInRoom_CONDITION_room_2" matchingNode="//@networknode.5"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.32" patternName="findNurseInRoom_CONDITION_room_2" matchingNode="//@networknode.5"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="assignNurseToRoom_6_nacjunction" inputPort="//@networknode.3/@ports/@port.0 //@networknode.4/@ports/@port.0" patternName="assignNurseToRoom_6" overlaps="//@networknode.6/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.7" patternName="assignNurseToRoom_6" matchingNode="//@networknode.6"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="assignNurseToRoom_4_junction" inputPort="//@networknode.2/@ports/@port.0 //@networknode.6/@ports/@port.0" patternName="assignNurseToRoom_4" overlaps="//@networknode.7/@allOverlaps.0" mappings="//@networknode.7/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.8" patternName="assignNurseToRoom_4" matchingNode="//@networknode.7"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="assignNurseToRoom_production" inputPort="//@networknode.7/@ports/@port.0" patternName="assignNurseToRoom">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Reception_waits_0_reference" inputPort="//@networknode.65/@ports/@port.0 //@networknode.67/@ports/@port.0" patternName="assignPatientToRoom_19">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.11" patternName="assignPatientToRoom_19" matchingNode="//@networknode.9"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.38" patternName="assignPatientToRoom_19" matchingNode="//@networknode.9"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Doctor_caresfor_0_reference" inputPort="//@networknode.63/@ports/@port.0 //@networknode.68/@ports/@port.0" patternName="findPatientWithDoc_CONDITION_patient_11">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.11" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.28" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.41" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.42" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.43" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.53" patternName="findPatientWithDoc_CONDITION_patient_11" matchingNode="//@networknode.10"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="assignPatientToRoom_17_nacjunction" inputPort="//@networknode.9/@ports/@port.0 //@networknode.10/@ports/@port.0" patternName="assignPatientToRoom_17" overlaps="//@networknode.11/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.16" patternName="assignPatientToRoom_17" matchingNode="//@networknode.11"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Department_rooms_1_reference" inputPort="//@networknode.59/@ports/@port.1 //@networknode.69/@ports/@port.0" patternName="assignPatientToRoom_20">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.15" patternName="assignPatientToRoom_20" matchingNode="//@networknode.12"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Hospital_reception_0_reference" inputPort="//@networknode.58/@ports/@port.0 //@networknode.66/@ports/@port.0" patternName="assignPatientToRoom_27">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.14" patternName="assignPatientToRoom_27" matchingNode="//@networknode.13"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.50" patternName="assignPatientToRoom_27" matchingNode="//@networknode.13"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="assignPatientToRoom_21_junction" inputPort="//@networknode.2/@ports/@port.1 //@networknode.13/@ports/@port.0" patternName="assignPatientToRoom_21" overlaps="//@networknode.14/@allOverlaps.0" mappings="//@networknode.14/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.15" patternName="assignPatientToRoom_21" matchingNode="//@networknode.14"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="assignPatientToRoom_18_junction" inputPort="//@networknode.12/@ports/@port.0 //@networknode.14/@ports/@port.0" patternName="assignPatientToRoom_18" overlaps="//@networknode.15/@allOverlaps.0" mappings="//@networknode.15/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.16" patternName="assignPatientToRoom_18" matchingNode="//@networknode.15"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="assignPatientToRoom_16_junction" inputPort="//@networknode.11/@ports/@port.0 //@networknode.15/@ports/@port.0" patternName="assignPatientToRoom_16" overlaps="//@networknode.16/@allOverlaps.0" mappings="//@networknode.16/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.17" patternName="assignPatientToRoom_16" matchingNode="//@networknode.16"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="3"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="assignPatientToRoom_14_junction" inputPort="//@networknode.71/@ports/@port.0 //@networknode.16/@ports/@port.0" patternName="assignPatientToRoom_14" overlaps="//@networknode.17/@allOverlaps.0" mappings="//@networknode.17/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.18" patternName="assignPatientToRoom_14" matchingNode="//@networknode.17"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="2"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="3"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="4"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="assignPatientToRoom_production" inputPort="//@networknode.17/@ports/@port.0" patternName="assignPatientToRoom">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="3"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="doctor" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="5"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="2"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="reception" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="4"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="department_production" inputPort="//@networknode.57/@ports/@port.1" patternName="department">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Department_staff_0_reference" inputPort="//@networknode.60/@ports/@port.1 //@networknode.63/@ports/@port.1" patternName="doctorInDepartment_CONDITION_department_30">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.21" patternName="doctorInDepartment_CONDITION_department_30" matchingNode="//@networknode.20"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.23" patternName="doctorInDepartment_CONDITION_department_30" matchingNode="//@networknode.20"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.24" patternName="doctorInDepartment_CONDITION_department_30" matchingNode="//@networknode.20"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.26" patternName="doctorInDepartment_CONDITION_department_30" matchingNode="//@networknode.20"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="doctor_33_nacjunction" inputPort="//@networknode.2/@ports/@port.2 //@networknode.20/@ports/@port.0" patternName="doctor_33" overlaps="//@networknode.21/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.22" patternName="doctor_33" matchingNode="//@networknode.21"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="doctor_production" inputPort="//@networknode.21/@ports/@port.0" patternName="doctor">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="doctorInDepartment_production" inputPort="//@networknode.20/@ports/@port.1" patternName="doctorInDepartment">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="someDoctor" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="doctorInDepartment_CONDITION_department_production" inputPort="//@networknode.20/@ports/@port.2" patternName="doctorInDepartment_CONDITION_department">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="0"/>
+    <signatureElts xmi:type="hipe.network:IntegerToIntegerMapEntry" key="0" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findDepartment_production" inputPort="//@networknode.59/@ports/@port.2" patternName="findDepartment">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="findDepartmentWithoutDoctor_41_nacjunction" inputPort="//@networknode.60/@ports/@port.2 //@networknode.20/@ports/@port.3" patternName="findDepartmentWithoutDoctor_41" overlaps="//@networknode.26/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.27" patternName="findDepartmentWithoutDoctor_41" matchingNode="//@networknode.26"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findDepartmentWithoutDoctor_production" inputPort="//@networknode.26/@ports/@port.0" patternName="findDepartmentWithoutDoctor">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findDocWithPatient_production" inputPort="//@networknode.10/@ports/@port.1" patternName="findDocWithPatient">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somedoctor" value="0"/>
+    <signatureElts xmi:type="hipe.network:IntegerToIntegerMapEntry" key="0" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findDoctor_production" inputPort="//@networknode.64/@ports/@port.0" patternName="findDoctor">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="doctor" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findHospital_production" inputPort="//@networknode.58/@ports/@port.1" patternName="findHospital">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findHospital_CONDITION__production" inputPort="//@networknode.57/@ports/@port.2" patternName="findHospital_CONDITION_"/>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findNurse_production" inputPort="//@networknode.5/@ports/@port.1" patternName="findNurse">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="nurse" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findNurseInRoom_production" inputPort="//@networknode.4/@ports/@port.1" patternName="findNurseInRoom">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somenurse" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findNurseInRoom_CONDITION_room_production" inputPort="//@networknode.4/@ports/@port.2" patternName="findNurseInRoom_CONDITION_room">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="0"/>
+    <signatureElts xmi:type="hipe.network:IntegerToIntegerMapEntry" key="1" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Patient_doctor_0_reference" inputPort="//@networknode.67/@ports/@port.1 //@networknode.63/@ports/@port.2" patternName="findOccupiedDoc_53">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.36" patternName="findOccupiedDoc_53" matchingNode="//@networknode.35"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.71" patternName="findOccupiedDoc_53" matchingNode="//@networknode.35"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findOccupiedDoc_production" inputPort="//@networknode.35/@ports/@port.0" patternName="findOccupiedDoc">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="doctor" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somepatient" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatient_production" inputPort="//@networknode.68/@ports/@port.1" patternName="findPatient">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatientInReception_production" inputPort="//@networknode.9/@ports/@port.1" patternName="findPatientInReception">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="reception" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Room_lies_0_reference" inputPort="//@networknode.62/@ports/@port.1 //@networknode.67/@ports/@port.2" patternName="findPatientInRoom_60">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.40" patternName="findPatientInRoom_60" matchingNode="//@networknode.39"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.53" patternName="findPatientInRoom_60" matchingNode="//@networknode.39"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.69" patternName="findPatientInRoom_60" matchingNode="//@networknode.39"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatientInRoom_production" inputPort="//@networknode.39/@ports/@port.0" patternName="findPatientInRoom">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somepatient" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatientWithDoc_production" inputPort="//@networknode.10/@ports/@port.2" patternName="findPatientWithDoc">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somedoctor" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatientWithDoc_CONDITION_patient_production" inputPort="//@networknode.10/@ports/@port.3" patternName="findPatientWithDoc_CONDITION_patient">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="0"/>
+    <signatureElts xmi:type="hipe.network:IntegerToIntegerMapEntry" key="1" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findPatientWithDoc_CONDITION_somedoctor_production" inputPort="//@networknode.10/@ports/@port.4" patternName="findPatientWithDoc_CONDITION_somedoctor">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="somedoctor" value="0"/>
+    <signatureElts xmi:type="hipe.network:IntegerToIntegerMapEntry" key="0" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findReception_production" inputPort="//@networknode.65/@ports/@port.1" patternName="findReception">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="reception" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findReception_CONDITION__production" inputPort="//@networknode.66/@ports/@port.1" patternName="findReception_CONDITION_"/>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findRoom_production" inputPort="//@networknode.61/@ports/@port.1" patternName="findRoom">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findRoomInDepartment_production" inputPort="//@networknode.3/@ports/@port.1" patternName="findRoomInDepartment">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="otherroom" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="findRoomWithoutNurse_72_nacjunction" inputPort="//@networknode.62/@ports/@port.2 //@networknode.4/@ports/@port.3" patternName="findRoomWithoutNurse_72" overlaps="//@networknode.48/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.49" patternName="findRoomWithoutNurse_72" matchingNode="//@networknode.48"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="findRoomWithoutNurse_production" inputPort="//@networknode.48/@ports/@port.0" patternName="findRoomWithoutNurse">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="patient_production" inputPort="//@networknode.13/@ports/@port.1" patternName="patient">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="reception" value="1"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:NACJunctionNode" name="reception_77_nacjunction" inputPort="//@networknode.58/@ports/@port.2 //@networknode.65/@ports/@port.2" patternName="reception_77" overlaps="//@networknode.51/@allOverlaps.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.52" patternName="reception_77" matchingNode="//@networknode.51"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="reception_production" inputPort="//@networknode.51/@ports/@port.0" patternName="reception">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:JunctionNode" name="releasePatient_79_junction" inputPort="//@networknode.10/@ports/@port.5 //@networknode.39/@ports/@port.1" patternName="releasePatient_79" overlaps="//@networknode.53/@allOverlaps.0" mappings="//@networknode.53/@allMappings.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.54" patternName="releasePatient_79" matchingNode="//@networknode.53"/>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" leftIndex="1" rightIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping"/>
+      <mapping xmi:type="hipe.network:Mapping" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+    </allMappings>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="releasePatient_production" inputPort="//@networknode.53/@ports/@port.0" patternName="releasePatient">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="doctor" value="0"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="patient" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="room" value="2"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ReferenceNode" name="Hospital_department_1_reference" inputPort="//@networknode.57/@ports/@port.3 //@networknode.70/@ports/@port.0" patternName="room_85">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.56" patternName="room_85" matchingNode="//@networknode.55"/>
+    </ports>
+    <type xmi:type="ecore:EReference" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    <srcType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <trgType xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ProductionNode" name="room_production" inputPort="//@networknode.55/@ports/@port.0" patternName="room">
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="department" value="1"/>
+    <labelToIndex xmi:type="hipe.network:StringToIntegerMapEntry" key="hospital" value="0"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Hospital_object_SP0" patternName="assignNurseToRoom_7" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.2" patternName="assignNurseToRoom_7" matchingNode="//@networknode.57"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.19" patternName="assignNurseToRoom_7" matchingNode="//@networknode.57"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.31" patternName="assignNurseToRoom_7" matchingNode="//@networknode.57"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.55" patternName="assignNurseToRoom_7" matchingNode="//@networknode.57"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Hospital_object_SP1" patternName="assignNurseToRoom_7" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.13" patternName="assignNurseToRoom_7" matchingNode="//@networknode.58"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.30" patternName="assignNurseToRoom_7" matchingNode="//@networknode.58"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.51" patternName="assignNurseToRoom_7" matchingNode="//@networknode.58"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Department_object_SP0" patternName="assignNurseToRoom_8" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.2" patternName="assignNurseToRoom_8" matchingNode="//@networknode.59"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.12" patternName="assignNurseToRoom_8" matchingNode="//@networknode.59"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.25" patternName="assignNurseToRoom_8" matchingNode="//@networknode.59"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.70" patternName="assignNurseToRoom_8" matchingNode="//@networknode.59"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Department_object_SP1" patternName="assignNurseToRoom_8" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.3" patternName="assignNurseToRoom_8" matchingNode="//@networknode.60"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.20" patternName="assignNurseToRoom_8" matchingNode="//@networknode.60"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.26" patternName="assignNurseToRoom_8" matchingNode="//@networknode.60"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Room_object_SP0" patternName="assignNurseToRoom_10" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.3" patternName="assignNurseToRoom_10" matchingNode="//@networknode.61"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.46" patternName="assignNurseToRoom_10" matchingNode="//@networknode.61"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.69" patternName="assignNurseToRoom_10" matchingNode="//@networknode.61"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Room_object_SP1" patternName="assignNurseToRoom_10" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.4" patternName="assignNurseToRoom_10" matchingNode="//@networknode.62"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.39" patternName="assignNurseToRoom_10" matchingNode="//@networknode.62"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.48" patternName="assignNurseToRoom_10" matchingNode="//@networknode.62"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Doctor_object_SP0" patternName="assignPatientToRoom_15" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.10" patternName="assignPatientToRoom_15" matchingNode="//@networknode.63"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.20" patternName="assignPatientToRoom_15" matchingNode="//@networknode.63"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.35" patternName="assignPatientToRoom_15" matchingNode="//@networknode.63"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Doctor_object_SP1" patternName="assignPatientToRoom_15" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.29" patternName="assignPatientToRoom_15" matchingNode="//@networknode.64"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.71" patternName="assignPatientToRoom_15" matchingNode="//@networknode.64"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Reception_object_SP0" patternName="assignPatientToRoom_22" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.9" patternName="assignPatientToRoom_22" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.44" patternName="assignPatientToRoom_22" matchingNode="//@networknode.65"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.51" patternName="assignPatientToRoom_22" matchingNode="//@networknode.65"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Reception_object_SP1" patternName="assignPatientToRoom_22" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.13" patternName="assignPatientToRoom_22" matchingNode="//@networknode.66"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.45" patternName="assignPatientToRoom_22" matchingNode="//@networknode.66"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Patient_object_SP0" patternName="assignPatientToRoom_23" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.9" patternName="assignPatientToRoom_23" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portTarget="//@networknode.35" patternName="assignPatientToRoom_23" matchingNode="//@networknode.67"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.39" patternName="assignPatientToRoom_23" matchingNode="//@networknode.67"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:ObjectNode" name="Patient_object_SP1" patternName="assignPatientToRoom_23" dispatchnode="//@networknode.0">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:SimplePort" portSlot="RIGHT" portTarget="//@networknode.10" patternName="assignPatientToRoom_23" matchingNode="//@networknode.68"/>
+      <port xmi:type="hipe.network:SimplePort" portSlot="CENTER" portTarget="//@networknode.37" patternName="assignPatientToRoom_23" matchingNode="//@networknode.68"/>
+    </ports>
+    <type xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:CountJunctionNode" name="assignNurseToRoom_10_count" inputPort="//@networknode.61/@ports/@port.2 //@networknode.39/@ports/@port.2" patternName="assignNurseToRoom_10">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.12" patternName="assignNurseToRoom_10" matchingNode="//@networknode.69" initializationCode="" constraintName="check_constraint_1" predicateCode="room.getCapacity() > getCount(match, COUNT_findPatientInRoom_room2room)">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+        <nodeNames>room</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.55"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+    <countInvocations xmi:type="hipe.network:CountInvocation" invocationOverlaps="//@networknode.69/@allOverlaps.0" invocationMappings="//@networknode.69/@allMappings.0" expressionID="COUNT_findPatientInRoom_room2room" invocationTarget="//@networknode.39"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:CountJunctionNode" name="assignNurseToRoom_8_count" inputPort="//@networknode.59/@ports/@port.3 //@networknode.3/@ports/@port.2" patternName="assignNurseToRoom_8">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.55" patternName="assignNurseToRoom_8" matchingNode="//@networknode.70" initializationCode="" constraintName="check_constraint_3" predicateCode="department.getMaxRoomCount() > getCount(match, COUNT_findRoomInDepartment_department2department)">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        <nodeNames>department</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.117"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+    </allMappings>
+    <countInvocations xmi:type="hipe.network:CountInvocation" invocationOverlaps="//@networknode.70/@allOverlaps.0" invocationMappings="//@networknode.70/@allMappings.0" expressionID="COUNT_findRoomInDepartment_department2department" invocationTarget="//@networknode.3"/>
+  </networknode>
+  <networknode xmi:type="hipe.network:CountJunctionNode" name="assignPatientToRoom_15_count" inputPort="//@networknode.64/@ports/@port.1 //@networknode.35/@ports/@port.1" patternName="assignPatientToRoom_15">
+    <ports xmi:type="hipe.network:Ports">
+      <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.17" patternName="assignPatientToRoom_15" matchingNode="//@networknode.71" initializationCode="" constraintName="check_constraint_2" predicateCode="doctor.getPatientCapacity() > getCount(match, COUNT_findOccupiedDoc_doctor2doctor)">
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+        <nodeNames>doctor</nodeNames>
+        <attributes xmi:type="ecore:EAttribute" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/patientCapacity"/>
+        <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.45"/>
+      </port>
+    </ports>
+    <allOverlaps xmi:type="hipe.network:Overlaps">
+      <overlap xmi:type="hipe.network:Overlap" rightIndex="1"/>
+    </allOverlaps>
+    <allMappings xmi:type="hipe.network:Mappings">
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT" index="1"/>
+      <mapping xmi:type="hipe.network:Mapping" origin="RIGHT"/>
+    </allMappings>
+    <countInvocations xmi:type="hipe.network:CountInvocation" invocationOverlaps="//@networknode.71/@allOverlaps.0" invocationMappings="//@networknode.71/@allMappings.0" expressionID="COUNT_findOccupiedDoc_doctor2doctor" invocationTarget="//@networknode.35"/>
+  </networknode>
+</hipe.network:HiPENetwork>

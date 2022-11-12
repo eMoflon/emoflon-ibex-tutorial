@@ -1,0 +1,26 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#rule DepartmentRule #with Hospital2Administration
+
+#source { 
+	h:Hospital{
+		++-department->d
+	}
+	++d:Department{
+		
+	}
+}
+
+#target {
+	
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	incrementingDepartmentID(d.dID)
+	setDefaultNumber(d.maxRoomCount, 10)
+}

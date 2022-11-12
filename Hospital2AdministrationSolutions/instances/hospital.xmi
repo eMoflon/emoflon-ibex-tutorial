@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ASCII"?>
+<HospitalExample:Hospital xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HospitalExample="platform:/resource/HospitalExample/model/HospitalExample.ecore">
+  <reception/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="2" works="2" name="Eliza Clark" caresfor="//@department.2/@rooms.3/@lies.1 //@department.0/@rooms.2/@lies.1" patientCapacity="16"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="3" works="4" name="Bob Reed" caresfor="//@department.3/@rooms.2/@lies.0 //@department.0/@rooms.2/@lies.0 //@department.1/@rooms.2/@lies.0" patientCapacity="16"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="4" works="5" name="Bob Williams" caresfor="//@department.0/@rooms.3/@lies.0 //@department.1/@rooms.2/@lies.1 //@department.3/@rooms.0/@lies.0" patientCapacity="16"/>
+  <staff xsi:type="HospitalExample:Doctor" staffID="5" works="3" name="Allan Stafford" caresfor="//@department.2/@rooms.3/@lies.0 //@department.3/@rooms.0/@lies.1" patientCapacity="16"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="6" works="2" name="Robert Stafford" responsible="//@department.0/@rooms.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="7" works="2" name="Stefanie Jones" responsible="//@department.0/@rooms.2"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="8" works="5" name="Robert Greenwood" responsible="//@department.3/@rooms.1"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="9" works="3" name="James Jones" responsible="//@department.1/@rooms.3"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="10" works="5" name="Abigail Ramirez" responsible="//@department.3/@rooms.3"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="11" works="4" name="James Clark" responsible="//@department.2/@rooms.2"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="12" works="4" name="George Martinez" responsible="//@department.2/@rooms.3"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="13" works="4" name="Eliza Lewis" responsible="//@department.2/@rooms.1"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="14" works="5" name="Ron Clark" responsible="//@department.3/@rooms.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="15" works="4" name="Chloe Rivera" responsible="//@department.2/@rooms.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="16" works="5" name="Eliza Greenwood" responsible="//@department.3/@rooms.2"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="17" works="3" name="Martin Taylor" responsible="//@department.1/@rooms.0"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="18" works="2" name="Sven Hall" responsible="//@department.0/@rooms.3"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="19" works="3" name="James Green" responsible="//@department.1/@rooms.1"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="20" works="2" name="Adam Jones" responsible="//@department.0/@rooms.1"/>
+  <staff xsi:type="HospitalExample:Nurse" staffID="21" works="3" name="Martin Jupiter" responsible="//@department.1/@rooms.2"/>
+  <department dID="2" staff="//@staff.0 //@staff.4 //@staff.5 //@staff.16 //@staff.18" maxRoomCount="4">
+    <rooms capacity="4" level="STRONG" nurses="//@staff.4"/>
+    <rooms capacity="4" nurses="//@staff.18"/>
+    <rooms capacity="4" nurses="//@staff.5">
+      <lies patientID="4" name="Steven Clark" doctor="//@staff.1"/>
+      <lies patientID="9" name="Martin King" doctor="//@staff.0"/>
+    </rooms>
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.16">
+      <lies patientID="5" name="John Lewis" doctor="//@staff.2"/>
+    </rooms>
+  </department>
+  <department dID="3" staff="//@staff.3 //@staff.7 //@staff.15 //@staff.17 //@staff.19" maxRoomCount="4">
+    <rooms capacity="4" level="STRONG" nurses="//@staff.15"/>
+    <rooms capacity="4" level="STRONG" nurses="//@staff.17"/>
+    <rooms capacity="4" level="STRONG" nurses="//@staff.19">
+      <lies patientID="3" name="Allan Martinez" doctor="//@staff.1"/>
+      <lies patientID="2" name="Bob More" doctor="//@staff.2"/>
+    </rooms>
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.7"/>
+  </department>
+  <department dID="4" staff="//@staff.1 //@staff.9 //@staff.10 //@staff.11 //@staff.13" maxRoomCount="4">
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.13"/>
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.11"/>
+    <rooms capacity="4" nurses="//@staff.9"/>
+    <rooms capacity="4" nurses="//@staff.10">
+      <lies patientID="8" name="Robert King" doctor="//@staff.3"/>
+      <lies patientID="6" name="Alex Brown" doctor="//@staff.0"/>
+    </rooms>
+  </department>
+  <department dID="5" staff="//@staff.2 //@staff.6 //@staff.8 //@staff.12 //@staff.14" maxRoomCount="4">
+    <rooms capacity="4" nurses="//@staff.12">
+      <lies patientID="7" name="Stefanie Rivera" doctor="//@staff.2"/>
+      <lies patientID="10" name="Misha King" doctor="//@staff.3"/>
+    </rooms>
+    <rooms capacity="4" nurses="//@staff.6"/>
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.14">
+      <lies patientID="11" name="James Williams" doctor="//@staff.1"/>
+    </rooms>
+    <rooms capacity="4" level="MEDIUM" nurses="//@staff.8"/>
+  </department>
+</HospitalExample:Hospital>

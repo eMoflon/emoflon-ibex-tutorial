@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Hospital2Administration="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore">
+  <Hospital2Administration:HospitaltoAdministrationRule__Marker>
+    <CREATE__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__r href="hospital.xmi#//@reception"/>
+    <CREATE__TRG__v href="trg.xmi#/"/>
+    <CREATE__CORR__htov href="corr.xmi#/0"/>
+  </Hospital2Administration:HospitaltoAdministrationRule__Marker>
+  <Hospital2Administration:DepartmentRule__Marker>
+    <CREATE__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+  </Hospital2Administration:DepartmentRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.2/@rooms.0"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.13"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.0"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.0/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.0/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/1"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.2/@rooms.2"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DepartmentRule__Marker>
+    <CREATE__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+  </Hospital2Administration:DepartmentRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.8"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.1"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.1/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.1/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/2"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.3/@rooms.0"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.3/@rooms.0/@lies.1"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.3/@rooms.0"/>
+    <CREATE__TRG__p2 href="trg.xmi#10"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/3"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.12"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.2"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.2/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.2/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/4"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.3/@rooms.2"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DocToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.2"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.3"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.3/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.3/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/5"/>
+  </Hospital2Administration:DocToStaffRule__Marker>
+  <Hospital2Administration:DepartmentRule__Marker>
+    <CREATE__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+  </Hospital2Administration:DepartmentRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.1/@rooms.3"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DocToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.3"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.4"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.4/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.4/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/6"/>
+  </Hospital2Administration:DocToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.17"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.5"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.5/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.5/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/7"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.10"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.6"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.6/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.6/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/8"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.15"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.7"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.7/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.7/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/9"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.19"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.8"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.8/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.8/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/10"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.2/@rooms.1"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DepartmentRule__Marker>
+    <CREATE__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+  </Hospital2Administration:DepartmentRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.18"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.9"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.9/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.9/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/11"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.0/@rooms.1"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.3/@rooms.1"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.0/@rooms.0"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.9"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.10"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.10/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.10/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/12"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.1/@rooms.2"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.1/@rooms.2/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.1/@rooms.2"/>
+    <CREATE__TRG__p2 href="trg.xmi#3"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/13"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.3/@rooms.0/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.3/@rooms.0"/>
+    <CREATE__TRG__p2 href="trg.xmi#7"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/14"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.1/@rooms.0"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DocToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.0"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.11"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.11/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.11/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/15"/>
+  </Hospital2Administration:DocToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.5"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.12"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.12/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.12/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/16"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.4"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.13"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.13/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.13/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/17"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.0/@rooms.3"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:DoctorToPatient__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#//@staff.2"/>
+    <CONTEXT__SRC__dep href="hospital.xmi#5"/>
+    <CONTEXT__SRC__p1 href="hospital.xmi#//@department.3/@rooms.0/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.3/@rooms.0"/>
+    <CONTEXT__TRG__p2 href="trg.xmi#7"/>
+    <CONTEXT__TRG__s href="trg.xmi#//@staff.3"/>
+    <CREATE__TRG__t href="trg.xmi#//@patient.2/@treatment"/>
+    <CONTEXT__CORR__dToS href="corr.xmi#/5"/>
+    <CONTEXT__CORR__pToP href="corr.xmi#/14"/>
+  </Hospital2Administration:DoctorToPatient__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.0/@rooms.2"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.0/@rooms.2/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.0/@rooms.2"/>
+    <CREATE__TRG__p2 href="trg.xmi#4"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/18"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:DocToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.1"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.14"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.14/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.14/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/19"/>
+  </Hospital2Administration:DocToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.16"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.15"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.15/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.15/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/20"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.11"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.16"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.16/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.16/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/21"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.0/@rooms.2/@lies.1"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.0/@rooms.2"/>
+    <CREATE__TRG__p2 href="trg.xmi#9"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/22"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:DoctorToPatient__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#//@staff.0"/>
+    <CONTEXT__SRC__dep href="hospital.xmi#2"/>
+    <CONTEXT__SRC__p1 href="hospital.xmi#//@department.0/@rooms.2/@lies.1"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.0/@rooms.2"/>
+    <CONTEXT__TRG__p2 href="trg.xmi#9"/>
+    <CONTEXT__TRG__s href="trg.xmi#//@staff.11"/>
+    <CREATE__TRG__t href="trg.xmi#//@patient.4/@treatment"/>
+    <CONTEXT__CORR__dToS href="corr.xmi#/15"/>
+    <CONTEXT__CORR__pToP href="corr.xmi#/22"/>
+  </Hospital2Administration:DoctorToPatient__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.2/@rooms.3"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.2/@rooms.3/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.2/@rooms.3"/>
+    <CREATE__TRG__p2 href="trg.xmi#8"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/23"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#4"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.2/@rooms.3/@lies.1"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.2/@rooms.3"/>
+    <CREATE__TRG__p2 href="trg.xmi#6"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/24"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.6"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.17"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.17/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.17/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/25"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.3/@rooms.2/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.3/@rooms.2"/>
+    <CREATE__TRG__p2 href="trg.xmi#11"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/26"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.14"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.18"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.18/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.18/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/27"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.1/@rooms.1"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.1/@rooms.2/@lies.1"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.1/@rooms.2"/>
+    <CREATE__TRG__p2 href="trg.xmi#2"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/28"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:PatientInRoom__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#2"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__p1 href="hospital.xmi#//@department.0/@rooms.3/@lies.0"/>
+    <CONTEXT__SRC__ro href="hospital.xmi#//@department.0/@rooms.3"/>
+    <CREATE__TRG__p2 href="trg.xmi#5"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__pTop href="corr.xmi#/29"/>
+  </Hospital2Administration:PatientInRoom__Marker>
+  <Hospital2Administration:RoomRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#5"/>
+    <CREATE__SRC__ro href="hospital.xmi#//@department.3/@rooms.3"/>
+  </Hospital2Administration:RoomRule__Marker>
+  <Hospital2Administration:NurseToStaffRule__Marker>
+    <CONTEXT__SRC__d href="hospital.xmi#3"/>
+    <CONTEXT__SRC__h href="hospital.xmi#/"/>
+    <CREATE__SRC__s1 href="hospital.xmi#//@staff.7"/>
+    <CREATE__TRG__s2 href="trg.xmi#//@staff.19"/>
+    <CREATE__TRG__sh href="trg.xmi#//@staff.19/@shiftPlan/@shifts.0"/>
+    <CREATE__TRG__sp href="trg.xmi#//@staff.19/@shiftPlan"/>
+    <CONTEXT__TRG__v href="trg.xmi#/"/>
+    <CONTEXT__CORR__htov href="corr.xmi#/0"/>
+    <CREATE__CORR__stot href="corr.xmi#/30"/>
+  </Hospital2Administration:NurseToStaffRule__Marker>
+</xmi:XMI>

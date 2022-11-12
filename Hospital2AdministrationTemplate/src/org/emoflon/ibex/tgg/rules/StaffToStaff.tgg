@@ -1,0 +1,61 @@
+#using Hospital2Administration.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule StaffToStaffRule #with Hospital2Administration
+
+#source {
+	++s1:Staff{
+		++-works -> d
+	}
+
+	h:Hospital{
+		++-staff -> s1
+	}
+
+	d:Department{
+		
+	}
+}
+
+#target {
+	++s2:Staff{
+		++-shiftPlan -> sp
+	}
+
+	v:Administration{
+		++-staff -> s2
+	}
+
+	++sp:Shiftplan{
+		++-shifts -> sh
+	}
+
+	++sh:Shift{
+		
+	}
+}
+
+#correspondence {
+	++stot:StaffToStaff{
+		#src->s1
+		#trg->s2
+	}
+
+	htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+}
+
+#attributeConditions {
+	nametoname(" ", s2.firstName, s2.lastName, s1.name)
+
+	incrementingStaffID(s1.staffID, s2.staffID)
+
+	eq_int(d.dID, s2.dInt)
+}
+
+// Please code the rules from section 3.3 here
+
+
+

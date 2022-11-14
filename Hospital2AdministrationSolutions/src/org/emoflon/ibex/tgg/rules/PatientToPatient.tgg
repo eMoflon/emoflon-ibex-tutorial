@@ -1,0 +1,59 @@
+#using Hospital2AdministrationSolutions.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule PatientToPatient  #with Hospital2AdministrationSolutions
+
+#source { 
+	++p1:Patient{
+		
+	}
+	
+	h:Hospital{
+		
+	}
+		
+}
+
+#target {
+	
+	v:Administration{
+		
+	}
+	
+	++p2:Patient{
+		
+	}
+		
+	
+	
+	
+	
+	
+	
+}
+
+#correspondence {
+	
+	++pTop:PatientToPatient{
+		#src->p1
+		#trg->p2
+	}
+	
+	htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+	
+	
+	
+}
+
+#attributeConditions {
+	
+	
+	nametoname(" ", p2.firstName, p2.lastName, p1.name)
+	incrementingPatientID(p1.patientID, p2.patientID)
+	
+	
+	
+}

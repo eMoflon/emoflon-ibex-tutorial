@@ -1,0 +1,25 @@
+#using Hospital2AdministrationSolutions.*
+#using AttrCondDefLibrary.*
+
+ #rule DoctorShiftplanRule #extends ShiftplanRule #with Hospital2AdministrationSolutions
+
+#source { 
+	s1:Doctor{
+
+	}
+	p1:Patient{
+		-doctor->s1
+	}
+}
+
+#target {
+	
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

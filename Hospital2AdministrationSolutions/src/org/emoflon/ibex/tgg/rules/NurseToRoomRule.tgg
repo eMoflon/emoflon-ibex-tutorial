@@ -1,0 +1,64 @@
+#using Hospital2AdministrationSolutions.*
+#using AttrCondDefLibrary.*
+
+#rule NurseToRoomRule #with Hospital2AdministrationSolutions
+
+#source { 
+	n:Nurse{
+		++-responsible->r
+		
+			}
+	r:Room{
+		
+		-lies->p1
+		
+		
+	}
+	dep:Department{
+		-rooms->r
+		-staff->n
+	}
+	p1:Patient{
+		
+		
+	}
+	
+	
+}
+
+#target {
+	
+		
+		p2:Patient{
+			
+		}
+		s:Staff{
+			
+		}
+		
+			
+		
+	
+}
+
+#correspondence {
+	
+	
+	nToS:StaffToStaff{
+		#src->n
+		#trg->s
+	
+	}
+	
+	pTop:PatientToPatient{
+		#src->p1
+		#trg->p2
+	}
+	
+
+}
+
+#attributeConditions {
+	
+}
+	

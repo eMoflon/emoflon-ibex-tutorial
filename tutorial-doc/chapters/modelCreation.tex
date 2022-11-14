@@ -1,7 +1,7 @@
 \section{Creating a metamodel}
 \subsection{Metamodeling introduction}
 
-The first question you might be asking yourself is, what is metamodeling ?
+The first question you might be asking yourself is: What is metamodeling?
 
 Metamodeling can be described as creating the model of a model. That means defining abstract rules and structures an instance of such a metamodel has to fulfill\footnote{See Sprinkle, Rumpe et. Al 2014 }.\newline
 
@@ -9,7 +9,7 @@ For a basic introduction into metamodeling and graph transformation see\footnote
 
 \subsection{Adding the eMoflon toolbar}
 
-Now it is time to get to know the functionalities of eMoflon. First, you should add the \textbf{eMoflon toolbar} to your \textbf{Eclipse} as shown in the chart below.\newline Look for the \textit\textsf{Window} tab in the left top corner and press:\newline
+Now it is time to get to know the functionalities of eMoflon. Firstly you should add the \textbf{eMoflon toolbar} to your \textbf{Eclipse} as shown in the screenshot below.\newline Look for the \textit\textsf{Window} tab in the top left corner and press:\newline
 
 \centering
 → \textit{\textsf{Window}} →
@@ -17,7 +17,7 @@ Now it is time to get to know the functionalities of eMoflon. First, you should 
 \newline
 
 \raggedright
-Then open the \textbf{eMoflon toolbar icon} which is highlighted via the red square in the chart below:\newline\newline
+Then open the \textbf{eMoflon toolbar icon} which is highlighted via the red square in the screenshot below. Note that sometimes the toolbar is displayed very tiny. This can be fixed by moving the toolbar via the four dots infront of it:\newline\newline
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4, width =\textwidth]{pictures/add_perspective.png}
@@ -52,10 +52,10 @@ The folder with the plug \textbf{creates a new eMoflon project}.
 
 \item
 \label{item:2}The folder with the green and red arrow \textbf{creates a new graph transformation project}.
-\item The green and red arrow \textbf{creates} a simple graph \textbf{transformation file}.
+\item The green and red arrow \textbf{creates a simple graph transformation file}.
 \item 
 \label{item:3}The folder with the green trapezoid is used for \textbf{creating triple grammar graph projects}.
-\item \label{tgg_rule} The green trapezoid button \textbf{creates} a single \textbf{triple grammar graph file}. 
+\item \label{tgg_rule} The green trapezoid button \textbf{creates a single triple grammar graph file}. 
 \end{enumerate}
 
 \clearpage
@@ -64,13 +64,13 @@ The folder with the plug \textbf{creates a new eMoflon project}.
 
 First of all we have to create a new \textbf{metamodel}. Click on \textbf{button 4} to create a new \textbf{\textsf{eMoflon EMF Project}} and choose a new name for your project.
 
-For this tutorial we are going to create a scenario which models a hospital and its administration. This is supposed to show you the basic functions of eMoflon::IBeX.\newline You should \textbf{stick to the naming conventions} we are using, since inconsistent names may lead to errors later !\newline
+For this tutorial we are going to create a scenario which models a hospital and its administration. This is supposed to show you the basic functions of eMoflon::IBeX.\newline You should \textbf{stick to the naming conventions} we are using, since inconsistent names may lead to errors later on!\newline
 
 \centering
-→ Please select \textit{\textsf{Generate default ecore file}}\newline
+→ Please select \textit{\textsf{Generate default Ecore file}}\newline
 
 \raggedright
-Please give the project the name \textit{\textsf{HospitalExample}} as shown in the chart below. After you have pressed the \textit{\textsf{finish}} button a new file should appear in the model folder. If you cannot see it, try to refresh the folder.\newline
+Please give the project the name \textit{\textsf{HospitalExample}} as shown in the screenshot below. After you have pressed the \textit{\textsf{finish}} button a new file should appear in the model folder. If you cannot see it, try to refresh the folder.\newline
 
 \begin{figure}[h]
     \centering
@@ -81,7 +81,7 @@ Please give the project the name \textit{\textsf{HospitalExample}} as shown in t
 \clearpage
 \subsection{Filling the model with content}
 
- The chart below provides a UML-based visualization of the finished model you will create throughout this part of the tutorial. If you are not sure whether your model is correct, you can use this as a comparison:\newline
+ The chart below provides an UML-based visualization of the finished model you will create throughout this part of the tutorial. If you are not sure whether your model is correct, you can use this as a comparison:\newline
  
 \begin{figure}[h]
     \centering
@@ -92,11 +92,11 @@ Please give the project the name \textit{\textsf{HospitalExample}} as shown in t
 
 \textbf{Note:}
 
-To visualize you current model left-click on \textit{\textsf{HospitalExample}} and look at the \textbf{PlantUML tab} in the top right corner. This will look a bit different than this UML chart, but should be equal in regard to its content.
+To visualize your current model, left-click on \textit{\textsf{HospitalExample}} and look at the \textbf{PlantUML tab} in the top right corner. This will look a bit different than this UML chart, but should be equal in regard to its content.
 
 \clearpage
 
-The first class we need for our tutorial is the hospital itself. To create the \textbf{Hospital class}, you need to \textbf{right-click} on the \textit{\textsf{HospitalExample}} package and select \textbf{EClass} in the drop-down menu as a new child of the metamodel.\newline
+The first class we need for our tutorial is the hospital itself. To create the \textbf{Hospital class}, you need to open the \textbf{HospitalExample.ecore package} in the model folder of your package and \textbf{right-click} it to select \textbf{EClass} as a new child of the metamodel in the drop-down menu.\newline
 
 \begin{figure}[h]
     \centering
@@ -105,15 +105,15 @@ The first class we need for our tutorial is the hospital itself. To create the \
     \label{project creation}
 \end{figure}
 
-As you can see, it is also possible to create an \textbf{enumeration}, a \textbf{data type}, and \textbf{other packages} to split up your project.\newline You may have noticed that every option begins with a capital "E". This is merely a \textbf{naming convention} used in EMF and it will be also used for things such as variable types. For example, a variable of the type of integer has to be defined as "EInt".\newline
+As you can see, it is also possible to create an \textbf{enumeration}, a \textbf{data type}, and \textbf{other packages} to split up your project.\newline You may have noticed that every option begins with a capital "E". This is merely a \textbf{naming convention} used in EMF and it will be also used for things such as variable types. For example, a variable of type Integer has to be defined as "EInt".\newline
 
 After you have created the Hospital, you can define its \textbf{properties} in the \textsf{\textit{properties}} window. If you cannot see the properties window, right-click on the \textit{\textsf{Hospital}} child you have just created and select \textit{\textsf{Show Properties View}} on the bottom of the list or \textbf{double left-click} on the child.
 
 Let us name the class accordingly by typing \textit{\textsf{Hospital}} in the name field. All other fields can be left set to their default value.\newline
 
-To fill our Hospital, we start by adding a \textsf{\textit{reception}} class and a \textsf{\textit{department}} class. This is done in the same way as for \textit{\textsf{Hospital}}.\newline
+To fill our Hospital, we start by adding a \textsf{\textit{Reception}} class and a \textsf{\textit{Department}} class. This is done in the same way as for \textit{\textsf{Hospital}}.\newline
 
-After creating the classes, we have to connect them to our hospital. This can be done by creating a \textbf{new child} in our hospital class. This child is of type \textbf{EReference}.
+After creating the classes, we have to connect them to our hospital. This can be done by creating a \textbf{new child} of type \textbf{EReference} in our hospital class.
 The properties of a \textbf{reference} offer a large variety of options you can configure but let's keep it simple for now.
 
 To maintain comprehensibility and simplicity in your model \textbf{naming your reference} after the corresponding class or its purpose is recommended.
@@ -128,19 +128,19 @@ Please note that it is also possible to change the \textbf{boundaries of attribu
 
 The model depicts the relation between the Hospital and the Department class with a \textbf{rhomb} this means the relationship is a \textbf{containment}. You have to set the value of the \textsf{"Containment"} field to \textsf{true}.\newline
 
-Please create the \textbf{department reference} analogously.\newline
+Please create the \textbf{department reference} analogously. This time the reference has an N-multiplicity, which can be modeled like shown above. Note that you can get the correct multiplicities and the correct type of an attribute by looking at Figure 7.\newline
 
 A short note on \textbf{containment objects}: If you delete a container object, e.g., the Hospital in our case, you will also delete every object that is contained by the Hospital. In addition, an object can only be contained by one container, once a new containment edge is assigned to an object the old containment edge will be deleted.\newline
 
-For the next step, we want to assign attributes such as department numbers and a maximum number of rooms for our departments, to our department class. Add a \textbf{new child} of the type \textbf{EAttribute} to the departments, name it \textsf{"dID"}, and give it the type \textsf{"EInt"}. Since we want every department to have an ID, we modify the \textbf{multiplicities} in the same manner as our previous references.
+For the next step, we want to assign attributes such as department numbers and a maximum number of rooms for our departments, to our Department class. Add a \textbf{new child} of the type \textbf{EAttribute} to the departments, name it \textsf{"dID"}, and give it the type \textsf{"EInt"} in the EType field. Since we want every department to have an ID, we modify the \textbf{multiplicities} in the same manner as our previous references.
 Also set the field \textsf{"ID"} to \textsf{true}. This tells the model whether the value of this attribute identifies the object uniquely in the containing resource.
 \newline
 Create the Attribute \textsf{"maxRoomCount"} analogously except it won't be used as an \textbf{ID}.\newline
 
-Before we continue we want to create something in our model that symbolizes the different care levels in a hospital. Suitable for this is an \textbf{enumeration}. The \textsf{Carelevel} enumeration can be created as a child of the Hospital package. The possible care levels should be \textsf{WEAK}, \textsf{MEDIUM}, \textsf{STRONG} and \textsf{PENDING} which can be added as \textbf{children of the enumeration} as \textbf{EEnum literals}.\newline
+Before we continue we want to create something in our model that symbolizes the different care levels in a hospital. Suitable for this is an \textbf{enumeration}. The \textsf{Carelevel} enumeration can be created as a child of the Hospital package. The possible care levels should be \textsf{WEAK}, \textsf{MEDIUM}, \textsf{STRONG} and \textsf{PENDING} which can be added as \textbf{children of the enumeration} of type \textbf{EEnum literals}.\newline
 
 Naturally we need patients in our hospital as well. \textbf{Patients} have the following attributes: A  \textsf{name}, a \textsf{patientID,} and a \textsf{level} representing the \textbf{care level} assigned to a patient.
-Please create the \textbf{patient class} accordingly.\newline
+Please create the \textbf{Patient class} accordingly.\newline
 
 When a patient arrives at the hospital he will be waiting in the reception until he has been assigned to a room and diagnosed with necessary treatment. For the first condition, we need a \textbf{reference in the reception class} to the patient and while the patient is waiting in the reception he has not been diagnosed yet. Hence, we want to set the \textbf{default value literal} of the \textbf{level attribute} to \textsf{PENDING}.\newline
 
@@ -151,17 +151,17 @@ Please create the room class accordingly.\newline
 The rooms also need a \textbf{connection to the departments} they are assigned to and \textbf{contain} multiple patients. Please add \textbf{references} in the \textbf{Department class} to model this. You can get their characteristics from the final model in fig \ref{goal model}.\newline
 % and the responsible staff.
 
-After creating the infrastructure for our hospital, we need the persons which are required to keep a hospital running and of course the patients. Starting with the Staff, create an \textbf{abstract class} with the \textbf{attributes} \textsf{staffID} of the type "EInt" and the \textsf{name} of the staff member which should be an "EString". You can set the class to abstract by selecting \textsf{true} for the field \textsf{Abstract} in the properties window.\newline
+After creating the infrastructure for our hospital, we need the people, which are required to keep a hospital running and of course the patients. Starting with the Staff, create an \textbf{abstract class} with the \textbf{attributes} \textsf{staffID} of the type "EInt" and the \textsf{name} of the staff member which should be an "EString". You can set the class to abstract by selecting \textsf{true} for the field \textsf{Abstract} in the properties window.\newline
 Similar to the concept of inheritance in Java it is not possible to instantiate such a class. However, attributes and variables defined in an abstract class will be inherited by a subclass of this abstract class.\newline
 
 The staff should be \textbf{contained in the hospital} and needs a \textbf{reference} to the department the staff member is working in.
-The staff need to be differentiated into nurses and doctors. Create a new \textbf{Doctor class} and change the \textsf{ESupertype} in the properties window to \textsf{Staff}, which allows the Doctor class to \textbf{inherit the references and attributes} of the \textbf{abstract Staff class}. This can be done by pressing \textsf{Add} and confirming in the windows that will pop up.
+The staff needs to be differentiated into nurses and doctors. Create a new \textbf{Doctor class} and change the \textsf{ESupertype} in the properties window to \textsf{Staff}, which allows the Doctor class to \textbf{inherit the references and attributes} of the \textbf{abstract Staff class}. This can be done by pressing \textsf{Add} and confirming in the windows that will pop up.
 Additionally, we want to add the \textbf{attribute} \textsf{patientCapacity} to define the number of patients a doctor can care for and a relationship to the patients he oversees.\newline
 For the Nurse class, we want a reference to the rooms a nurse is \textsf{responsible} for. 
 
 To model this responsibility we want a \textbf{bidirectional reference} between the \textbf{Doctor class} and the \textbf{Patient class}.
 To achieve bidirectional references please create a \textbf{reference} in the \textbf{patient class} to the doctor called \textsf{doctor}. On the other hand create a \textbf{reference} to the patient class in the \textbf{doctor class} called \textsf{caresFor}. Multiplicities can be read from fig \ref{goal model}.
-Now for the latter select the reference \textsf{caresfor:Patient} in the \textbf{EOpposite property}. Now go to the \textbf{doctor class} and assign the \textsf{doctor:Doctor} reference as an \textbf{EOpposite} of the created reference as well.\newline
+Now for the latter select the reference \textsf{caresfor:Patient} in the \textbf{EOpposite property}. This should be done automatically but if not, go to the \textbf{doctor class} and assign the \textsf{doctor:Doctor} reference as an \textbf{EOpposite} of the created reference as well.\newline
 \textbf{Note}: This works only if you have set the type correctly and if the opposite reference has been created already.\newline
 
 Please follow the same procedure to make the existing \textbf{reference between the nurse class and the room class bidirectional}.\newline

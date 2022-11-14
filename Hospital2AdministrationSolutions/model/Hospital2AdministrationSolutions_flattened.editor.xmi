@@ -1,0 +1,1891 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.emoflon.org/ibex/tgg/editor/TGG">
+  <imports name="platform:/resource/HospitalExample/model/HospitalExample.ecore"/>
+  <imports name="platform:/resource/AdministrationExample/model/AdministrationExample.ecore"/>
+  <schema name="Hospital2AdministrationSolutions">
+    <sourceTypes href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
+    <targetTypes href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#/"/>
+    <correspondenceTypes name="HospitalToAdministration">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="StaffToStaff">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="PatientToPatient">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="RoomToShiftplan">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="DoctorToStaff">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </correspondenceTypes>
+    <correspondenceTypes name="NurseToStaff">
+      <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+      <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </correspondenceTypes>
+    <attributeCondDefs name="doctorsalary" userDefined="true">
+      <params paramName="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="nursesalary" userDefined="true">
+      <params paramName="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="carelevelToMedication" userDefined="true">
+      <params paramName="carelevel">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Carelevel"/>
+      </params>
+      <params paramName="medication">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Medication"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="nametoname" userDefined="true">
+      <params paramName="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingDepartmentID" userDefined="true">
+      <params paramName="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingStaffID" userDefined="true">
+      <params paramName="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params paramName="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingPatientID" userDefined="true">
+      <params paramName="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params paramName="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingRoomID" userDefined="true">
+      <params paramName="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_string">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_int">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_float">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_double">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_long">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_char">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="eq_boolean">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="addPrefix">
+      <params paramName="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="addSuffix">
+      <params paramName="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="concat">
+      <params paramName="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultString">
+      <params paramName="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultNumber">
+      <params paramName="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="stringToDouble">
+      <params paramName="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="stringToInt">
+      <params paramName="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params paramName="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="multiply">
+      <params paramName="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="divide">
+      <params paramName="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="add">
+      <params paramName="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="sub">
+      <params paramName="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="max">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="smallerOrEqual">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <params paramName="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncAdornments>
+      <allowedSyncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+    <attributeCondDefs name="setRandomString">
+      <params paramName="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncAdornments>
+        <value>B</value>
+      </allowedSyncAdornments>
+      <allowedGenAdornments>
+        <value>F</value>
+      </allowedGenAdornments>
+      <allowedGenAdornments>
+        <value>B</value>
+      </allowedGenAdornments>
+    </attributeCondDefs>
+  </schema>
+  <rules name="DepartmentRule" schema="//@schema">
+    <sourcePatterns name="d">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </sourcePatterns>
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.4">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.19">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+      </values>
+      <values xsi:type="tgg:LiteralExpression" value="10"/>
+    </attrConditions>
+  </rules>
+  <rules name="DocToStaffRule" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </sourcePatterns>
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+      <linkVariablePatterns target="//@rules.1/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="s2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+      <linkVariablePatterns target="//@rules.1/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.1/@sourcePatterns.1" target="//@rules.1/@targetPatterns.3"/>
+    <correspondencePatterns name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.1/@sourcePatterns.2" target="//@rules.1/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.0">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.9">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="DoctorShiftplanRule" schema="//@schema">
+    <sourcePatterns name="p1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.2/@sourcePatterns.1">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="s2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.3">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.2/@targetPatterns.2">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.2/@sourcePatterns.0" target="//@rules.2/@targetPatterns.0"/>
+    <correspondencePatterns name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourcePatterns.1" target="//@rules.2/@targetPatterns.1"/>
+  </rules>
+  <rules name="DoctorToPatient" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="dep">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.3">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="p1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ro">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="s">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="t">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </targetPatterns>
+    <correspondencePatterns name="dToS" type="//@schema/@correspondenceTypes.1" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.1"/>
+    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.3/@sourcePatterns.2" target="//@rules.3/@targetPatterns.0"/>
+    <attrConditions name="//@schema/@attributeCondDefs.2">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.2">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="HospitaltoAdministrationRule" schema="//@schema">
+    <sourcePatterns name="h">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.4/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="r">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </sourcePatterns>
+    <targetPatterns name="v">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+  </rules>
+  <rules name="NurseShiftplanRule" schema="//@schema">
+    <sourcePatterns name="p1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <sourcePatterns name="ro">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <linkVariablePatterns target="//@rules.5/@sourcePatterns.0">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+      <linkVariablePatterns target="//@rules.5/@sourcePatterns.1">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="s2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.3">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.5/@targetPatterns.2">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.0"/>
+    <correspondencePatterns name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.5/@sourcePatterns.2" target="//@rules.5/@targetPatterns.1"/>
+  </rules>
+  <rules name="NurseToRoomRule" schema="//@schema">
+    <sourcePatterns name="dep">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.3">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      </linkVariablePatterns>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.1">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="n">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="p1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <sourcePatterns name="r">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <linkVariablePatterns target="//@rules.6/@sourcePatterns.2">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </targetPatterns>
+    <targetPatterns name="s">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </targetPatterns>
+    <correspondencePatterns name="nToS" type="//@schema/@correspondenceTypes.1" source="//@rules.6/@sourcePatterns.1" target="//@rules.6/@targetPatterns.1"/>
+    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourcePatterns.2" target="//@rules.6/@targetPatterns.0"/>
+  </rules>
+  <rules name="NurseToStaffRule" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </sourcePatterns>
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+      <linkVariablePatterns target="//@rules.7/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="s2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+      <linkVariablePatterns target="//@rules.7/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.7/@sourcePatterns.1" target="//@rules.7/@targetPatterns.3"/>
+    <correspondencePatterns name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.7/@sourcePatterns.2" target="//@rules.7/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.9">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.1">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PatientInReception" schema="//@schema">
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.2">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="p1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <sourcePatterns name="r">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+      <linkVariablePatterns target="//@rules.8/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.1"/>
+    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.1" target="//@rules.8/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.6">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.8/@sourcePatterns.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PatientInRoom" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.3">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.0">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="p1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <sourcePatterns name="ro">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <linkVariablePatterns target="//@rules.9/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+      <linkVariablePatterns target="//@rules.9/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.1" target="//@rules.9/@targetPatterns.1"/>
+    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.9/@sourcePatterns.2" target="//@rules.9/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.6">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.9/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="PatientToPatient" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </sourcePatterns>
+    <sourcePatterns name="p1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.10/@sourcePatterns.0" target="//@rules.10/@targetPatterns.1"/>
+    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourcePatterns.1" target="//@rules.10/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.6">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.10/@sourcePatterns.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+  <rules name="RoomRule" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+      <linkVariablePatterns target="//@rules.11/@sourcePatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="ro">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <attributeAssignments op=":=">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        <valueExp xsi:type="tgg:LiteralExpression" value="4"/>
+      </attributeAssignments>
+    </sourcePatterns>
+  </rules>
+  <rules name="ShiftplanRule" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="p1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </sourcePatterns>
+    <targetPatterns name="p2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+      <linkVariablePatterns target="//@rules.12/@targetPatterns.3">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="s2">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.12/@targetPatterns.3">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.12/@targetPatterns.2">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.12/@sourcePatterns.0" target="//@rules.12/@targetPatterns.0"/>
+    <correspondencePatterns name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.12/@sourcePatterns.1" target="//@rules.12/@targetPatterns.1"/>
+  </rules>
+  <rules name="StaffToStaffRule" abstractRule="true" schema="//@schema">
+    <sourcePatterns name="d">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </sourcePatterns>
+    <sourcePatterns name="h">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+      <linkVariablePatterns target="//@rules.13/@sourcePatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <sourcePatterns name="s1">
+      <op value="++"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.13/@sourcePatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+      </linkVariablePatterns>
+    </sourcePatterns>
+    <targetPatterns name="s2">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+      <linkVariablePatterns target="//@rules.13/@targetPatterns.2">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="sh">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </targetPatterns>
+    <targetPatterns name="sp">
+      <op value="++"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+      <linkVariablePatterns target="//@rules.13/@targetPatterns.1">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <targetPatterns name="v">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+      <linkVariablePatterns target="//@rules.13/@targetPatterns.0">
+        <op value="++"/>
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+      </linkVariablePatterns>
+    </targetPatterns>
+    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.13/@sourcePatterns.1" target="//@rules.13/@targetPatterns.3"/>
+    <correspondencePatterns name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.13/@sourcePatterns.2" target="//@rules.13/@targetPatterns.0">
+      <op value="++"/>
+    </correspondencePatterns>
+    <attrConditions name="//@schema/@attributeCondDefs.9">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@sourcePatterns.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.5">
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@schema/@attributeCondDefs.3">
+      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@targetPatterns.0">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </values>
+      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.13/@sourcePatterns.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+      </values>
+    </attrConditions>
+  </rules>
+</tgg:TripleGraphGrammarFile>

@@ -1,0 +1,45 @@
+#using Hospital2AdministrationSolutions.*
+#using AttrCondDefLibrary.*
+
+#rule PatientInRoom #extends PatientToPatient #with Hospital2AdministrationSolutions
+
+
+#source { 
+	
+	++ p1 : Patient{
+		
+	}
+	h:Hospital{
+		-department->d
+	}
+	
+	d:Department{
+		-rooms->ro
+	}
+	ro:Room{
+		++-lies->p1
+	}
+	
+	
+}
+
+#target {
+	++ p2 : Patient
+	v:Administration{
+		++-patient->p2
+	}
+}
+	
+
+#correspondence {
+	
+	htov:HospitalToAdministration{
+		#src->h
+		#trg->v
+	}
+	
+}
+
+#attributeConditions {
+	
+}

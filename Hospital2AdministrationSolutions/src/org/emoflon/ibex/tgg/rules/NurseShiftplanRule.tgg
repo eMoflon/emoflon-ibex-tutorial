@@ -1,0 +1,28 @@
+#using Hospital2AdministrationSolutions.*
+#using AttrCondDefLibrary.*
+
+ #rule NurseShiftplanRule #extends ShiftplanRule #with Hospital2AdministrationSolutions
+
+#source { 
+	s1:Nurse{
+		-responsible->ro
+	}
+	ro:Room{
+		-lies->p1
+	}
+	p1:Patient{
+		
+	}
+}
+
+#target {
+	
+}
+
+#correspondence {
+	
+}
+
+#attributeConditions {
+	
+}

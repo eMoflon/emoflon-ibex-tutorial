@@ -8,11 +8,10 @@ Bundle-Localization: plugin
 Bundle-SymbolicName: Hospital2Administration;singleton:=true
 Automatic-Module-Name: Hospital2Administration
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-16
 Export-Package: org.emoflon.ibex.tgg.run.hospital2administration.config,
  Hospital2Administration,
- Hospital2Administration.impl,
- Hospital2Administration.util
+ Hospital2Administration.impl
 Require-Bundle: AdministrationExample;visibility:=reexport,
  HospitalExample;bundle-version="0.0.1";visibility:=reexport,
  org.apache.log4j,
@@ -31,4 +30,5 @@ Require-Bundle: AdministrationExample;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.emoflon.ibex.tgg.runtime.hipe,
  Hospital2Administration,
- org.emoflon.ibex.tgg.runtime.viatra
+ org.emoflon.smartemf
+

@@ -12,11 +12,11 @@ public class _DefaultRegistrationHelper implements IRegistrationHelper{
 	/** Load and register source and target metamodels */
 	public void registerMetamodels(ResourceSet rs, IbexExecutable executable) throws IOException {
 		// Replace to register generated code or handle other URI-related requirements
-		new DemoclesRegistrationHelper().registerMetamodels(rs, executable);
+		new HiPERegistrationHelper().registerMetamodels(rs, executable);
 	}
 
 	/** Create default options **/
 	public IbexOptions createIbexOptions() {
-		return new DemoclesRegistrationHelper().createIbexOptions();
+		return new HiPERegistrationHelper().createIbexOptions();
 	}
 }

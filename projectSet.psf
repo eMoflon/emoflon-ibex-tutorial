@@ -3,7 +3,8 @@
 <provider id="org.eclipse.egit.core.GitProvider">
 <project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,AdministrationExample"/>
 <project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,AdministrationTransformRule"/>
-<project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,Hospital2Administration"/>
+<project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,Hospital2AdministrationSolutions"/>
+<project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,Hospital2AdministrationTemplate"/>
 <project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,HospitalExample"/>
 <project reference="1.0,https://github.com/eMoflon/emoflon-ibex-tutorial.git,master,HospitalTransformRules"/>
 </provider>

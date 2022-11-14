@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Hospital2AdministrationSolutions" nsURI="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore"
+    nsPrefix="Hospital2AdministrationSolutions">
+  <eClassifiers xsi:type="ecore:EClass" name="HospitalToAdministration" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaffToStaff" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PatientToPatient" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomToShiftplan" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoctorToStaff" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NurseToStaff" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//CorrespondenceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DepartmentRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocToStaffRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__s1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__s2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__sh" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__sp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__v" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__htov" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__stot" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoctorShiftplanRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__s2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__sh" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__sp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__pToP" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__sToS" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoctorToPatient__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__dep" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__ro" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__t" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__dToS" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__pToP" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HospitaltoAdministrationRule__Marker"
+      eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__r" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__v" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__htov" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NurseShiftplanRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__ro" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__s1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__s2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__sh" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__sp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__pToP" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__sToS" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NurseToRoomRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__dep" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__n" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__r" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__s" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__nToS" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__pTop" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NurseToStaffRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__s1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__s2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__sh" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__sp" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__v" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__htov" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__stot" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PatientInReception__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__r" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__v" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__htov" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__pTop" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PatientInRoom__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__h" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__p1" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__ro" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__TRG__p2" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__TRG__v" lowerBound="1"
+        eType="ecore:EClass platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__CORR__htov" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__CORR__pTop" lowerBound="1"
+        eType="ecore:EClass platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoomRule__Marker" eSuperTypes="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.ecore#//TGGRuleApplication">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CONTEXT__SRC__d" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CREATE__SRC__ro" lowerBound="1"
+        eType="ecore:EClass platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+  </eClassifiers>
+</ecore:EPackage>

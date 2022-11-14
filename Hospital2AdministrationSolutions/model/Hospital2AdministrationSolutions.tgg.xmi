@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="ASCII"?>
+<language:TGG xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:language="platform:/plugin/org.emoflon.ibex.tgg.language/model/Language.ecore" name="Hospital2AdministrationSolutions">
+  <src href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
+  <trg href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#/"/>
+  <rules name="StaffToStaffRule" abstract="true">
+    <nodes name="s1" bindingType="CREATE" incomingEdges="//@rules.0/@edges.0 //@rules.0/@edges.5 //@rules.0/@edges.9" outgoingEdges="//@rules.0/@edges.4" incomingCorrsSource="//@rules.0/@nodes.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="h" incomingEdges="//@rules.0/@edges.2" outgoingEdges="//@rules.0/@edges.5" incomingCorrsSource="//@rules.0/@nodes.8">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="d" incomingEdges="//@rules.0/@edges.4" outgoingEdges="//@rules.0/@edges.9">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="s2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.1 //@rules.0/@edges.7" outgoingEdges="//@rules.0/@edges.6" incomingCorrsTarget="//@rules.0/@nodes.7">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="v" domainType="TRG" incomingEdges="//@rules.0/@edges.3" outgoingEdges="//@rules.0/@edges.7" incomingCorrsTarget="//@rules.0/@nodes.8">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="sp" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.6" outgoingEdges="//@rules.0/@edges.8">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="sh" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.0/@edges.8">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="stot" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.0/@edges.0 //@rules.0/@edges.1" source="//@rules.0/@nodes.0" target="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="htov" domainType="CORR" outgoingEdges="//@rules.0/@edges.2 //@rules.0/@edges.3" source="//@rules.0/@nodes.1" target="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <edges name="stot__source__s1_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges name="stot__target__s2_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.0/@nodes.7" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges name="htov__source__h_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges name="htov__target__v_eMoflonEdge" domainType="CORR" srcNode="//@rules.0/@nodes.8" trgNode="//@rules.0/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges name="s1__works__d_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.0" trgNode="//@rules.0/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="h__staff__s1_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.1" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="s2__shiftPlan__sp_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.3" trgNode="//@rules.0/@nodes.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="v__staff__s2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.4" trgNode="//@rules.0/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    </edges>
+    <edges name="sp__shifts__sh_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.0/@nodes.5" trgNode="//@rules.0/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="d__staff__s1_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.0/@nodes.2" trgNode="//@rules.0/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.0 //@rules.0/@attributeConditionLibrary/@parameterValues.1 //@rules.0/@attributeConditionLibrary/@parameterValues.2 //@rules.0/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.4 //@rules.0/@attributeConditionLibrary/@parameterValues.5"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.9" parameters="//@rules.0/@attributeConditionLibrary/@parameterValues.6 //@rules.0/@attributeConditionLibrary/@parameterValues.7"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.2" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.3" objectVar="//@rules.0/@nodes.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.5/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.9/@parameterDefinitions.0" objectVar="//@rules.0/@nodes.2">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.9/@parameterDefinitions.1" objectVar="//@rules.0/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="DocToStaffRule" refines="//@rules.0">
+    <nodes name="s1" bindingType="CREATE">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="s2" domainType="TRG" bindingType="CREATE">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0" parameters="//@rules.1/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.0/@parameterDefinitions.0" objectVar="//@rules.1/@nodes.1">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="NurseToStaffRule" refines="//@rules.0">
+    <nodes name="s1" bindingType="CREATE">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="s2" domainType="TRG" bindingType="CREATE">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1" parameters="//@rules.2/@attributeConditionLibrary/@parameterValues.0"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.1/@parameterDefinitions.0" objectVar="//@rules.2/@nodes.1">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="DoctorToPatient">
+    <nodes name="d" incomingEdges="//@rules.3/@edges.2 //@rules.3/@edges.5 //@rules.3/@edges.10" outgoingEdges="//@rules.3/@edges.4 //@rules.3/@edges.11" incomingCorrsSource="//@rules.3/@nodes.8">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="p1" incomingEdges="//@rules.3/@edges.0 //@rules.3/@edges.6 //@rules.3/@edges.11" outgoingEdges="//@rules.3/@edges.5" incomingCorrsSource="//@rules.3/@nodes.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="ro" incomingEdges="//@rules.3/@edges.7" outgoingEdges="//@rules.3/@edges.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="dep" incomingEdges="//@rules.3/@edges.4" outgoingEdges="//@rules.3/@edges.7 //@rules.3/@edges.10">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="s" domainType="TRG" incomingEdges="//@rules.3/@edges.3" outgoingEdges="//@rules.3/@edges.8" incomingCorrsTarget="//@rules.3/@nodes.8">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" incomingEdges="//@rules.3/@edges.1" outgoingEdges="//@rules.3/@edges.9" incomingCorrsTarget="//@rules.3/@nodes.7">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="t" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.3/@edges.8 //@rules.3/@edges.9">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="pToP" domainType="CORR" outgoingEdges="//@rules.3/@edges.0 //@rules.3/@edges.1" source="//@rules.3/@nodes.1" target="//@rules.3/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="dToS" domainType="CORR" outgoingEdges="//@rules.3/@edges.2 //@rules.3/@edges.3" source="//@rules.3/@nodes.0" target="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    </nodes>
+    <edges name="pToP__source__p1_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.7" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges name="pToP__target__p2_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.7" trgNode="//@rules.3/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges name="dToS__source__d_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.8" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges name="dToS__target__s_eMoflonEdge" domainType="CORR" srcNode="//@rules.3/@nodes.8" trgNode="//@rules.3/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges name="d__works__dep_eMoflonEdge" srcNode="//@rules.3/@nodes.0" trgNode="//@rules.3/@nodes.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="p1__doctor__d_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.3/@nodes.1" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+    </edges>
+    <edges name="ro__lies__p1_eMoflonEdge" srcNode="//@rules.3/@nodes.2" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="dep__rooms__ro_eMoflonEdge" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="s__treatment__t_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.4" trgNode="//@rules.3/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+    </edges>
+    <edges name="p2__treatment__t_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.3/@nodes.5" trgNode="//@rules.3/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+    </edges>
+    <edges name="dep__staff__d_eMoflonEdge" srcNode="//@rules.3/@nodes.3" trgNode="//@rules.3/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="d__caresfor__p1_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.3/@nodes.0" trgNode="//@rules.3/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2" parameters="//@rules.3/@attributeConditionLibrary/@parameterValues.0 //@rules.3/@attributeConditionLibrary/@parameterValues.1"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0" objectVar="//@rules.3/@nodes.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.1" objectVar="//@rules.3/@nodes.6">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="PatientToPatient" abstract="true">
+    <nodes name="p1" bindingType="CREATE" incomingEdges="//@rules.4/@edges.0" incomingCorrsSource="//@rules.4/@nodes.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="h" incomingEdges="//@rules.4/@edges.2" incomingCorrsSource="//@rules.4/@nodes.5">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="v" domainType="TRG" incomingEdges="//@rules.4/@edges.3" incomingCorrsTarget="//@rules.4/@nodes.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.4/@edges.1" incomingCorrsTarget="//@rules.4/@nodes.4">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="pTop" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.4/@edges.0 //@rules.4/@edges.1" source="//@rules.4/@nodes.0" target="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="htov" domainType="CORR" outgoingEdges="//@rules.4/@edges.2 //@rules.4/@edges.3" source="//@rules.4/@nodes.1" target="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <edges name="pTop__source__p1_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.4" trgNode="//@rules.4/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges name="pTop__target__p2_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.4/@nodes.4" trgNode="//@rules.4/@nodes.3">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges name="htov__source__h_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges name="htov__target__v_eMoflonEdge" domainType="CORR" srcNode="//@rules.4/@nodes.5" trgNode="//@rules.4/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.0 //@rules.4/@attributeConditionLibrary/@parameterValues.1 //@rules.4/@attributeConditionLibrary/@parameterValues.2 //@rules.4/@attributeConditionLibrary/@parameterValues.3"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.6" parameters="//@rules.4/@attributeConditionLibrary/@parameterValues.4 //@rules.4/@attributeConditionLibrary/@parameterValues.5"/>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.0" value="&quot; &quot;"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.1" objectVar="//@rules.4/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.2" objectVar="//@rules.4/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.3/@parameterDefinitions.3" objectVar="//@rules.4/@nodes.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.6/@parameterDefinitions.0" objectVar="//@rules.4/@nodes.0">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.6/@parameterDefinitions.1" objectVar="//@rules.4/@nodes.3">
+        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+      </parameterValues>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="ShiftplanRule" abstract="true">
+    <nodes name="p1" incomingEdges="//@rules.5/@edges.0" incomingCorrsSource="//@rules.5/@nodes.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="s1" incomingEdges="//@rules.5/@edges.2" incomingCorrsSource="//@rules.5/@nodes.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="s2" domainType="TRG" incomingEdges="//@rules.5/@edges.3" outgoingEdges="//@rules.5/@edges.4" incomingCorrsTarget="//@rules.5/@nodes.7">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="sp" domainType="TRG" incomingEdges="//@rules.5/@edges.4 //@rules.5/@edges.6" outgoingEdges="//@rules.5/@edges.5 //@rules.5/@edges.7">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="sh" domainType="TRG" incomingEdges="//@rules.5/@edges.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" incomingEdges="//@rules.5/@edges.1 //@rules.5/@edges.7" outgoingEdges="//@rules.5/@edges.6" incomingCorrsTarget="//@rules.5/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="pToP" domainType="CORR" outgoingEdges="//@rules.5/@edges.0 //@rules.5/@edges.1" source="//@rules.5/@nodes.0" target="//@rules.5/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="sToS" domainType="CORR" outgoingEdges="//@rules.5/@edges.2 //@rules.5/@edges.3" source="//@rules.5/@nodes.1" target="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    </nodes>
+    <edges name="pToP__source__p1_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.6" trgNode="//@rules.5/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges name="pToP__target__p2_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.6" trgNode="//@rules.5/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges name="sToS__source__s1_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.7" trgNode="//@rules.5/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges name="sToS__target__s2_eMoflonEdge" domainType="CORR" srcNode="//@rules.5/@nodes.7" trgNode="//@rules.5/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges name="s2__shiftPlan__sp_eMoflonEdge" domainType="TRG" srcNode="//@rules.5/@nodes.2" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="sp__shifts__sh_eMoflonEdge" domainType="TRG" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.4">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="p2__coveredBy__sp_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.5" trgNode="//@rules.5/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+    </edges>
+    <edges name="sp__covers__p2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.5/@nodes.3" trgNode="//@rules.5/@nodes.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/covers"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="PatientInRoom" refines="//@rules.4">
+    <nodes name="p1" bindingType="CREATE" incomingEdges="//@rules.6/@edges.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="h" incomingEdges="//@rules.6/@edges.0" outgoingEdges="//@rules.6/@edges.2" incomingCorrsSource="//@rules.6/@nodes.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="d" incomingEdges="//@rules.6/@edges.2" outgoingEdges="//@rules.6/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="ro" incomingEdges="//@rules.6/@edges.3" outgoingEdges="//@rules.6/@edges.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.6/@edges.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="v" domainType="TRG" incomingEdges="//@rules.6/@edges.1" outgoingEdges="//@rules.6/@edges.5" incomingCorrsTarget="//@rules.6/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="htov" domainType="CORR" outgoingEdges="//@rules.6/@edges.0 //@rules.6/@edges.1" source="//@rules.6/@nodes.1" target="//@rules.6/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <edges name="htov__source__h_eMoflonEdge" domainType="CORR" srcNode="//@rules.6/@nodes.6" trgNode="//@rules.6/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges name="htov__target__v_eMoflonEdge" domainType="CORR" srcNode="//@rules.6/@nodes.6" trgNode="//@rules.6/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges name="h__department__d_eMoflonEdge" srcNode="//@rules.6/@nodes.1" trgNode="//@rules.6/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <edges name="d__rooms__ro_eMoflonEdge" srcNode="//@rules.6/@nodes.2" trgNode="//@rules.6/@nodes.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="ro__lies__p1_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.6/@nodes.3" trgNode="//@rules.6/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="v__patient__p2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.6/@nodes.5" trgNode="//@rules.6/@nodes.4">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="DepartmentRule">
+    <nodes name="h" outgoingEdges="//@rules.7/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="d" bindingType="CREATE" incomingEdges="//@rules.7/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <edges name="h__department__d_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.7/@nodes.0" trgNode="//@rules.7/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+    </edges>
+    <attributeConditionLibrary>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4" parameters="//@rules.7/@attributeConditionLibrary/@parameterValues.0"/>
+      <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.19" parameters="//@rules.7/@attributeConditionLibrary/@parameterValues.1 //@rules.7/@attributeConditionLibrary/@parameterValues.2"/>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.4/@parameterDefinitions.0" objectVar="//@rules.7/@nodes.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGAttributeExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.19/@parameterDefinitions.0" objectVar="//@rules.7/@nodes.1">
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+      </parameterValues>
+      <parameterValues xsi:type="language:TGGLiteralExpression" parameterDefinition="//@attributeConstraintDefinitionLibrary/@tggAttributeConstraintDefinitions.19/@parameterDefinitions.1" value="10"/>
+    </attributeConditionLibrary>
+  </rules>
+  <rules name="NurseToRoomRule">
+    <nodes name="n" incomingEdges="//@rules.8/@edges.0 //@rules.8/@edges.7 //@rules.8/@edges.8" outgoingEdges="//@rules.8/@edges.4 //@rules.8/@edges.9" incomingCorrsSource="//@rules.8/@nodes.6">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="r" incomingEdges="//@rules.8/@edges.4 //@rules.8/@edges.6" outgoingEdges="//@rules.8/@edges.5 //@rules.8/@edges.8">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="dep" incomingEdges="//@rules.8/@edges.9" outgoingEdges="//@rules.8/@edges.6 //@rules.8/@edges.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="p1" incomingEdges="//@rules.8/@edges.2 //@rules.8/@edges.5" incomingCorrsSource="//@rules.8/@nodes.7">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" incomingEdges="//@rules.8/@edges.3" incomingCorrsTarget="//@rules.8/@nodes.7">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="s" domainType="TRG" incomingEdges="//@rules.8/@edges.1" incomingCorrsTarget="//@rules.8/@nodes.6">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="nToS" domainType="CORR" outgoingEdges="//@rules.8/@edges.0 //@rules.8/@edges.1" source="//@rules.8/@nodes.0" target="//@rules.8/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="pTop" domainType="CORR" outgoingEdges="//@rules.8/@edges.2 //@rules.8/@edges.3" source="//@rules.8/@nodes.3" target="//@rules.8/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient"/>
+    </nodes>
+    <edges name="nToS__source__n_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.6" trgNode="//@rules.8/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/source"/>
+    </edges>
+    <edges name="nToS__target__s_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.6" trgNode="//@rules.8/@nodes.5">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//StaffToStaff/target"/>
+    </edges>
+    <edges name="pTop__source__p1_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.7" trgNode="//@rules.8/@nodes.3">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/source"/>
+    </edges>
+    <edges name="pTop__target__p2_eMoflonEdge" domainType="CORR" srcNode="//@rules.8/@nodes.7" trgNode="//@rules.8/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//PatientToPatient/target"/>
+    </edges>
+    <edges name="n__responsible__r_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.8/@nodes.0" trgNode="//@rules.8/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+    <edges name="r__lies__p1_eMoflonEdge" srcNode="//@rules.8/@nodes.1" trgNode="//@rules.8/@nodes.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="dep__rooms__r_eMoflonEdge" srcNode="//@rules.8/@nodes.2" trgNode="//@rules.8/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <edges name="dep__staff__n_eMoflonEdge" srcNode="//@rules.8/@nodes.2" trgNode="//@rules.8/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+    </edges>
+    <edges name="r__nurses__n_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.8/@nodes.1" trgNode="//@rules.8/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/nurses"/>
+    </edges>
+    <edges name="n__works__dep_eMoflonEdge" srcNode="//@rules.8/@nodes.0" trgNode="//@rules.8/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="HospitaltoAdministrationRule">
+    <nodes name="h" bindingType="CREATE" incomingEdges="//@rules.9/@edges.0" outgoingEdges="//@rules.9/@edges.2" incomingCorrsSource="//@rules.9/@nodes.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="r" bindingType="CREATE" incomingEdges="//@rules.9/@edges.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="v" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.9/@edges.1" incomingCorrsTarget="//@rules.9/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="htov" domainType="CORR" bindingType="CREATE" outgoingEdges="//@rules.9/@edges.0 //@rules.9/@edges.1" source="//@rules.9/@nodes.0" target="//@rules.9/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <edges name="htov__source__h_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.9/@nodes.3" trgNode="//@rules.9/@nodes.0">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges name="htov__target__v_eMoflonEdge" domainType="CORR" bindingType="CREATE" srcNode="//@rules.9/@nodes.3" trgNode="//@rules.9/@nodes.2">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges name="h__reception__r_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.9/@nodes.0" trgNode="//@rules.9/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="NurseShiftplanRule" refines="//@rules.5">
+    <nodes name="s1" incomingEdges="//@rules.10/@edges.2" outgoingEdges="//@rules.10/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+    </nodes>
+    <nodes name="ro" incomingEdges="//@rules.10/@edges.0" outgoingEdges="//@rules.10/@edges.1 //@rules.10/@edges.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+    </nodes>
+    <nodes name="p1" incomingEdges="//@rules.10/@edges.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <edges name="s1__responsible__ro_eMoflonEdge" srcNode="//@rules.10/@nodes.0" trgNode="//@rules.10/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+    </edges>
+    <edges name="ro__lies__p1_eMoflonEdge" srcNode="//@rules.10/@nodes.1" trgNode="//@rules.10/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+    </edges>
+    <edges name="ro__nurses__s1_eMoflonEdge" srcNode="//@rules.10/@nodes.1" trgNode="//@rules.10/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/nurses"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="PatientInReception" refines="//@rules.4">
+    <nodes name="p1" bindingType="CREATE" incomingEdges="//@rules.11/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="h" incomingEdges="//@rules.11/@edges.0" outgoingEdges="//@rules.11/@edges.2" incomingCorrsSource="//@rules.11/@nodes.5">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="r" incomingEdges="//@rules.11/@edges.2" outgoingEdges="//@rules.11/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="p2" domainType="TRG" bindingType="CREATE" incomingEdges="//@rules.11/@edges.4">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+    </nodes>
+    <nodes name="v" domainType="TRG" incomingEdges="//@rules.11/@edges.1" outgoingEdges="//@rules.11/@edges.4" incomingCorrsTarget="//@rules.11/@nodes.5">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes xsi:type="language:TGGRuleCorr" name="htov" domainType="CORR" outgoingEdges="//@rules.11/@edges.0 //@rules.11/@edges.1" source="//@rules.11/@nodes.1" target="//@rules.11/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration"/>
+    </nodes>
+    <edges name="htov__source__h_eMoflonEdge" domainType="CORR" srcNode="//@rules.11/@nodes.5" trgNode="//@rules.11/@nodes.1">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/source"/>
+    </edges>
+    <edges name="htov__target__v_eMoflonEdge" domainType="CORR" srcNode="//@rules.11/@nodes.5" trgNode="//@rules.11/@nodes.4">
+      <type href="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore#//HospitalToAdministration/target"/>
+    </edges>
+    <edges name="h__reception__r_eMoflonEdge" srcNode="//@rules.11/@nodes.1" trgNode="//@rules.11/@nodes.2">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="r__waits__p1_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.11/@nodes.2" trgNode="//@rules.11/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+    </edges>
+    <edges name="v__patient__p2_eMoflonEdge" domainType="TRG" bindingType="CREATE" srcNode="//@rules.11/@nodes.4" trgNode="//@rules.11/@nodes.3">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="DoctorShiftplanRule" refines="//@rules.5">
+    <nodes name="s1" incomingEdges="//@rules.12/@edges.0" outgoingEdges="//@rules.12/@edges.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+    </nodes>
+    <nodes name="p1" incomingEdges="//@rules.12/@edges.1" outgoingEdges="//@rules.12/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+    </nodes>
+    <edges name="p1__doctor__s1_eMoflonEdge" srcNode="//@rules.12/@nodes.1" trgNode="//@rules.12/@nodes.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+    </edges>
+    <edges name="s1__caresfor__p1_eMoflonEdge" srcNode="//@rules.12/@nodes.0" trgNode="//@rules.12/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor/caresfor"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <rules name="RoomRule">
+    <nodes name="d" outgoingEdges="//@rules.13/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="ro" bindingType="CREATE" incomingEdges="//@rules.13/@edges.0">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <attrExpr>
+        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+        <valueExpr xsi:type="language:TGGLiteralExpression" value="4"/>
+      </attrExpr>
+    </nodes>
+    <edges name="d__rooms__ro_eMoflonEdge" bindingType="CREATE" srcNode="//@rules.13/@nodes.0" trgNode="//@rules.13/@nodes.1">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+    </edges>
+    <attributeConditionLibrary/>
+  </rules>
+  <attributeConstraintDefinitionLibrary>
+    <tggAttributeConstraintDefinitions name="doctorsalary">
+      <parameterDefinitions name="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="nursesalary">
+      <parameterDefinitions name="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="carelevelToMedication">
+      <parameterDefinitions name="carelevel">
+        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Carelevel"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="medication">
+        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Medication"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="nametoname">
+      <parameterDefinitions name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="incrementingDepartmentID">
+      <parameterDefinitions name="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="incrementingStaffID">
+      <parameterDefinitions name="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="incrementingPatientID">
+      <parameterDefinitions name="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="incrementingRoomID">
+      <parameterDefinitions name="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_string" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_int" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_float" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_double" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_long" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_char" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="eq_boolean" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addPrefix" userDefined="false">
+      <parameterDefinitions name="prefix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="addSuffix" userDefined="false">
+      <parameterDefinitions name="suffix">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="word">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="concat" userDefined="false">
+      <parameterDefinitions name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultString" userDefined="false">
+      <parameterDefinitions name="variableString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultString">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setDefaultNumber" userDefined="false">
+      <parameterDefinitions name="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToDouble" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="doubleValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="stringToInt" userDefined="false">
+      <parameterDefinitions name="stringValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="intValue">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="multiply" userDefined="false">
+      <parameterDefinitions name="operand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="operand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="divide" userDefined="false">
+      <parameterDefinitions name="numerator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="denominator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="add" userDefined="false">
+      <parameterDefinitions name="summand1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="summand2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="sub" userDefined="false">
+      <parameterDefinitions name="minuend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="subtrahend">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="max" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="max">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="smallerOrEqual" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <parameterDefinitions name="b">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+        <value>B</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>B</value>
+        <value>F</value>
+      </syncAdornments>
+      <syncAdornments>
+        <value>F</value>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>B</value>
+      </genAdornments>
+      <genAdornments>
+        <value>F</value>
+        <value>F</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+    <tggAttributeConstraintDefinitions name="setRandomString" userDefined="false">
+      <parameterDefinitions name="a">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameterDefinitions>
+      <syncAdornments>
+        <value>B</value>
+      </syncAdornments>
+      <genAdornments>
+        <value>F</value>
+      </genAdornments>
+      <genAdornments>
+        <value>B</value>
+      </genAdornments>
+    </tggAttributeConstraintDefinitions>
+  </attributeConstraintDefinitionLibrary>
+</language:TGG>

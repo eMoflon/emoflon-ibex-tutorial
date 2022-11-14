@@ -1,7 +1,7 @@
-#using Hospital2Administration.*
+#using Hospital2AdministrationSolutions.*
 #using AttrCondDefLibrary.*
 
-#rule DoctorToPatient #with Hospital2Administration
+#rule DoctorToPatient #with Hospital2AdministrationSolutions
 
 #source { 
 	d:Doctor{

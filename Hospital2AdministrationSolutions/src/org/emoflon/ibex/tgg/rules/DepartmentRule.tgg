@@ -1,7 +1,7 @@
-#using Hospital2Administration.*
+#using Hospital2AdministrationSolutions.*
 #using AttrCondDefLibrary.*
 
-#rule DepartmentRule #with Hospital2Administration
+#rule DepartmentRule #with Hospital2AdministrationSolutions
 
 #source { 
 	h:Hospital{

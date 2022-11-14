@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Hospital2Administration -->
+      <!-- @generated Hospital2AdministrationSolutions -->
       <package
-            uri="platform:/resource/Hospital2Administration/model/Hospital2Administration.ecore"
-            class="Hospital2Administration.Hospital2AdministrationPackage"
-            genModel="model/Hospital2Administration.genmodel"/>
+            uri="platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore"
+            class="Hospital2AdministrationSolutions.Hospital2AdministrationSolutionsPackage"
+            genModel="model/Hospital2AdministrationSolutions.genmodel"/>
    </extension>
 
 </plugin>

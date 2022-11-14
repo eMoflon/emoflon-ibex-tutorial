@@ -1,7 +1,7 @@
-#using Hospital2Administration.*
+#using Hospital2AdministrationSolutions.*
 #using AttrCondDefLibrary.*
 
-#abstract #rule PatientToPatient  #with Hospital2Administration
+#abstract #rule PatientToPatient  #with Hospital2AdministrationSolutions
 
 #source { 
 	++p1:Patient{

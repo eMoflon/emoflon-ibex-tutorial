@@ -1,7 +1,7 @@
-#using Hospital2Administration.*
+#using Hospital2AdministrationSolutions.*
 #using AttrCondDefLibrary.*
 
-#abstract #rule StaffToStaffRule #with Hospital2Administration
+#abstract #rule StaffToStaffRule #with Hospital2AdministrationSolutions
 
 #source {
 	++s1:Staff{
@@ -55,7 +55,7 @@
 	eq_int(d.dID, s2.dInt)
 }
 
-#rule DocToStaffRule #extends StaffToStaffRule #with Hospital2Administration
+#rule DocToStaffRule #extends StaffToStaffRule #with Hospital2AdministrationSolutions
 
 #source{
 	++s1:Doctor
@@ -71,7 +71,7 @@
 	doctorsalary(s2.salary)
 }
 
-#rule NurseToStaffRule #extends StaffToStaffRule #with Hospital2Administration
+#rule NurseToStaffRule #extends StaffToStaffRule #with Hospital2AdministrationSolutions
 
 #source{
 	++s1:Nurse{

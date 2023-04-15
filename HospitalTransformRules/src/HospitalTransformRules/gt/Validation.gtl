@@ -1,0 +1,30 @@
+package HospitalTransformRules.gt
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+// ##### Validation Patterns
+pattern findDepartment {  // Pattern to find a department
+	[=] department: Department
+};
+
+pattern findNurse { // Pattern to find a nurse
+	[=] nurse: Nurse
+};
+
+pattern findDoctor {  // Pattern to find a doctor
+	[=] doctor: Doctor
+};
+
+pattern findDocWithPatient {
+	[=] somedoctor : Doctor
+//	enforce()
+};
+//when docWithPatient condition docWithPatient = enforce findPatientWithDoc
+
+pattern findPatient { // Pattern to find a patient
+	[=] patient: Patient
+};
+
+pattern findRoom { // Pattern to find a room
+	[=] room: Room
+};

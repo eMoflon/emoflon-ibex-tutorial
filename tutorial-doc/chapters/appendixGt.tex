@@ -32,8 +32,8 @@ Supported values are:
 \begin{itemize}
 
 \item constants 
-\item enum values (type enum:: for auto-completion)
-\item parameters (type param:: for auto-completion)
+\item enum values (type enums. for auto-completion)
+\item parameters (type parameter. for auto-completion)
 \item the attribute value of another attribute \newline (given by the node and attribute name <typeName>.<attributeName>)
 
 \end{itemize}
@@ -181,10 +181,6 @@ Each rule R supports all methods provided for patterns and additional methods fo
 \hline
 \textsf{collection<M>} & \textcolor{MidnightBlue}{bindAndApply\newline}(Supplier<? extends GraphTransformationMatch<?,?>> matchSupplier) & Binds the nodes to the ones bound in the match given by the supplier and applies the rule. This is repeated until the supplier returns null \\
 \hline
-\textsf{void} & \textcolor{MidnightBlue}{enableAutoApply}() & Enables instant automatic rule application: As soon as a match for the rule is found, the rule will be applied \\
-\hline
-\textsf{void} & \textcolor{MidnightBlue}{disableAutoApply}() & Disables instant automatic rule application \\
-\hline
 \textsf{int} & \textcolor{MidnightBlue}{countRuleApplications}() & Returns how often the rule has been applied \\
 \hline
 \textsf{void} & \textcolor{MidnightBlue}{subscribeRuleApplications\newline}(Consumer<M> action) & Subscribes rule applications: Whenever the rule is applied, the given action will be executed \\
@@ -223,25 +219,25 @@ The list below provides a summary of the textual concrete syntax using the EBNF-
 
 8\hspace{1cm}\textcolor{ForestGreen}{/* Node: context, ++ for create, -- for delete */}
 
-9\hspace{1cm}[\textcolor{LimeGreen}{++}|\textcolor{Red}{-- --}] <node-name>: <node-type> \{
+9\hspace{1cm}[\textcolor{LimeGreen}{[+]}|[=]|\textcolor{Red}{[--]}] <node-name>: <node-type> \{
 
 10
 
 11\hspace{1.5cm}\textcolor{ForestGreen}{/* Attributes */}
 
-12\hspace{1.5cm}.<attribute-name> [:=] <constant>
+12\hspace{1.5cm}.<attribute-name> [:=] <constant>;
 
-13\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{enum}::<VALUE>
+13\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{enums}.<VALUE>;
 
-14\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{param}::<parameter-name>
+14\hspace{1.5cm}.<attribute-name> [:=] \textcolor{Purple}{parameter}.<parameter-name>;
 
-15\hspace{1.5cm}.<attribute-name> [:=] <node-name>.<attribute-name>
+15\hspace{1.5cm}.<attribute-name> [:=] <node-name>.<attribute-name>;
 
 16
 
 17\hspace{1.5cm}\textcolor{ForestGreen}{/* References to other nodes */}
 
-18\hspace{1.5cm}[\textcolor{LimeGreen}{++}|[\textcolor{Red}{-- --}] -<reference-name> -> <node-name>
+18\hspace{1.5cm}[\textcolor{LimeGreen}{[+]}|[=]|[\textcolor{Red}{[--]}] -<reference-name> -> <node-name>
 
 19\hspace{1cm}\}
 
@@ -249,47 +245,47 @@ The list below provides a summary of the textual concrete syntax using the EBNF-
 
 21
 
-22\hspace{0.5cm}\textcolor{ForestGreen}{/* Additional (application) conditions for pattern/rule: Combine conditions via OR */}
+%22\hspace{0.5cm}\textcolor{ForestGreen}{/* Additional (application) conditions for pattern/rule: Combine conditions via OR */}
 
-23\hspace{0.5cm}[\textcolor{Purple}{when} <condition-name> [|| <condition-name> || ...]]
+%23\hspace{0.5cm}[\textcolor{Purple}{when} <condition-name> [|| <condition-name> || ...]]
 
-24
+%22
 
-25\hspace{0.5cm}\textcolor{ForestGreen}{/* Probability of the rule; cannot be used on patterns */}
+22\hspace{0.5cm}\textcolor{ForestGreen}{/* Probability of the rule; cannot be used on patterns */}
 
-26\hspace{0.5cm}[@ <arithmetic-expression> | [N|U|Exp](<arithmetic-expression>
+23\hspace{0.5cm}[@ <arithmetic-expression> | [N|U|Exp](<arithmetic-expression>
 
-27\hspace{0.5cm}[, <arithmetic-expression>]) [<arithmetic-expression>]]
+24\hspace{0.5cm}[, <arithmetic-expression>]) [<arithmetic-expression>]]
 
-28
+25
 
-29\hspace{0.5cm}\textcolor{ForestGreen}{/*--- conditions to be used in patterns/rules ----------*/}
+26\hspace{0.5cm}\textcolor{ForestGreen}{/*--- conditions to be used in patterns/rules ----------*/}
 
-30\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern can be matched (positive application condition) */}
+27\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern can be matched (positive application condition) */}
 
-31\hspace{0.5cm}condition <condition-name> = \textcolor{Purple}{enforce} <pattern-name>
+28\hspace{0.5cm}\textcolor{Purple}{enforce} (<pattern-name>) [<node1>=<node2>]
+
+29
+
+30\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern cannot be matched (negative application condition) */}
+
+31\hspace{0.5cm}\textcolor{Purple}{forbid} (<pattern-name>) [<node1>=<node2>]
 
 32
 
-33\hspace{0.5cm}\textcolor{ForestGreen}{/* Ensure that a certain pattern cannot be matched (negative application condition) */}
+%36\hspace{0.5cm}\textcolor{ForestGreen}{/* Combine conditions via AND */}
 
-34\hspace{0.5cm}condition <condition-name> = \textcolor{Purple}{forbid} <pattern-name>
+%37\hspace{0.5cm}condition <condition-name> = <condition-name> \&\& <condition-name>
 
-35
+%38
 
-36\hspace{0.5cm}\textcolor{ForestGreen}{/* Combine conditions via AND */}
+33\hspace{0.5cm}\textcolor{ForestGreen}{/*----- summary of the arithmetic extension ------------*/}
 
-37\hspace{0.5cm}condition <condition-name> = <condition-name> \&\& <condition-name>
+34\hspace{0.5cm}<arithmetic-expression> = <constant> | <node-name>.<attribute-name> |
 
-38
+35\hspace{0.5cm}<arithmetic-expression> [+|-|*|/|\%|ˆ] <arithmetic-expression> |
 
-39\hspace{0.5cm}\textcolor{ForestGreen}{/*----- summary of the arithmetic extension ------------*/}
-
-40\hspace{0.5cm}<arithmetic-expression> = <constant> | <node-name>.<attribute-name> |
-
-41\hspace{0.5cm}<arithmetic-expression> [+|-|*|/|\%|ˆ] <arithmetic-expression> |
-
-42\hspace{0.5cm}[\textcolor{Purple}{exp}|\textcolor{Purple}{log}|\textcolor{Purple}{ln}|\textcolor{Purple}{sqrt}|\textcolor{Purple}{abs}|\textcolor{Purple}{cos}|\textcolor{Purple}{sin}|\textcolor{Purple}{tan}] (<arithmetic-expression>)
+36\hspace{0.5cm}[\textcolor{Purple}{exp}|\textcolor{Purple}{log}|\textcolor{Purple}{ln}|\textcolor{Purple}{sqrt}|\textcolor{Purple}{abs}|\textcolor{Purple}{cos}|\textcolor{Purple}{sin}|\textcolor{Purple}{tan}] (<arithmetic-expression>)
 
 }
 

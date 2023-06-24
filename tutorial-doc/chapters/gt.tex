@@ -697,45 +697,33 @@ Let us inspect HospitalRules.java a bit more closely since there is much of inte
 
 12\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.validateHospital();
 
-13\hspace{1cm}\textcolor{Purple}{try} \{
+13\hspace{1.5cm}persistModel(HospitalValidator.hospitalFilePath, \textcolor{Tan}{hospitalrules}\textcolor{blue}{api});
 
-14\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.\textcolor{blue}{api}.getModel().getResources().get(0).save(null); 
+14\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.\textcolor{blue}{api}.terminate();
 
-15\hspace{1cm}\}
+15\hspace{1.0cm}\}
 
-16\hspace{1cm}\textcolor{Purple}{catch} (IOException e) \{
+16\hspace{1.0cm}\textcolor{Purple}{public void} createHospital() \{
 
-17\hspace{1.5cm}// TODO Auto-generated catch block
+17\hspace{1.5cm}\textcolor{blue}{api}.hospital().apply();
 
-18\hspace{1.5cm}\textcolor{Tan}{e}.printStackTrace();
+18\hspace{1.5cm}\textcolor{blue}{api}.reception().apply();
 
-19\hspace{1cm}\}
+19\hspace{1.5cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<4; \textcolor{Tan}{i}++) \{
 
-20\hspace{1cm}\textcolor{Tan}{hospitalrules}.\textcolor{blue}{api}.terminate();
+20\hspace{2.0cm}\textcolor{blue}{api}.department(i+2, 4).apply();
 
-21\hspace{0.5cm}\}
+21\hspace{1.5cm}\}
 
-22\hspace{0.5cm}\textcolor{Purple}{public void} createHospital() \{
+22\hspace{1.5cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<16; \textcolor{Tan}{i}++) \{
 
-23\hspace{1cm}\textcolor{blue}{api}.hospital().apply();
+23\hspace{2.0cm}\textcolor{blue}{api}.room(4, Carelevel.get(\textcolor{blue}{rnd}.nextInt(3))).apply();
 
-24\hspace{1cm}\textcolor{blue}{api}.reception().apply();
+24\hspace{1.5cm}\} 
 
-25\hspace{1cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<4; \textcolor{Tan}{i}++) \{
+25\hspace{1.5cm}…
 
-26\hspace{1.5cm}\textcolor{blue}{api}.department(i+2, 4).apply();
-
-27\hspace{1cm}\}
-
-28\hspace{1cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<16; \textcolor{Tan}{i}++) \{
-
-29\hspace{1.5cm}\textcolor{blue}{api}.room(4, Carelevel.get(\textcolor{blue}{rnd}.nextInt(3))).apply();
-
-30\hspace{1cm}\} 
-
-\hspace{0.7cm}…
-
-\hspace{0.7cm}\}
+26\hspace{1.0cm}\}
 
 }
 
@@ -748,7 +736,7 @@ The API command is used to access and apply our rules and patterns.\newline
 
 \textbf{Saving the project:}
 
-Another important thing to note is happening on \textbf{line 14} where we save our hospital model. It is important to note that the hospital instance we have initialized in the \textsf{HospitalValidator} will \textbf{not be stored} anywhere. If we want to keep it for usage in the future, we have to \textbf{save it with a separate command} as we are doing it in line 14.\newline The URI \textsf{hospital.xmi} is saved in the project folder of the \textsf{HospitalTransformRules} project.\newline
+Another important thing to note is happening on \textbf{line 13} where we save our hospital model. The method \textsf{persistModel(...)} is a utility method that can be found at the end of this source file. It is important to note that the hospital instance we have initialized in the \textsf{HospitalValidator} will \textbf{not be stored} anywhere. If we want to keep it for usage in the future, we have to \textbf{save it with a separate command} as we are doing it in line 13.\newline The URI \textsf{hospital.xmi} is saved in the project folder of the \textsf{HospitalTransformRules} project.\newline
 
 \textbf{Rule application:}
 
@@ -789,26 +777,19 @@ System.\textcolor{blue}{out}.println(\textcolor{Tan}{countPatientsInHospital} + 
 You can run the java application by \textbf{right-clicking} on the \textsf{HospitalRule.java} and selecting the \textsf{Run as Java Application} option. If you look at the output in the console, and it should look like this:\newline
 
 {\setstretch{1.2}
-
-\textsf{10 Patients are in the hospital right now}
-
-\textsf{10 Patients are in a room}
-
 \textsf{One instance of a hospital has been created}
+
+\textsf{One instance of a reception has been created}
 
 \textsf{At least one department instance has been created}
 
 \textsf{16 nurses are in the hospital right now and 16 nurses are busy}
 
-\textsf{At least one doctor is in the hospital}
-
-\textsf{4 doctors are in the hospital right now and 4 doctors are busy}
+\textsf{4 doctors are in the hospital right now and 3 doctors are busy}
 
 \textsf{At least one patient is in the hospital}
 
-\textsf{The hospital consists of at least one room}
-
-\textsf{10 Patients are in the hospital right now and 10 patients are in a room}\newline
+\textsf{11 Patients are in the hospital right now and 11 patients are in a room}\newline
 
 }
 

@@ -5,8 +5,10 @@ import HospitalTransformRules.api.HospitalTransformRulesHiPEApp;
 
 public class HospitalValidator extends HospitalTransformRulesHiPEApp  {
 	
+	public static String hospitalFilePath = "hospital.xmi";
+	
 	public HospitalValidator() {
-		createModel(URI.createURI("hospital.xmi"));
+		createModel(URI.createURI(hospitalFilePath));
 	}	
 
 }

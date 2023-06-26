@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="Hospital2AdministrationSolutions/gen/" modelPluginID="Hospital2AdministrationSolutions"
     modelName="Hospital2AdministrationSolutions" generateSchema="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    usedGenPackages="../../HospitalExample/model/HospitalExample.genmodel#//HospitalExample platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.genmodel#//runtime ../../AdministrationExample/model/AdministrationExample.genmodel#//AdministrationExample"
+    usedGenPackages="platform:/plugin/org.emoflon.ibex.tgg.runtime/model/Runtime.genmodel#//runtime ../../AdministrationExample/model/AdministrationExample.genmodel#//AdministrationExample ../../HospitalExample/model/HospitalExample.genmodel#//HospitalExample"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Hospital2AdministrationSolutions.ecore</foreignModel>
   <genPackages prefix="Hospital2AdministrationSolutions" disposableProviderFactory="true"

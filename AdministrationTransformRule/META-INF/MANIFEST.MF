@@ -6,9 +6,9 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: AdministrationTransformRule; singleton:=true
 Bundle-ActivationPolicy: lazy
-Import-Package: org.apache.commons.logging;version="1.2.0",org.apache.
- log4j
-Bundle-RequiredExecutionEnvironment: JavaSE-16
+Import-Package: org.apache.commons.logging;version="1.2.0",
+ org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.emoflon.ibex.common,
  org.emoflon.ibex.gt,
  org.emoflon.ibex.patternmodel,
@@ -18,3 +18,4 @@ Require-Bundle: org.emoflon.ibex.common,
 Export-Package: AdministrationTransformRule.api,
  AdministrationTransformRule.api.matches,
  AdministrationTransformRule.api.rules
+

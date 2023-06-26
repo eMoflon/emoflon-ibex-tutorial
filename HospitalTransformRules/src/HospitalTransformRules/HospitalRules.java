@@ -2,6 +2,11 @@ package HospitalTransformRules;
 
 import java.io.IOException;
 import java.util.Random;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.emoflon.smartemf.persistence.SmartEMFResourceFactoryImpl;
 
 import HospitalExample.Carelevel;
 import HospitalTransformRules.api.HospitalTransformRulesAPI;
@@ -27,12 +32,8 @@ public class HospitalRules {
 //		hospitalrules.api.trackModelStates(false);
 		hospitalrules.createHospital();
 		hospitalrules.validateHospital();
-		try {
-			hospitalrules.api.getModel().getResources().get(0).save(null); 
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		persistModel(HospitalValidator.hospitalFilePath, hospitalrules.api);
+		
 		hospitalrules.api.terminate();
 //		hospitalrules.api.displayModelStates();
 	}
@@ -67,16 +68,7 @@ public class HospitalRules {
 			api.assignPatientToRoom().apply();
 		}
 		
-
-		try {
-			api.getModel().getResources().get(0).save(null);
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-
+		persistModel(HospitalValidator.hospitalFilePath, api);
 	}
 
 	public void validateHospital() { // Method to validate the ruleset via print outputs
@@ -128,6 +120,32 @@ public class HospitalRules {
 		} else
 			System.out.println("Error, there are no rooms in the hospital");
 
+	}
+	
+	/**
+	 * Saves the model to given file path.
+	 *
+	 * @param path File path as string.
+	 * @param api The transformation rules API (eMoflon).
+	 */
+	public static void persistModel(final String path, final HospitalTransformRulesAPI api) {
+		// Workaround: Always use absolute path
+		final URI absPath = URI.createFileURI(System.getProperty("user.dir") + "/" + path);
+
+		// Create new model for saving
+		final ResourceSet rs = new ResourceSetImpl();
+		rs.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new SmartEMFResourceFactoryImpl(null));
+		// ^null is okay if all paths are absolute
+		final Resource r = rs.createResource(absPath);
+		// Fetch model contents from eMoflon API
+		r.getContents().add(api.getModel().getResources().get(0).getContents().get(0));
+		try {
+			r.save(null);
+		} catch (final IOException e) {
+			e.printStackTrace();
+		}
+		// Hand model back to owner
+		api.getModel().getResources().get(0).getContents().addAll(r.getContents());
 	}
 
 }

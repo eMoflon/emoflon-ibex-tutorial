@@ -9,7 +9,7 @@ public class AdministrationValidator extends AdministrationTransformRuleDemocles
 	public AdministrationValidator() {
 		
 		
-		String filePathUrl = workspacePath + "Hospital2Administration\\instances\\trg.xmi";
+		String filePathUrl = workspacePath + "Hospital2Administration/instances/trg.xmi";
 		
 		loadModel(URI.createFileURI(filePathUrl));
 		

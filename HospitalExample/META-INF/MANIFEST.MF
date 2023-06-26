@@ -5,11 +5,10 @@ Bundle-SymbolicName: HospitalExample;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-Vendor: 
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-16
 Automatic-Module-Name: HospitalExample
 Require-Bundle: org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.emoflon.smartemf
 Export-Package: HospitalExample,
  HospitalExample.impl
-

@@ -52,8 +52,8 @@
     <eLiterals name="pending" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Daytime">
-    <eLiterals name="night"/>
-    <eLiterals name="early" value="1"/>
-    <eLiterals name="late" value="2"/>
+    <eLiterals name="NIGHT"/>
+    <eLiterals name="EARLY" value="1"/>
+    <eLiterals name="LATE" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

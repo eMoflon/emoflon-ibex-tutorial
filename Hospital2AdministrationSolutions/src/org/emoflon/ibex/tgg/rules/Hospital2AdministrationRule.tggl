@@ -1,0 +1,28 @@
+rule Hospital2AdministrationRule{
+
+source { 
+	[+] h:HE.Hospital{
+		[+] -reception->r
+		
+	}
+	[+] r:HE.Reception{
+		
+	}
+	
+}
+
+target {
+	[+] v:AE.Administration
+}
+
+correspondence {
+	[+] htov:HospitalToAdministration{
+		src->h
+		trg->v
+	}
+}
+
+attributeConditions {
+	
+}
+}

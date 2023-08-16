@@ -1,0 +1,43 @@
+rule PatientInRoom refines PatientToPatient{
+
+
+source { 
+	
+	[+]  p1p:HE.Patient{
+		
+	}
+	[=] hp:HE.Hospital{
+		[=] -department->d
+	}
+	
+	[=] d:HE.Department{
+		[=] -rooms->ro
+	}
+	[=] ro:HE.Room{
+		[+] -lies->p1p
+	}
+	
+	
+}
+
+target {
+	[+]  p2p:AE.Patient
+	[=] vp:AE.Administration{
+		[+] -patient->p2p
+	}
+}
+	
+
+correspondence {
+	
+	[=] htovp:HospitalToAdministration{
+		src->hp
+		trg->vp
+	}
+	
+}
+
+attributeConditions {
+	
+}
+}

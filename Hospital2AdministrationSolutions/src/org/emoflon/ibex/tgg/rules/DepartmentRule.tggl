@@ -1,0 +1,24 @@
+rule DepartmentRule {
+
+	source { 
+		[=] h : HE.Hospital{
+			[+] -department->d
+		}
+		[+] d : HE.Department{
+		
+		}
+	}
+
+	target {
+	
+	}
+
+	correspondence {
+	
+	}
+
+	attributeConditions {
+		Hospital2AdministrationLibrary.incrementingDepartmentID(d.dID)
+		Hospital2AdministrationLibrary.setDefaultNumber(d.maxRoomCount, 10.0)
+	}
+}

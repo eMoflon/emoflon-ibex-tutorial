@@ -1,0 +1,23 @@
+rule DoctorShiftplanRule refines ShiftplanRule{
+
+source { 
+	[=] s1d:HE.Doctor{
+
+	}
+	[=] p1d:HE.Patient{
+		[=] -doctor->s1d
+	}
+}
+
+target {
+	
+}
+
+correspondence {
+	
+}
+
+attributeConditions {
+	
+}
+}

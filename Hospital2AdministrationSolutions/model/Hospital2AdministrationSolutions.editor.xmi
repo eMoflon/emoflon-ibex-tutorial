@@ -1,1659 +1,2478 @@
 <?xml version="1.0" encoding="ASCII"?>
-<tgg:TripleGraphGrammarFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tgg="http://www.emoflon.org/ibex/tgg/editor/TGG">
-  <imports name="platform:/resource/HospitalExample/model/HospitalExample.ecore"/>
-  <imports name="platform:/resource/AdministrationExample/model/AdministrationExample.ecore"/>
+<tGGL:EditorFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:slimGT="http://www.emoflon.org/ibex/common/slimgt/SlimGT" xmlns:tGGL="http://www.emoflon.org/ibex/tgg/tggl/TGGL">
+  <imports name="platform:/resource/HospitalExample/model/HospitalExample.ecore">
+    <packageAliases xsi:type="slimGT:PackageReferenceAlias" name="HE">
+      <importedPackage href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
+    </packageAliases>
+  </imports>
+  <imports name="platform:/resource/AdministrationExample/model/AdministrationExample.ecore">
+    <packageAliases xsi:type="slimGT:PackageReferenceAlias" name="AE">
+      <importedPackage href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#/"/>
+    </packageAliases>
+  </imports>
   <schema name="Hospital2AdministrationSolutions">
     <sourceTypes href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
     <targetTypes href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#/"/>
-    <correspondenceTypes name="HospitalToAdministration">
+    <correspondenceTypes name="HospitalToAdministration" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
     </correspondenceTypes>
-    <correspondenceTypes name="StaffToStaff">
+    <correspondenceTypes name="StaffToStaff" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </correspondenceTypes>
-    <correspondenceTypes name="PatientToPatient">
+    <correspondenceTypes name="PatientToPatient" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
     </correspondenceTypes>
-    <correspondenceTypes name="RoomToShiftplan">
+    <correspondenceTypes name="RoomToShiftplan" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </correspondenceTypes>
-    <correspondenceTypes name="DoctorToStaff">
+    <correspondenceTypes name="DoctorToStaff" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </correspondenceTypes>
-    <correspondenceTypes name="NurseToStaff">
+    <correspondenceTypes name="NurseToStaff" hasSource="true" hasTarget="true">
       <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
       <target href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </correspondenceTypes>
-    <attributeCondDefs name="doctorsalary" userDefined="true">
-      <params paramName="salary">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="nursesalary" userDefined="true">
-      <params paramName="salary">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="carelevelToMedication" userDefined="true">
-      <params paramName="carelevel">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Carelevel"/>
-      </params>
-      <params paramName="medication">
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Medication"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="nametoname" userDefined="true">
-      <params paramName="separator">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </params>
-      <params paramName="leftWord">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </params>
-      <params paramName="rightWord">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </params>
-      <params paramName="result">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>F</value>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="incrementingDepartmentID" userDefined="true">
-      <params paramName="id">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="incrementingStaffID" userDefined="true">
-      <params paramName="id1">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <params paramName="id2">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="incrementingPatientID" userDefined="true">
-      <params paramName="id1">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <params paramName="id2">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
-    <attributeCondDefs name="incrementingRoomID" userDefined="true">
-      <params paramName="id">
-        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-      </params>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>F</value>
-      </allowedGenAdornments>
-    </attributeCondDefs>
+  </schema>
+  <libraries name="DefaultAttributeConditionLibrary">
     <attributeCondDefs name="eq_string">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_int">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_float">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_double">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_long">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_char">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EChar"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="eq_boolean">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="addPrefix">
-      <params paramName="prefix">
+      <params name="prefix">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="word">
+      <params name="word">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="addSuffix">
-      <params paramName="suffix">
+      <params name="suffix">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="word">
+      <params name="word">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="concat">
-      <params paramName="separator">
+      <params name="separator">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="leftWord">
+      <params name="leftWord">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="rightWord">
+      <params name="rightWord">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="setDefaultString">
-      <params paramName="variableString">
+      <params name="variableString">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="defaultString">
+      <params name="defaultString">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="setDefaultNumber">
-      <params paramName="variableNumber">
+      <params name="variableNumber">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="defaultNumber">
+      <params name="defaultNumber">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="stringToDouble">
-      <params paramName="stringValue">
+      <params name="stringValue">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="doubleValue">
+      <params name="doubleValue">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="stringToInt">
-      <params paramName="stringValue">
+      <params name="stringValue">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <params paramName="intValue">
+      <params name="intValue">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="multiply">
-      <params paramName="operand1">
+      <params name="operand1">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="operand2">
+      <params name="operand2">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="divide">
-      <params paramName="numerator">
+      <params name="numerator">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="denominator">
+      <params name="denominator">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="add">
-      <params paramName="summand1">
+      <params name="summand1">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="summand2">
+      <params name="summand2">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="sub">
-      <params paramName="minuend">
+      <params name="minuend">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="subtrahend">
+      <params name="subtrahend">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="result">
+      <params name="result">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
-    <attributeCondDefs name="max">
-      <params paramName="a">
+    <attributeCondDefs name="maximum">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="max">
+      <params name="maximum">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
         <value>B</value>
-      </allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="smallerOrEqual">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <params paramName="b">
+      <params name="b">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>B</value>
-        <value>F</value>
-      </allowedSyncAdornments>
-      <allowedSyncAdornments>
-        <value>F</value>
-        <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
-        <value>B</value>
-        <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>B</value>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
         <value>F</value>
         <value>B</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>F</value>
         <value>F</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
     <attributeCondDefs name="setRandomString">
-      <params paramName="a">
+      <params name="a">
         <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </params>
-      <allowedSyncAdornments>
+      <allowedSyncBindings>
         <value>B</value>
-      </allowedSyncAdornments>
-      <allowedGenAdornments>
+      </allowedSyncBindings>
+      <allowedGenBindings>
         <value>F</value>
-      </allowedGenAdornments>
-      <allowedGenAdornments>
+      </allowedGenBindings>
+      <allowedGenBindings>
         <value>B</value>
-      </allowedGenAdornments>
+      </allowedGenBindings>
     </attributeCondDefs>
-  </schema>
-  <rules name="StaffToStaffRule" abstractRule="true" schema="//@schema">
-    <sourcePatterns name="s1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-      <linkVariablePatterns target="//@rules.0/@sourcePatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="h">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-      <linkVariablePatterns target="//@rules.0/@sourcePatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="d">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-    </sourcePatterns>
-    <targetPatterns name="s2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-      <linkVariablePatterns target="//@rules.0/@targetPatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="v">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
-      <linkVariablePatterns target="//@rules.0/@targetPatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="sp">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
-      <linkVariablePatterns target="//@rules.0/@targetPatterns.3">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="sh">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
-    </targetPatterns>
-    <correspondencePatterns name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.0/@sourcePatterns.0" target="//@rules.0/@targetPatterns.0">
-      <op value="++"/>
-    </correspondencePatterns>
-    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.0/@sourcePatterns.1" target="//@rules.0/@targetPatterns.1"/>
-    <attrConditions name="//@schema/@attributeCondDefs.3">
-      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
-      </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
-      </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+  </libraries>
+  <libraries name="Hospital2AdministrationLibrary">
+    <attributeCondDefs name="doctorsalary">
+      <params name="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncBindings>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="nursesalary">
+      <params name="salary">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncBindings>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="carelevelToMedication">
+      <params name="carelevel">
+        <type href="platform:/resource/Hospital2AdministrationSolutions/src/org/emoflon/ibex/tgg/csp/lib/Hospital2AdministrationLibrary.tggl#|2"/>
+      </params>
+      <params name="medication">
+        <type href="platform:/resource/Hospital2AdministrationSolutions/src/org/emoflon/ibex/tgg/csp/lib/Hospital2AdministrationLibrary.tggl#|3"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="nametoname">
+      <params name="separator">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params name="leftWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params name="rightWord">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <params name="result">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingDepartmentID">
+      <params name="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingStaffID">
+      <params name="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params name="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingPatientID">
+      <params name="id1">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params name="id2">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="incrementingRoomID">
+      <params name="id">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>F</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+    <attributeCondDefs name="setDefaultNumber">
+      <params name="variableNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </params>
+      <params name="defaultNumber">
+        <type href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </params>
+      <allowedSyncBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedSyncBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedSyncBindings>
+      <allowedGenBindings>
+        <value>B</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>B</value>
+      </allowedGenBindings>
+      <allowedGenBindings>
+        <value>F</value>
+        <value>F</value>
+      </allowedGenBindings>
+    </attributeCondDefs>
+  </libraries>
+  <rules name="DepartmentRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.0/@sourceRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule/>
+    <corrRule/>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.4">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.0/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </operand>
       </values>
     </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.5">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.0">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.8">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.0/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+        </operand>
       </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
-      </values>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.9">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@sourcePatterns.2">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
-      </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.0/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:DoubleLiteral" value="10.0"/>
+        </operand>
       </values>
     </attrConditions>
   </rules>
-  <rules name="DocToStaffRule" supertypes="//@rules.0" schema="//@schema">
-    <sourcePatterns name="s1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
-    </sourcePatterns>
-    <targetPatterns name="s2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </targetPatterns>
-    <attrConditions name="//@schema/@attributeCondDefs.0">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.1/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+  <rules name="DoctorShiftplanRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s1d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.1/@sourceRule/@contextNodes.0/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+        </context>
+      </contextNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.1/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.1/@targetRule/@contextNodes.2/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.1/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.1/@sourceRule/@contextNodes.2/@context" target="//@rules.1/@targetRule/@contextNodes.3/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.1/@sourceRule/@contextNodes.3/@context" target="//@rules.1/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+    </corrRule>
+  </rules>
+  <rules name="DoctorToPatient">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@sourceRule/@contextNodes.3/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@sourceRule/@contextNodes.0/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="ro">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="dep">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@sourceRule/@contextNodes.2/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@targetRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.2/@targetRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="t">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.2/@sourceRule/@contextNodes.1/@context" target="//@rules.2/@targetRule/@contextNodes.1/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="dToS" type="//@schema/@correspondenceTypes.1" source="//@rules.2/@sourceRule/@contextNodes.0/@context" target="//@rules.2/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.2">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.2/@sourceRule/@contextNodes.1/@context"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.2/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+        </operand>
       </values>
     </attrConditions>
   </rules>
-  <rules name="NurseToStaffRule" supertypes="//@rules.0" schema="//@schema">
-    <sourcePatterns name="s1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
-    </sourcePatterns>
-    <targetPatterns name="s2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </targetPatterns>
-    <attrConditions name="//@schema/@attributeCondDefs.1">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.2/@targetPatterns.0">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+  <rules name="Hospital2AdministrationRule">
+    <sourceRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.3/@sourceRule/@createdNodes.1/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="r">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <createdCorrespondenceNodes>
+        <creation name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.3/@sourceRule/@createdNodes.0/@creation" target="//@rules.3/@targetRule/@createdNodes.0/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+  </rules>
+  <rules name="NurseShiftplanRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s1n">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.4/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="ro">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.4/@sourceRule/@contextNodes.2/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1n">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+        </context>
+      </contextNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.4/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.4/@targetRule/@contextNodes.2/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.4/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.4/@sourceRule/@contextNodes.3/@context" target="//@rules.4/@targetRule/@contextNodes.3/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.4/@sourceRule/@contextNodes.4/@context" target="//@rules.4/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+    </corrRule>
+  </rules>
+  <rules name="NurseToRoomRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="n">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.5/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="r">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.5/@sourceRule/@contextNodes.3/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="dep">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.5/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+            </context>
+          </contextEdges>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.5/@sourceRule/@contextNodes.0/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        </context>
+      </contextNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="nToS" type="//@schema/@correspondenceTypes.1" source="//@rules.5/@sourceRule/@contextNodes.0/@context" target="//@rules.5/@targetRule/@contextNodes.1/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.5/@sourceRule/@contextNodes.3/@context" target="//@rules.5/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+    </corrRule>
+  </rules>
+  <rules name="PatientInReception">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="hr">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.6/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="r">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.6/@sourceRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p1r">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="vr">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.6/@targetRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p2r">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="htovr" type="//@schema/@correspondenceTypes.0" source="//@rules.6/@sourceRule/@contextNodes.0/@context" target="//@rules.6/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.6/@sourceRule/@contextNodes.2/@context" target="//@rules.6/@targetRule/@contextNodes.1/@context"/>
+      </contextCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.6/@sourceRule/@createdNodes.1/@creation" target="//@rules.6/@targetRule/@createdNodes.1/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.6/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.6/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.6/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.6">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.6/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.6/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+        </operand>
       </values>
     </attrConditions>
   </rules>
-  <rules name="DoctorToPatient" schema="//@schema">
-    <sourcePatterns name="d">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.3">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="p1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="ro">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.1">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="dep">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-      <linkVariablePatterns target="//@rules.3/@sourcePatterns.2">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <targetPatterns name="s">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="p2">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-      <linkVariablePatterns target="//@rules.3/@targetPatterns.2">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/treatment"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="t">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment"/>
-    </targetPatterns>
-    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.3/@sourcePatterns.1" target="//@rules.3/@targetPatterns.1"/>
-    <correspondencePatterns name="dToS" type="//@schema/@correspondenceTypes.1" source="//@rules.3/@sourcePatterns.0" target="//@rules.3/@targetPatterns.0"/>
-    <attrConditions name="//@schema/@attributeCondDefs.2">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@sourcePatterns.1">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/level"/>
+  <rules name="PatientInRoom">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="hp">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.7/@sourceRule/@contextNodes.1/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.7/@sourceRule/@contextNodes.2/@context">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="ro">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.7/@sourceRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p1p">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="vp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.7/@targetRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p2p">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="htovp" type="//@schema/@correspondenceTypes.0" source="//@rules.7/@sourceRule/@contextNodes.0/@context" target="//@rules.7/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.7/@sourceRule/@contextNodes.3/@context" target="//@rules.7/@targetRule/@contextNodes.1/@context"/>
+      </contextCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.7/@sourceRule/@createdNodes.1/@creation" target="//@rules.7/@targetRule/@createdNodes.1/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
       </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.3/@targetPatterns.2">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Treatment/medication"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.7/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.7/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.7/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.6">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.7/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.7/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+        </operand>
       </values>
     </attrConditions>
   </rules>
-  <rules name="PatientToPatient" abstractRule="true" schema="//@schema">
-    <sourcePatterns name="p1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
-    <sourcePatterns name="h">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-    </sourcePatterns>
-    <targetPatterns name="v">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
-    </targetPatterns>
-    <targetPatterns name="p2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-    </targetPatterns>
-    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.4/@sourcePatterns.0" target="//@rules.4/@targetPatterns.1">
-      <op value="++"/>
-    </correspondencePatterns>
-    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.4/@sourcePatterns.1" target="//@rules.4/@targetPatterns.0"/>
-    <attrConditions name="//@schema/@attributeCondDefs.3">
-      <values xsi:type="tgg:LiteralExpression" value="&quot; &quot;"/>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@targetPatterns.1">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+  <rules abstract="true" name="PatientToPatient">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.8/@sourceRule/@contextNodes.0/@context" target="//@rules.8/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourceRule/@createdNodes.0/@creation" target="//@rules.8/@targetRule/@createdNodes.0/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
       </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@targetPatterns.1">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.8/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
       </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@sourcePatterns.0">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.8/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
       </values>
-    </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.6">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@sourcePatterns.0">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
-      </values>
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.4/@targetPatterns.1">
-        <attribute href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
-      </values>
-    </attrConditions>
-  </rules>
-  <rules name="ShiftplanRule" abstractRule="true" schema="//@schema">
-    <sourcePatterns name="p1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
-    <sourcePatterns name="s1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </sourcePatterns>
-    <targetPatterns name="s2">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-      <linkVariablePatterns target="//@rules.5/@targetPatterns.1">
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="sp">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
-      <linkVariablePatterns target="//@rules.5/@targetPatterns.2">
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <targetPatterns name="sh">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
-    </targetPatterns>
-    <targetPatterns name="p2">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-      <linkVariablePatterns target="//@rules.5/@targetPatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <correspondencePatterns name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.5/@sourcePatterns.0" target="//@rules.5/@targetPatterns.3"/>
-    <correspondencePatterns name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.5/@sourcePatterns.1" target="//@rules.5/@targetPatterns.0"/>
-  </rules>
-  <rules name="PatientInRoom" supertypes="//@rules.4" schema="//@schema">
-    <sourcePatterns name="p1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
-    <sourcePatterns name="h">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-      <linkVariablePatterns target="//@rules.6/@sourcePatterns.2">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="d">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-      <linkVariablePatterns target="//@rules.6/@sourcePatterns.3">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="ro">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
-      <linkVariablePatterns target="//@rules.6/@sourcePatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <targetPatterns name="p2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-    </targetPatterns>
-    <targetPatterns name="v">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
-      <linkVariablePatterns target="//@rules.6/@targetPatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.6/@sourcePatterns.1" target="//@rules.6/@targetPatterns.1"/>
-  </rules>
-  <rules name="DepartmentRule" schema="//@schema">
-    <sourcePatterns name="h">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-      <linkVariablePatterns target="//@rules.7/@sourcePatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="d">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-    </sourcePatterns>
-    <attrConditions name="//@schema/@attributeCondDefs.4">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.1">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.8/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/name"/>
+        </operand>
       </values>
     </attrConditions>
-    <attrConditions name="//@schema/@attributeCondDefs.19">
-      <values xsi:type="tgg:AttributeExpression" objectVar="//@rules.7/@sourcePatterns.1">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/maxRoomCount"/>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.6">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.8/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/patientID"/>
+        </operand>
       </values>
-      <values xsi:type="tgg:LiteralExpression" value="10"/>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.8/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/patientID"/>
+        </operand>
+      </values>
     </attrConditions>
   </rules>
-  <rules name="NurseToRoomRule" schema="//@schema">
-    <sourcePatterns name="n">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
-      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="r">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
-      <linkVariablePatterns target="//@rules.8/@sourcePatterns.3">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="dep">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-      <linkVariablePatterns target="//@rules.8/@sourcePatterns.1">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
-      </linkVariablePatterns>
-      <linkVariablePatterns target="//@rules.8/@sourcePatterns.0">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/staff"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="p1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
-    <targetPatterns name="p2">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-    </targetPatterns>
-    <targetPatterns name="s">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </targetPatterns>
-    <correspondencePatterns name="nToS" type="//@schema/@correspondenceTypes.1" source="//@rules.8/@sourcePatterns.0" target="//@rules.8/@targetPatterns.1"/>
-    <correspondencePatterns name="pTop" type="//@schema/@correspondenceTypes.2" source="//@rules.8/@sourcePatterns.3" target="//@rules.8/@targetPatterns.0"/>
+  <rules name="RoomRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.9/@sourceRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="ro">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+          <assignments>
+            <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
+            <value xsi:type="tGGL:ExpressionOperand">
+              <operand xsi:type="slimGT:ArithmeticLiteral">
+                <value xsi:type="slimGT:IntegerLiteral" value="4"/>
+              </operand>
+            </value>
+          </assignments>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule/>
+    <corrRule/>
   </rules>
-  <rules name="HospitaltoAdministrationRule" schema="//@schema">
-    <sourcePatterns name="h">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-      <linkVariablePatterns target="//@rules.9/@sourcePatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="r">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
-    </sourcePatterns>
-    <targetPatterns name="v">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
-    </targetPatterns>
-    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.9/@sourcePatterns.0" target="//@rules.9/@targetPatterns.0">
-      <op value="++"/>
-    </correspondencePatterns>
+  <rules abstract="true" name="ShiftplanRule">
+    <sourceRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+        </context>
+      </contextNodes>
+    </sourceRule>
+    <targetRule>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.10/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <contextEdges>
+            <context xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.10/@targetRule/@contextNodes.2/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </context>
+          </contextEdges>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </context>
+      </contextNodes>
+      <contextNodes>
+        <context xsi:type="tGGL:SlimRuleNode" name="p2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.10/@targetRule/@contextNodes.1/@context">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient/coveredBy"/>
+            </creation>
+          </createdEdges>
+        </context>
+      </contextNodes>
+    </targetRule>
+    <corrRule>
+      <contextCorrespondenceNodes>
+        <context name="pToP" type="//@schema/@correspondenceTypes.2" source="//@rules.10/@sourceRule/@contextNodes.0/@context" target="//@rules.10/@targetRule/@contextNodes.3/@context"/>
+      </contextCorrespondenceNodes>
+      <contextCorrespondenceNodes>
+        <context name="sToS" type="//@schema/@correspondenceTypes.1" source="//@rules.10/@sourceRule/@contextNodes.1/@context" target="//@rules.10/@targetRule/@contextNodes.0/@context"/>
+      </contextCorrespondenceNodes>
+    </corrRule>
   </rules>
-  <rules name="NurseShiftplanRule" supertypes="//@rules.5" schema="//@schema">
-    <sourcePatterns name="s1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
-      <linkVariablePatterns target="//@rules.10/@sourcePatterns.1">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse/responsible"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="ro">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
-      <linkVariablePatterns target="//@rules.10/@sourcePatterns.2">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="p1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
+  <rules abstract="true" name="StaffToStaffRule">
+    <sourceRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.11/@sourceRule/@createdNodes.2/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.11/@sourceRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.11/@targetRule/@createdNodes.2/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.11/@targetRule/@createdNodes.0/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.11/@targetRule/@createdNodes.3/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <createdCorrespondenceNodes>
+        <creation name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.11/@sourceRule/@createdNodes.0/@creation" target="//@rules.11/@targetRule/@createdNodes.0/@creation"/>
+      </createdCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.11/@sourceRule/@createdNodes.1/@creation" target="//@rules.11/@targetRule/@createdNodes.1/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.5">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@sourceRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.0/@attributeCondDefs.1">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@sourceRule/@createdNodes.2/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.11/@targetRule/@createdNodes.0/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        </operand>
+      </values>
+    </attrConditions>
   </rules>
-  <rules name="PatientInReception" supertypes="//@rules.4" schema="//@schema">
-    <sourcePatterns name="p1">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-    </sourcePatterns>
-    <sourcePatterns name="h">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-      <linkVariablePatterns target="//@rules.11/@sourcePatterns.2">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="r">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
-      <linkVariablePatterns target="//@rules.11/@sourcePatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <targetPatterns name="p2">
-      <op value="++"/>
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
-    </targetPatterns>
-    <targetPatterns name="v">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
-      <linkVariablePatterns target="//@rules.11/@targetPatterns.0">
-        <op value="++"/>
-        <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
-      </linkVariablePatterns>
-    </targetPatterns>
-    <correspondencePatterns name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.11/@sourcePatterns.1" target="//@rules.11/@targetPatterns.1"/>
+  <rules name="DocToStaffRule">
+    <sourceRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s1d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.12/@sourceRule/@createdNodes.3/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.12/@sourceRule/@createdNodes.1/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s2d">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.12/@targetRule/@createdNodes.3/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.12/@targetRule/@createdNodes.1/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.12/@targetRule/@createdNodes.4/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <createdCorrespondenceNodes>
+        <creation name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.12/@sourceRule/@createdNodes.1/@creation" target="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+      </createdCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.12/@sourceRule/@createdNodes.2/@creation" target="//@rules.12/@targetRule/@createdNodes.2/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.0">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.5">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.0/@attributeCondDefs.1">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@sourceRule/@createdNodes.3/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.12/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        </operand>
+      </values>
+    </attrConditions>
   </rules>
-  <rules name="DoctorShiftplanRule" supertypes="//@rules.5" schema="//@schema">
-    <sourcePatterns name="s1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
-    </sourcePatterns>
-    <sourcePatterns name="p1">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
-      <linkVariablePatterns target="//@rules.12/@sourcePatterns.0">
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient/doctor"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
+  <rules name="NurseToStaffRule">
+    <sourceRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s1n">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s1">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.13/@sourceRule/@createdNodes.3/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="h">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.13/@sourceRule/@createdNodes.1/@creation">
+              <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="d">
+          <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        </creation>
+      </createdNodes>
+    </sourceRule>
+    <targetRule>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s2n">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="s2">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.13/@targetRule/@createdNodes.3/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="v">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.13/@targetRule/@createdNodes.1/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sp">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <createdEdges>
+            <creation xsi:type="slimGT:SlimRuleSimpleEdge" target="//@rules.13/@targetRule/@createdNodes.4/@creation">
+              <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+            </creation>
+          </createdEdges>
+        </creation>
+      </createdNodes>
+      <createdNodes>
+        <creation xsi:type="tGGL:SlimRuleNode" name="sh">
+          <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </creation>
+      </createdNodes>
+    </targetRule>
+    <corrRule>
+      <createdCorrespondenceNodes>
+        <creation name="stot" type="//@schema/@correspondenceTypes.1" source="//@rules.13/@sourceRule/@createdNodes.1/@creation" target="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+      </createdCorrespondenceNodes>
+      <createdCorrespondenceNodes>
+        <creation name="htov" type="//@schema/@correspondenceTypes.0" source="//@rules.13/@sourceRule/@createdNodes.2/@creation" target="//@rules.13/@targetRule/@createdNodes.2/@creation"/>
+      </createdCorrespondenceNodes>
+    </corrRule>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.1">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/salary"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.3">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:ArithmeticLiteral">
+          <value xsi:type="slimGT:StringLiteral" value=" "/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/firstName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Person/lastName"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/name"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.1/@attributeCondDefs.5">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@sourceRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/staffID"/>
+        </operand>
+      </values>
+    </attrConditions>
+    <attrConditions name="//@libraries.0/@attributeCondDefs.1">
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@sourceRule/@createdNodes.3/@creation"/>
+          <feature href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/dID"/>
+        </operand>
+      </values>
+      <values xsi:type="tGGL:ExpressionOperand">
+        <operand xsi:type="slimGT:NodeAttributeExpression">
+          <nodeExpression xsi:type="tGGL:NodeExpression" node="//@rules.13/@targetRule/@createdNodes.1/@creation"/>
+          <feature href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/dInt"/>
+        </operand>
+      </values>
+    </attrConditions>
   </rules>
-  <rules name="RoomRule" schema="//@schema">
-    <sourcePatterns name="d">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-      <linkVariablePatterns target="//@rules.13/@sourcePatterns.1">
-        <op value="++"/>
-        <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department/rooms"/>
-      </linkVariablePatterns>
-    </sourcePatterns>
-    <sourcePatterns name="ro">
-      <op value="++"/>
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
-      <attributeAssignments op=":=">
-        <attribute href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/capacity"/>
-        <valueExp xsi:type="tgg:LiteralExpression" value="4"/>
-      </attributeAssignments>
-    </sourcePatterns>
-  </rules>
-</tgg:TripleGraphGrammarFile>
+</tGGL:EditorFile>

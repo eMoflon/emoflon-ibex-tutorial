@@ -1,0 +1,44 @@
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore" using HospitalExample as HE
+import "platform:/resource/AdministrationExample/model/AdministrationExample.ecore" using AdministrationExample as AE
+
+schema Hospital2AdministrationSolutions{
+
+	source {
+		HospitalExample
+	}
+
+	target {
+		AdministrationExample
+	}
+
+	correspondence {
+		HospitalToAdministration{
+			src->HospitalExample.Hospital
+			trg->AdministrationExample.Administration
+		}
+
+		StaffToStaff{
+			src->HE.Staff
+			trg->AE.Staff
+		}
+
+		PatientToPatient{
+			src->HE.Patient
+			trg->AE.Patient
+		}
+
+		RoomToShiftplan{
+			src->HE.Room
+			trg->AE.Shiftplan
+		}
+		DoctorToStaff{
+			src->HE.Doctor
+			trg->AE.Staff
+		}
+		NurseToStaff{
+			src->HE.Nurse
+			trg->AE.Staff
+		}
+	}
+}
+

@@ -1,0 +1,52 @@
+abstract rule ShiftplanRule{
+
+source {
+	
+	[=] p1:HE.Patient{
+		
+	}
+	[=] s1:HE.Staff{
+		
+	}
+	
+	
+	
+}
+
+target {
+	
+	[=] s2:AE.Staff{
+		[=] -shiftPlan->sp
+	}
+	[=] sp:AE.Shiftplan{
+		[=] -shifts->sh
+		
+	}
+	[=] sh:AE.Shift{
+		
+	}
+	[=] p2:AE.Patient{
+		[+] -coveredBy->sp
+	}
+	
+}
+
+correspondence {
+	
+	[=] pToP:PatientToPatient{
+		src->p1
+		trg->p2
+	}
+	
+	[=] sToS:StaffToStaff{
+		src->s1
+		trg->s2
+	}
+	
+}
+
+attributeConditions {
+	
+}
+}
+

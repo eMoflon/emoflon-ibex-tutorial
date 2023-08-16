@@ -1,0 +1,87 @@
+abstract rule StaffToStaffRule{
+
+source {
+	[+] s1:HE.Staff{
+		[+] -works -> d
+	}
+
+	[+] h:HE.Hospital{
+		[+] -staff -> s1
+	}
+
+	[+] d:HE.Department{
+
+	}
+}
+
+target {
+	[+] s2:AE.Staff{
+		[+] -shiftPlan -> sp
+	}
+
+	[+] v:AE.Administration{
+		[+] -staff -> s2
+	}
+
+	[+] sp:AE.Shiftplan{
+		[+] -shifts -> sh
+	}
+
+	[+] sh:AE.Shift{
+
+	}
+}
+
+correspondence {
+	[+] stot:StaffToStaff{
+		src->s1
+		trg->s2
+	}
+
+	[+] htov:HospitalToAdministration{
+		src->h
+		trg->v
+	}
+}
+
+attributeConditions {
+	Hospital2AdministrationLibrary.nametoname(" ", s2.firstName, s2.lastName, s1.name)
+
+	Hospital2AdministrationLibrary.incrementingStaffID(s1.staffID, s2.staffID)
+
+	DefaultAttributeConditionLibrary.eq_int(d.dID, s2.dInt)
+}
+}
+
+rule DocToStaffRule refines StaffToStaffRule {
+
+source {
+	[+] s1d:HE.Doctor
+}
+
+target {
+	[+] s2d:AE.Staff
+
+}
+
+attributeConditions {
+	Hospital2AdministrationLibrary.doctorsalary(s2.salary)
+}
+}
+
+
+rule NurseToStaffRule refines StaffToStaffRule {
+
+source {
+	[+] s1n:HE.Nurse
+}
+
+target {
+	[+] s2n:AE.Staff
+}
+
+attributeConditions {
+	Hospital2AdministrationLibrary.nursesalary(s2.salary)
+}
+}
+

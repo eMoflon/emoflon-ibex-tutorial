@@ -1,0 +1,61 @@
+rule NurseToRoomRule{
+
+source { 
+	[=] n:HE.Nurse{
+		[+] -responsible->r
+		
+			}
+	[=] r:HE.Room{
+		
+		[=] -lies->p1
+		
+		
+	}
+	[=] dep:HE.Department{
+		[=] -rooms->r
+		[=] -staff->n
+	}
+	[=] p1:HE.Patient{
+		
+		
+	}
+	
+	
+}
+
+target {
+	
+		
+		[=] p2:AE.Patient{
+			
+		}
+		[=] s:AE.Staff{
+			
+		}
+		
+			
+		
+	
+}
+
+correspondence {
+	
+	
+	[=] nToS:StaffToStaff{
+		src->n
+		trg->s
+	
+	}
+	
+	[=] pTop:PatientToPatient{
+		src->p1
+		trg->p2
+	}
+	
+
+}
+
+attributeConditions {
+	
+}
+}

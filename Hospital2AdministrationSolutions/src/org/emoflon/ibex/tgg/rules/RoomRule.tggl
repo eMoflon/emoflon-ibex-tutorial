@@ -1,0 +1,24 @@
+rule RoomRule{
+
+source { 
+	
+	[=] d:HE.Department{
+		[+] -rooms->ro
+	}
+	[+] ro:HE.Room{
+		.capacity:=4;
+	}
+}
+
+target {
+	
+}
+
+correspondence {
+	
+}
+
+attributeConditions {
+	
+}
+}

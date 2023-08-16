@@ -91,50 +91,50 @@ The second model to select will be our \textbf{target model} and you might have 
 
 Right now, we have a hospital metamodel and an administration metamodel but they are not connected. As a consequence, we need means to create relations between our two metamodels. These relations are defined in the files we will inspect now.
 
-In the source folder you will find the \textbf{tgg package} and in it you will find the \textbf{Schema.tgg} file. This file is the central element linking both the source and the target side since it defines the \textbf{correspondence metamodel} for the connections between both the source and the target side. The correspondence metamodel defined by the Schema.tgg also completes our triple of metamodel graphs.\newline
+In the source folder you will find the \textbf{tgg package} and in it you will find the \textbf{Schema.tggl} file. This file is the central element linking both the source and the target side since it defines the \textbf{correspondence metamodel} for the connections between both the source and the target side. The correspondence metamodel defined by the Schema.tggl also completes our triple of metamodel graphs.\newline
 
 \textbf{Warning:} Please always start the name of your project with a \textbf{capital letter}. The automatic file generation will not work otherwise.\newline
 
-There are three important parts in the Schema file. Also there are a lot of desired elements missing in the Schema.tgg which will be added throughout the next section. Do not worry we will explain everything in detail and walk you through every step.
+There are three important parts in the Schema file. Also there are a lot of desired elements missing in the Schema.tggl which will be added throughout the next section. Do not worry we will explain everything in detail and walk you through every step.
 \clearpage
 
 \subsection{Writing a TGG schema}
 
-The automatically generated Schema.tgg should look like this:\newline
+The automatically generated Schema.tggl should look like this:\newline
 
 {\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{\#\textit{import}} \textcolor{Orange}{"platform:/resource/AdministrationExample/model/AdministrationExample.ecore"}
+1\hspace{0.5cm}\textcolor{Purple}{\textit{import}} \textcolor{Orange}{"platform:/resource/AdministrationExample/model/AdministrationExample.ecore"} \textcolor{Purple}{using} HospitalExample \textcolor{Purple}{as} HE
 
-2\hspace{0.5cm}\textcolor{Purple}{\#\textit{import}} \textcolor{Orange}{"platform:/resource/HospitalExample/model/HospitalExample.ecore"}
+2\hspace{0.5cm}\textcolor{Purple}{\textit{import}} \textcolor{Orange}{"platform:/resource/HospitalExample/model/HospitalExample.ecore"} \textcolor{Purple}{using} AdministrationExample \textcolor{Purple}{as} AE
 
-3\hspace{0.5cm}\textcolor{Purple}{\#\textit{schema}} Hospital2Administration
+3\hspace{0.5cm}\textcolor{Purple}{\textit{schema}} Hospital2Administration \{
 
-4\hspace{0.5cm}\colorbox{LightYellow}{\#\textit{source}} \{
+4\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}} \{
 
 5\hspace{1cm}HospitalExample
 
 6\hspace{0.5cm}\}
 
-7\hspace{0.5cm}\colorbox{LightSalmon}{\#\textit{target}}\{ 
+7\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}}\{ 
 
 8\hspace{1cm}AdministrationExample
 
 9\hspace{0.5cm}\} 
 
-10\hspace{0.5cm}\textcolor{Purple}{\#\textit{correspondence}} \{
+10\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{
 
 11\hspace{0.5cm}\}
 
-12\hspace{0.5cm}\textcolor{Purple}{\#\textit{attributeConditions}} \{
-	
-13\hspace{0.5cm}\} \newline
+12\hspace{0.5cm}\}\newline
 
 }
 
+
 \textbf{Source and target model:}
 
-First, the Schema.tgg defines the \textbf{source} and the \textbf{target} which was done automatically in our case because we defined the source and target model when we created the project. If you want to start with a blank project you have to do this yourself. You can see this definition in lines 4 to 9 where the \textsf{HospitalExample} metamodel was defined as the source model and the \textsf{AdministrationExample} metamodel was defined as the target model.\newline
+First, the Schema.tgg defines the \textbf{source} and the \textbf{target} which was done automatically in our case because we defined the source and target model when we created the project. If you want to start with a blank project you have to do this yourself. You can see this definition in lines 5 and 8 where the \textsf{HospitalExample} metamodel was defined as the source model and the \textsf{AdministrationExample} metamodel was defined as the target model.\newline
+Additionally you can define \textbf{aliases}. Those are meant for you to adress your source and target model in the way you want. In the Schema.tggl file you can see those aliases defined by using the keyword \textbf{as} and the name you intend, here \textbf{HE} for HospitalExample and \textbf{AE} for AdministrationExample. In the correspondences we will define on the next page you can see that we use the aliases to specify the model we want to adress instead of the full name.\newline
 
 \textbf{Correspondences:}
 
@@ -142,18 +142,16 @@ The second block consists of the \textbf{correspondences} between our meta model
 
 \textbf{Staff and patients:}
 
-Go ahead and write \textsf{HospitalToAdministration} within the \textcolor{Purple}{\#\textit{correspondence}} bracket and \textbf{add curved brackets} to it.
+Go ahead and write \textsf{Hospital2Administration} within the \textcolor{Purple}{\textit{correspondence}} bracket and \textbf{add curved brackets} to it.
 Now we need to choose an element of the source/hospital side we want to correspond with an element on the target/administration side. As the name of the correspondence already indicates we want the \textbf{hospital class} to correspond with the \textbf{administration class} on the target metamodel.
 
-A source element can be added via typing \textsf{\#src-> <nameOfElement>}. In the case of our hospital, we have to type \textsf{\#src->Hospital}.
+A source element can be added via typing \textsf{src-> <nameOfElement>}. In the case of our hospital, we have to type \textsf{src->Hospital}.
 
-Since we are still missing an element on the target side, we add the administration by writing \textsf{\#trg->Administration}. Our correspondence metamodel has now one correspondence between the hospital and the administration.\newline
+Since we are still missing an element on the target side, we add the administration by writing \textsf{trg->Administration}. Our correspondence metamodel has now one correspondence between the hospital and the administration.\newline
 
 However, we have still more elements we want to correspond with each other. Furthermore we want to connect the \textbf{staff} and the \textbf{patients} of both sides to each other. Let us create the new correspondence \textsf{StaffToStaff} and assign the staff classes of both sides as target and source to this correspondence.\newline
 
-Try coding the \textsf{PatientToPatient} correspondence yourself. For the correspondence between patients, we want to connect the patients on the source side with their respective counterparts on the target side.
-
-\clearpage
+Try coding the \textsf{PatientToPatient} correspondence yourself. For the correspondence between patients, we want to connect the patients on the source side with their respective counterparts on the target side.\newline
 
 \textbf{Doctors and nurses:}
 
@@ -161,50 +159,50 @@ Now we have covered the rather obvious correspondences between our two models, b
 
 Let us create two further \textbf{correspondences} then. Firstly, we need the \textbf{DoctorToStaff} correspondences which ensures a doctor on the source side corresponds with the staff on the target side. Secondly, the nurses should correspond with staff in the same way, and hence we need the \textbf{NurseToStaff} correspondence.\newline
 
-Finally your \textcolor{Purple}{\textit{\#correspondence}} section should look like this:\newline
+Finally your \textcolor{Purple}{\textit{correspondence}} section should look like this:\newline
 
 {\setstretch{1.2}
 
 
-10\hspace{0.5cm}\textcolor{Purple}{\#\textit{correspondence}} \{
+10\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{
 
-11\hspace{1cm}HospitalToAdministration\{
+11\hspace{1cm}Hospital2Administration\{
 
-12\hspace{1.5cm}\colorbox{LightYellow}{\#\textit{src->}}Hospital
+12\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}HospitalExample.Hospital
 
-13\hspace{1.5cm}\colorbox{LightSalmon}{\#\textit{trg->}}Administration
+13\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}AdministrationExample.Administration
 
 14\hspace{1cm}\}
 
 15\hspace{1cm}StaffToStaff\{
 	
-16\hspace{1.5cm}\colorbox{LightYellow}{\#\textit{src->}}Staff
+16\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}HE.Staff
 
-17\hspace{1.5cm}\colorbox{LightSalmon}{\#\textit{trg->}}Staff
+17\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}AE.Staff
 
 18\hspace{1cm}\}
 
 19\hspace{1cm}PatientToPatient\{
 
-20\hspace{1.5cm}\colorbox{LightYellow}{\#\textit{src->}}Patient
+20\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}HE.Patient
 
-21\hspace{1.5cm}\colorbox{LightSalmon}{\#\textit{trg->}}Patient
+21\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}AE.Patient
 
 22\hspace{1cm}\}
 
 23\hspace{1cm}DoctorToStaff\{
 
-24\hspace{1.5cm}\colorbox{LightYellow}{\#\textit{src->}}Doctor
+24\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}HE.Doctor
 
-25\hspace{1.5cm}\colorbox{LightSalmon}{\#\textit{trg->}}Staff
+25\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}AE.Staff
 
 26\hspace{1cm}\}
 
 27\hspace{1cm}NurseToStaff\{
 
-28\hspace{1.5cm}\colorbox{LightYellow}{\#\textit{src->}}Nurse
+28\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}HE.Nurse
 
-29\hspace{1.5cm}\colorbox{LightSalmon}{\#\textit{trg->}}Staff
+29\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}AE.Staff
 
 30\hspace{1cm}\}
 
@@ -245,52 +243,60 @@ The target side will require the creation of an \textbf{administration node}.
 
 So far, the syntax of our TGG rule is almost the same as in graph transformation projects.\newline
 
-According to the correspondence metamodel that we have defined in the Schema.tgg this rule also needs to consider the correspondence between our hospital node and the administration node. We do this by \textbf{adding a new correspondence} (lines 16 to 20) in the \textcolor{Purple}{\#correspondence} bracket.
+According to the correspondence metamodel that we have defined in the Schema.tgg this rule also needs to consider the correspondence between our hospital node and the administration node. We do this by \textbf{adding a new correspondence} (lines 16 to 20) in the \textcolor{Purple}{correspondence} bracket.
 
 This is similar to the principle of graph transformation rules. We first have define in the ecoremodel what relations different elements in our model have between each other, i.e references.
 When creating instances of these elements via the application of a rule we also need to add an instance of those relations explicitly.
 
 \clearpage
 
-Please name the correspondence \textsf{htoa} and define its type as \textsf{HospitalToAdministration}. This is the correspondence we have created in the Schema.tgg. 
+Please name the correspondence \textsf{htov} and define its type as \textsf{Hospital2Administration}. This is the correspondence we have created in the Schema.tggl. 
 
 Now we are going to add the hospital node we have created in this rule to the source side and the administration node to the target side.\newline
 
 Finally your rule should look like this: \newline
 
 {\setstretch{1.2}
-
-1\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}}\{ 
-
-2\hspace{1cm}\textcolor{LimeGreen}{++hospital:Hospital\{}
-
-3\hspace{1.5cm}\textcolor{LimeGreen}{++-reception->reception}
-
-4\hspace{1cm}\textcolor{LimeGreen}{\}}
-
-5\hspace{1cm}\textcolor{LimeGreen}{++reception:Reception}
-
-6\hspace{0.5cm}\}
-
-7\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}}\{
-
-8\hspace{1cm}\textcolor{LimeGreen}{++administration:Administration}
-
-9\hspace{0.5cm}\}
-
-10\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}}\{
-
-11\hspace{1cm}\textcolor{LimeGreen}{++htoa:HospitalToAdministration\{}
-
-12\hspace{1.5cm}\colorbox{LightYellow}{\textit{\#src->}}\textcolor{LimeGreen}{hospital}
-
-13\hspace{1.5cm}\colorbox{LightSalmon}{\textit{\#trg->}}\textcolor{LimeGreen}{administration}
-
-14\hspace{1cm}\textcolor{LimeGreen}{\}}
-
-15\hspace{0.5cm}\}\newline
-
+	
+	\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}}\{ 
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] h:HE.Hospital\{}
+	
+	\hspace{1.5cm}\textcolor{LimeGreen}{[+] -reception->r}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{\}}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] r:HE.Reception\{}
+	
+	\hspace{1cm}\}
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}}\{
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] v:AE.Administration}
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}}\{
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] htov:HospitalToAdministration\{}
+	
+	\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}\textcolor{LimeGreen}{h}
+	
+	\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}\textcolor{LimeGreen}{v}
+	
+	\hspace{1cm}\}
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{attributeConditions}}\{
+	
+	\hspace{0.5cm}\}\newline
+	
 }
+
+
 
 \begin{figure}[h]
     \centering
@@ -315,42 +321,48 @@ The department rule creates a department with the respective edge to the hospita
 So go ahead and create a new tgg rule with the name \textsf{DepartmentRule} for which we need to add the following contents:\newline
 
 {\setstretch{1.2}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{rule}} \textcolor{black}{DepartmentRule} \{
+	
+	\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}} \{ 
+	
+	\hspace{1cm}\textcolor{black}{[=] h : HE.Hospital\{}
+	
+	\hspace{1.5cm}\textcolor{LimeGreen}{[+] -department->d}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{\}}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] d : HE.Department\{}
+	
+	\hspace{1cm}\}
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{black}{\colorbox{LightSalmon}{\textit{target}}} \{
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{attributeConditions}} \{
+	
+	\hspace{1cm}\textcolor{black}{Hospital2AdministrationLibrary.incrementingDepartmentID(d.dID)}
+	
+	\hspace{1cm}\textcolor{black}{Hospital2AdministrationLibrary.setDefaultNumber(d, 10)}
+	
+	\hspace{0.5cm}\}
+	
+	\}
 
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#rule}} DepartmentRule \textcolor{Purple}{\textit{\#with}} Hospital2Administration
 
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}} \{ 
 
-3\hspace{1cm}h:Hospital \{
 
-4\hspace{1.5cm}\hspace{1cm}\textcolor{LimeGreen}{++-department->department}
-
-5\hspace{1cm}\}
-
-6\hspace{1cm}\textcolor{LimeGreen}{++department:Department}
-
-7\hspace{0.5cm}\}
-
-8\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}} \{
-
-9\hspace{0.5cm}\}
-
-10\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}} \{
-
-11\hspace{0.5cm}\}
-
-12\hspace{0.5cm}\textcolor{Purple}{\textit{\#attributeConditions}} \{
-
-13\hspace{1cm}incrementingDepartmentID(department.dID)
-
-14\hspace{1cm}setDefaultNumber(department.maxRoomCount, \textcolor{Grey}{10})
-
-15\hspace{0.5cm}\}\newline
-
-}
 
 \textbf{Note:}
 
-We will explain the \textcolor{Purple}{\#attributeConditions} section later on. Please just copy these sections for now.\newline
+We will explain the \textcolor{Purple}{attributeConditions} section later on. Please just copy these sections for now.\newline
 
 \textbf{Please try to code the \textsf{RoomRule} yourself}.\newline
 
@@ -359,38 +371,39 @@ For this rule want to add a \textbf{room node} in case we have a department and 
 It should look like this in the end:\newline
 
 {\setstretch{1.2}
-
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#rule}} RoomRule \textcolor{Purple}{\textit{\#with}} Hospital2Administration
-
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}} \{ 
-
-3\hspace{1cm}department:Department\{
-
-4\hspace{2cm}\textcolor{LimeGreen}{++-rooms->room}
-
-5\hspace{1cm}\}
-
-6\hspace{1cm}\textcolor{LimeGreen}{++room:Room\{}
-
-7\hspace{2cm}capacity := \textcolor{Grey}{4}
-
-8\hspace{1cm}\textcolor{LimeGreen}{\}}
-
-9\hspace{0.5cm}\}
-
-10\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}} \{
-
-11\hspace{0.5cm}\}
-
-12\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}} \{
-
-13\hspace{0.5cm}\}
-
-14\hspace{0.5cm}\textcolor{Purple}{\textit{\#attributeConditions}} \{
-
-15\hspace{0.5cm}\} \newline
-
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{rule RoomRule}} \{
+	
+	\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}} \{ 
+	
+	\hspace{1cm}\textcolor{black}{[=] d:HE.Department\{}
+	
+	\hspace{1.5cm}\textcolor{LimeGreen}{[+] -rooms->ro}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{\}}
+	
+	\hspace{1cm}\textcolor{LimeGreen}{[+] ro:HE.Room\{}
+	
+	\hspace{1.5cm} .capacity:=4;
+	
+	\hspace{1cm}\textcolor{LimeGreen}{\}}
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{black}{\colorbox{LightSalmon}{\textit{target}}} \{
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{
+	
+	\hspace{0.5cm}\}
+	
+	\hspace{0.5cm}\textcolor{Purple}{\textit{attributeConditions}} \{
+	
+	\hspace{0.5cm}\}
+	\par
 }
+
 
 As you can see, we are only operating on the source side of our consistent triple since we do not have and do not need a correspondence for these elements on the target side because these elements are not present on the administration side. \newline
 
@@ -413,38 +426,38 @@ Upon creating a staff member on the target side, we also want to assign them a s
     \label{TGG rule creation}
 \end{figure}
 
-You probably have noticed the keyword \textcolor{Purple}{\#abstract} in the definition of this rule. Similar to \textbf{abstract} rules from graph transformations this means that this rule cannot be applied directly.\newline
+You probably have noticed the keyword \textcolor{Purple}{abstract} in the definition of this rule. Similar to \textbf{abstract} rules from graph transformations this means that this rule cannot be applied directly.\newline
 
 \textbf{Extending abstract rules:}
 
 You might also wonder how we are going to distinguish doctors from nurses in the administration view. That is the part where the \textsf{DoctorToStaff} and \textsf{NurseToStaff} \textbf{correspondences} that we have created previously come into play. With those we have established a correspondence between doctors and nurses on the source side to staff on the target side.
 
-This requires a further extension of our Staff rule which can be added just below the \textsf{StaffToStaffRule}. The keyword for the further specification of an existing rule in TGG is \textcolor{Purple}{\#extends} which needs to be added after the name of the rule. If you remember from the GT part of our tutorial the keyword \textcolor{Purple}{\#extends} works similar to the concept of inheritance in Java. We reduce redundancies for the new rules because they inherit the elements defined in the \textsf{StaffToStaffRule} as well.
-For the creation of the DocToStaff rule, which can be done in the present StaffToStaff rule, we need to add a staff node of the type doctor on our \colorbox{LightYellow}{\textit{\#source}} side and a new staff node on the \colorbox{LightSalmon}{\textit{\#target}} side. \newline
+This requires a further extension of our Staff rule which can be added just below the \textsf{StaffToStaffRule}. The keyword for the further specification of an existing rule in TGG is \textcolor{Purple}{refines} which needs to be added after the name of the rule. If you remember from the GT part of our tutorial the keyword \textcolor{Purple}{refines} works similar to the concept of inheritance in Java. We reduce redundancies for the new rules because they inherit the elements defined in the \textsf{StaffToStaffRule} as well.
+For the creation of the DocToStaff rule, which can be done in the present StaffToStaff rule, we need to add a staff node of the type doctor on our \colorbox{LightYellow}{\textit{source}} side and a new staff node on the \colorbox{LightSalmon}{\textit{target}} side. \newline
 
 {\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#rule}} DocToStaffRule \textcolor{Purple}{\textit{\#extends}} StaffToStaffRule \textcolor{Purple}{\textit{\#with}} Hospital2Administration
+1\hspace{0.5cm}\textcolor{Purple}{\textit{rule}} DocToStaffRule \textcolor{Purple}{\textit{refines}} StaffToStaffRule
 
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}}\{
+2\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}}\{
 
-3\hspace{1cm}\textcolor{LimeGreen}{++s1:Doctor}
+3\hspace{1cm}\textcolor{LimeGreen}{[+] s1d:HE.Doctor}
 
 4\hspace{0.5cm}\}
 
-5\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}}\{
+5\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}}\{
 
-6\hspace{1cm}\textcolor{LimeGreen}{++s2:Staff}
+6\hspace{1cm}\textcolor{LimeGreen}{[+] s2d:AE.Staff}
 
 7\hspace{0.5cm}\}
 
-8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}}\{
+8\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}}\{
 
 9\hspace{0.5cm}\}
 
-10\hspace{0.42cm}\textcolor{Purple}{\textit{\#attributeConditions}}\{
+10\hspace{0.42cm}\textcolor{Purple}{\textit{attributeConditions}}\{
 
-11\hspace{1cm}doctorsalary(s2.salary)
+11\hspace{1cm}Hospital2AdministrationLibrary.doctorsalary(s2.salary)
 
 12\hspace{0.5cm}\}\newline
 
@@ -455,32 +468,34 @@ For the creation of the DocToStaff rule, which can be done in the present StaffT
 The \textsf{NurseToStaffRule} can be created similarly. Please try it yourself before having a look at the syntax below. Change the type of staff member accordingly and adjust the attribute condition to \textsf{nursesalary}.\newline
 
 {\setstretch{1.2}
-
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#rule}} NurseToStaffRule \textcolor{Purple}{\textit{\#extends}} StaffToStaffRule \textcolor{Purple}{\textit{\#with}} Hospital2Administration
-
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}}\{
-
-3\hspace{1cm}\textcolor{LimeGreen}{++s1:Nurse}
-
-4\hspace{0.5cm}\}
-
-5\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}}\{
-
-6\hspace{1cm}\textcolor{LimeGreen}{++s2:Staff}
-
-7\hspace{0.5cm}\}
-
-8\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}}\{
-
-9\hspace{0.5cm}\}
-
-10\hspace{0.42cm}\textcolor{Purple}{\textit{\#attributeConditions}}\{
-
-11\hspace{1cm}nursesalary(s2.salary)
-
-12\hspace{0.5cm}\}\newline
-
+	
+	1\hspace{0.5cm}\textcolor{Purple}{\textit{rule}} NurseToStaffRule \textcolor{Purple}{\textit{refines}} StaffToStaffRule
+	
+	2\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}}\{
+	
+	3\hspace{1cm}\textcolor{LimeGreen}{[+] s1n:HE.Nurse}
+	
+	4\hspace{0.5cm}\}
+	
+	5\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}}\{
+	
+	6\hspace{1cm}\textcolor{LimeGreen}{[+] s2n:AE.Staff}
+	
+	7\hspace{0.5cm}\}
+	
+	8\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}}\{
+	
+	9\hspace{0.5cm}\}
+	
+	10\hspace{0.42cm}\textcolor{Purple}{\textit{attributeConditions}}\{
+	
+	11\hspace{1cm}Hospital2AdministrationLibrary.nursesalary(s2.salary)
+	
+	12\hspace{0.5cm}\}\newline
+	
 }
+
+
 
 \begin{figure}[h]
     \centering
@@ -507,63 +522,68 @@ You can look at the complete rule on the next page.
 
 {\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#abstract}} \textcolor{Purple}{\textit{\#rule}} ShiftplanRule \textcolor{Purple}{\textit{\#with}} Hospital2Administration
-
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}} \{
-
-3\hspace{1cm}p1:Patient\{\}
-
-4\hspace{1cm}s1:Staff\{\}
+1\hspace{0.5cm}\textcolor{Purple}{\textit{abstract}} \textcolor{Purple}{\textit{rule}} ShiftplanRule\{ 
 	
-5\hspace{0.5cm}\}
-
-6\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}} \{
+	2\hspace{0.5cm}\textcolor{black}{\colorbox{LightYellow}{\textit{source}}} \{ 
 	
-7\hspace{1cm}s2:Staff\{
-
-8\hspace{1.5cm}-shiftPlan->sp
-
-9\hspace{1cm}\}
-
-10\hspace{1cm}sp:Shiftplan\{
-
-11\hspace{1.5cm}-shifts->sh
-
-12\hspace{1cm}\}
-
-13\hspace{1cm}sh:Shift
-
-14\hspace{1cm}p2:Patient\{
-
-15\hspace{1.5cm}\textcolor{LimeGreen}{++-coveredBy->sp}
-
-16\hspace{1cm}\}
-
-17\hspace{0.5cm}\}
-
-18\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}} \{
+	3\hspace{1cm}[=] p1:HE.Patient\{
 		
-19\hspace{1cm}pToP:PatientToPatient\{
+	4\hspace{1cm}\}
+		
+	5\hspace{1cm}[=] s1:HE.Staff\{
+		
+	6\hspace{1cm}\}
+		
+	7\hspace{0.5cm}\}
+		
+	8\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}} \{ 
+		
+	9\hspace{1cm}[=] s2:AE.Staff\{
+			
+	10\hspace{1.5cm}[=] -shiftPlan->sp
+			
+	11\hspace{1cm}\}
+			
+	12\hspace{1cm}[=] sp:AE.Shiftplan\{
+			
+	13\hspace{1.5cm}[=] -shifts->sh
+			
+	14\hspace{1cm}\}
+			
+	15\hspace{1cm}[=] sh:AE.Shift\{
+			
+	16\hspace{1cm}\}
+			
+	17\hspace{1cm}[=] p2:AE.Patient\{
+			
+	18\hspace{1.5cm}\textcolor{LimeGreen}{[+] -coveredBy->sp}
+			
+	19\hspace{1cm}\}
+			
+	20\hspace{0.5cm}\}
+			
+	21\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{ 
+			
+	22\hspace{1cm}[=] pToP:PatientToPatient\{
+				
+	23\hspace{1.5cm}\colorbox{LightYellow}{src}->p1
+				
+	24\hspace{1.5cm}\colorbox{LightSalmon}{trg}->p2
+				
+	25\hspace{1cm}\}
+				
+	26\hspace{1cm}[=] sToS:StaffToStaff\{
+				
+	27\hspace{1.5cm}\colorbox{LightYellow}{src}->s1
+				
+	28\hspace{1.5cm}\colorbox{LightSalmon}{trg}->s2
+				
+	29\hspace{1cm}\}
+				
+	30\hspace{0.5cm}\}
+				
+	31\hspace{0.5cm}\}
 
-20\hspace{1.5cm}\colorbox{LightYellow}{\textit{\#src->}}p1
-
-21\hspace{1.5cm}\colorbox{LightSalmon}{\textit{\#trg->}}p2
-
-22\hspace{1cm}\}
-
-23\hspace{1cm}sToS:StaffToStaff\{
-
-24\hspace{1.5cm}\colorbox{LightYellow}{\textit{\#src->}}s1
-
-25\hspace{1.5cm}\colorbox{LightSalmon}{\textit{\#trg->}}s2
-
-26\hspace{1cm}\}
-	
-27\hspace{0.5cm}\}
-
-28\hspace{0.5cm}\textcolor{Purple}{\textit{\#attributeConditions}} \{
-
-29\hspace{0.5cm}\} \newline
 
 }
 
@@ -622,53 +642,55 @@ For the target side, we want to create the patient node and its respective edge 
 
 {\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{\textit{\#rule}} PatientInReception \textcolor{Purple}{\textit{\#extends}} PatientToPatient \textcolor{Purple}{\textit{\#with}} Hospital2Administration
+1\hspace{0.5cm}\textcolor{Purple}{\textit{rule}} PatientInReception \textcolor{Purple}{\textit{refines}} PatientToPatient \{
 
-2\hspace{0.5cm}\colorbox{LightYellow}{\textit{\#source}} \{ 
+2\hspace{0.5cm}\colorbox{LightYellow}{\textit{source}} \{ 
 
-3\hspace{1cm}\textcolor{LimeGreen}{++ p1 : Patient}
+3\hspace{1cm}\textcolor{LimeGreen}{[+] p1r : HE.Patient}
 
-4\hspace{1cm}h:Hospital\{
+4\hspace{1cm}[=] hr:HE.Hospital\{
 
-5\hspace{1.5cm}-reception->r
+5\hspace{1.5cm}[=] -reception->r
 
 6\hspace{1cm}\}
 
-7\hspace{1cm}r:Reception\{
+7\hspace{1cm}[=] r:HE.Reception\{
 
-8\hspace{1.5cm}\textcolor{LimeGreen}{++-waits->p1}
+8\hspace{1.5cm}\textcolor{LimeGreen}{[+] -waits->p1}
 
 9\hspace{1cm}\}
 
 10\hspace{0.5cm}\}
 
-11\hspace{0.5cm}\colorbox{LightSalmon}{\textit{\#target}} \{
+11\hspace{0.5cm}\colorbox{LightSalmon}{\textit{target}} \{
 
-12\hspace{1cm}\textcolor{LimeGreen}{++ p2 : Patient}
+12\hspace{1cm}\textcolor{LimeGreen}{[+] p2r : AE.Patient}
 
-13\hspace{1cm}v:Administration\{
+13\hspace{1cm}[=] vr:AE.Administration\{
 
-14\hspace{1.5cm}\textcolor{LimeGreen}{++-patient->p2}
+14\hspace{1.5cm}\textcolor{LimeGreen}{[+] -patient->p2}
 
 15\hspace{1cm}\}
 
 16\hspace{0.5cm}\}
 
-17\hspace{0.5cm}\textcolor{Purple}{\textit{\#correspondence}} \{
+17\hspace{0.5cm}\textcolor{Purple}{\textit{correspondence}} \{
 	
-18\hspace{1cm}htov:HospitalToAdministration\{
+18\hspace{1cm}[=] htovr:HospitalToAdministration\{
 
-19\hspace{1.5cm}\colorbox{LightYellow}{\textit{\#src->}}h
+19\hspace{1.5cm}\colorbox{LightYellow}{\textit{src->}}hr
 			
-20\hspace{1.5cm}\colorbox{LightSalmon}{\textit{\#trg->}}v
+20\hspace{1.5cm}\colorbox{LightSalmon}{\textit{trg->}}vr
 
 21\hspace{1cm}\}
 
 22\hspace{0.5cm}\}
 
-23\hspace{0.5cm}\textcolor{Purple}{\textit{\#attributeConditions}} \{
+23\hspace{0.5cm}\textcolor{Purple}{\textit{attributeConditions}} \{
 
 24\hspace{0.5cm}\}
+
+25\hspace{0.5cm}\}
 
 }
 
@@ -712,11 +734,11 @@ You have already seen how to invoke them in the previous chapters:
 
 \hspace{0.5cm}...
 
-\hspace{0.5cm}\textcolor{Purple}{\textit{\#attributeConditions}} \{
+\hspace{0.5cm}\textcolor{Purple}{\textit{attributeConditions}} \{
 
-\hspace{1cm}incrementingDepartmentID(department.dID)
+\hspace{1cm}Hospital2AdministrationLibrary.incrementingDepartmentID(department.dID)
 
-\hspace{1cm}setDefaultNumber(department.maxRoomCount, \textcolor{Grey}{10})
+\hspace{1cm}Hospital2AdministrationLibrary.setDefaultNumber(department.maxRoomCount, \textcolor{Grey}{10})
 
 \hspace{0.5cm}\} \newline
 
@@ -724,7 +746,7 @@ You have already seen how to invoke them in the previous chapters:
 
 To introduce you to the inner workings of attribute conditions we will have a look a the pre-defined condition \textsf{setDefaultNumber(variableNumber:EDouble, defaultNumber:EDouble)}.\newline
 
-Please, go to \textbf{line 75} in this file:
+Please, go to \textbf{line 75} in the file \textbf{DefaultAttributeConditionLibrary} in the shown location:
 
 \begin{figure}[h]
     \centering
@@ -749,8 +771,8 @@ These cases will be defined in the definition of the attribute condition.\newlin
 Note that there are two different sets of cases for the two application scenarios:
 
 \begin{itemize}
-    \item\textcolor{Purple}{\textit{\#sync}}: Keeping two existing graphs synchronized. [\textcolor{Purple}{ F F } ... \textcolor{Purple}{ F}] is not available since unset values don't need to be synchronized.
-    \item\textcolor{Purple}{\textit{\#gen}}: Generation of a new graph pair.
+    \item\textcolor{Purple}{\textit{sync}}: Keeping two existing graphs synchronized. [\textcolor{Purple}{ F F } ... \textcolor{Purple}{ F}] is not available since unset values don't need to be synchronized.
+    \item\textcolor{Purple}{\textit{gen}}: Generation of a new graph pair.
 \end{itemize}
 
 \clearpage
@@ -763,9 +785,9 @@ Let's have a look at the definition of \textsf{setDefaultNumber}:\newline
 
 75\hspace{0.5cm}setDefaultNumber(variableNumber:EDouble, defaultNumber:EDouble) \{
 
-76\hspace{1cm}\textcolor{Purple}{\textit{\#sync}}: [\textcolor{Purple}{\textit{B B}}], [\textcolor{Purple}{\textit{F B}}]
+76\hspace{1cm}\textcolor{Purple}{\textit{sync}} \{ [\textcolor{Purple}{\textit{B B}}], [\textcolor{Purple}{\textit{F B}}] \}
 
-77\hspace{1cm}\textcolor{Purple}{\textit{\#gen}}: [\textcolor{Purple}{\textit{B B}}], [\textcolor{Purple}{\textit{F B}}], [\textcolor{Purple}{\textit{F F}}]
+77\hspace{1cm}\textcolor{Purple}{\textit{gen}} \{ [\textcolor{Purple}{\textit{B B}}], [\textcolor{Purple}{\textit{F B}}], [\textcolor{Purple}{\textit{F F}}] \}
 
 78\hspace{0.5cm}\}\newline
 
@@ -779,77 +801,77 @@ You can find a comprehensive list of the predefined attribute conditions and a s
 
 \textbf{User-defined conditions:}
 
-To create a user-defined attribute condition you have to define it in the \textsf{schema.tgg} first. Let us start with by inspecting the \textsf{incrementingDepartmentID} which is already given:\newline
+To create a user-defined attribute condition you have to define your own \textbf{library}. We will call it \textbf{Hospital2AdministrationLibrary}. Let us start by inspecting the \textsf{incrementingDepartmentID} which is already given:\newline
 
 {\setstretch{1.2}
 
-88\hspace{0.5cm}\textcolor{Purple}{\textit{\#userDefined}} incrementingDepartmentID(id:EInt) \{
+88\hspace{0.5cm}incrementingDepartmentID(id:EInt) \{
 	
-89\hspace{1cm}\textcolor{Purple}{\textit{\#sync}}:\hspace{0.3cm}[\textcolor{Purple}{\textit{B}}], [\textcolor{Purple}{\textit{F}}]
+89\hspace{1cm}\textcolor{Purple}{\textit{sync}} \hspace{0.3cm}\{ [\textcolor{Purple}{\textit{B}}], [\textcolor{Purple}{\textit{F}}] \}
 		
-90\hspace{1cm}\textcolor{Purple}{\textit{\#gen}}:\hspace{0.3cm}[\textcolor{Purple}{\textit{F}}]
+90\hspace{1cm}\textcolor{Purple}{\textit{gen}} \hspace{0.3cm}\{ [\textcolor{Purple}{\textit{F}}] \}
 		
 91\hspace{0.5cm}\}\newline
 }
 
-A user-defined attribute condition is defined by the keyword \textcolor{Purple}{\#userDefined} followed by the \textbf{name} of the attribute condition and the \textbf{parameters/attributes} to alter.
+A Library is defined by the keyword \textcolor{Purple}{library} followed by the \textbf{name} of the library. You can define as many libraries as you want.
 
-In our case, we want to modify the ID of a department. The different boundary states are defined in the curved brackets just like in the predefined attribute conditions.
+In our case, we want to modify the ID of a department. The different boundary states are defined in the curved brackets just like in the predefined attribute conditions.\newline
 
-Now head to the \textsf{.constraints.custom.hospital2administration} package and open up the \textsf{UserDefined\_incrementingDepartmentID}. Which should look like this: \newline
+%/*Now head to the \textsf{.constraints.custom.hospital2administration} package and open up the \textsf{UserDefined\_incrementingDepartmentID}. Which should look like this: \newline
+%
+%{\setstretch{1.2}
+%
+%1\hspace{0.5cm}\textcolor{Purple}{public class}
+%UserDefined\_incrementingDepartmentID \textcolor{Purple}{extends} RuntimeTGGAttributeConstraint
+%
+%2\hspace{0.5cm}\{\hspace{0.5cm}	\textcolor{Purple}{private static int} \textcolor{Blue}{\textit{idIncrement}} = 1;
+%
+%3\hspace{1cm}\textcolor{Grey}{@Override}
+%
+%4\hspace{1cm}\textcolor{Purple}{public void} solve() \{
+%
+%5\hspace{1.5cm}\textcolor{Purple}{if} (\textcolor{Blue}{variables}.size() != 1)
+%
+%6\hspace{2cm}\textcolor{Purple}{throw new} RuntimeException("\textcolor{Blue}{The CSP -INCREMENTINGDEPARTMENTID- needs exactly 1 variables}");
+%
+%7
+%
+%8\hspace{1.5cm}RuntimeTGGAttributeConstraintVariable \textcolor{Tan}{v0} = \textcolor{Blue}{variables}.get(0);
+%
+%9\hspace{1.5cm}String \textcolor{Tan}{bindingStates} = getBindingStates(\textcolor{Tan}{v0});
+%
+%10
+%
+%11\hspace{1.5cm}\textcolor{Purple}{switch}(\textcolor{Tan}{bindingStates}) \{
+%
+%12\hspace{1.5cm}\textcolor{Purple}{case} "\textcolor{Blue}{F}":
+%
+%13\hspace{2cm}\textcolor{Tan}{v0}.bindToValue(\textcolor{Blue}{\textit{idIncrement}}++);
+%
+%14\hspace{2cm}setSatisfied(\textcolor{Purple}{true});
+%
+%15\hspace{2cm}\textcolor{Purple}{break};
+%
+%16\hspace{1.5cm}\textcolor{Purple}{case} "\textcolor{Blue}{B}":
+%
+%17\hspace{2cm}setSatisfied(\textcolor{Purple}{true});
+%
+%18\hspace{2cm}\textcolor{Purple}{return};
+%
+%19\hspace{1.5cm}\textcolor{Purple}{default}: \textcolor{Purple}{throw new} UnsupportedOperationException("\textcolor{Blue}{This case in the constraint has not been implemented yet: }" + \textcolor{Tan}{bindingStates});
+%
+%}
 
-{\setstretch{1.2}
-
-1\hspace{0.5cm}\textcolor{Purple}{public class}
-UserDefined\_incrementingDepartmentID \textcolor{Purple}{extends} RuntimeTGGAttributeConstraint
-
-2\hspace{0.5cm}\{\hspace{0.5cm}	\textcolor{Purple}{private static int} \textcolor{Blue}{\textit{idIncrement}} = 1;
-
-3\hspace{1cm}\textcolor{Grey}{@Override}
-
-4\hspace{1cm}\textcolor{Purple}{public void} solve() \{
-
-5\hspace{1.5cm}\textcolor{Purple}{if} (\textcolor{Blue}{variables}.size() != 1)
-
-6\hspace{2cm}\textcolor{Purple}{throw new} RuntimeException("\textcolor{Blue}{The CSP -INCREMENTINGDEPARTMENTID- needs exactly 1 variables}");
-
-7
-
-8\hspace{1.5cm}RuntimeTGGAttributeConstraintVariable \textcolor{Tan}{v0} = \textcolor{Blue}{variables}.get(0);
-
-9\hspace{1.5cm}String \textcolor{Tan}{bindingStates} = getBindingStates(\textcolor{Tan}{v0});
-
-10
-
-11\hspace{1.5cm}\textcolor{Purple}{switch}(\textcolor{Tan}{bindingStates}) \{
-
-12\hspace{1.5cm}\textcolor{Purple}{case} "\textcolor{Blue}{F}":
-
-13\hspace{2cm}\textcolor{Tan}{v0}.bindToValue(\textcolor{Blue}{\textit{idIncrement}}++);
-
-14\hspace{2cm}setSatisfied(\textcolor{Purple}{true});
-
-15\hspace{2cm}\textcolor{Purple}{break};
-
-16\hspace{1.5cm}\textcolor{Purple}{case} "\textcolor{Blue}{B}":
-
-17\hspace{2cm}setSatisfied(\textcolor{Purple}{true});
-
-18\hspace{2cm}\textcolor{Purple}{return};
-
-19\hspace{1.5cm}\textcolor{Purple}{default}: \textcolor{Purple}{throw new} UnsupportedOperationException("\textcolor{Blue}{This case in the constraint has not been implemented yet: }" + \textcolor{Tan}{bindingStates});
-
-}
-
-\clearpage
-
-In line 2 we define the initial value of our department ID in the static variable \textsf{idIncrement}. Which will be incremented later on in the switch statement in lines 13 to 14.
-
-If the department ID is free which is given as the parameter \textsf{id} in our attribute condition we switch to the \textcolor{Purple}{case} \textsf{"\textcolor{Purple}{F}"} and bind the ID to the value of the \textsf{idIncrement} variable. Afterwards we increasing this variable to give each department an unique ID.
-
-In the next line, we set the boolean variable \textsf{setSatisfied} to \textsf{true} to fulfill the requirement for our runtime variable.
-
-For the second \textcolor{Purple}{case} \textsf{“\textcolor{Purple}{B}”} we just set the setSatisfied value to true, since a department already has an ID and does not need one. \newline
+%\clearpage
+%
+%In line 2 we define the initial value of our department ID in the static variable \textsf{idIncrement}. Which will be incremented later on in the switch statement in lines 13 to 14.
+%
+%If the department ID is free which is given as the parameter \textsf{id} in our attribute condition we switch to the \textcolor{Purple}{case} \textsf{"\textcolor{Purple}{F}"} and bind the ID to the value of the \textsf{idIncrement} variable. Afterwards we increasing this variable to give each department an unique ID.
+%
+%In the next line, we set the boolean variable \textsf{setSatisfied} to \textsf{true} to fulfill the requirement for our runtime variable.
+%
+%For the second \textcolor{Purple}{case} \textsf{“\textcolor{Purple}{B}”} we just set the setSatisfied value to true, since a department already has an ID and does not need one. \newline
 
 Be aware that after the application of an attribute condition all involved attributes have to be \textbf{bound}.\newline
 
@@ -857,13 +879,13 @@ Maybe we should practice a bit by creating a fresh user-defined attribute condit
 
 {\setstretch{1.2}
 
-108\hspace{0.5cm}\textcolor{Purple}{\textit{\#userDefined}} incrementingRoomID(id:EInt)
+108\hspace{0.5cm}incrementingRoomID(id:EInt)
 
 109\hspace{0.5cm}\{
 	
-110\hspace{1cm}\textcolor{Purple}{\textit{\#sync}}:[\textcolor{Purple}{B}],[\textcolor{Purple}{F}]
+110\hspace{1cm}\textcolor{Purple}{\textit{sync}}\{[\textcolor{Purple}{B}],[\textcolor{Purple}{F}]\}
 		
-111\hspace{1cm}\textcolor{Purple}{\textit{\#gen}}:[\textcolor{Purple}{F}]
+111\hspace{1cm}\textcolor{Purple}{\textit{gen}}\{[\textcolor{Purple}{F}]\}
 		
 112\hspace{0.5cm}\}\newline
 
@@ -871,10 +893,7 @@ Maybe we should practice a bit by creating a fresh user-defined attribute condit
 
 Please \textbf{build} the project by pressing either the \textbf{black or the green hammer button} \ref{item:0} in the eMoflon Toolbar. Once you refresh your project folder you can see that the new attribute condition was created automatically and tucked into our project by eMoflon.
 
-Now we have to implement the user-defined attribute constraint to do what it is supposed to do.
-For this condition we want the same implementation logic as for \textsf{incrementingDepartmentID}.\newline
-
-\textbf{Please try to implement the corresponding file in the \textsf{org.emoflon.ibex.tgg.operational.csp.constraints.custom.hospital2administration} package.} \newline
+\clearpage
 
 \textbf{Complex conditions:}
 
@@ -882,11 +901,11 @@ To further get to know user-defined attribute constraints let us look at the \te
 
 {\setstretch{1.2}
 
-82\hspace{0.45cm}\textcolor{Purple}{\textit{\#userDefined}} nametoname(separator:EString, leftWord:EString, rightWord:EString, result:EString) \{
+82\hspace{0.45cm}nametoname(separator:EString, leftWord:EString, rightWord:EString, result:EString) \{
 
-83\hspace{1cm}\textcolor{Purple}{\textit{\#sync}}: [\textcolor{Purple}{\textit{B B B B}}], [\textcolor{Purple}{\textit{B B B F}}], [\textcolor{Purple}{\textit{B B F B}}], [\textcolor{Purple}{\textit{B F F B}}], [\textcolor{Purple}{\textit{B F B B}}]
+83\hspace{1cm}\textcolor{Purple}{\textit{sync}}\{ [\textcolor{Purple}{\textit{B B B B}}], [\textcolor{Purple}{\textit{B B B F}}], [\textcolor{Purple}{\textit{B B F B}}], [\textcolor{Purple}{\textit{B F F B}}], [\textcolor{Purple}{\textit{B F B B}}]\}
 		
-84\hspace{1cm}\textcolor{Purple}{\textit{\#gen}}: [\textcolor{Purple}{\textit{B B B B}}] , [\textcolor{Purple}{\textit{B B B F}}], [\textcolor{Purple}{\textit{B B F B}}], [\textcolor{Purple}{\textit{B F F B}}], [\textcolor{Purple}{\textit{B F B B}}], [\textcolor{Purple}{\textit{B F B F}}], [\textcolor{Purple}{\textit{B B F F}}], [\textcolor{Purple}{\textit{B F F F}}]
+84\hspace{1cm}\textcolor{Purple}{\textit{gen}}\{ [\textcolor{Purple}{\textit{B B B B}}] , [\textcolor{Purple}{\textit{B B B F}}], [\textcolor{Purple}{\textit{B B F B}}], [\textcolor{Purple}{\textit{B F F B}}], [\textcolor{Purple}{\textit{B F B B}}], [\textcolor{Purple}{\textit{B F B F}}], [\textcolor{Purple}{\textit{B B F F}}], [\textcolor{Purple}{\textit{B F F F}}]\}
 
 85\hspace{0.45cm}\} \newline
 	
@@ -898,37 +917,37 @@ The \textsf{separator:EString} defines the character we are using to distinguish
 
 \clearpage
 
-If you open the java file of the attribute constraint you can see two arrays with sample names which we are using to generate a random first and last name whenever we invoke the attribute constraint, and the name attributes are not set yet:\newline
-
-{\setstretch{1.2}
-
-25\hspace{0.5cm}\textcolor{Purple}{case} \textcolor{Blue}{"BFFF"}:
-
-26		  		
-
-27\hspace{1cm}String \textcolor{Tan}{firstName} = firstNames[\textcolor{Tan}{random}.nextInt(\textcolor{Tan}{firstNames}\textcolor{Blue}{.length})];
-
-28\hspace{1cm}\textcolor{Tan}{v1}.bindToValue(\textcolor{Tan}{firstName});
-
-29\hspace{1cm}String \textcolor{Tan}{lastName} = \textcolor{Tan}{lastNames}[\textcolor{Tan}{random}.nextInt(\textcolor{Tan}{lastNames}\textcolor{Blue}{.length})];
-
-30\hspace{1cm}\textcolor{Tan}{v2}.bindToValue(\textcolor{Tan}{lastName});
-
-31\hspace{1cm}\textcolor{Tan}{v3}.bindToValue(\textcolor{Tan}{firstName} + \textcolor{Tan}{v0}.getValue() + \textcolor{Tan}{lastName});
-
-32\hspace{1cm}setSatisfied(\textcolor{Purple}{true});	
-
-33\hspace{1cm}\textcolor{Purple}{break}; \newline
-
-}
-
-For the case above we want a bound separator character which is a blank space in our case. Then we select a random first name from our first name array and bind its value to the runtime variable \textsf{v1} which represents the \textbf{leftWord}.
-
-The same is done for the last name.
-
-\textsf{v3} is the result of combining the values of the previous runtime variables.\newline
-
-As you can see the user-defined constraints are a powerful way to create constraints that are not covered by our predetermined library.
+%If you open the java file of the attribute constraint you can see two arrays with sample names which we are using to generate a random first and last name whenever we invoke the attribute constraint, and the name attributes are not set yet:\newline
+%
+%{\setstretch{1.2}
+%
+%25\hspace{0.5cm}\textcolor{Purple}{case} \textcolor{Blue}{"BFFF"}:
+%
+%26		  		
+%
+%27\hspace{1cm}String \textcolor{Tan}{firstName} = firstNames[\textcolor{Tan}{random}.nextInt(\textcolor{Tan}{firstNames}\textcolor{Blue}{.length})];
+%
+%28\hspace{1cm}\textcolor{Tan}{v1}.bindToValue(\textcolor{Tan}{firstName});
+%
+%29\hspace{1cm}String \textcolor{Tan}{lastName} = \textcolor{Tan}{lastNames}[\textcolor{Tan}{random}.nextInt(\textcolor{Tan}{lastNames}\textcolor{Blue}{.length})];
+%
+%30\hspace{1cm}\textcolor{Tan}{v2}.bindToValue(\textcolor{Tan}{lastName});
+%
+%31\hspace{1cm}\textcolor{Tan}{v3}.bindToValue(\textcolor{Tan}{firstName} + \textcolor{Tan}{v0}.getValue() + \textcolor{Tan}{lastName});
+%
+%32\hspace{1cm}setSatisfied(\textcolor{Purple}{true});	
+%
+%33\hspace{1cm}\textcolor{Purple}{break}; \newline
+%
+%}
+%
+%For the case above we want a bound separator character which is a blank space in our case. Then we select a random first name from our first name array and bind its value to the runtime variable \textsf{v1} which represents the \textbf{leftWord}.
+%
+%The same is done for the last name.
+%
+%\textsf{v3} is the result of combining the values of the previous runtime variables.\newline
+%
+%As you can see the user-defined constraints are a powerful way to create constraints that are not covered by our predetermined library.
 
 \subsection{Running the TGG Project}
 
@@ -944,8 +963,6 @@ Open the package \textsf{org.emoflon.ibex.tgg.run.hospital2administration} and t
     \caption{\centering{run.hospital2administration package}}
     \label{setDefaultNumber}
 \end{figure}
-
-\clearpage
 
 The first operation we are interested in is the \textit{\textsf{MODELGEN\_APP.java}} which is marked above. Let us start exploring this feature by \textbf{running} it in our java project. Please \textbf{refresh} the project folder afterwards.\newline
 
@@ -986,8 +1003,6 @@ Another option is the \textsf{CC\_App} which stands for consistency checking. It
 
 If you want to check a complete triple of source, correspondence, and target models for consistency you can use the \textsf{CO\_App} which stands for check only. \newline
 
-\clearpage
-
 \textbf{Model synchronization via SYNC:}
 
 Throughout the rest of this tutorial, we will be concentrating on model transformation via the \textbf{SYNC} operation. 
@@ -1001,6 +1016,8 @@ Another reason to use \textbf{SYNC} is the improved performance. Since it works 
 Please note that you can only update either source or target model during one synchronization operation.If you changed the information on both sides of your model and want to propagate them to the respective side you should use the \textbf{integrate} operation via the \textsf{INTEGRATE\_APP} application. 
 
 The \textbf{SYNC} operation is of course the best way to handle small updates when you are working on your eMoflon project. And henceforth we recommend using this option.\newline
+
+\clearpage
 
 \textbf{Pattern matcher configuration:}
 

@@ -1,0 +1,58 @@
+abstract rule PatientToPatient{
+
+source { 
+	[+] p1:HE.Patient{
+		
+	}
+	
+	[=] h:HE.Hospital{
+		
+	}
+		
+}
+
+target {
+	
+	[=] v:AE.Administration{
+		
+	}
+	
+	[+] p2:AE.Patient{
+		
+	}
+		
+	
+	
+	
+	
+	
+	
+}
+
+correspondence {
+	
+	[+] pTop:PatientToPatient{
+		src->p1
+		trg->p2
+	}
+	
+	[=] htov:HospitalToAdministration{
+		src->h
+		trg->v
+	}
+	
+	
+	
+}
+
+attributeConditions {
+	
+	
+	Hospital2AdministrationLibrary.nametoname(" ", p2.firstName, p2.lastName, p1.name)
+	Hospital2AdministrationLibrary.incrementingPatientID(p1.patientID, p2.patientID)
+	
+	
+	
+}
+}
+

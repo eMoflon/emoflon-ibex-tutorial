@@ -2,23 +2,19 @@ package org.emoflon.ibex.tgg.run.hospital2administration;
 
 import java.io.IOException;
 
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.BasicConfigurator;
-
-import org.emoflon.ibex.tgg.compiler.defaults.IRegistrationHelper;
-import org.emoflon.ibex.tgg.operational.strategies.modules.TGGResourceHandler;
-
-import org.emoflon.ibex.tgg.run.hospital2administration.config.*;
-
-import org.emoflon.ibex.tgg.operational.defaults.IbexOptions;
-import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGEN;
-import org.emoflon.ibex.tgg.operational.strategies.gen.MODELGENStopCriterion;
+import org.emoflon.ibex.tgg.run.hospital2administration.config._DefaultRegistrationHelper;
+import org.emoflon.ibex.tgg.runtime.config.IRegistrationHelper;
+import org.emoflon.ibex.tgg.runtime.strategies.gen.MODELGEN;
+import org.emoflon.ibex.tgg.runtime.strategies.gen.MODELGENStopCriterion;
+import org.emoflon.ibex.tgg.runtime.strategies.modules.TGGResourceHandler;
 
 public class MODELGEN_App extends MODELGEN {
 
 	// eMoflon supports other pattern matching engines. Replace _DefaultRegistrationHelper with one of the other registrationHelpers from the *.config-package to choose between them. Default: Democles 
-	public static IRegistrationHelper registrationHelper = new HiPERegistrationHelper();
+	public static IRegistrationHelper registrationHelper = new _DefaultRegistrationHelper();
 
 	public MODELGEN_App() throws IOException {
 		super(registrationHelper.createIbexOptions().resourceHandler(new TGGResourceHandler() {
@@ -59,9 +55,6 @@ public class MODELGEN_App extends MODELGEN {
 		
 		MODELGENStopCriterion stop = new MODELGENStopCriterion(generator.getTGG());
 		stop.setTimeOutInMS(1000);
-	    stop.setMaxRuleCount("HospitaltoAdministrationRule", 1);
-	    stop.setMaxRuleCount("NurseShiftplanRule", 10);
-	    stop.setMaxRuleCount("DoctorShiftplanRule", 10);
 		generator.setStopCriterion(stop);
 		
 		tic = System.currentTimeMillis();

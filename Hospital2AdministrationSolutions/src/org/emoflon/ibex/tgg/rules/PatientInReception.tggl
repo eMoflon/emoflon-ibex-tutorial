@@ -1,0 +1,41 @@
+rule PatientInReception refines PatientToPatient{
+
+
+source { 
+	
+	[+]  p1r : HE.Patient{
+		
+	}
+	[=] hr:HE.Hospital{
+		[=] -reception->r
+	}
+	
+	[=] r:HE.Reception{
+		[+] -waits->p1r
+	}
+	
+}
+
+target {
+	
+	[+]  p2r : AE.Patient
+	[=] vr:AE.Administration{
+		[+] -patient->p2r
+	}
+	
+}
+
+correspondence {
+	
+	[=] htovr:HospitalToAdministration{
+		src->hr
+		trg->vr
+	}
+	
+}
+
+attributeConditions {
+	
+	
+}
+}

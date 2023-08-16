@@ -1,0 +1,27 @@
+rule NurseShiftplanRule refines ShiftplanRule{
+
+source {
+	[=] s1n : HE.Nurse{
+		[=] -responsible->ro
+	}
+	[=] ro : HE.Room{
+		[=] -lies->p1n
+	}
+	[=] p1n : HE.Patient{
+
+	}
+}
+
+target {
+
+}
+
+correspondence {
+
+}
+
+attributeConditions {
+
+}
+}
+

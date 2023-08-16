@@ -1,0 +1,62 @@
+rule DoctorToPatient{
+
+source { 
+	[=] d:HE.Doctor{
+		
+		[=] -works->dep
+	}
+	[=] p1:HE.Patient{
+		[+] -doctor->d
+		
+	}
+	[=] ro:HE.Room{
+		[=] -lies->p1
+	}
+	[=] dep:HE.Department{
+		[=] -rooms->ro
+		
+	}
+	
+}
+
+target {
+	
+	[=] s:AE.Staff{
+		[+] -treatment->t
+		
+	}
+	
+	[=] p2:AE.Patient{
+		[+] -treatment->t
+		
+		
+	}
+		
+
+	[+] t:AE.Treatment{
+		
+	}
+}
+
+correspondence {
+	
+	[=] pToP:PatientToPatient{
+		src->p1
+		trg->p2
+	}
+	[=] dToS:StaffToStaff{
+		src->d
+		trg->s
+	
+	}
+}
+
+attributeConditions {
+	
+
+ Hospital2AdministrationLibrary.carelevelToMedication(p1.level, t.medication)
+ 
+	
+	
+}
+}

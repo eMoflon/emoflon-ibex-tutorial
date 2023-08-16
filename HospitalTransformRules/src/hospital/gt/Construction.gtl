@@ -1,0 +1,209 @@
+package hospital.gt
+import "platform:/resource/HospitalExample/model/HospitalExample.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+pattern findHospital { // Pattern to find a hospital object
+	[=] hospital: Hospital
+};
+
+pattern findReception { // Pattern to find a reception object
+	[=] hospital: Hospital {
+		[=] - reception -> reception
+	}
+	[=] reception: Reception
+};
+
+pattern findRoomInDepartment { // Pattern to find a room in a department
+	[=] department: Department {
+		[=] -rooms -> room
+	}
+
+	[=] room: Room
+};
+
+pattern findDoctorInDepartment { // Pattern to find a doctor in a department
+	[=] doctor : Doctor
+	[=] department : Department {
+		[=] -staff->doctor
+	}
+};
+
+pattern findNurseInRoom { //This pattern checks whether a nurse is already responsible for this room
+	[=] nurse: Nurse {
+		[=] -responsible -> room
+	}
+
+	[=] room: Room
+};
+
+pattern findDepartmentWithoutDoctor { // Pattern to find a department without a doctor
+	[=] department : Department
+	
+	forbid(findDoctorInDepartment)[department=department]
+};
+
+pattern findRoomWithoutNurse {  // Pattern to find rooms which are not covered by a nurse
+	[=] room : Room
+	
+	forbid(findNurseInRoom)[room=room]
+};
+
+pattern findPatientInReception { // Pattern to find a patient waiting in the reception
+	[=] reception: Reception {
+		[=] - waits -> patient
+	}
+	[=] patient : Patient
+};
+
+pattern findOccupiedDoc { // Pattern to find a doctor who is occupied with patients
+	[=] doctor: Doctor
+
+	[=] patient: Patient {
+		[=] -doctor -> doctor
+	}
+};
+
+pattern findPatientInRoom{ // Pattern to find a patient lying in a room
+	[=] patient:Patient
+	
+	[=] room:Room{
+		[=] -lies->patient
+	}
+};
+
+rule hospital {
+	[+] hospital: Hospital // Adds a Node named Hospital of the type Hospital
+	
+	forbid(findHospital)[]
+};
+
+rule reception {
+	[=] hospital: Hospital {
+		[+] -reception -> reception ///Adds an edge named reception to the node reception but it requires a Hospital node
+	}
+ 
+	[+] reception: Reception // Adds a node reception of the type reception
+	
+	forbid(findReception)[hospital=hospital]
+};
+
+rule department(dID: EInt, maxRoomCount: EInt) { // creates a department with the parameter dID
+	[=] hospital: Hospital {
+		[+] -department -> department // Adds a branch department from Hospital to Department
+	}
+
+	[+] department: Department { // Adds a node named department of the type Department
+		.dID:=parameter.dID; // Creates the Parameter departmentID (dID)
+		.maxRoomCount:=parameter.maxRoomCount; // initalisation the parameter maxRoomCount
+	}
+};
+
+rule room(cap: EInt, carelvl: Carelevel) { //rule room which handles the Inputs, Capacity: cap and Carelevel: carelevel
+	[=] department: Department {
+		[+]  -rooms -> room // Adds a branch from department to room
+	}
+	
+	[=] hospital: Hospital {
+		[=] -department -> department
+	}
+
+	[+] room: Room { // Adds a node named room of they type Room
+		.capacity:=parameter.cap; // initalisation the parameter capacity
+		.level:=parameter.carelvl; // initalisation the parameter carelvl
+	}
+	
+	[#]department.maxRoomCount > 
+		count(findRoomInDepartment)[department=department]; // attribute condition for the maximum number of rooms which can be assigned to a department
+};
+
+abstract rule staff(name: EString, staffID: EInt) { //creates the Abstract rule Staff which hands over the StaffID to the rules Nurse and Doctor
+	[=] hospital: Hospital {
+		[+] -staff -> staff // Adds an edge staff from hospital to Staff
+		[=] -department -> department
+	}
+	
+	[=] department : Department
+
+	[+] staff: Staff { // Creates the node staff of the type Staff and the param staffID
+		.staffID:=parameter.staffID; // initalisation the parameter capacity
+		.name:=parameter.name; // initalisation the parameter name
+	}
+};
+
+rule doctor(capacity: EInt)
+refines staff { // adds the rule doctor which refines/inherits from the rule Staff
+	@refines+ staff.staff
+	[+] staff: Doctor {
+		.patientCapacity:=parameter.capacity; // initalisation the parameter capacity
+	}
+	
+	@refines= staff.department
+	[=] department : Department {
+		[+] -staff -> staff // Adds an edge staff from staff to department
+	}
+	
+	forbid(findDoctorInDepartment)[department=department]
+};
+
+rule assignNurseToRoom refines staff { // assigns a Nurse to a room she is responsible for
+	@refines+ staff.staff
+	[+] staff: Nurse {
+		[+] -responsible -> room // Adds a responsiblity edge from room to nurse
+	}
+
+	[=] room: Room
+	
+	@refines= staff.department
+	[=] department : Department {
+		[=] - rooms -> room
+		[+] - staff -> staff // Adds an edge from department to room
+	}
+	
+	forbid(findNurseInRoom) [room = room]
+};
+
+rule patient(name: EString, patientId: EInt, level: Carelevel) {
+	[=] hospital: Hospital {
+		[=] -reception -> reception //Adds an edge from Hospital to reception is required before creating a new patient in the reception
+	}
+
+	[=] reception: Reception {
+		[+] -waits -> patient // Creates the edge waits from reception towards the patient node
+	}
+
+	[+] patient: Patient {
+		.name:=parameter.name;  // initalisation the parameter name
+		.patientID:=parameter.patientId; // initalisation the parameter patientid
+		.level:=parameter.level;		// initalisation the parameter carelvl
+	} // Adds a patient in the reception
+};
+
+rule assignPatientToRoom { // Rule to assign a patient to a room and a doctor if the room is not full and the given doctor is not exceeding has patient limit
+	[=] patient: Patient
+
+	[=] room: Room {
+		[+] - lies -> patient  // Adds an edge from department to room
+	}
+	[#] room.capacity > count(findPatientInRoom)[room=room];
+
+	[=] doctor: Doctor {
+		[+] - caresfor -> patient // Adds an edge from doctor to patient
+	}
+
+	[#] doctor.patientCapacity>count(findOccupiedDoc)[doctor=doctor];
+	
+	[=] hospital: Hospital {
+		[=] -reception -> reception
+		[=] -department -> department
+	}
+
+	[=] department: Department {
+		[=] -rooms -> room
+	}
+
+	[=] reception: Reception {
+		[-] -waits -> patient // Removes a patient from the reception 
+	}
+	
+	forbid(findOccupiedDoc)[patient = patient]
+};

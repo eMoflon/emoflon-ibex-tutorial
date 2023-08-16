@@ -1,0 +1,51 @@
+library Hospital2AdministrationLibrary {
+		doctorsalary(salary:EDouble){
+			sync {[F],[B]}
+			gen {[F], [B]}
+		}
+
+		nursesalary(salary:EDouble){
+			sync {[F],[B]}
+			gen {[F], [B]}
+		}
+
+		carelevelToMedication(carelevel:Carelevel, medication:Medication){
+			sync {[B B], [B F], [F B]}
+			gen  {[B B], [B F], [F B], [F F]}
+		}
+
+		nametoname(separator:EString, leftWord:EString, rightWord:EString, result:EString) {
+			sync {[B B B B], [B B B F], [B B F B], [B F F B], [B F B B]}
+			gen {[B B B B] , [B B B F], [B B F B], [B F F B], [B F B B], [B F B F], [B B F F], [B F F F]}
+		}
+
+		incrementingDepartmentID(id:EInt)
+		{
+			sync {[B F]}
+			gen {[F]}
+	
+		}
+
+		incrementingStaffID(id1:EInt, id2:EInt )
+		{
+			sync {[B B],[B F], [F B]}
+			gen {[B B], [B F], [F B], [F F]}
+		}
+
+		incrementingPatientID(id1:EInt, id2:EInt)
+		{
+			sync {[B B],[B F], [F B]}
+			gen {[B B], [B F], [F B], [F F]}
+		}
+
+		incrementingRoomID(id:EInt)
+		{
+			sync {[B F]}
+			gen {[F]}
+		}
+		
+		setDefaultNumber(variableNumber:EInt, defaultNumber:EDouble) {
+		sync { [B B], [F B] }
+		gen { [B B], [F B], [F F] }
+	}
+	}

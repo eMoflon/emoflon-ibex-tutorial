@@ -10,8 +10,6 @@ Automatic-Module-Name: Hospital2AdministrationSolutions
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.emoflon.ibex.tgg.run.hospital2administrationsolutions.config,
- Hospital2AdministrationSolutions,
- Hospital2AdministrationSolutions.impl,
  Hospital2Administration.impl,
  Hospital2Administration
 Require-Bundle: AdministrationExample;visibility:=reexport,

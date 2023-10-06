@@ -14,10 +14,7 @@ Require-Bundle: AdministrationExample;bundle-version="0.0.1",
  org.emoflon.ibex.gt.gtmodel,
  org.emoflon.ibex.gt.hipe
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: administrationtransformrule.example.api,
- administrationtransformrule.example.api.match,
- administrationtransformrule.example.api.pattern,
- gt.api,
+Export-Package: gt.api,
  gt.api.match,
  gt.api.pattern,
  gt.api.rule

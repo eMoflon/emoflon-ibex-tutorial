@@ -16,8 +16,8 @@ import org.emoflon.ibex.tgg.runtime.strategies.opt.BWD_OPT;
 import org.emoflon.ibex.tgg.runtime.strategies.opt.FWD_OPT;
 
 import AdministrationExample.impl.AdministrationExamplePackageImpl;
-import Hospital2AdministrationSolutions.Hospital2AdministrationSolutionsPackage;
-import Hospital2AdministrationSolutions.impl.Hospital2AdministrationSolutionsPackageImpl;
+import Hospital2Administration.Hospital2AdministrationPackage;
+import Hospital2Administration.impl.Hospital2AdministrationPackageImpl;
 import HospitalExample.impl.HospitalExamplePackageImpl;
 
 public class HiPERegistrationHelper implements IRegistrationHelper {
@@ -68,9 +68,9 @@ public class HiPERegistrationHelper implements IRegistrationHelper {
 			administrationexamplePack = AdministrationExamplePackageImpl.init();
 		
 		if(hospital2administrationsolutionsPack == null) {
-			hospital2administrationsolutionsPack = Hospital2AdministrationSolutionsPackageImpl.init();
-			rs.getPackageRegistry().put("platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore", Hospital2AdministrationSolutionsPackage.eINSTANCE);
-			rs.getPackageRegistry().put("platform:/plugin/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore", Hospital2AdministrationSolutionsPackage.eINSTANCE);
+			hospital2administrationsolutionsPack = Hospital2AdministrationPackageImpl.init();
+			rs.getPackageRegistry().put("platform:/resource/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore", Hospital2AdministrationPackage.eINSTANCE);
+			rs.getPackageRegistry().put("platform:/plugin/Hospital2AdministrationSolutions/model/Hospital2AdministrationSolutions.ecore", Hospital2AdministrationPackage.eINSTANCE);
 		}
 			
 		rs.getPackageRegistry().put("platform:/resource/HospitalExample/model/HospitalExample.ecore", hospitalexamplePack);

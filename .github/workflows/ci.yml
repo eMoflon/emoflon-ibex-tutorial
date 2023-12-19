@@ -23,10 +23,10 @@ on:
 jobs:
   # Build tutorial PDF
   build-pdf:
-    runs-on: [ubuntu-20.04]
+    runs-on: [ubuntu-22.04]
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Docker setup
         run: |
           docker pull maxkratz/texlive:latest
@@ -36,7 +36,7 @@ jobs:
           cd tutorial-doc
           docker run --rm -v $PWD:/data maxkratz/texlive:latest latexmk -pdflua -interaction=nonstopmode
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: emoflon-tutorial
           path: |
@@ -45,7 +45,7 @@ jobs:
 
   create-release:
     needs: [build-pdf]
-    runs-on: [ubuntu-20.04]
+    runs-on: [ubuntu-22.04]
     # Only run on pushed tags (and explicitely ignore scheduled runs)
     if: github.event_name == 'push' && contains(github.ref, 'refs/tags/') && github.event_name != 'schedule'
     steps:

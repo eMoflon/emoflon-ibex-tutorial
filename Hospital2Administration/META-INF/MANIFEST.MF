@@ -5,14 +5,11 @@ Bundle-Version: 0.0.1
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-SymbolicName: Hospital2AdministrationSolutions;singleton:=true
-Automatic-Module-Name: Hospital2AdministrationSolutions
+Bundle-SymbolicName: Hospital2Administration;singleton:=true
+Automatic-Module-Name: Hospital2Administration
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.emoflon.ibex.tgg.run.hospital2administrationsolutions.config,
- Hospital2AdministrationSolutions,
- Hospital2AdministrationSolutions.impl,
- Hospital2Administration.impl,
+Export-Package: Hospital2Administration.impl,
  Hospital2Administration
 Require-Bundle: AdministrationExample;visibility:=reexport,
  HospitalExample;bundle-version="0.0.1";visibility:=reexport,
@@ -33,4 +30,5 @@ Require-Bundle: AdministrationExample;visibility:=reexport,
  org.emoflon.ibex.tgg.runtimemodel;bundle-version="0.1.0",
  org.emoflon.ibex.tgg.tggmodel;bundle-version="0.1.0",
  org.emoflon.ibex.tgg.util;bundle-version="1.0.0"
+
 

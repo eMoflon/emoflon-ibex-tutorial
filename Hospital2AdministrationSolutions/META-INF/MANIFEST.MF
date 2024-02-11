@@ -9,9 +9,9 @@ Bundle-SymbolicName: Hospital2AdministrationSolutions;singleton:=true
 Automatic-Module-Name: Hospital2AdministrationSolutions
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Export-Package: org.emoflon.ibex.tgg.run.hospital2administrationsolutions.config,
- Hospital2AdministrationSolutions,
- Hospital2AdministrationSolutions.impl
+Export-Package: Hospital2Administration,
+ Hospital2Administration.impl,
+ org.emoflon.ibex.tgg.run.hospital2administrationsolutions.config
 Require-Bundle: AdministrationExample;visibility:=reexport,
  HospitalExample;bundle-version="0.0.1";visibility:=reexport,
  org.apache.log4j,

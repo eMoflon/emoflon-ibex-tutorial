@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <IBeXTGGModel:TGGModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:IBeXCoreArithmetic="platform:/resource/org.emoflon.ibex.common.coremodel/model/IBeXCoreArithmetic.ecore" xmlns:IBeXCoreModel="platform:/resource/org.emoflon.ibex.common.coremodel/model/IBeXCoreModel.ecore" xmlns:IBeXTGGModel="platform:/resource/org.emoflon.ibex.tgg.tggmodel/model/IBeXTGGModel.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Hospital2AdministrationSolutions">
-  <metaData project="Hospital2AdministrationSolutions" projectPath="E:/Desktop/runtime-New_configuration234/Hospital2AdministrationSolutions">
+  <metaData project="Hospital2AdministrationSolutions" projectPath="/home/mkratz/git/emoflon-ibex-tutorial/Hospital2AdministrationSolutions">
     <dependencies simpleName="HospitalExample" fullyQualifiedName="HospitalExample" packageURI="platform:/resource/HospitalExample/model/HospitalExample.ecore" factoryClassName="HospitalExample.HospitalExampleFactory" packageClassName="HospitalExamplePackage" ecoreURI="platform:/resource/HospitalExample/model/HospitalExample.ecore">
       <package href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
       <classifierName2FQN key="Hospital" value="HospitalExample.Hospital"/>
@@ -304,7 +304,7 @@
       </conditions>
       <attributeConstraints/>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DoctorShiftplanRule" signatureNodes="//@ruleSet/@rules.1/@nodes.1 //@ruleSet/@rules.1/@nodes.3 //@ruleSet/@rules.1/@nodes.8 //@ruleSet/@rules.1/@nodes.2 //@ruleSet/@rules.1/@nodes.9 //@ruleSet/@rules.1/@nodes.6 //@ruleSet/@rules.1/@nodes.7 //@ruleSet/@rules.1/@nodes.4 //@ruleSet/@rules.1/@nodes.5 //@ruleSet/@rules.1/@nodes.0" edges="//@ruleSet/@rules.1/@edges.0 //@ruleSet/@rules.1/@edges.2 //@ruleSet/@rules.1/@edges.5 //@ruleSet/@rules.1/@edges.1 //@ruleSet/@rules.1/@edges.6 //@ruleSet/@rules.1/@edges.4 //@ruleSet/@rules.1/@edges.3">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DoctorShiftplanRule" signatureNodes="//@ruleSet/@rules.1/@nodes.7 //@ruleSet/@rules.1/@nodes.9 //@ruleSet/@rules.1/@nodes.4 //@ruleSet/@rules.1/@nodes.2 //@ruleSet/@rules.1/@nodes.0 //@ruleSet/@rules.1/@nodes.8 //@ruleSet/@rules.1/@nodes.1 //@ruleSet/@rules.1/@nodes.6 //@ruleSet/@rules.1/@nodes.3 //@ruleSet/@rules.1/@nodes.5" edges="//@ruleSet/@rules.1/@edges.3 //@ruleSet/@rules.1/@edges.2 //@ruleSet/@rules.1/@edges.4 //@ruleSet/@rules.1/@edges.5 //@ruleSet/@rules.1/@edges.1 //@ruleSet/@rules.1/@edges.6 //@ruleSet/@rules.1/@edges.0">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.1/@nodes.2">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
@@ -427,7 +427,7 @@
         </parameters>
       </attributeConstraints>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DoctorToPatient" signatureNodes="//@ruleSet/@rules.2/@nodes.5 //@ruleSet/@rules.2/@nodes.3 //@ruleSet/@rules.2/@nodes.1 //@ruleSet/@rules.2/@nodes.2 //@ruleSet/@rules.2/@nodes.7 //@ruleSet/@rules.2/@nodes.4 //@ruleSet/@rules.2/@nodes.0 //@ruleSet/@rules.2/@nodes.6" edges="//@ruleSet/@rules.2/@edges.2 //@ruleSet/@rules.2/@edges.4 //@ruleSet/@rules.2/@edges.6 //@ruleSet/@rules.2/@edges.5 //@ruleSet/@rules.2/@edges.7 //@ruleSet/@rules.2/@edges.0 //@ruleSet/@rules.2/@edges.3">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DoctorToPatient" signatureNodes="//@ruleSet/@rules.2/@nodes.7 //@ruleSet/@rules.2/@nodes.4 //@ruleSet/@rules.2/@nodes.1 //@ruleSet/@rules.2/@nodes.5 //@ruleSet/@rules.2/@nodes.0 //@ruleSet/@rules.2/@nodes.2 //@ruleSet/@rules.2/@nodes.3 //@ruleSet/@rules.2/@nodes.6" edges="//@ruleSet/@rules.2/@edges.0 //@ruleSet/@rules.2/@edges.3 //@ruleSet/@rules.2/@edges.4 //@ruleSet/@rules.2/@edges.6 //@ruleSet/@rules.2/@edges.5 //@ruleSet/@rules.2/@edges.2 //@ruleSet/@rules.2/@edges.7">
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.2" parameters="//@patternSet/@patterns.26/@attributeConstraints/@parameters.0 //@patternSet/@patterns.26/@attributeConstraints/@parameters.1"/>
         <parameters parameterDefinition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.2/@parameterDefinitions.0">
@@ -468,24 +468,24 @@
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="Hospital2AdministrationRule__SOURCE" signatureNodes="//@ruleSet/@rules.3/@operationalisations.0/@nodes.0 //@ruleSet/@rules.3/@operationalisations.0/@nodes.1" edges="//@ruleSet/@rules.3/@operationalisations.0/@edges.0">
       <invocations invokedBy="//@patternSet/@patterns.28" invocation="//@patternSet/@patterns.29">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.0/@nodes.0" value="//@nodeSet/@nodes.5"/>
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.6"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.28" invocation="//@patternSet/@patterns.30">
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.0/@nodes.0" value="//@nodeSet/@nodes.8"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.0/@nodes.0" value="//@nodeSet/@nodes.7"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
-    <patterns name="Hospital2AdministrationRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.5 //@nodeSet/@nodes.6" localNodes="//@nodeSet/@nodes.7" edges="//@edgeSet/@edges.3 //@edgeSet/@edges.4">
+    <patterns name="Hospital2AdministrationRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.5" localNodes="//@nodeSet/@nodes.6" edges="//@edgeSet/@edges.3"/>
+    <patterns name="Hospital2AdministrationRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.7 //@nodeSet/@nodes.8" localNodes="//@nodeSet/@nodes.9" edges="//@edgeSet/@edges.4 //@edgeSet/@edges.5">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.6">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.8">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.7">
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.9">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="Hospital2AdministrationRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.8" localNodes="//@nodeSet/@nodes.9" edges="//@edgeSet/@edges.5"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="Hospital2AdministrationRule__TARGET" signatureNodes="//@ruleSet/@rules.3/@operationalisations.1/@nodes.0">
       <invocations invokedBy="//@patternSet/@patterns.31" invocation="//@patternSet/@patterns.32">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.10"/>
@@ -499,10 +499,10 @@
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="Hospital2AdministrationRule__FWD" signatureNodes="//@ruleSet/@rules.3/@operationalisations.3/@nodes.0 //@ruleSet/@rules.3/@operationalisations.3/@nodes.1" edges="//@ruleSet/@rules.3/@operationalisations.3/@edges.0">
       <invocations invokedBy="//@patternSet/@patterns.34" invocation="//@patternSet/@patterns.29">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.3/@nodes.0" value="//@nodeSet/@nodes.5"/>
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.6"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.34" invocation="//@patternSet/@patterns.30">
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.3/@nodes.0" value="//@nodeSet/@nodes.8"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.3/@nodes.0" value="//@nodeSet/@nodes.7"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -515,13 +515,13 @@
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="Hospital2AdministrationRule__CC" signatureNodes="//@ruleSet/@rules.3/@operationalisations.5/@nodes.0 //@ruleSet/@rules.3/@operationalisations.5/@nodes.1 //@ruleSet/@rules.3/@operationalisations.5/@nodes.3" edges="//@ruleSet/@rules.3/@operationalisations.5/@edges.0">
       <invocations invokedBy="//@patternSet/@patterns.36" invocation="//@patternSet/@patterns.29">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.0" value="//@nodeSet/@nodes.5"/>
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.6"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.36" invocation="//@patternSet/@patterns.30">
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.0" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.36" invocation="//@patternSet/@patterns.32">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.10"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.36" invocation="//@patternSet/@patterns.30">
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.0" value="//@nodeSet/@nodes.7"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -534,13 +534,13 @@
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="Hospital2AdministrationRule__CONSISTENCY" signatureNodes="//@ruleSet/@rules.3/@operationalisations.7/@nodes.0 //@ruleSet/@rules.3/@operationalisations.7/@nodes.1 //@ruleSet/@rules.3/@operationalisations.7/@nodes.2 //@ruleSet/@rules.3/@operationalisations.7/@nodes.3 //@ruleSet/@rules.3/@operationalisations.7/@nodes.4" edges="//@ruleSet/@rules.3/@operationalisations.7/@edges.0 //@ruleSet/@rules.3/@operationalisations.7/@edges.1 //@ruleSet/@rules.3/@operationalisations.7/@edges.2 //@ruleSet/@rules.3/@operationalisations.7/@edges.3 //@ruleSet/@rules.3/@operationalisations.7/@edges.4 //@ruleSet/@rules.3/@operationalisations.7/@edges.5 //@ruleSet/@rules.3/@operationalisations.7/@edges.6">
       <invocations invokedBy="//@patternSet/@patterns.39" invocation="//@patternSet/@patterns.29">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.0" value="//@nodeSet/@nodes.5"/>
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.6"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.39" invocation="//@patternSet/@patterns.30">
-        <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.0" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.39" invocation="//@patternSet/@patterns.32">
         <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.10"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.39" invocation="//@patternSet/@patterns.30">
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.0" value="//@nodeSet/@nodes.7"/>
+        <mapping key="//@ruleSet/@rules.3/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.8"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -661,7 +661,7 @@
       </conditions>
       <attributeConstraints/>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseShiftplanRule" signatureNodes="//@ruleSet/@rules.4/@nodes.7 //@ruleSet/@rules.4/@nodes.0 //@ruleSet/@rules.4/@nodes.2 //@ruleSet/@rules.4/@nodes.8 //@ruleSet/@rules.4/@nodes.4 //@ruleSet/@rules.4/@nodes.1 //@ruleSet/@rules.4/@nodes.5 //@ruleSet/@rules.4/@nodes.9 //@ruleSet/@rules.4/@nodes.10 //@ruleSet/@rules.4/@nodes.6 //@ruleSet/@rules.4/@nodes.3" edges="//@ruleSet/@rules.4/@edges.2 //@ruleSet/@rules.4/@edges.7 //@ruleSet/@rules.4/@edges.4 //@ruleSet/@rules.4/@edges.1 //@ruleSet/@rules.4/@edges.0 //@ruleSet/@rules.4/@edges.3 //@ruleSet/@rules.4/@edges.5 //@ruleSet/@rules.4/@edges.6">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseShiftplanRule" signatureNodes="//@ruleSet/@rules.4/@nodes.6 //@ruleSet/@rules.4/@nodes.0 //@ruleSet/@rules.4/@nodes.4 //@ruleSet/@rules.4/@nodes.10 //@ruleSet/@rules.4/@nodes.5 //@ruleSet/@rules.4/@nodes.7 //@ruleSet/@rules.4/@nodes.2 //@ruleSet/@rules.4/@nodes.8 //@ruleSet/@rules.4/@nodes.3 //@ruleSet/@rules.4/@nodes.9 //@ruleSet/@rules.4/@nodes.1" edges="//@ruleSet/@rules.4/@edges.5 //@ruleSet/@rules.4/@edges.2 //@ruleSet/@rules.4/@edges.3 //@ruleSet/@rules.4/@edges.4 //@ruleSet/@rules.4/@edges.6 //@ruleSet/@rules.4/@edges.1 //@ruleSet/@rules.4/@edges.0 //@ruleSet/@rules.4/@edges.7">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.4/@nodes.3">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
@@ -720,7 +720,7 @@
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToRoomRule__CO" signatureNodes="//@ruleSet/@rules.5/@operationalisations.6/@nodes.0 //@ruleSet/@rules.5/@operationalisations.6/@nodes.1 //@ruleSet/@rules.5/@operationalisations.6/@nodes.2 //@ruleSet/@rules.5/@operationalisations.6/@nodes.3 //@ruleSet/@rules.5/@operationalisations.6/@nodes.4 //@ruleSet/@rules.5/@operationalisations.6/@nodes.5 //@ruleSet/@rules.5/@operationalisations.6/@nodes.6 //@ruleSet/@rules.5/@operationalisations.6/@nodes.7" edges="//@ruleSet/@rules.5/@operationalisations.6/@edges.0 //@ruleSet/@rules.5/@operationalisations.6/@edges.1 //@ruleSet/@rules.5/@operationalisations.6/@edges.2 //@ruleSet/@rules.5/@operationalisations.6/@edges.3 //@ruleSet/@rules.5/@operationalisations.6/@edges.4 //@ruleSet/@rules.5/@operationalisations.6/@edges.5 //@ruleSet/@rules.5/@operationalisations.6/@edges.6 //@ruleSet/@rules.5/@operationalisations.6/@edges.7">
       <attributeConstraints/>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToRoomRule" signatureNodes="//@ruleSet/@rules.5/@nodes.3 //@ruleSet/@rules.5/@nodes.6 //@ruleSet/@rules.5/@nodes.2 //@ruleSet/@rules.5/@nodes.4 //@ruleSet/@rules.5/@nodes.0 //@ruleSet/@rules.5/@nodes.1 //@ruleSet/@rules.5/@nodes.5 //@ruleSet/@rules.5/@nodes.7" edges="//@ruleSet/@rules.5/@edges.6 //@ruleSet/@rules.5/@edges.7 //@ruleSet/@rules.5/@edges.1 //@ruleSet/@rules.5/@edges.4 //@ruleSet/@rules.5/@edges.2 //@ruleSet/@rules.5/@edges.3 //@ruleSet/@rules.5/@edges.5">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToRoomRule" signatureNodes="//@ruleSet/@rules.5/@nodes.4 //@ruleSet/@rules.5/@nodes.7 //@ruleSet/@rules.5/@nodes.2 //@ruleSet/@rules.5/@nodes.5 //@ruleSet/@rules.5/@nodes.6 //@ruleSet/@rules.5/@nodes.3 //@ruleSet/@rules.5/@nodes.0 //@ruleSet/@rules.5/@nodes.1" edges="//@ruleSet/@rules.5/@edges.3 //@ruleSet/@rules.5/@edges.7 //@ruleSet/@rules.5/@edges.5 //@ruleSet/@rules.5/@edges.4 //@ruleSet/@rules.5/@edges.1 //@ruleSet/@rules.5/@edges.2 //@ruleSet/@rules.5/@edges.6">
       <attributeConstraints/>
     </patterns>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToRoomRule__CONSISTENCY" signatureNodes="//@ruleSet/@rules.5/@operationalisations.7/@nodes.0 //@ruleSet/@rules.5/@operationalisations.7/@nodes.1 //@ruleSet/@rules.5/@operationalisations.7/@nodes.2 //@ruleSet/@rules.5/@operationalisations.7/@nodes.3 //@ruleSet/@rules.5/@operationalisations.7/@nodes.4 //@ruleSet/@rules.5/@operationalisations.7/@nodes.5 //@ruleSet/@rules.5/@operationalisations.7/@nodes.6 //@ruleSet/@rules.5/@operationalisations.7/@nodes.7 //@ruleSet/@rules.5/@operationalisations.7/@nodes.8" edges="//@ruleSet/@rules.5/@operationalisations.7/@edges.0 //@ruleSet/@rules.5/@operationalisations.7/@edges.1 //@ruleSet/@rules.5/@operationalisations.7/@edges.2 //@ruleSet/@rules.5/@operationalisations.7/@edges.3 //@ruleSet/@rules.5/@operationalisations.7/@edges.4 //@ruleSet/@rules.5/@operationalisations.7/@edges.5 //@ruleSet/@rules.5/@operationalisations.7/@edges.6 //@ruleSet/@rules.5/@operationalisations.7/@edges.7 //@ruleSet/@rules.5/@operationalisations.7/@edges.8 //@ruleSet/@rules.5/@operationalisations.7/@edges.9 //@ruleSet/@rules.5/@operationalisations.7/@edges.10 //@ruleSet/@rules.5/@operationalisations.7/@edges.11 //@ruleSet/@rules.5/@operationalisations.7/@edges.12 //@ruleSet/@rules.5/@operationalisations.7/@edges.13 //@ruleSet/@rules.5/@operationalisations.7/@edges.14 //@ruleSet/@rules.5/@operationalisations.7/@edges.15">
@@ -747,16 +747,16 @@
         <mapping key="//@ruleSet/@rules.6/@operationalisations.0/@nodes.4" value="//@nodeSet/@nodes.12"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.58" invocation="//@patternSet/@patterns.60">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.14"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.0/@nodes.4" value="//@nodeSet/@nodes.14"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.58" invocation="//@patternSet/@patterns.61">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.0/@nodes.4" value="//@nodeSet/@nodes.16"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.16"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
-    <patterns name="PatientInReception_p1_waits_0_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.12" localNodes="//@nodeSet/@nodes.13" edges="//@edgeSet/@edges.7"/>
-    <patterns name="PatientInReception_p1r_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.14" localNodes="//@nodeSet/@nodes.15" edges="//@edgeSet/@edges.8"/>
-    <patterns name="PatientInReception_p1_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.16" localNodes="//@nodeSet/@nodes.17" edges="//@edgeSet/@edges.9"/>
+    <patterns name="PatientInReception_p1_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.12" localNodes="//@nodeSet/@nodes.13" edges="//@edgeSet/@edges.7"/>
+    <patterns name="PatientInReception_p1_waits_0_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.14" localNodes="//@nodeSet/@nodes.15" edges="//@edgeSet/@edges.8"/>
+    <patterns name="PatientInReception_p1r_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.16" localNodes="//@nodeSet/@nodes.17" edges="//@edgeSet/@edges.9"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInReception__TARGET" signatureNodes="//@ruleSet/@rules.6/@operationalisations.1/@nodes.0 //@ruleSet/@rules.6/@operationalisations.1/@nodes.1 //@ruleSet/@rules.6/@operationalisations.1/@nodes.2 //@ruleSet/@rules.6/@operationalisations.1/@nodes.3" edges="//@ruleSet/@rules.6/@operationalisations.1/@edges.0">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.6/@operationalisations.1/@nodes.3">
@@ -828,10 +828,10 @@
         <mapping key="//@ruleSet/@rules.6/@operationalisations.3/@nodes.4" value="//@nodeSet/@nodes.12"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.65" invocation="//@patternSet/@patterns.60">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.14"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.3/@nodes.4" value="//@nodeSet/@nodes.14"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.65" invocation="//@patternSet/@patterns.61">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.3/@nodes.4" value="//@nodeSet/@nodes.16"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.16"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -898,17 +898,17 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
         </rhs>
       </conditions>
+      <invocations invokedBy="//@patternSet/@patterns.67" invocation="//@patternSet/@patterns.63">
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.11" value="//@nodeSet/@nodes.18"/>
+      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.67" invocation="//@patternSet/@patterns.59">
         <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.4" value="//@nodeSet/@nodes.12"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.67" invocation="//@patternSet/@patterns.60">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.14"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.67" invocation="//@patternSet/@patterns.63">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.11" value="//@nodeSet/@nodes.18"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.4" value="//@nodeSet/@nodes.14"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.67" invocation="//@patternSet/@patterns.61">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.4" value="//@nodeSet/@nodes.16"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.16"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.3" parameters="//@patternSet/@patterns.67/@attributeConstraints/@parameters.0 //@patternSet/@patterns.67/@attributeConstraints/@parameters.1 //@patternSet/@patterns.67/@attributeConstraints/@parameters.2 //@patternSet/@patterns.67/@attributeConstraints/@parameters.3"/>
@@ -1023,7 +1023,7 @@
         </parameters>
       </attributeConstraints>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInReception" signatureNodes="//@ruleSet/@rules.6/@nodes.1 //@ruleSet/@rules.6/@nodes.6 //@ruleSet/@rules.6/@nodes.5 //@ruleSet/@rules.6/@nodes.2 //@ruleSet/@rules.6/@nodes.8 //@ruleSet/@rules.6/@nodes.0 //@ruleSet/@rules.6/@nodes.9" edges="//@ruleSet/@rules.6/@edges.2 //@ruleSet/@rules.6/@edges.5 //@ruleSet/@rules.6/@edges.4 //@ruleSet/@rules.6/@edges.0 //@ruleSet/@rules.6/@edges.3">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInReception" signatureNodes="//@ruleSet/@rules.6/@nodes.9 //@ruleSet/@rules.6/@nodes.8 //@ruleSet/@rules.6/@nodes.5 //@ruleSet/@rules.6/@nodes.2 //@ruleSet/@rules.6/@nodes.6 //@ruleSet/@rules.6/@nodes.1 //@ruleSet/@rules.6/@nodes.0" edges="//@ruleSet/@rules.6/@edges.4 //@ruleSet/@rules.6/@edges.5 //@ruleSet/@rules.6/@edges.3 //@ruleSet/@rules.6/@edges.0 //@ruleSet/@rules.6/@edges.2">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.6/@nodes.2">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
@@ -1113,17 +1113,17 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
         </rhs>
       </conditions>
+      <invocations invokedBy="//@patternSet/@patterns.70" invocation="//@patternSet/@patterns.63">
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.11" value="//@nodeSet/@nodes.18"/>
+      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.70" invocation="//@patternSet/@patterns.59">
         <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.4" value="//@nodeSet/@nodes.12"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.70" invocation="//@patternSet/@patterns.60">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.14"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.70" invocation="//@patternSet/@patterns.63">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.11" value="//@nodeSet/@nodes.18"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.4" value="//@nodeSet/@nodes.14"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.70" invocation="//@patternSet/@patterns.61">
-        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.4" value="//@nodeSet/@nodes.16"/>
+        <mapping key="//@ruleSet/@rules.6/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.16"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.3" parameters="//@patternSet/@patterns.70/@attributeConstraints/@parameters.0 //@patternSet/@patterns.70/@attributeConstraints/@parameters.1 //@patternSet/@patterns.70/@attributeConstraints/@parameters.2 //@patternSet/@patterns.70/@attributeConstraints/@parameters.3"/>
@@ -1193,9 +1193,9 @@
       </invocations>
       <attributeConstraints/>
     </patterns>
-    <patterns name="PatientInRoom_p1_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.20" localNodes="//@nodeSet/@nodes.21" edges="//@edgeSet/@edges.11"/>
+    <patterns name="PatientInRoom_p1_waits_0_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.20" localNodes="//@nodeSet/@nodes.21" edges="//@edgeSet/@edges.11"/>
     <patterns name="PatientInRoom_p1p_waits_0_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.22" localNodes="//@nodeSet/@nodes.23" edges="//@edgeSet/@edges.12"/>
-    <patterns name="PatientInRoom_p1_waits_0_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.24" localNodes="//@nodeSet/@nodes.25" edges="//@edgeSet/@edges.13"/>
+    <patterns name="PatientInRoom_p1_lies_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.24" localNodes="//@nodeSet/@nodes.25" edges="//@edgeSet/@edges.13"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInRoom__TARGET" signatureNodes="//@ruleSet/@rules.7/@operationalisations.1/@nodes.0 //@ruleSet/@rules.7/@operationalisations.1/@nodes.1 //@ruleSet/@rules.7/@operationalisations.1/@nodes.2 //@ruleSet/@rules.7/@operationalisations.1/@nodes.3" edges="//@ruleSet/@rules.7/@operationalisations.1/@edges.0">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.7/@operationalisations.1/@nodes.3">
@@ -1337,14 +1337,14 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.80" invocation="//@patternSet/@patterns.76">
-        <mapping key="//@ruleSet/@rules.7/@operationalisations.5/@nodes.12" value="//@nodeSet/@nodes.26"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.80" invocation="//@patternSet/@patterns.72">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.5/@nodes.5" value="//@nodeSet/@nodes.20"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.80" invocation="//@patternSet/@patterns.73">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.5/@nodes.4" value="//@nodeSet/@nodes.22"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.80" invocation="//@patternSet/@patterns.76">
+        <mapping key="//@ruleSet/@rules.7/@operationalisations.5/@nodes.12" value="//@nodeSet/@nodes.26"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.80" invocation="//@patternSet/@patterns.74">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.5/@nodes.5" value="//@nodeSet/@nodes.24"/>
@@ -1462,7 +1462,7 @@
         </parameters>
       </attributeConstraints>
     </patterns>
-    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInRoom" signatureNodes="//@ruleSet/@rules.7/@nodes.1 //@ruleSet/@rules.7/@nodes.7 //@ruleSet/@rules.7/@nodes.2 //@ruleSet/@rules.7/@nodes.3 //@ruleSet/@rules.7/@nodes.0 //@ruleSet/@rules.7/@nodes.6 //@ruleSet/@rules.7/@nodes.10 //@ruleSet/@rules.7/@nodes.9" edges="//@ruleSet/@rules.7/@edges.6 //@ruleSet/@rules.7/@edges.3 //@ruleSet/@rules.7/@edges.0 //@ruleSet/@rules.7/@edges.5 //@ruleSet/@rules.7/@edges.1 //@ruleSet/@rules.7/@edges.4">
+    <patterns xsi:type="IBeXTGGModel:TGGPattern" name="PatientInRoom" signatureNodes="//@ruleSet/@rules.7/@nodes.0 //@ruleSet/@rules.7/@nodes.3 //@ruleSet/@rules.7/@nodes.10 //@ruleSet/@rules.7/@nodes.2 //@ruleSet/@rules.7/@nodes.9 //@ruleSet/@rules.7/@nodes.6 //@ruleSet/@rules.7/@nodes.7 //@ruleSet/@rules.7/@nodes.1" edges="//@ruleSet/@rules.7/@edges.3 //@ruleSet/@rules.7/@edges.6 //@ruleSet/@rules.7/@edges.0 //@ruleSet/@rules.7/@edges.4 //@ruleSet/@rules.7/@edges.5 //@ruleSet/@rules.7/@edges.1">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.7/@nodes.3">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
@@ -1552,14 +1552,14 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.83" invocation="//@patternSet/@patterns.76">
-        <mapping key="//@ruleSet/@rules.7/@operationalisations.7/@nodes.12" value="//@nodeSet/@nodes.26"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.83" invocation="//@patternSet/@patterns.72">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.7/@nodes.5" value="//@nodeSet/@nodes.20"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.83" invocation="//@patternSet/@patterns.73">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.7/@nodes.4" value="//@nodeSet/@nodes.22"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.83" invocation="//@patternSet/@patterns.76">
+        <mapping key="//@ruleSet/@rules.7/@operationalisations.7/@nodes.12" value="//@nodeSet/@nodes.26"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.83" invocation="//@patternSet/@patterns.74">
         <mapping key="//@ruleSet/@rules.7/@operationalisations.7/@nodes.5" value="//@nodeSet/@nodes.24"/>
@@ -1674,57 +1674,57 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.92" invocation="//@patternSet/@patterns.93">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.29"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.92" invocation="//@patternSet/@patterns.94">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.30"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.31"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.31"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.92" invocation="//@patternSet/@patterns.95">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.33"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.34"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.33"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.34"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.92" invocation="//@patternSet/@patterns.96">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.36"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.37"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.36"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.92" invocation="//@patternSet/@patterns.97">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.39"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.38"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.39"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
-    <patterns name="DocToStaffRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.28" localNodes="//@nodeSet/@nodes.29" edges="//@edgeSet/@edges.15"/>
-    <patterns name="DocToStaffRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.30 //@nodeSet/@nodes.31" localNodes="//@nodeSet/@nodes.32" edges="//@edgeSet/@edges.16 //@edgeSet/@edges.17">
+    <patterns name="DocToStaffRule_d_works_1_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.28 //@nodeSet/@nodes.29" localNodes="//@nodeSet/@nodes.30" edges="//@edgeSet/@edges.15 //@edgeSet/@edges.16">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.31">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.29">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.32">
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.30">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="DocToStaffRule_d_works_1_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.33 //@nodeSet/@nodes.34" localNodes="//@nodeSet/@nodes.35" edges="//@edgeSet/@edges.18 //@edgeSet/@edges.19">
+    <patterns name="DocToStaffRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.31" localNodes="//@nodeSet/@nodes.32" edges="//@edgeSet/@edges.17"/>
+    <patterns name="DocToStaffRule_s1_works_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.33 //@nodeSet/@nodes.34" localNodes="//@nodeSet/@nodes.35" edges="//@edgeSet/@edges.18 //@edgeSet/@edges.19">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.34">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
         </lhs>
         <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.35">
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        </rhs>
+      </conditions>
+    </patterns>
+    <patterns name="DocToStaffRule_d_department_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.36" localNodes="//@nodeSet/@nodes.37" edges="//@edgeSet/@edges.20"/>
+    <patterns name="DocToStaffRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.38 //@nodeSet/@nodes.39" localNodes="//@nodeSet/@nodes.40" edges="//@edgeSet/@edges.21 //@edgeSet/@edges.22">
+      <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.39">
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+        </lhs>
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.40">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="DocToStaffRule_s1_works_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.36 //@nodeSet/@nodes.37" localNodes="//@nodeSet/@nodes.38" edges="//@edgeSet/@edges.20 //@edgeSet/@edges.21">
-      <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.37">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-        </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.38">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-        </rhs>
-      </conditions>
-    </patterns>
-    <patterns name="DocToStaffRule_d_department_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.39" localNodes="//@nodeSet/@nodes.40" edges="//@edgeSet/@edges.22"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DocToStaffRule__TARGET" signatureNodes="//@ruleSet/@rules.9/@operationalisations.1/@nodes.0 //@ruleSet/@rules.9/@operationalisations.1/@nodes.1 //@ruleSet/@rules.9/@operationalisations.1/@nodes.2 //@ruleSet/@rules.9/@operationalisations.1/@nodes.3 //@ruleSet/@rules.9/@operationalisations.1/@nodes.4" edges="//@ruleSet/@rules.9/@operationalisations.1/@edges.0 //@ruleSet/@rules.9/@operationalisations.1/@edges.1 //@ruleSet/@rules.9/@operationalisations.1/@edges.2">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.9/@operationalisations.1/@nodes.1">
@@ -1735,22 +1735,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.98" invocation="//@patternSet/@patterns.99">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.41"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.4" value="//@nodeSet/@nodes.42"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.41"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.98" invocation="//@patternSet/@patterns.100">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.44"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.43"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.44"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.98" invocation="//@patternSet/@patterns.101">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.46"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.47"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.2" value="//@nodeSet/@nodes.46"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.47"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.98" invocation="//@patternSet/@patterns.102">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.4" value="//@nodeSet/@nodes.50"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.98" invocation="//@patternSet/@patterns.103">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.2" value="//@nodeSet/@nodes.51"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.52"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.52"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.0" parameters="//@patternSet/@patterns.98/@attributeConstraints/@parameters.0"/>
@@ -1762,38 +1762,38 @@
         </parameters>
       </attributeConstraints>
     </patterns>
-    <patterns name="DocToStaffRule_sp_shifts_1_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.41 //@nodeSet/@nodes.42" localNodes="//@nodeSet/@nodes.43" edges="//@edgeSet/@edges.23 //@edgeSet/@edges.24">
+    <patterns name="DocToStaffRule_s2d_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.41" localNodes="//@nodeSet/@nodes.42" edges="//@edgeSet/@edges.23"/>
+    <patterns name="DocToStaffRule_s2_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.43 //@nodeSet/@nodes.44" localNodes="//@nodeSet/@nodes.45" edges="//@edgeSet/@edges.24 //@edgeSet/@edges.25">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.42">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.44">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.43">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.45">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="DocToStaffRule_s2d_staff_0_incoming_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.44" localNodes="//@nodeSet/@nodes.45" edges="//@edgeSet/@edges.25"/>
-    <patterns name="DocToStaffRule_s2_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.46 //@nodeSet/@nodes.47" localNodes="//@nodeSet/@nodes.48" edges="//@edgeSet/@edges.26 //@edgeSet/@edges.27">
+    <patterns name="DocToStaffRule_v_staff_0_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.46 //@nodeSet/@nodes.47" localNodes="//@nodeSet/@nodes.48" edges="//@edgeSet/@edges.26 //@edgeSet/@edges.27">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.47">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </lhs>
         <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.48">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="DocToStaffRule_s2d_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.49" localNodes="//@nodeSet/@nodes.50" edges="//@edgeSet/@edges.28"/>
-    <patterns name="DocToStaffRule_v_staff_0_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.51 //@nodeSet/@nodes.52" localNodes="//@nodeSet/@nodes.53" edges="//@edgeSet/@edges.29 //@edgeSet/@edges.30">
+    <patterns name="DocToStaffRule_sp_shifts_1_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.49 //@nodeSet/@nodes.50" localNodes="//@nodeSet/@nodes.51" edges="//@edgeSet/@edges.28 //@edgeSet/@edges.29">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.52">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.50">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.53">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.51">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
         </rhs>
       </conditions>
     </patterns>
+    <patterns name="DocToStaffRule_s2d_staff_0_incoming_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.52" localNodes="//@nodeSet/@nodes.53" edges="//@edgeSet/@edges.30"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="DocToStaffRule__GEN">
       <attributeConstraints/>
     </patterns>
@@ -1807,22 +1807,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.105" invocation="//@patternSet/@patterns.93">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.29"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.105" invocation="//@patternSet/@patterns.94">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.30"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.31"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.31"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.105" invocation="//@patternSet/@patterns.95">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.33"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.34"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.33"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.34"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.105" invocation="//@patternSet/@patterns.96">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.36"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.37"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.36"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.105" invocation="//@patternSet/@patterns.97">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.39"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.38"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.39"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -1836,22 +1836,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.106" invocation="//@patternSet/@patterns.99">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.41"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.10" value="//@nodeSet/@nodes.42"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.41"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.106" invocation="//@patternSet/@patterns.100">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.44"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.43"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.44"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.106" invocation="//@patternSet/@patterns.101">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.46"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.47"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.8" value="//@nodeSet/@nodes.46"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.47"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.106" invocation="//@patternSet/@patterns.102">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.10" value="//@nodeSet/@nodes.50"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.106" invocation="//@patternSet/@patterns.103">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.8" value="//@nodeSet/@nodes.51"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.52"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.52"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.0" parameters="//@patternSet/@patterns.106/@attributeConstraints/@parameters.0"/>
@@ -1880,41 +1880,41 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.99">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.41"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.10" value="//@nodeSet/@nodes.42"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.100">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.44"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.101">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.46"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.47"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.93">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.28"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.102">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.29"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.94">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.30"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.31"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.31"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.99">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.41"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.100">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.43"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.44"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.95">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.33"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.34"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.103">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.8" value="//@nodeSet/@nodes.51"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.52"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.33"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.34"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.96">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.36"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.37"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.36"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.101">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.8" value="//@nodeSet/@nodes.46"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.47"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.102">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.10" value="//@nodeSet/@nodes.50"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.97">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.39"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.38"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.39"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.107" invocation="//@patternSet/@patterns.103">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.52"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.0" parameters="//@patternSet/@patterns.107/@attributeConstraints/@parameters.0"/>
@@ -2131,41 +2131,41 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.99">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.41"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.10" value="//@nodeSet/@nodes.42"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.100">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.44"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.101">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.46"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.47"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.93">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.28"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.102">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.28"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.29"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.94">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.30"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.31"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.31"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.99">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.41"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.100">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.43"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.44"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.95">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.33"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.34"/>
-      </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.103">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.8" value="//@nodeSet/@nodes.51"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.52"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.33"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.34"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.96">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.36"/>
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.37"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.36"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.101">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.8" value="//@nodeSet/@nodes.46"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.47"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.102">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.49"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.10" value="//@nodeSet/@nodes.50"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.97">
-        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.39"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.38"/>
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.39"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.110" invocation="//@patternSet/@patterns.103">
+        <mapping key="//@ruleSet/@rules.9/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.52"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.0" parameters="//@patternSet/@patterns.110/@attributeConstraints/@parameters.0"/>
@@ -2237,37 +2237,37 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.111" invocation="//@patternSet/@patterns.112">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.54"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.54"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.111" invocation="//@patternSet/@patterns.113">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.56"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.57"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.56"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.57"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.111" invocation="//@patternSet/@patterns.114">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.59"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.59"/>
         <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.60"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.111" invocation="//@patternSet/@patterns.115">
         <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.62"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.63"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.111" invocation="//@patternSet/@patterns.116">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.1" value="//@nodeSet/@nodes.64"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.3" value="//@nodeSet/@nodes.65"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.0/@nodes.2" value="//@nodeSet/@nodes.65"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
-    <patterns name="NurseToStaffRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.54" localNodes="//@nodeSet/@nodes.55" edges="//@edgeSet/@edges.31"/>
-    <patterns name="NurseToStaffRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.56 //@nodeSet/@nodes.57" localNodes="//@nodeSet/@nodes.58" edges="//@edgeSet/@edges.32 //@edgeSet/@edges.33">
+    <patterns name="NurseToStaffRule_d_department_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.54" localNodes="//@nodeSet/@nodes.55" edges="//@edgeSet/@edges.31"/>
+    <patterns name="NurseToStaffRule_s1_works_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.56 //@nodeSet/@nodes.57" localNodes="//@nodeSet/@nodes.58" edges="//@edgeSet/@edges.32 //@edgeSet/@edges.33">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.57">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
         </lhs>
         <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.58">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="NurseToStaffRule_d_works_1_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.59 //@nodeSet/@nodes.60" localNodes="//@nodeSet/@nodes.61" edges="//@edgeSet/@edges.34 //@edgeSet/@edges.35">
+    <patterns name="NurseToStaffRule_h_staff_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.59 //@nodeSet/@nodes.60" localNodes="//@nodeSet/@nodes.61" edges="//@edgeSet/@edges.34 //@edgeSet/@edges.35">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.60">
           <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
@@ -2277,17 +2277,17 @@
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="NurseToStaffRule_d_department_2_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.62" localNodes="//@nodeSet/@nodes.63" edges="//@edgeSet/@edges.36"/>
-    <patterns name="NurseToStaffRule_s1_works_1_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.64 //@nodeSet/@nodes.65" localNodes="//@nodeSet/@nodes.66" edges="//@edgeSet/@edges.37 //@edgeSet/@edges.38">
+    <patterns name="NurseToStaffRule_d_works_1_incoming_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.62 //@nodeSet/@nodes.63" localNodes="//@nodeSet/@nodes.64" edges="//@edgeSet/@edges.36 //@edgeSet/@edges.37">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.65">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.63">
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.66">
-          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.64">
+          <type xsi:type="ecore:EClass" href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
         </rhs>
       </conditions>
     </patterns>
+    <patterns name="NurseToStaffRule_h_reception_0_outgoing_SOURCE__FILTER_NAC_SRC" signatureNodes="//@nodeSet/@nodes.65" localNodes="//@nodeSet/@nodes.66" edges="//@edgeSet/@edges.38"/>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToStaffRule__TARGET" signatureNodes="//@ruleSet/@rules.10/@operationalisations.1/@nodes.0 //@ruleSet/@rules.10/@operationalisations.1/@nodes.1 //@ruleSet/@rules.10/@operationalisations.1/@nodes.2 //@ruleSet/@rules.10/@operationalisations.1/@nodes.3 //@ruleSet/@rules.10/@operationalisations.1/@nodes.4" edges="//@ruleSet/@rules.10/@operationalisations.1/@edges.0 //@ruleSet/@rules.10/@operationalisations.1/@edges.1 //@ruleSet/@rules.10/@operationalisations.1/@edges.2">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
         <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@ruleSet/@rules.10/@operationalisations.1/@nodes.1">
@@ -2298,22 +2298,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.117" invocation="//@patternSet/@patterns.118">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.2" value="//@nodeSet/@nodes.67"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.68"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.67"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.117" invocation="//@patternSet/@patterns.119">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.70"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.4" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.69"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.117" invocation="//@patternSet/@patterns.120">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.73"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.2" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.72"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.117" invocation="//@patternSet/@patterns.121">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.76"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.1" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.75"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.117" invocation="//@patternSet/@patterns.122">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.0" value="//@nodeSet/@nodes.78"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.3" value="//@nodeSet/@nodes.77"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.1/@nodes.4" value="//@nodeSet/@nodes.78"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.1" parameters="//@patternSet/@patterns.117/@attributeConstraints/@parameters.0"/>
@@ -2325,38 +2325,38 @@
         </parameters>
       </attributeConstraints>
     </patterns>
-    <patterns name="NurseToStaffRule_v_staff_0_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.67 //@nodeSet/@nodes.68" localNodes="//@nodeSet/@nodes.69" edges="//@edgeSet/@edges.39 //@edgeSet/@edges.40">
+    <patterns name="NurseToStaffRule_s2n_staff_0_incoming_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.67" localNodes="//@nodeSet/@nodes.68" edges="//@edgeSet/@edges.39"/>
+    <patterns name="NurseToStaffRule_s2n_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.69" localNodes="//@nodeSet/@nodes.70" edges="//@edgeSet/@edges.40"/>
+    <patterns name="NurseToStaffRule_v_staff_0_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.71 //@nodeSet/@nodes.72" localNodes="//@nodeSet/@nodes.73" edges="//@edgeSet/@edges.41 //@edgeSet/@edges.42">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.68">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.72">
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.69">
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.73">
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="NurseToStaffRule_sp_shifts_1_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.70 //@nodeSet/@nodes.71" localNodes="//@nodeSet/@nodes.72" edges="//@edgeSet/@edges.41 //@edgeSet/@edges.42">
+    <patterns name="NurseToStaffRule_s2_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.74 //@nodeSet/@nodes.75" localNodes="//@nodeSet/@nodes.76" edges="//@edgeSet/@edges.43 //@edgeSet/@edges.44">
       <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.71">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
-        </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.72">
-          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
-        </rhs>
-      </conditions>
-    </patterns>
-    <patterns name="NurseToStaffRule_s2_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.73 //@nodeSet/@nodes.74" localNodes="//@nodeSet/@nodes.75" edges="//@edgeSet/@edges.43 //@edgeSet/@edges.44">
-      <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
-        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.74">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.75">
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
         </lhs>
-        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.75">
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.76">
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
         </rhs>
       </conditions>
     </patterns>
-    <patterns name="NurseToStaffRule_s2n_shiftPlan_4_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.76" localNodes="//@nodeSet/@nodes.77" edges="//@edgeSet/@edges.45"/>
-    <patterns name="NurseToStaffRule_s2n_staff_0_incoming_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.78" localNodes="//@nodeSet/@nodes.79" edges="//@edgeSet/@edges.46"/>
+    <patterns name="NurseToStaffRule_sp_shifts_1_outgoing_TARGET__FILTER_NAC_TRG" signatureNodes="//@nodeSet/@nodes.77 //@nodeSet/@nodes.78" localNodes="//@nodeSet/@nodes.79" edges="//@edgeSet/@edges.45 //@edgeSet/@edges.46">
+      <conditions xsi:type="IBeXCoreArithmetic:RelationalExpression" operator="OBJECT_NOT_EQUALS">
+        <lhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.78">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </lhs>
+        <rhs xsi:type="IBeXCoreModel:IBeXNodeValue" node="//@nodeSet/@nodes.79">
+          <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+        </rhs>
+      </conditions>
+    </patterns>
     <patterns xsi:type="IBeXTGGModel:TGGPattern" name="NurseToStaffRule__GEN">
       <attributeConstraints/>
     </patterns>
@@ -2370,22 +2370,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.124" invocation="//@patternSet/@patterns.112">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.54"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.54"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.124" invocation="//@patternSet/@patterns.113">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.56"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.57"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.56"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.57"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.124" invocation="//@patternSet/@patterns.114">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.59"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.59"/>
         <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.60"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.124" invocation="//@patternSet/@patterns.115">
         <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.62"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.63"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.124" invocation="//@patternSet/@patterns.116">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.1" value="//@nodeSet/@nodes.64"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.3" value="//@nodeSet/@nodes.65"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.3/@nodes.2" value="//@nodeSet/@nodes.65"/>
       </invocations>
       <attributeConstraints/>
     </patterns>
@@ -2399,22 +2399,22 @@
         </rhs>
       </conditions>
       <invocations invokedBy="//@patternSet/@patterns.125" invocation="//@patternSet/@patterns.118">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.8" value="//@nodeSet/@nodes.67"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.68"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.67"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.125" invocation="//@patternSet/@patterns.119">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.70"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.10" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.69"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.125" invocation="//@patternSet/@patterns.120">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.73"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.8" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.72"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.125" invocation="//@patternSet/@patterns.121">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.76"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.7" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.75"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.125" invocation="//@patternSet/@patterns.122">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.6" value="//@nodeSet/@nodes.78"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.9" value="//@nodeSet/@nodes.77"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.4/@nodes.10" value="//@nodeSet/@nodes.78"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.1" parameters="//@patternSet/@patterns.125/@attributeConstraints/@parameters.0"/>
@@ -2443,41 +2443,41 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.118">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.8" value="//@nodeSet/@nodes.67"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.68"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.112">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.54"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.54"/>
       </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.119">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.70"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.10" value="//@nodeSet/@nodes.71"/>
+      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.118">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.67"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.113">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.56"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.57"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.56"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.57"/>
       </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.114">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.59"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.60"/>
+      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.119">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.69"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.120">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.73"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.8" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.72"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.121">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.76"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.7" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.75"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.114">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.59"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.60"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.115">
         <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.62"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.63"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.122">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.6" value="//@nodeSet/@nodes.78"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.9" value="//@nodeSet/@nodes.77"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.10" value="//@nodeSet/@nodes.78"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.126" invocation="//@patternSet/@patterns.116">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.1" value="//@nodeSet/@nodes.64"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.3" value="//@nodeSet/@nodes.65"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.5/@nodes.2" value="//@nodeSet/@nodes.65"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.1" parameters="//@patternSet/@patterns.126/@attributeConstraints/@parameters.0"/>
@@ -2694,41 +2694,41 @@
           <type xsi:type="ecore:EClass" href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
         </rhs>
       </conditions>
-      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.118">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.8" value="//@nodeSet/@nodes.67"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.68"/>
-      </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.112">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.54"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.54"/>
       </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.119">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.70"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.10" value="//@nodeSet/@nodes.71"/>
+      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.118">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.67"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.113">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.56"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.57"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.56"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.57"/>
       </invocations>
-      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.114">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.59"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.60"/>
+      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.119">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.69"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.120">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.73"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.8" value="//@nodeSet/@nodes.71"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.72"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.121">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.76"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.7" value="//@nodeSet/@nodes.74"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.75"/>
+      </invocations>
+      <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.114">
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.59"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.60"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.115">
         <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.62"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.63"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.122">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.6" value="//@nodeSet/@nodes.78"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.9" value="//@nodeSet/@nodes.77"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.10" value="//@nodeSet/@nodes.78"/>
       </invocations>
       <invocations invokedBy="//@patternSet/@patterns.129" invocation="//@patternSet/@patterns.116">
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.1" value="//@nodeSet/@nodes.64"/>
-        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.3" value="//@nodeSet/@nodes.65"/>
+        <mapping key="//@ruleSet/@rules.10/@operationalisations.7/@nodes.2" value="//@nodeSet/@nodes.65"/>
       </invocations>
       <attributeConstraints>
         <tggAttributeConstraints definition="//@attributeConstraintDefinitionLibraries.1/@tggAttributeConstraintDefinitions.1" parameters="//@patternSet/@patterns.129/@attributeConstraints/@parameters.0"/>
@@ -2807,20 +2807,20 @@
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.2">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.3 //@edgeSet/@edges.4">
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.3">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
-    <nodes name="r" incomingEdges="//@edgeSet/@edges.3">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.3">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.4">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
-    </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.5">
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.4 //@edgeSet/@edges.5">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="r" incomingEdges="//@edgeSet/@edges.4">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.5">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
     </nodes>
     <nodes name="v" outgoingEdges="//@edgeSet/@edges.6">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
@@ -2832,15 +2832,15 @@
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.7">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
     </nodes>
-    <nodes name="p1r" incomingEdges="//@edgeSet/@edges.8">
+    <nodes name="p1" incomingEdges="//@edgeSet/@edges.8">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.8">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
     </nodes>
-    <nodes name="p1" incomingEdges="//@edgeSet/@edges.9">
+    <nodes name="p1r" incomingEdges="//@edgeSet/@edges.9">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.9">
@@ -2856,7 +2856,7 @@
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.11">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
     </nodes>
     <nodes name="p1p" incomingEdges="//@edgeSet/@edges.12">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
@@ -2868,7 +2868,7 @@
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Patient"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.13">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room"/>
     </nodes>
     <nodes name="p2" incomingEdges="//@edgeSet/@edges.14">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Patient"/>
@@ -2876,140 +2876,143 @@
     <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.14">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
     </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.15">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.15">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
-    </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.16 //@edgeSet/@edges.17">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-    </nodes>
-    <nodes name="s1" incomingEdges="//@edgeSet/@edges.16">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.17">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="d" incomingEdges="//@edgeSet/@edges.18 //@edgeSet/@edges.19">
+    <nodes name="d" incomingEdges="//@edgeSet/@edges.15 //@edgeSet/@edges.16">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
-    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.18">
+    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.15">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.19">
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.16">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.20 //@edgeSet/@edges.21">
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.17">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.17">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
+    </nodes>
+    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.18 //@edgeSet/@edges.19">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="d" incomingEdges="//@edgeSet/@edges.18">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.19">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
     <nodes name="d" incomingEdges="//@edgeSet/@edges.20">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.21">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-    </nodes>
-    <nodes name="d" incomingEdges="//@edgeSet/@edges.22">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.22">
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.20">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
-    <nodes name="sp" outgoingEdges="//@edgeSet/@edges.23 //@edgeSet/@edges.24">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.21 //@edgeSet/@edges.22">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
-    <nodes name="sh" incomingEdges="//@edgeSet/@edges.23">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <nodes name="s1" incomingEdges="//@edgeSet/@edges.21">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.24">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.22">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="s2d" incomingEdges="//@edgeSet/@edges.25">
+    <nodes name="s2d" outgoingEdges="//@edgeSet/@edges.23">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.25">
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.23">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="s2" outgoingEdges="//@edgeSet/@edges.24 //@edgeSet/@edges.25">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="sp" incomingEdges="//@edgeSet/@edges.24">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.25">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
+    </nodes>
+    <nodes name="v" outgoingEdges="//@edgeSet/@edges.26 //@edgeSet/@edges.27">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
     </nodes>
-    <nodes name="s2" outgoingEdges="//@edgeSet/@edges.26 //@edgeSet/@edges.27">
+    <nodes name="s2" incomingEdges="//@edgeSet/@edges.26">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="sp" incomingEdges="//@edgeSet/@edges.26">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.27">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
-    </nodes>
-    <nodes name="s2d" outgoingEdges="//@edgeSet/@edges.28">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.28">
+    <nodes name="sp" outgoingEdges="//@edgeSet/@edges.28 //@edgeSet/@edges.29">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </nodes>
-    <nodes name="v" outgoingEdges="//@edgeSet/@edges.29 //@edgeSet/@edges.30">
+    <nodes name="sh" incomingEdges="//@edgeSet/@edges.28">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.29">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    </nodes>
+    <nodes name="s2d" incomingEdges="//@edgeSet/@edges.30">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.30">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
     </nodes>
-    <nodes name="s2" incomingEdges="//@edgeSet/@edges.29">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <nodes name="d" incomingEdges="//@edgeSet/@edges.31">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.30">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.31">
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.31">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.31">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
-    </nodes>
-    <nodes name="h" outgoingEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.33">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
-    </nodes>
-    <nodes name="s1" incomingEdges="//@edgeSet/@edges.32">
+    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.32 //@edgeSet/@edges.33">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="d" incomingEdges="//@edgeSet/@edges.32">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.33">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="d" incomingEdges="//@edgeSet/@edges.34 //@edgeSet/@edges.35">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
     </nodes>
-    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.34">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.35">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="d" incomingEdges="//@edgeSet/@edges.36">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.36">
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.34 //@edgeSet/@edges.35">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
-    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.37 //@edgeSet/@edges.38">
+    <nodes name="s1" incomingEdges="//@edgeSet/@edges.34">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
     </nodes>
-    <nodes name="d" incomingEdges="//@edgeSet/@edges.37">
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.35">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="d" incomingEdges="//@edgeSet/@edges.36 //@edgeSet/@edges.37">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+    </nodes>
+    <nodes name="s1" outgoingEdges="//@edgeSet/@edges.36">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.37">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="h" outgoingEdges="//@edgeSet/@edges.38">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.38">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Department"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception"/>
     </nodes>
-    <nodes name="v" outgoingEdges="//@edgeSet/@edges.39 //@edgeSet/@edges.40">
+    <nodes name="s2n" incomingEdges="//@edgeSet/@edges.39">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    </nodes>
+    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.39">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
     </nodes>
-    <nodes name="s2" incomingEdges="//@edgeSet/@edges.39">
+    <nodes name="s2n" outgoingEdges="//@edgeSet/@edges.40">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.40">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="sp" outgoingEdges="//@edgeSet/@edges.41 //@edgeSet/@edges.42">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </nodes>
-    <nodes name="sh" incomingEdges="//@edgeSet/@edges.41">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+    <nodes name="v" outgoingEdges="//@edgeSet/@edges.41 //@edgeSet/@edges.42">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    </nodes>
+    <nodes name="s2" incomingEdges="//@edgeSet/@edges.41">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.42">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
     </nodes>
     <nodes name="s2" outgoingEdges="//@edgeSet/@edges.43 //@edgeSet/@edges.44">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
@@ -3020,17 +3023,14 @@
     <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.44">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </nodes>
-    <nodes name="s2n" outgoingEdges="//@edgeSet/@edges.45">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
-    </nodes>
-    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.45">
+    <nodes name="sp" outgoingEdges="//@edgeSet/@edges.45 //@edgeSet/@edges.46">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan"/>
     </nodes>
-    <nodes name="s2n" incomingEdges="//@edgeSet/@edges.46">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff"/>
+    <nodes name="sh" incomingEdges="//@edgeSet/@edges.45">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
     </nodes>
-    <nodes name="FILTER_NAC_NODE" outgoingEdges="//@edgeSet/@edges.46">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration"/>
+    <nodes name="FILTER_NAC_NODE" incomingEdges="//@edgeSet/@edges.46">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shift"/>
     </nodes>
   </nodeSet>
   <edgeSet>
@@ -3043,23 +3043,23 @@
     <edges name="nac edge" source="//@nodeSet/@nodes.4" target="//@nodeSet/@nodes.2">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/treatment"/>
     </edges>
-    <edges name="h_reception_r" source="//@nodeSet/@nodes.5" target="//@nodeSet/@nodes.6">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.5" target="//@nodeSet/@nodes.7">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.8" target="//@nodeSet/@nodes.9">
+    <edges name="nac edge" source="//@nodeSet/@nodes.5" target="//@nodeSet/@nodes.6">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="h_reception_r" source="//@nodeSet/@nodes.7" target="//@nodeSet/@nodes.8">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.7" target="//@nodeSet/@nodes.9">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.10" target="//@nodeSet/@nodes.11">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.13" target="//@nodeSet/@nodes.12">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.15" target="//@nodeSet/@nodes.14">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.17" target="//@nodeSet/@nodes.16">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
@@ -3068,112 +3068,112 @@
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.21" target="//@nodeSet/@nodes.20">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.23" target="//@nodeSet/@nodes.22">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.25" target="//@nodeSet/@nodes.24">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Reception/waits"/>
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Room/lies"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.27" target="//@nodeSet/@nodes.26">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/patient"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.28" target="//@nodeSet/@nodes.29">
+    <edges name="s1_works_d" source="//@nodeSet/@nodes.29" target="//@nodeSet/@nodes.28">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.30" target="//@nodeSet/@nodes.28">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.31" target="//@nodeSet/@nodes.32">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
     </edges>
-    <edges name="h_staff_s1" source="//@nodeSet/@nodes.30" target="//@nodeSet/@nodes.31">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.30" target="//@nodeSet/@nodes.32">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
-    </edges>
-    <edges name="s1_works_d" source="//@nodeSet/@nodes.34" target="//@nodeSet/@nodes.33">
+    <edges name="s1_works_d" source="//@nodeSet/@nodes.33" target="//@nodeSet/@nodes.34">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.35" target="//@nodeSet/@nodes.33">
+    <edges name="nac edge" source="//@nodeSet/@nodes.33" target="//@nodeSet/@nodes.35">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
     </edges>
-    <edges name="s1_works_d" source="//@nodeSet/@nodes.36" target="//@nodeSet/@nodes.37">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.36" target="//@nodeSet/@nodes.38">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.40" target="//@nodeSet/@nodes.39">
+    <edges name="nac edge" source="//@nodeSet/@nodes.37" target="//@nodeSet/@nodes.36">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
     </edges>
-    <edges name="sp_shifts_sh" source="//@nodeSet/@nodes.41" target="//@nodeSet/@nodes.42">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    <edges name="h_staff_s1" source="//@nodeSet/@nodes.38" target="//@nodeSet/@nodes.39">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.41" target="//@nodeSet/@nodes.43">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    <edges name="nac edge" source="//@nodeSet/@nodes.38" target="//@nodeSet/@nodes.40">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.45" target="//@nodeSet/@nodes.44">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
-    </edges>
-    <edges name="s2_shiftPlan_sp" source="//@nodeSet/@nodes.46" target="//@nodeSet/@nodes.47">
+    <edges name="nac edge" source="//@nodeSet/@nodes.41" target="//@nodeSet/@nodes.42">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="s2_shiftPlan_sp" source="//@nodeSet/@nodes.43" target="//@nodeSet/@nodes.44">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.43" target="//@nodeSet/@nodes.45">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="v_staff_s2" source="//@nodeSet/@nodes.46" target="//@nodeSet/@nodes.47">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
     <edges name="nac edge" source="//@nodeSet/@nodes.46" target="//@nodeSet/@nodes.48">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.49" target="//@nodeSet/@nodes.50">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-    </edges>
-    <edges name="v_staff_s2" source="//@nodeSet/@nodes.51" target="//@nodeSet/@nodes.52">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.51" target="//@nodeSet/@nodes.53">
+    <edges name="sp_shifts_sh" source="//@nodeSet/@nodes.49" target="//@nodeSet/@nodes.50">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.49" target="//@nodeSet/@nodes.51">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.53" target="//@nodeSet/@nodes.52">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.54" target="//@nodeSet/@nodes.55">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
-    </edges>
-    <edges name="h_staff_s1" source="//@nodeSet/@nodes.56" target="//@nodeSet/@nodes.57">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.56" target="//@nodeSet/@nodes.58">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
-    </edges>
-    <edges name="s1_works_d" source="//@nodeSet/@nodes.60" target="//@nodeSet/@nodes.59">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.61" target="//@nodeSet/@nodes.59">
-      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.63" target="//@nodeSet/@nodes.62">
+    <edges name="nac edge" source="//@nodeSet/@nodes.55" target="//@nodeSet/@nodes.54">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/department"/>
     </edges>
-    <edges name="s1_works_d" source="//@nodeSet/@nodes.64" target="//@nodeSet/@nodes.65">
+    <edges name="s1_works_d" source="//@nodeSet/@nodes.56" target="//@nodeSet/@nodes.57">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.64" target="//@nodeSet/@nodes.66">
+    <edges name="nac edge" source="//@nodeSet/@nodes.56" target="//@nodeSet/@nodes.58">
       <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
     </edges>
-    <edges name="v_staff_s2" source="//@nodeSet/@nodes.67" target="//@nodeSet/@nodes.68">
+    <edges name="h_staff_s1" source="//@nodeSet/@nodes.59" target="//@nodeSet/@nodes.60">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.59" target="//@nodeSet/@nodes.61">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/staff"/>
+    </edges>
+    <edges name="s1_works_d" source="//@nodeSet/@nodes.63" target="//@nodeSet/@nodes.62">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.64" target="//@nodeSet/@nodes.62">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Staff/works"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.65" target="//@nodeSet/@nodes.66">
+      <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital/reception"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.68" target="//@nodeSet/@nodes.67">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.67" target="//@nodeSet/@nodes.69">
+    <edges name="nac edge" source="//@nodeSet/@nodes.69" target="//@nodeSet/@nodes.70">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="v_staff_s2" source="//@nodeSet/@nodes.71" target="//@nodeSet/@nodes.72">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
-    <edges name="sp_shifts_sh" source="//@nodeSet/@nodes.70" target="//@nodeSet/@nodes.71">
+    <edges name="nac edge" source="//@nodeSet/@nodes.71" target="//@nodeSet/@nodes.73">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
+    </edges>
+    <edges name="s2_shiftPlan_sp" source="//@nodeSet/@nodes.74" target="//@nodeSet/@nodes.75">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="nac edge" source="//@nodeSet/@nodes.74" target="//@nodeSet/@nodes.76">
+      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
+    </edges>
+    <edges name="sp_shifts_sh" source="//@nodeSet/@nodes.77" target="//@nodeSet/@nodes.78">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
     </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.70" target="//@nodeSet/@nodes.72">
+    <edges name="nac edge" source="//@nodeSet/@nodes.77" target="//@nodeSet/@nodes.79">
       <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Shiftplan/shifts"/>
-    </edges>
-    <edges name="s2_shiftPlan_sp" source="//@nodeSet/@nodes.73" target="//@nodeSet/@nodes.74">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.73" target="//@nodeSet/@nodes.75">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.76" target="//@nodeSet/@nodes.77">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Staff/shiftPlan"/>
-    </edges>
-    <edges name="nac edge" source="//@nodeSet/@nodes.79" target="//@nodeSet/@nodes.78">
-      <type href="platform:/resource/AdministrationExample/model/AdministrationExample.ecore#//Administration/staff"/>
     </edges>
   </edgeSet>
   <source href="platform:/resource/HospitalExample/model/HospitalExample.ecore#/"/>
@@ -4366,7 +4366,7 @@
       <attributeConstraints/>
     </rules>
     <rules name="DoctorToPatient" precondition="//@patternSet/@patterns.26" allNodes="//@ruleSet/@rules.2/@nodes.0 //@ruleSet/@rules.2/@nodes.1 //@ruleSet/@rules.2/@nodes.2 //@ruleSet/@rules.2/@nodes.3 //@ruleSet/@rules.2/@nodes.4 //@ruleSet/@rules.2/@nodes.5 //@ruleSet/@rules.2/@nodes.6 //@ruleSet/@rules.2/@nodes.7 //@ruleSet/@rules.2/@nodes.8" allEdges="//@ruleSet/@rules.2/@edges.0 //@ruleSet/@rules.2/@edges.1 //@ruleSet/@rules.2/@edges.2 //@ruleSet/@rules.2/@edges.3 //@ruleSet/@rules.2/@edges.4 //@ruleSet/@rules.2/@edges.5 //@ruleSet/@rules.2/@edges.6 //@ruleSet/@rules.2/@edges.7 //@ruleSet/@rules.2/@edges.8 //@ruleSet/@rules.2/@edges.9" correspondenceNodes="//@ruleSet/@rules.2/@nodes.4 //@ruleSet/@rules.2/@nodes.5">
-      <creation nodes="//@ruleSet/@rules.2/@nodes.8" edges="//@ruleSet/@rules.2/@edges.1 //@ruleSet/@rules.2/@edges.8 //@ruleSet/@rules.2/@edges.9"/>
+      <creation nodes="//@ruleSet/@rules.2/@nodes.8" edges="//@ruleSet/@rules.2/@edges.8 //@ruleSet/@rules.2/@edges.9 //@ruleSet/@rules.2/@edges.1"/>
       <nodes name="d" incomingEdges="//@ruleSet/@rules.2/@edges.1 //@ruleSet/@rules.2/@edges.6" outgoingEdges="//@ruleSet/@rules.2/@edges.0" outgoingCorrespondence="//@ruleSet/@rules.2/@nodes.5">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
       </nodes>
@@ -5234,7 +5234,7 @@
       </attributeConstraints>
     </rules>
     <rules name="Hospital2AdministrationRule" precondition="//@patternSet/@patterns.38" allNodes="//@ruleSet/@rules.3/@nodes.0 //@ruleSet/@rules.3/@nodes.1 //@ruleSet/@rules.3/@nodes.2 //@ruleSet/@rules.3/@nodes.3" allEdges="//@ruleSet/@rules.3/@edges.0 //@ruleSet/@rules.3/@edges.1 //@ruleSet/@rules.3/@edges.2" correspondenceNodes="//@ruleSet/@rules.3/@nodes.2" axiom="true">
-      <creation nodes="//@ruleSet/@rules.3/@nodes.0 //@ruleSet/@rules.3/@nodes.2 //@ruleSet/@rules.3/@nodes.3 //@ruleSet/@rules.3/@nodes.1" edges="//@ruleSet/@rules.3/@edges.2 //@ruleSet/@rules.3/@edges.0 //@ruleSet/@rules.3/@edges.1"/>
+      <creation nodes="//@ruleSet/@rules.3/@nodes.1 //@ruleSet/@rules.3/@nodes.3 //@ruleSet/@rules.3/@nodes.0 //@ruleSet/@rules.3/@nodes.2" edges="//@ruleSet/@rules.3/@edges.0 //@ruleSet/@rules.3/@edges.1 //@ruleSet/@rules.3/@edges.2"/>
       <nodes name="h" operationType="CREATION" incomingEdges="//@ruleSet/@rules.3/@edges.1" outgoingEdges="//@ruleSet/@rules.3/@edges.0" bindingType="CREATE" outgoingCorrespondence="//@ruleSet/@rules.3/@nodes.2">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
       </nodes>
@@ -7145,7 +7145,7 @@
       <attributeConstraints/>
     </rules>
     <rules name="PatientInReception" precondition="//@patternSet/@patterns.69" allNodes="//@ruleSet/@rules.6/@nodes.0 //@ruleSet/@rules.6/@nodes.1 //@ruleSet/@rules.6/@nodes.2 //@ruleSet/@rules.6/@nodes.3 //@ruleSet/@rules.6/@nodes.4 //@ruleSet/@rules.6/@nodes.5 //@ruleSet/@rules.6/@nodes.6 //@ruleSet/@rules.6/@nodes.7 //@ruleSet/@rules.6/@nodes.8 //@ruleSet/@rules.6/@nodes.9 //@ruleSet/@rules.6/@nodes.10 //@ruleSet/@rules.6/@nodes.11" allEdges="//@ruleSet/@rules.6/@edges.0 //@ruleSet/@rules.6/@edges.1 //@ruleSet/@rules.6/@edges.2 //@ruleSet/@rules.6/@edges.3 //@ruleSet/@rules.6/@edges.4 //@ruleSet/@rules.6/@edges.5 //@ruleSet/@rules.6/@edges.6 //@ruleSet/@rules.6/@edges.7 //@ruleSet/@rules.6/@edges.8" correspondenceNodes="//@ruleSet/@rules.6/@nodes.5 //@ruleSet/@rules.6/@nodes.6 //@ruleSet/@rules.6/@nodes.7">
-      <creation nodes="//@ruleSet/@rules.6/@nodes.3 //@ruleSet/@rules.6/@nodes.10 //@ruleSet/@rules.6/@nodes.7 //@ruleSet/@rules.6/@nodes.11 //@ruleSet/@rules.6/@nodes.4" edges="//@ruleSet/@rules.6/@edges.8 //@ruleSet/@rules.6/@edges.7 //@ruleSet/@rules.6/@edges.1 //@ruleSet/@rules.6/@edges.6"/>
+      <creation nodes="//@ruleSet/@rules.6/@nodes.10 //@ruleSet/@rules.6/@nodes.3 //@ruleSet/@rules.6/@nodes.7 //@ruleSet/@rules.6/@nodes.11 //@ruleSet/@rules.6/@nodes.4" edges="//@ruleSet/@rules.6/@edges.7 //@ruleSet/@rules.6/@edges.8 //@ruleSet/@rules.6/@edges.6 //@ruleSet/@rules.6/@edges.1"/>
       <nodes name="hr" incomingEdges="//@ruleSet/@rules.6/@edges.2" outgoingEdges="//@ruleSet/@rules.6/@edges.0" outgoingCorrespondence="//@ruleSet/@rules.6/@nodes.5">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
       </nodes>
@@ -8274,7 +8274,7 @@
       </attributeConstraints>
     </rules>
     <rules name="PatientInRoom" precondition="//@patternSet/@patterns.82" allNodes="//@ruleSet/@rules.7/@nodes.0 //@ruleSet/@rules.7/@nodes.1 //@ruleSet/@rules.7/@nodes.2 //@ruleSet/@rules.7/@nodes.3 //@ruleSet/@rules.7/@nodes.4 //@ruleSet/@rules.7/@nodes.5 //@ruleSet/@rules.7/@nodes.6 //@ruleSet/@rules.7/@nodes.7 //@ruleSet/@rules.7/@nodes.8 //@ruleSet/@rules.7/@nodes.9 //@ruleSet/@rules.7/@nodes.10 //@ruleSet/@rules.7/@nodes.11 //@ruleSet/@rules.7/@nodes.12" allEdges="//@ruleSet/@rules.7/@edges.0 //@ruleSet/@rules.7/@edges.1 //@ruleSet/@rules.7/@edges.2 //@ruleSet/@rules.7/@edges.3 //@ruleSet/@rules.7/@edges.4 //@ruleSet/@rules.7/@edges.5 //@ruleSet/@rules.7/@edges.6 //@ruleSet/@rules.7/@edges.7 //@ruleSet/@rules.7/@edges.8 //@ruleSet/@rules.7/@edges.9" correspondenceNodes="//@ruleSet/@rules.7/@nodes.6 //@ruleSet/@rules.7/@nodes.7 //@ruleSet/@rules.7/@nodes.8">
-      <creation nodes="//@ruleSet/@rules.7/@nodes.4 //@ruleSet/@rules.7/@nodes.12 //@ruleSet/@rules.7/@nodes.5 //@ruleSet/@rules.7/@nodes.11 //@ruleSet/@rules.7/@nodes.8" edges="//@ruleSet/@rules.7/@edges.2 //@ruleSet/@rules.7/@edges.9 //@ruleSet/@rules.7/@edges.7 //@ruleSet/@rules.7/@edges.8"/>
+      <creation nodes="//@ruleSet/@rules.7/@nodes.8 //@ruleSet/@rules.7/@nodes.4 //@ruleSet/@rules.7/@nodes.12 //@ruleSet/@rules.7/@nodes.5 //@ruleSet/@rules.7/@nodes.11" edges="//@ruleSet/@rules.7/@edges.7 //@ruleSet/@rules.7/@edges.9 //@ruleSet/@rules.7/@edges.2 //@ruleSet/@rules.7/@edges.8"/>
       <nodes name="hp" incomingEdges="//@ruleSet/@rules.7/@edges.3" outgoingEdges="//@ruleSet/@rules.7/@edges.0" outgoingCorrespondence="//@ruleSet/@rules.7/@nodes.6">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Hospital"/>
       </nodes>
@@ -9754,7 +9754,7 @@
       <attributeConstraints/>
     </rules>
     <rules name="DocToStaffRule" precondition="//@patternSet/@patterns.109" allNodes="//@ruleSet/@rules.9/@nodes.0 //@ruleSet/@rules.9/@nodes.1 //@ruleSet/@rules.9/@nodes.2 //@ruleSet/@rules.9/@nodes.3 //@ruleSet/@rules.9/@nodes.4 //@ruleSet/@rules.9/@nodes.5 //@ruleSet/@rules.9/@nodes.6 //@ruleSet/@rules.9/@nodes.7 //@ruleSet/@rules.9/@nodes.8 //@ruleSet/@rules.9/@nodes.9 //@ruleSet/@rules.9/@nodes.10" allEdges="//@ruleSet/@rules.9/@edges.0 //@ruleSet/@rules.9/@edges.1 //@ruleSet/@rules.9/@edges.2 //@ruleSet/@rules.9/@edges.3 //@ruleSet/@rules.9/@edges.4 //@ruleSet/@rules.9/@edges.5 //@ruleSet/@rules.9/@edges.6 //@ruleSet/@rules.9/@edges.7 //@ruleSet/@rules.9/@edges.8" correspondenceNodes="//@ruleSet/@rules.9/@nodes.4 //@ruleSet/@rules.9/@nodes.5" axiom="true">
-      <creation nodes="//@ruleSet/@rules.9/@nodes.3 //@ruleSet/@rules.9/@nodes.7 //@ruleSet/@rules.9/@nodes.9 //@ruleSet/@rules.9/@nodes.5 //@ruleSet/@rules.9/@nodes.10 //@ruleSet/@rules.9/@nodes.0 //@ruleSet/@rules.9/@nodes.4 //@ruleSet/@rules.9/@nodes.6 //@ruleSet/@rules.9/@nodes.8 //@ruleSet/@rules.9/@nodes.1 //@ruleSet/@rules.9/@nodes.2" edges="//@ruleSet/@rules.9/@edges.4 //@ruleSet/@rules.9/@edges.2 //@ruleSet/@rules.9/@edges.1 //@ruleSet/@rules.9/@edges.3 //@ruleSet/@rules.9/@edges.5 //@ruleSet/@rules.9/@edges.0 //@ruleSet/@rules.9/@edges.8 //@ruleSet/@rules.9/@edges.6 //@ruleSet/@rules.9/@edges.7"/>
+      <creation nodes="//@ruleSet/@rules.9/@nodes.0 //@ruleSet/@rules.9/@nodes.10 //@ruleSet/@rules.9/@nodes.1 //@ruleSet/@rules.9/@nodes.2 //@ruleSet/@rules.9/@nodes.3 //@ruleSet/@rules.9/@nodes.8 //@ruleSet/@rules.9/@nodes.6 //@ruleSet/@rules.9/@nodes.9 //@ruleSet/@rules.9/@nodes.4 //@ruleSet/@rules.9/@nodes.5 //@ruleSet/@rules.9/@nodes.7" edges="//@ruleSet/@rules.9/@edges.3 //@ruleSet/@rules.9/@edges.4 //@ruleSet/@rules.9/@edges.1 //@ruleSet/@rules.9/@edges.0 //@ruleSet/@rules.9/@edges.5 //@ruleSet/@rules.9/@edges.8 //@ruleSet/@rules.9/@edges.6 //@ruleSet/@rules.9/@edges.7 //@ruleSet/@rules.9/@edges.2"/>
       <nodes name="s1d" operationType="CREATION" bindingType="CREATE">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Doctor"/>
       </nodes>
@@ -10998,7 +10998,7 @@
       </attributeConstraints>
     </rules>
     <rules name="NurseToStaffRule" precondition="//@patternSet/@patterns.128" allNodes="//@ruleSet/@rules.10/@nodes.0 //@ruleSet/@rules.10/@nodes.1 //@ruleSet/@rules.10/@nodes.2 //@ruleSet/@rules.10/@nodes.3 //@ruleSet/@rules.10/@nodes.4 //@ruleSet/@rules.10/@nodes.5 //@ruleSet/@rules.10/@nodes.6 //@ruleSet/@rules.10/@nodes.7 //@ruleSet/@rules.10/@nodes.8 //@ruleSet/@rules.10/@nodes.9 //@ruleSet/@rules.10/@nodes.10" allEdges="//@ruleSet/@rules.10/@edges.0 //@ruleSet/@rules.10/@edges.1 //@ruleSet/@rules.10/@edges.2 //@ruleSet/@rules.10/@edges.3 //@ruleSet/@rules.10/@edges.4 //@ruleSet/@rules.10/@edges.5 //@ruleSet/@rules.10/@edges.6 //@ruleSet/@rules.10/@edges.7 //@ruleSet/@rules.10/@edges.8" correspondenceNodes="//@ruleSet/@rules.10/@nodes.4 //@ruleSet/@rules.10/@nodes.5" axiom="true">
-      <creation nodes="//@ruleSet/@rules.10/@nodes.3 //@ruleSet/@rules.10/@nodes.7 //@ruleSet/@rules.10/@nodes.0 //@ruleSet/@rules.10/@nodes.2 //@ruleSet/@rules.10/@nodes.4 //@ruleSet/@rules.10/@nodes.8 //@ruleSet/@rules.10/@nodes.10 //@ruleSet/@rules.10/@nodes.1 //@ruleSet/@rules.10/@nodes.6 //@ruleSet/@rules.10/@nodes.9 //@ruleSet/@rules.10/@nodes.5" edges="//@ruleSet/@rules.10/@edges.6 //@ruleSet/@rules.10/@edges.0 //@ruleSet/@rules.10/@edges.5 //@ruleSet/@rules.10/@edges.7 //@ruleSet/@rules.10/@edges.4 //@ruleSet/@rules.10/@edges.8 //@ruleSet/@rules.10/@edges.1 //@ruleSet/@rules.10/@edges.2 //@ruleSet/@rules.10/@edges.3"/>
+      <creation nodes="//@ruleSet/@rules.10/@nodes.5 //@ruleSet/@rules.10/@nodes.9 //@ruleSet/@rules.10/@nodes.4 //@ruleSet/@rules.10/@nodes.3 //@ruleSet/@rules.10/@nodes.2 //@ruleSet/@rules.10/@nodes.8 //@ruleSet/@rules.10/@nodes.6 //@ruleSet/@rules.10/@nodes.0 //@ruleSet/@rules.10/@nodes.7 //@ruleSet/@rules.10/@nodes.10 //@ruleSet/@rules.10/@nodes.1" edges="//@ruleSet/@rules.10/@edges.2 //@ruleSet/@rules.10/@edges.6 //@ruleSet/@rules.10/@edges.7 //@ruleSet/@rules.10/@edges.3 //@ruleSet/@rules.10/@edges.8 //@ruleSet/@rules.10/@edges.0 //@ruleSet/@rules.10/@edges.1 //@ruleSet/@rules.10/@edges.5 //@ruleSet/@rules.10/@edges.4"/>
       <nodes name="s1n" operationType="CREATION" bindingType="CREATE">
         <type href="platform:/resource/HospitalExample/model/HospitalExample.ecore#//Nurse"/>
       </nodes>

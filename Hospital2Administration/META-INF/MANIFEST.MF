@@ -31,4 +31,3 @@ Require-Bundle: AdministrationExample;visibility:=reexport,
  org.emoflon.ibex.tgg.tggmodel;bundle-version="0.1.0",
  org.emoflon.ibex.tgg.util;bundle-version="1.0.0"
 
-

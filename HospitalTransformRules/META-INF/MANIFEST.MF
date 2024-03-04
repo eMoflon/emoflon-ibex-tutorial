@@ -6,14 +6,16 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: HospitalTransformRules;singleton:=true
 Bundle-ActivationPolicy: lazy
-Import-Package: org.apache.log4j,
- org.apache.commons.logging
+Import-Package: org.apache.commons.logging,
+ org.apache.log4j,
+ org.junit.jupiter.api;version="5.9.3"
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: HospitalExample;bundle-version="0.0.1",
  org.emoflon.ibex.common,
  org.emoflon.ibex.gt,
  org.emoflon.ibex.gt.gtmodel,
- org.emoflon.ibex.gt.hipe
+ org.emoflon.ibex.gt.hipe,
+ org.junit;bundle-version="4.13.2"
 Export-Package: hospital.gt.api,
  hospital.gt.api.match,
  hospital.gt.api.pattern,

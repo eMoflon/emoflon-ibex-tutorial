@@ -658,81 +658,61 @@ To understand how we implement our graph transformation ruleset we should take a
 %%}
 
 %%We use this simple class to initialize a new model instance with the name \textsf{hospital.xmi}.\newline
-Let us inspect HospitalRules.java a bit more closely since there is much of interest going on:\newline\newline 
 
-{\setstretch{1.2}
 
-1\hspace{0.5cm}\textcolor{Purple}{public class} HospitalRules \{
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
 
-2\hspace{0.5cm}…	
-
-3\hspace{1cm}\textcolor{Purple}{private} Random \textcolor{blue}{rnd};
-
-4\hspace{1cm}\textcolor{Purple}{public} HospitalTransformRulesAPI \textcolor{blue}{api};
-
-5\hspace{1cm}\textcolor{Purple}{public} HospitalRules(\textcolor{Purple}{final long} \textcolor{Tan}{rndSeed}) \{
-
-6\hspace{1.5cm}\textcolor{blue}{rnd} = \textcolor{Purple}{new} Random(\textcolor{Tan}{rndSeed});
-
-7\hspace{1.5cm}\textcolor{blue}{api} = \textcolor{Purple}{new} HospitalValidator().initAPI();
-
-8\hspace{1.5cm}\textcolor{Purple}{try} \{
-
-9\hspace{2cm}\textcolor{blue}{api}.addModel(\textcolor{blue}{URI}.\textcolor{blue}{createURI(}\textcolor{Tan}{"hospital.xmi"})); 
-
-10\hspace{1.5cm}\}
-
-11\hspace{1.5cm}\textcolor{Purple}{catch} (Exception e) \{
-
-12\hspace{2cm}\textcolor{Tan}{e}.printStackTrace();
-
-13\hspace{1.5cm}\}
-
-14\hspace{1.5cm}\textcolor{blue}{api}.initializeEngine();
-
-15\hspace{1cm}\}
-
-16\hspace{1cm}\textcolor{Purple}{public static void} main(String[] \textcolor{Tan}{args}) \textcolor{Purple}{throws} IOException \{
-
-17\hspace{1.5cm}HospitalRules \textcolor{Tan}{hospitalrules} = \textcolor{Purple}{new} HospitalRules(\textcolor{blue}{"someSeed"}.hashCode());
-
-18\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.createHospital();
-
-19\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.validateHospital();
-
-20\hspace{1.5cm}\textcolor{Tan}{hospitalrules}.\textcolor{blue}{api}.terminate();
-
-21\hspace{0.5cm}\}
-
-22\hspace{0.5cm}\textcolor{Purple}{public void} createHospital() \{
-
-23\hspace{1cm}\textcolor{blue}{api}.hospital().applyAny(\textcolor{blue}{true});
-
-24\hspace{1cm}\textcolor{blue}{api}.reception().applyAny(\textcolor{blue}{true});
-
-25\hspace{1cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<4; \textcolor{Tan}{i}++) \{
-
-26\hspace{1.5cm}\textcolor{blue}{api}.department(i+2, 4).applyAny(\textcolor{blue}{true});
-
-27\hspace{1cm}\}
-
-28\hspace{1cm}\textcolor{Purple}{for}(\textcolor{Purple}{int} \textcolor{Tan}{i}=0; \textcolor{Tan}{i}<16; \textcolor{Tan}{i}++) \{
-
-29\hspace{1.5cm}\textcolor{blue}{api}.room(4, Carelevel.get(\textcolor{blue}{rnd}.nextInt(3))).applyAny(\textcolor{blue}{true});
-
-30\hspace{1cm}\} 
-
-\hspace{0.7cm}…
-
-\hspace{0.7cm}\}
-
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
 }
 
-\clearpage
+
+
+Let us inspect HospitalRules.java a bit more closely since there is much of interest going on:\newline
+
+\begin{lstlisting}	
+		public class HospitalRules() extends HospitalAbstractTest{
+		...
+		@Test
+		public void testHospital() {
+			GtGtApi<?> api = this.initEmpty("HospitalTest.xmi");
+			rnd = new Random(12124);
+		
+			//create Hospital
+			assertApplicableAndApply(api.hospital());
+			assertApplicableAndApply(api.reception());
+			
+			for(int i=0; i<4; i++) {
+				assertApplicableAndApply(api.department(i+2,4));
+			}
+			for(int i=0; i<16; i++) {
+				assertApplicableAndApply(api.room(4, Carelevel.get(rnd.nextInt(3))));
+			}
+			...
+			api.terminate();
+		}
+		
+	}
+\end{lstlisting}
 
 \textbf{Initialization:}
 
-The first important thing we want to look at is in \textbf{line 4} where we define and initialize the \textbf{api variable} for our hospital transformation rules.\newline
+The first important thing we want to look at is in \textbf{line 5} where we define and initialize the \textbf{api variable} for our hospital transformation rules.\newline
 The API command is used to access and apply our rules and patterns.\newline
 
 %%\textbf{Saving the project:}
@@ -741,19 +721,23 @@ The API command is used to access and apply our rules and patterns.\newline
 
 \textbf{Rule application:}
 
-Let us take a closer look at the \textsf{createHospital} method starting at \textbf{line 22}.\newline
-As you can see we are accessing our rules via the variable name \textbf{api.<rulename>.applyAny(\textcolor{blue}{true})}.\newline Then we construct our hospital subsequently by applying all the rules necessary for our hospital.\newline
+Let us take a closer look at the \textsf{createHospital} method starting at \textbf{line 9}.\newline
+As you can see we are accessing our rules via the variable name \textbf{assertApplicableAndApply(api.<rulename>)}.\newline Then we construct our hospital subsequently by applying all the rules necessary for our hospital.\newline
 
-The application of the hospital rule in \textbf{line 28} creates \textbf{one hospital object} according to our rule. Keep in mind we can only apply rules and not patterns. As previously mentioned we can access the eMoflon:IBeX functionalities via the \textbf{.api command}.\newline
+The application of the hospital rule in \textbf{line 9} creates \textbf{one hospital object} according to our rule. Keep in mind we can only apply rules and not patterns. As previously mentioned we can access the eMoflon:IBeX functionalities via the \textbf{.api command}.\newline
 
 Writing \textsf{.api} and pressing the hotkeys for auto-completion will show you the extensive list of commands we can use for our graph transformation project. In the appendix for this part of the tutorial, you can find a list with a short explanation of the respective command.\newline
 
 Be aware that a rule can only be applied if the precondition is met, i.e., matches to its left-hand side exist.\newline
 For example, if we switch the application order of the hospital and reception rule, we would not be able to create a reception because we are missing the context of the hospital node and the corresponding connection.\newline
 Here is a faulty example if you changed the order of the rule application:\newline
+\clearpage
 
-\textcolor{red}{api.reception().applyAny(true);}\newline
-\textcolor{red}{api.hospital().applyAny(true);}\newline
+\begin{lstlisting}	
+	assertApplicableAndApply(api.reception());
+	assertApplicableAndApply(api.hospital());
+			
+\end{lstlisting}
 
 This order would have \textbf{severe consequences} for our hospital since the rules which require a reception such as the patients would not be applied as well as the reception itself. \newline
 
@@ -771,8 +755,6 @@ A basic way to check whether our rule applications had the desired effect is, to
 System.\textcolor{blue}{out}.println(\textcolor{Tan}{patientsInHospital} + \textcolor{blue}{" Patients are in the hospital right now and "} + \textcolor{Tan}{patientsInRoom} + \textcolor{blue}{" patients are in a room"});\newline\newline
 	
 }
-
-\clearpage
 
 \textbf{Testing:}
 
